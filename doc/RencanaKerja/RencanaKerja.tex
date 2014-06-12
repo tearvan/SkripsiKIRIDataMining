@@ -1,0 +1,127 @@
+\documentclass[a4paper,twoside]{article}
+\usepackage[T1]{fontenc}
+\usepackage[bahasa]{babel}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{float}
+\usepackage[cm]{fullpage}
+\pagestyle{myheadings}
+\usepackage{etoolbox}
+\usepackage{setspace} 
+\usepackage{lipsum} 
+\setlength{\headsep}{30pt}
+\usepackage[inner=2cm,outer=2.5cm,top=2.5cm,bottom=2cm]{geometry} %margin
+% \pagestyle{empty}
+
+\makeatletter
+\renewcommand{\@maketitle} {\begin{center} {\LARGE \textbf{ \textsc{\@title}} \par} \bigskip {\large \textbf{\textsc{\@author}} }\end{center} }
+\renewcommand{\thispagestyle}[1]{}
+\markright{\textbf{\textsc{AIF401 \textemdash Usulan Topik Skripsi \textemdash Sem. Ganjil 2014/2015}}}
+
+\onehalfspacing
+ 
+\begin{document}
+
+\title{\@judultopik}
+\author{\nama \textendash \@npm} 
+
+%tulis nama dan NPM anda di sini:
+\newcommand{\nama}{Jovan Gunawan}
+\newcommand{\@npm}{2011730029}
+\newcommand{\@judultopik}{\textsl{Data Mining} Histori Pencarian Rute Angkot} % Judul/topik anda
+\newcommand{\jumpemb}{1} % Jumlah pembimbing, 1
+\newcommand{\tanggal}{7/06/2014}
+\maketitle
+
+\pagenumbering{arabic}
+
+\section{Deskripsi}
+\textsl{Data mining} merupakan teknik untuk mengolah \textsl{data}, mencari suatu pola, kemudian dievaluasi untuk mendapatkan \textsl{knowledge}. Pola yang dihasilkan oleh \textsl{data mining} dapat digunakan untuk mencari suatu hal yang menarik dan unik. Dari pola tersebutlah, akan didapatkan suatu informasi yang sangat bermakna yang biasa disebut sebagai \textsl{knowledge}.
+
+\textsl{Data mining} dapat diterapkan di berbagai macam bidang, seperti bisnis, marketing, bahkan analisis dan penelitian. Pada \textsl{paper} ini, akan dilakukan penelitian rute angkot yang digunakan oleh penduduk Bandung dengan menggunakan \textsl{data mining}. Penelitian ini, diharapkan dapat ditemukan suatu pola yang menarik dan menghasilkan suatu ide atau gagasan yang baru. Maka dari itu, penelitian akan membutuhkan \textsl{data-data} tentang rute pencarian angkot yang banyak. Data tersebut bisa diperoleh dari KIRI.
+
+KIRI merupakan suatu organisasi di bidang navigasi jalan untuk kendaraan umum termasuk angkot. Setiap bulan, KIRI memiliki sekitar 10000 \textsl{log} histori pencarian rute angkot di daerah Bandung. \textsl{Log} tersebut memiliki 4 kolom sebagai berikut
+\begin{itemize}
+	\item \textsl{Timestamp}, waktu ketika pengguna KIRI mencari rute angkot
+	\item \textsl{Latitude dan longitude} awal, titik posisi awal dari pengguna KIRI
+	\item \textsl{Latitude dan longitude} awal, titik posisi akhir dari pengguna KIRI
+	\item Banyak pilihan rute yang ditemukan, banyak rute yang ditemukan untuk mencapai posisi akhir dari posisi awal
+\end{itemize}
+
+Dengan menggunakan \textsl{data log} histori pencarian rute angkot dari KIRI, diharapkan bisa diperoleh pola yang menarik dari \textsl{data mining}. Pola tersebut memiliki kemungkinan untuk digunakan kembali sebagai informasi tambahan pada perangkat lunak navigasi lain seperti KIRI.
+
+\section{Rumusan Masalah}
+Dengan mengacu pada uraian diskripsi diatas, maka permasalahan yang dibahas dan diteliti oleh penulis adalah
+\begin{itemize}
+	\item Apakah pola yang diperoleh dari \textsl{data log} histori KIRI merupakan pola yang menarik dan bermakna?
+	\item Apakah bisa didapat suatu informasi yang bermakna dari pola yang ditemukan?
+	\item Apakah hasil \textsl{data} tersebut dapat digunakan untuk perangkat lunak lain seperti KIRI?
+\end{itemize}
+
+\section{Tujuan}
+Penelitian ini bertujuan untuk 
+\begin{itemize}
+	\item Mencari pola dan informasi yang menarik dari \textsl{log} histori KIRI
+\end{itemize}
+
+\section{Deskripsi Perangkat Lunak}
+Perangkat lunak akhir yang akan dibuat memiliki fitur minimal sebagai berikut:
+\begin{itemize}
+	\item Pengguna dapat melakukan memasukkan database \textsl{log} KIRI.
+	\item Perangkat lunak dapat melakukan \textsl{data mining} pada \textsl{log} KIRI yang sudah dimasukan.
+	\item Perangkat lunak dapat menunjukkan hasil pola yang diperoleh dari \textsl{data mining}.
+\end{itemize}
+
+\section{Rencana Kerja}
+Tuliskan rencana anda untuk menyelesaikan skripsi. Rencana kerja dibagi menjadi dua bagian yaitu yang akan dilakukan pada saat mengambil kuliah AIF401 Skripsi 1 dan pada saat mengambil kuliah AIF402 Skripsi 2. Perhatikan contoh berikut ini :
+
+Rencana kerja untuk menyelesaikan skripsi ini:
+\begin{itemize}
+	\item Pada saat mengambil kuliah AIF401 Skripsi 1
+	\begin{enumerate}
+		\item Melakukan studi literatur tentang algoritma-algoritma yang berkaitan dengan pemrosesan data mining.
+		\item Mempelajari algoritma untuk melakukan data mining
+		\item Mempelajari bahasa Java untuk membuat data mining
+	\end{enumerate}
+	\item Pada saat mengambil kuliah AIF401 Skripsi 2
+	\begin{enumerate}
+		\item Merancang dan mengimplementasikan algoritma untuk data mining.
+		\item Mengimplementasikan pembangkit pola data mining
+		\item Melakukan pengujian dan eksperimen
+		\item Membuat dokumentasi skripsi
+	\end{enumerate}
+\end{itemize}
+
+\section{Isi {\it Progress Report} Skripsi 1}
+Isi dari {\it Progress Report} Skripsi 1 yang akan diselesaikan paling lambat pada tanggal 1 Januari 2015 adalah :
+\begin{enumerate}
+	\item Algoritma/langkah-langkah untuk melakukan \textsl{data mining} dan pengambil kesimpulan dari hasil \textsl{data mining}.
+	\item Hasil eksperimen penggunaan fitur-fitur Graphical User Interface pada bahasa Java
+\end{enumerate}
+Estimasi persentase penyelesaian skripsi sampai dengan {\it Progress Report} Skripsi 1 adalah : 85\%
+\vspace{1.5cm}
+
+\centering Bandung, \tanggal\\
+\vspace{2cm} \nama \\ 
+\vspace{1cm}
+
+Menyetujui, \\
+\ifdefstring{\jumpemb}{2}{
+\vspace{1.5cm}
+\begin{centering} Menyetujui,\\ \end{centering} \vspace{0.75cm}
+\begin{minipage}[b]{0.45\linewidth}
+% \centering Bandung, \makebox[0.5cm]{\hrulefill}/\makebox[0.5cm]{\hrulefill}/2013 \\
+\vspace{2cm} Nama: \makebox[3cm]{\hrulefill}\\ Pembimbing Utama
+\end{minipage} \hspace{0.5cm}
+\begin{minipage}[b]{0.45\linewidth}
+% \centering Bandung, \makebox[0.5cm]{\hrulefill}/\makebox[0.5cm]{\hrulefill}/2013\\
+\vspace{2cm} Nama: \makebox[3cm]{\hrulefill}\\ Pembimbing Pendamping
+\end{minipage}
+\vspace{0.5cm}
+}{
+% \centering Bandung, \makebox[0.5cm]{\hrulefill}/\makebox[0.5cm]{\hrulefill}/2013\\
+\vspace{2cm} Nama: \makebox[3cm]{\hrulefill}\\ Pembimbing Tunggal
+}
+`
+\end{document}
+
