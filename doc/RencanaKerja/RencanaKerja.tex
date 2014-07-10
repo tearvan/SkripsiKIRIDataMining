@@ -16,7 +16,7 @@
 \makeatletter
 \renewcommand{\@maketitle} {\begin{center} {\LARGE \textbf{ \textsc{\@title}} \par} \bigskip {\large \textbf{\textsc{\@author}} }\end{center} }
 \renewcommand{\thispagestyle}[1]{}
-\markright{\textbf{\textsc{AIF401 \textemdash Usulan Topik Skripsi \textemdash Sem. Ganjil 2014/2015}}}
+\markright{\textbf{\textsc{AIF401 \textemdash Rencana Kerja Skripsi \textemdash Sem. Ganjil 2014/2015}}}
 
 \onehalfspacing
  
@@ -38,14 +38,14 @@
 \section{Deskripsi}
 \textsl{Data mining} merupakan teknik untuk mengolah \textsl{data}, mencari suatu pola, kemudian dievaluasi untuk mendapatkan \textsl{knowledge}. Pola yang dihasilkan oleh \textsl{data mining} dapat digunakan untuk mencari suatu hal yang menarik dan unik. Dari pola tersebutlah, akan didapatkan suatu informasi yang sangat bermakna yang biasa disebut sebagai \textsl{knowledge}.
 
-\textsl{Data mining} dapat diterapkan di berbagai macam bidang, seperti bisnis, marketing, bahkan analisis dan penelitian. Pada \textsl{paper} ini, akan dilakukan penelitian rute angkot yang digunakan oleh penduduk Bandung dengan menggunakan \textsl{data mining}. Penelitian ini, diharapkan dapat ditemukan suatu pola yang menarik dan menghasilkan suatu ide atau gagasan yang baru. Maka dari itu, penelitian akan membutuhkan \textsl{data-data} tentang rute pencarian angkot yang banyak. Data tersebut bisa diperoleh dari KIRI.
+Pada \textsl{paper} ini, akan dilakukan penelitian rute angkot yang digunakan oleh penduduk Bandung dengan menggunakan \textsl{data mining}. Penelitian ini, diharapkan dapat ditemukan suatu pola yang menarik dan menghasilkan suatu ide atau gagasan yang baru. Maka dari itu, penelitian akan membutuhkan \textsl{data-data} tentang rute pencarian angkot yang banyak. Data tersebut bisa diperoleh dari KIRI.
 
-KIRI merupakan suatu organisasi di bidang navigasi jalan untuk kendaraan umum termasuk angkot. Setiap bulan, KIRI memiliki sekitar 10000 \textsl{log} histori pencarian rute angkot di daerah Bandung. \textsl{Log} tersebut memiliki 4 kolom sebagai berikut
+KIRI merupakan suatu organisasi di bidang navigasi jalan untuk mencari rute angkot. \textsl{Data log} yang dimiliki KIRI akan digunakan untuk \textsl{data mining}. \textsl{Log} tersebut memiliki 4 \textsl{field} untuk setiap \textsl{entry} sebagai berikut
 \begin{itemize}
 	\item \textsl{Timestamp}, waktu ketika pengguna KIRI mencari rute angkot
-	\item \textsl{Latitude dan longitude} awal, titik posisi awal dari pengguna KIRI
-	\item \textsl{Latitude dan longitude} awal, titik posisi akhir dari pengguna KIRI
-	\item Banyak pilihan rute yang ditemukan, banyak rute yang ditemukan untuk mencapai posisi akhir dari posisi awal
+	\item Koordinat awal (lat,lon)
+	\item Koordinat akhir (lat,lon)
+	\item banyak rute yang ditemukan untuk mencapai posisi akhir dari posisi awal
 \end{itemize}
 
 Dengan menggunakan \textsl{data log} histori pencarian rute angkot dari KIRI, diharapkan bisa diperoleh pola yang menarik dari \textsl{data mining}. Pola tersebut memiliki kemungkinan untuk digunakan kembali sebagai informasi tambahan pada perangkat lunak navigasi lain seperti KIRI.
@@ -53,15 +53,15 @@ Dengan menggunakan \textsl{data log} histori pencarian rute angkot dari KIRI, di
 \section{Rumusan Masalah}
 Dengan mengacu pada uraian diskripsi diatas, maka permasalahan yang dibahas dan diteliti oleh penulis adalah
 \begin{itemize}
-	\item Apakah pola yang diperoleh dari \textsl{data log} histori KIRI merupakan pola yang menarik dan bermakna?
-	\item Apakah bisa didapat suatu informasi yang bermakna dari pola yang ditemukan?
-	\item Apakah hasil \textsl{data} tersebut dapat digunakan untuk perangkat lunak lain seperti KIRI?
+	\item Bagaimana cara mengolah pola yang diperoleh dari \textsl{data log histori}  KIRI agar pola menjadi menarik dan bermakna?
+	\item Bagaimana membuat program untuk melakukan data mining pada data log history?
 \end{itemize}
 
 \section{Tujuan}
 Penelitian ini bertujuan untuk 
 \begin{itemize}
-	\item Mencari pola dan informasi yang menarik dari \textsl{log} histori KIRI
+	\item Mencari pola dan informasi yang menarik dari \textsl{log histori} KIRI.
+	\item Program dapat melakukan data mining dari \textsl{log histori} KIRI.
 \end{itemize}
 
 \section{Deskripsi Perangkat Lunak}
@@ -79,14 +79,14 @@ Rencana kerja untuk menyelesaikan skripsi ini:
 \begin{itemize}
 	\item Pada saat mengambil kuliah AIF401 Skripsi 1
 	\begin{enumerate}
-		\item Melakukan studi literatur tentang algoritma-algoritma yang berkaitan dengan pemrosesan data mining.
-		\item Mempelajari algoritma untuk melakukan data mining
-		\item Mempelajari bahasa Java untuk membuat data mining
+		\item Melakukan studi literatur tentang algoritma-algoritma yang berkaitan dengan pemrosesan \textsl{data mining}
+		\item melakukan penelitian \textsl{data mining} yang diterapkan pada \textsl{log} KIRI
+		\item Membuat dokumentasi skripsi
 	\end{enumerate}
 	\item Pada saat mengambil kuliah AIF401 Skripsi 2
 	\begin{enumerate}
-		\item Merancang dan mengimplementasikan algoritma untuk data mining.
-		\item Mengimplementasikan pembangkit pola data mining
+		\item Merancang dan mengimplementasikan algoritma untuk \textsl{data mining}
+		\item Mengimplementasikan pembangkit pola \textsl{data mining}
 		\item Melakukan pengujian dan eksperimen
 		\item Membuat dokumentasi skripsi
 	\end{enumerate}
