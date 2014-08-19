@@ -1,0 +1,169 @@
+\begin{thebibliography}{10}
+
+\bibitem{Vlachos:2002}
+M.~Vlachos, D.~Gunopoulos, and G.~Kollios, ``Discovering similar
+  multidimensional trajectories,'' in {\em ICDE '02: Proceedings of the 18th
+  International Conference on Data Engineering}, (Washington, DC, USA), p.~673,
+  IEEE Computer Society, 2002.
+
+\bibitem{Lionov:2009}
+Lionov, ``Median trajectory.'' Experimentation Project Report, 2009.
+
+\bibitem{Calenge:2009}
+C.~Calenge, S.~Dray, and M.~Royer-Carenzi, ``The concept of animals'
+  trajectories from a data analysis perspective,'' {\em Ecological
+  Informatics}, vol.~4, no.~1, pp.~34 -- 41, 2009.
+
+\bibitem{Nams:2004}
+V.~O. Nams, ``Using animal movement paths to measure response to spatial
+  scale,'' {\em Oecologia}, vol.~143, no.~2, pp.~179--188, 2004.
+
+\bibitem{Herb:2010}
+G.~of~Yukon, ``Porcupine caribou herd satellite collar project,'' March 2010.
+
+\bibitem{Brillinger:2001}
+D.~R. Brillinger, H.~K. Preisler, A.~A. Ager, J.~G. Kie, and B.~S. Stewart,
+  ``Modelling movements of free-ranging animals,'' tech. rep., University of
+  California, Berkeley, 2001.
+
+\bibitem{Yunyao:1998}
+Y.~Qu, C.~Wang, and X.~S. Wang, ``Supporting fast search in time series for
+  movement patterns in multiple scales,'' in {\em CIKM '98: Proceedings of the
+  seventh international conference on Information and knowledge management},
+  (New York, NY, USA), pp.~251--258, ACM, 1998.
+
+\bibitem{Ng:2001}
+R.~T.Ng, ``Detecting outliers from large datasets,'' in {\em Geographic Data
+  Mining and Knowledge Discovery} (H.~J. Miller and J.~Han, eds.), vol.~1,
+  pp.~218--236, CRC Press, 2001.
+
+\bibitem{Hubert:1957}
+W.~E. Hubert, ``Hurricane trajectory forecasts from a non-divergent,
+  non-geostrophic, barotropic model,'' {\em Monthly Weather Review}, vol.~85,
+  pp.~83--87, March 1957.
+
+\bibitem{Fuentes:2001}
+L.~M. Fuentes and S.~A. Velastin, ``People tracking in surveillance
+  applications,'' in {\em In Proceedings of the 2nd IEEE International workshop
+  on PETS}, 2001.
+
+\bibitem{Brillinger:2007}
+D.~R. Brillinger, ``A potential function approach to the flow of play in
+  soccer,'' {\em J. Quantitative Analysis}, 2007.
+
+\bibitem{Iwase:2002}
+S.~Iwase and H.~Saito, ``Tracking soccer player using multiple views,'' in {\em
+  In Proceedings of the IAPR Workshop on Machine Vision Applications (MVA02},
+  pp.~102--105, 2002.
+
+\bibitem{VlachosGunopoulos:2002}
+M.~Vlachos, D.~Gunopoulos, and G.~Kollios, ``Robust similarity measures for
+  mobile object trajectories,'' in {\em DEXA '02: Proceedings of the 13th
+  International Workshop on Database and Expert Systems Applications},
+  (Washington, DC, USA), pp.~721--728, IEEE Computer Society, 2002.
+
+\bibitem{Lin:2005}
+B.~Lin and J.~Su, ``Shapes based trajectory queries for moving objects,'' in
+  {\em GIS '05: Proceedings of the 13th annual ACM international workshop on
+  Geographic information systems}, (New York, NY, USA), pp.~21--30, ACM, 2005.
+
+\bibitem{Kreveld:2007}
+M.~van Kreveld and J.~Luo, ``The definition and computation of trajectory and
+  subtrajectory similarity,'' in {\em GIS '07: Proceedings of the 15th annual
+  ACM international symposium on Advances in geographic information systems},
+  (New York, NY, USA), pp.~1--4, ACM, 2007.
+
+\bibitem{Gaffney:1999}
+S.~Gaffney and P.~Smyth, ``Trajectory clustering with mixtures of regression
+  models,'' in {\em KDD '99: Proceedings of the fifth ACM SIGKDD international
+  conference on Knowledge discovery and data mining}, (New York, NY, USA),
+  pp.~63--72, ACM, 1999.
+
+\bibitem{Lee:2007}
+J.-G. Lee, J.~Han, and K.-Y. Whang, ``Trajectory clustering: a
+  partition-and-group framework,'' in {\em SIGMOD '07: Proceedings of the 2007
+  ACM SIGMOD international conference on Management of data}, (New York, NY,
+  USA), pp.~593--604, ACM, 2007.
+
+\bibitem{Nanni:2006}
+M.~Nanni and D.~Pedreschi, ``Time-focused clustering of trajectories of moving
+  objects,'' {\em J. Intell. Inf. Syst.}, vol.~27, no.~3, pp.~267--289, 2006.
+
+\bibitem{Buchin:2009}
+K.~Buchin, M.~Buchin, M.~van Kreveld, and J.~Luo, ``Finding long and similar
+  parts of trajectories,'' in {\em GIS '09: Proceedings of the 17th ACM
+  SIGSPATIAL International Conference on Advances in Geographic Information
+  Systems}, (New York, NY, USA), pp.~296--305, ACM, 2009.
+
+\bibitem{Lee:2008}
+J.-G. Lee, J.~Han, X.~Li, and H.~Gonzalez, ``Traclass: trajectory
+  classification using hierarchical region-based and trajectory-based
+  clustering,'' {\em Proc. VLDB Endow.}, vol.~1, no.~1, pp.~1081--1094, 2008.
+
+\bibitem{Garcia:2006}
+J.~Garcia, O.~Concha, J.~Molina, and G.~de~Miguel, ``Trajectory classification
+  based on machine-learning techniques over tracking data,'' in {\em
+  Information Fusion, 2006 9th International Conference on}, pp.~1 --8, 10-13
+  2006.
+
+\bibitem{LeeHan:2008}
+J.-G. Lee, J.~Han, and X.~Li, ``Trajectory outlier detection: A
+  partition-and-detect framework,'' in {\em ICDE '08: Proceedings of the 2008
+  IEEE 24th International Conference on Data Engineering}, (Washington, DC,
+  USA), pp.~140--149, IEEE Computer Society, 2008.
+
+\bibitem{Gudmundsson:2006}
+J.~Gudmundsson and M.~van Kreveld, ``Computing longest duration flocks in
+  trajectory data,'' in {\em GIS '06: Proceedings of the 14th annual ACM
+  international symposium on Advances in geographic information systems}, (New
+  York, NY, USA), pp.~35--42, ACM, 2006.
+
+\bibitem{Buchin:2008}
+K.~Buchin, M.~Buchin, J.~Gudmundsson, M.~Löffler, and J.~Luo, {\em Detecting
+  Commuting Patterns by Clustering Subtrajectories}, vol.~Volume 5369/2008 of
+  {\em Lecture Notes in Computer Science}, pp.~644--655.
+\newblock Springer Berlin / Heidelberg, 2008.
+
+\bibitem{Gudmundsson:2007}
+J.~Gudmundsson, M.~Kreveld, and B.~Speckmann, ``Efficient detection of patterns
+  in 2d trajectories of moving points,'' {\em Geoinformatica}, vol.~11, no.~2,
+  pp.~195--215, 2007.
+
+\bibitem{Laube:2006}
+P.~Laube and R.~S. Purves, ``An approach to evaluating motion pattern detection
+  techniques in spatio-temporal data,'' {\em Computers, Environment and Urban
+  Systems}, vol.~30, no.~3, pp.~347 -- 374, 2006.
+
+\bibitem{Agarwal:2003}
+P.~K. Agarwal, M.~Berg, J.~Gao, L.~J. Guibas, and S.~Har-peled, ``Staying in
+  the middle: Exact and approximate medians in r 1 and r 2 for moving points,
+  manuscript,'' in {\em In Proc. of the Canadian Conference on Computational
+  Geometry}, pp.~42--45, 2003.
+
+\bibitem{Agarwal:1997}
+P.~K. Agarwal, L.~J. Guibas, J.~Hershberger, and E.~Veach, ``Maintaining the
+  extent of a moving point set,'' in {\em WADS '97: Proceedings of the 5th
+  International Workshop on Algorithms and Data Structures}, (London, UK),
+  pp.~31--44, Springer-Verlag, 1997.
+
+\bibitem{Amenta:2000}
+D.~E. N.~Amenta, M.~Bern and S.~H. Teng, ``Regression depth and center
+  points,'' {\em Discrete and Computational Geometry}, vol.~23, no.~3,
+  pp.~305--323, 2000.
+
+\bibitem{Kaufman:2005}
+L.~Kaufman and P.~J. Rousseeuw, {\em Finding Groups in Data: An Introduction to
+  Cluster Analysis}.
+\newblock Wiley-Interscience, 2005.
+
+\bibitem{Buchin:2010}
+K.~Buchin, M.~Buchin, M.~van Kreveld, M.~L$\ddot{o}$ffler, R.~I. Silveira,
+  C.~Wenk, and L.~Wiratma, ``Median trajectories,'' in {\em Proc. 18th European
+  Symposium on Algorithms}, 2010.
+
+\bibitem{AltGodau:1995}
+H.~Alt and M.~Godau, ``Computing the fr\'{e}chet distance between two polygonal
+  curves,'' {\em International Journal of Computational Geometry \&
+  Applications}, vol.~5, pp.~75--91, 1995.
+
+\end{thebibliography}
