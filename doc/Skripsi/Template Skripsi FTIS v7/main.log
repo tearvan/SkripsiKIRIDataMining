@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.12)  11 AUG 2014 20:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.8.19)  23 SEP 2014 00:23
 entering extended mode
 **main.tex
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\main.tex"
+("D:\Tugas\Skripsi-1\Skripsi\Template Skripsi FTIS v7\main.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, arabic, armenian, assamese, basque, bengali
 , bokmal, bulgarian, catalan, coptic, croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, galic
@@ -163,15 +163,15 @@ Package graphics Info: Driver file: pdftex.def on input line 91.
 \lst@maxwidth=\dimen117
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
-File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
+File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
 \c@lstnumber=\count102
 \lst@skipnumbers=\count103
 \lst@framebox=\box29
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
-File: listings.cfg 2014/03/04 1.5c listings configuration
+File: listings.cfg 2014/09/06 1.5e listings configuration
 ))
-Package: listings 2014/03/04 1.5c (Carsten Heinz)
+Package: listings 2014/09/06 1.5e (Carsten Heinz)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\lscape.sty"
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
@@ -242,7 +242,7 @@ Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \bframebox=\box56
 LaTeX Info: Redefining \\ on input line 3056.
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\lipsum\lipsum.sty"
-Package: lipsum 2011/04/14 v1.2 150 paragraphs of Lorem Ipsum dummy text
+Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
 \c@lips@count=\count120
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\titlesec\titlesec.sty"
@@ -433,7 +433,7 @@ Package hyperref Info: Option `unicode' set `true' on input line 290.
 Package hyperref Info: Option `colorlinks' set `true' on input line 290.
 
 \@input{data.aux}
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\data.tex"
+("D:\Tugas\Skripsi-1\Skripsi\Template Skripsi FTIS v7\data.tex"
 ("C:\Program Files\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \heavyrulewidth=\dimen140
@@ -559,26 +559,10 @@ LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 ))
 \@input{dosen.aux}
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\dosen.tex")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\main.aux"
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab1.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab2.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab3.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab4.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab5.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab6.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab7.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab8.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab9.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Lampiran/lampA.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Lampiran/lampB.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Lampiran/lampC.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Lampiran/lampD.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Lampiran/lampE.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Lampiran/lampF.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Lampiran/lampG.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Lampiran/lampH.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Lampiran/lampI.aux"))
+("D:\Tugas\Skripsi-1\Skripsi\Template Skripsi FTIS v7\dosen.tex")
+("D:\Tugas\Skripsi-1\Skripsi\Template Skripsi FTIS v7\main.aux"
+("D:\Tugas\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab1.aux")
+("D:\Tugas\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab2.aux"))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 305.
 LaTeX Font Info:    ... okay on input line 305.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 305.
@@ -659,14 +643,14 @@ LaTeX Info: Redefining \ref on input line 305.
 LaTeX Info: Redefining \pageref on input line 305.
 LaTeX Info: Redefining \nameref on input line 305.
 
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\main.out")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\main.out")
+("D:\Tugas\Skripsi-1\Skripsi\Template Skripsi FTIS v7\main.out")
+("D:\Tugas\Skripsi-1\Skripsi\Template Skripsi FTIS v7\main.out")
 \@outlinefile=\write4
 
-<Gambar/logo-unpar.png, id=207, 360.59718pt x 356.0803pt>
+<Gambar/logo-unpar.png, id=95, 360.59718pt x 356.0803pt>
 File: Gambar/logo-unpar.png Graphic file (type png)
  <use Gambar/logo-unpar.png>
-Package pdftex.def Info: Gambar/logo-unpar.png used on input line 473.
+Package pdftex.def Info: Gambar/logo-unpar.png used on input line 472.
 (pdftex.def)             Requested size: 144.23631pt x 142.4296pt.
  [1
 
@@ -674,642 +658,105 @@ Package pdftex.def Info: Gambar/logo-unpar.png used on input line 473.
 
 
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <E:/Unpar/Skripsi-1/Skripsi/Template Skripsi FTIS v7/Gambar/logo-un
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <D:/Tugas/Skripsi-1/Skripsi/Template Skripsi FTIS v7/Gambar/logo-un
 par.png>] [2
 
 ]
 File: Gambar/logo-unpar.png Graphic file (type png)
 
 <use Gambar/logo-unpar.png>
-Package pdftex.def Info: Gambar/logo-unpar.png used on input line 473.
+Package pdftex.def Info: Gambar/logo-unpar.png used on input line 472.
 (pdftex.def)             Requested size: 144.23631pt x 142.4296pt.
  [3] [4
 
 ] [5] [6
 
-] [7] [8
-
-] [9] [10
-
-] [11] [12
-
-] [13] [14
-
-] [15
-
-] [16]
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\main.toc" [17
-
-])
-\tf@toc=\write5
- [18]
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\main.lof" [19])
-\tf@lof=\write6
- [20]
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\main.lot")
-\tf@lot=\write7
- [21] [22
-
 ]
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab1.tex"
-Bab 1.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 13.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 472.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 13.
- [1
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 472.
+ [7] [8
+
+] [9]
+[10
+
+] [11
+
+] [12
+
+] ("D:\Tugas\Skripsi-1\Skripsi\Template Skripsi FTIS v7\main.toc")
+\tf@toc=\write5
+ [13]
+("D:\Tugas\Skripsi-1\Skripsi\Template Skripsi FTIS v7\main.lof")
+\tf@lof=\write6
+ [14]
+("D:\Tugas\Skripsi-1\Skripsi\Template Skripsi FTIS v7\main.lot")
+\tf@lot=\write7
+ [15] [16
+
+]
+("D:\Tugas\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab1.tex"
+Bab 1.
+[1
 
 
 
-]) [2]
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab2.tex"
+]) [2] ("D:\Tugas\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab2.tex"
 Bab 2.
-<Gambar/tahapdatamining.jpg, id=492, 145.29282pt x 206.27063pt>
+<Gambar/tahapdatamining.jpg, id=207, 355.3275pt x 477.28313pt>
 File: Gambar/tahapdatamining.jpg Graphic file (type jpg)
  <use Gambar/tahapdatamining.jpg>
-Package pdftex.def Info: Gambar/tahapdatamining.jpg used on input line 8.
-(pdftex.def)             Requested size: 145.29245pt x 206.27011pt.
+Package pdftex.def Info: Gambar/tahapdatamining.jpg used on input line 10.
+(pdftex.def)             Requested size: 355.32661pt x 477.28195pt.
+ [3
 
-! Misplaced alignment tab character &.
-<argument> ...ning}, Sumber Data Mining Concepts &
-                                                   Techniques\fi 
-l.9 ..., Sumber Data Mining Concepts & Techniques}
-                                                  
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
 
-) [3
 
+] [4 <D:/Tugas/Skripsi-1/Skripsi/Template Skripsi FTIS v7/Gambar/tahapdatamining.jpg>] [5]) [6]
+("D:\Tugas\Skripsi-1\Skripsi\Template Skripsi FTIS v7\main.bbl"
 
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-] [4 <E:/Unpar/Skripsi-1/Skripsi/Template Skripsi FTIS v7/Gambar/tahapdatamining.jpg>]
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab3.tex"
-Bab 3.
-<Gambar/2d_trj.pdf, id=502, 225.14012pt x 165.18715pt>
-File: Gambar/2d_trj.pdf Graphic file (type pdf)
- <use Gambar/2d_trj.pdf>
-Package pdftex.def Info: Gambar/2d_trj.pdf used on input line 17.
-(pdftex.def)             Requested size: 225.13956pt x 165.18674pt.
-
-
-LaTeX Warning: Reference `fig:2d_trj' on page 5 undefined on input line 23.
-
-[5
-
-
-
- <E:/Unpar/Skripsi-1/Skripsi/Template Skripsi FTIS v7/Gambar/2d_trj.pdf>]
-
-LaTeX Warning: Reference `fig:mean_dis' on page 6 undefined on input line 43.
-
-<Gambar/mean_dis.pdf, id=538, 343.62135pt x 76.7427pt>
-File: Gambar/mean_dis.pdf Graphic file (type pdf)
- <use Gambar/mean_dis.pdf>
-Package pdftex.def Info: Gambar/mean_dis.pdf used on input line 52.
-(pdftex.def)             Requested size: 343.6205pt x 76.74251pt.
-
-
-LaTeX Warning: Reference `fig:robust_med' on page 6 undefined on input line 58.
-
-
-LaTeX Warning: Reference `fig:mean_dis' on page 6 undefined on input line 59.
-
-<Gambar/robust_med.pdf, id=540, 339.97676pt x 132.4388pt>
-File: Gambar/robust_med.pdf Graphic file (type pdf)
- <use Gambar/robust_med.pdf>
-Package pdftex.def Info: Gambar/robust_med.pdf used on input line 63.
-(pdftex.def)             Requested size: 339.97592pt x 132.43846pt.
- [6 <E:/Unpar/Skripsi-1/Skripsi/Template Skripsi FTIS v7/Gambar/mean_dis.pdf>] <Gambar/all30_visual.pdf, id=583, 209.971
-45pt x 181.39369pt>
-File: Gambar/all30_visual.pdf Graphic file (type pdf)
-
-<use Gambar/all30_visual.pdf>
-Package pdftex.def Info: Gambar/all30_visual.pdf used on input line 94.
-(pdftex.def)             Requested size: 209.97092pt x 181.39323pt.
- <Gambar/med_visual.pdf, id=584, 208.76294pt x 180.35179pt>
-File: Gambar/med_visual.pdf Graphic file (type pdf)
- <use Gambar/med_visual.pdf>
-Package pdftex.def Info: Gambar/med_visual.pdf used on input line 101.
-(pdftex.def)             Requested size: 208.76242pt x 180.35133pt.
-
-
-LaTeX Warning: Reference `fig:all30_visual' on page 7 undefined on input line 106.
-
-[7 <E:/Unpar/Skripsi-1/Skripsi/Template Skripsi FTIS v7/Gambar/robust_med.pdf>] [8 <E:/Unpar/Skripsi-1/Skripsi/Template 
-Skripsi FTIS v7/Gambar/all30_visual.pdf> <E:/Unpar/Skripsi-1/Skripsi/Template Skripsi FTIS v7/Gambar/med_visual.pdf>]
-
-LaTeX Warning: Reference `fig:med_visual' on page 9 undefined on input line 110.
-
-[9] <Gambar/switch_fail0.pdf, id=618, 329.07341pt x 70.18622pt>
-File: Gambar/switch_fail0.pdf Graphic file (type pdf)
- <use Gambar/switch_fail0.pdf>
-Package pdftex.def Info: Gambar/switch_fail0.pdf used on input line 168.
-(pdftex.def)             Requested size: 329.0726pt x 70.18604pt.
-
-<Gambar/switch_fail1.pdf, id=619, 256.08934pt x 124.83539pt>
-File: Gambar/switch_fail1.pdf Graphic file (type pdf)
- <use Gambar/switch_fail1.pdf>
-Package pdftex.def Info: Gambar/switch_fail1.pdf used on input line 175.
-(pdftex.def)             Requested size: 256.08871pt x 124.83507pt.
-
-
-LaTeX Warning: Reference `fig:switch_fail0' on page 10 undefined on input line 180.
-
-
-LaTeX Warning: Reference `fig:switch_fail0' on page 10 undefined on input line 181.
-
-
-LaTeX Warning: Reference `fig:switch_fail1' on page 10 undefined on input line 185.
-
-<Gambar/switch_fail2.pdf, id=622, 243.26283pt x 120.5303pt>
-File: Gambar/switch_fail2.pdf Graphic file (type pdf)
- <use Gambar/switch_fail2.pdf>
-Package pdftex.def Info: Gambar/switch_fail2.pdf used on input line 189.
-(pdftex.def)             Requested size: 243.26222pt x 120.53pt.
- [10 <E:/Unpar/Skripsi-1/Skripsi/Template Skripsi FTIS v7/Gambar/switch_fail0.pdf> <E:/Unpar/Skripsi-1/Skripsi/Template 
-Skripsi FTIS v7/Gambar/switch_fail1.pdf>]
-
-LaTeX Warning: Reference `fig:switch_fail2' on page 11 undefined on input line 194.
-
-
-LaTeX Warning: Reference `fig:switch_fail3' on page 11 undefined on input line 195.
-
-<Gambar/switch_fail3.pdf, id=637, 217.89084pt x 240.55873pt>
-File: Gambar/switch_fail3.pdf Graphic file (type pdf)
- <use Gambar/switch_fail3.pdf>
-Package pdftex.def Info: Gambar/switch_fail3.pdf used on input line 200.
-(pdftex.def)             Requested size: 217.89029pt x 240.55814pt.
-
-
-LaTeX Warning: Reference `fig:homotopy' on page 11 undefined on input line 210.
-
-<Gambar/homotopy.pdf, id=640, 187.27264pt x 106.97466pt>
-File: Gambar/homotopy.pdf Graphic file (type pdf)
- <use Gambar/homotopy.pdf>
-Package pdftex.def Info: Gambar/homotopy.pdf used on input line 214.
-(pdftex.def)             Requested size: 187.27219pt x 106.97438pt.
-
-
-LaTeX Warning: Reference `fig:base_sign' on page 11 undefined on input line 220.
-
-
-LaTeX Warning: Reference `fig:base_sign' on page 11 undefined on input line 225.
-
-[11 <E:/Unpar/Skripsi-1/Skripsi/Template Skripsi FTIS v7/Gambar/switch_fail2.pdf> <E:/Unpar/Skripsi-1/Skripsi/Template S
-kripsi FTIS v7/Gambar/switch_fail3.pdf>] <Gambar/base_sign.pdf, id=652, 306.60419pt x 135.439pt>
-File: Gambar/base_sign.pdf Graphic file (type pdf)
-
-<use Gambar/base_sign.pdf>
-Package pdftex.def Info: Gambar/base_sign.pdf used on input line 230.
-(pdftex.def)             Requested size: 306.60342pt x 135.43866pt.
-
-
-LaTeX Warning: Reference `fig:diff_sign' on page 12 undefined on input line 241.
-
-
-LaTeX Warning: Reference `fig:diff_sign' on page 12 undefined on input line 245.
-
-<Gambar/diff_sign.pdf, id=653, 289.02008pt x 161.27853pt>
-File: Gambar/diff_sign.pdf Graphic file (type pdf)
- <use Gambar/diff_sign.pdf>
-Package pdftex.def Info: Gambar/diff_sign.pdf used on input line 255.
-(pdftex.def)             Requested size: 289.01938pt x 161.27812pt.
- [12 <E:/Unpar/Skripsi-1/Skripsi/Template Skripsi FTIS v7/Gambar/homotopy.pdf> <E:/Unpar/Skripsi-1/Skripsi/Template Skri
-psi FTIS v7/Gambar/base_sign.pdf>]
-
-LaTeX Warning: Reference `fig:homotopy_algo' on page 13 undefined on input line 271.
-
-<Gambar/hmtp_works.pdf, id=679, 314.45761pt x 108.90887pt>
-File: Gambar/hmtp_works.pdf Graphic file (type pdf)
- <use Gambar/hmtp_works.pdf>
-Package pdftex.def Info: Gambar/hmtp_works.pdf used on input line 277.
-(pdftex.def)             Requested size: 314.45683pt x 108.9086pt.
- [13 <E:/Unpar/Skripsi-1/Skripsi/Template Skripsi FTIS v7/Gambar/diff_sign.pdf> <E:/Unpar/Skripsi-1/Skripsi/Template Skr
-ipsi FTIS v7/Gambar/hmtp_works.pdf>]
-
-LaTeX Warning: Reference `fig:homotopy_fail0' on page 14 undefined on input line 294.
-
-<Gambar/homotopy_fail0.pdf, id=701, 330.02396pt x 116.72508pt>
-File: Gambar/homotopy_fail0.pdf Graphic file (type pdf)
- <use Gambar/homotopy_fail0.pdf>
-Package pdftex.def Info: Gambar/homotopy_fail0.pdf used on input line 299.
-(pdftex.def)             Requested size: 330.02315pt x 116.7248pt.
-
-
-LaTeX Warning: Reference `fig:homotopy_fail1' on page 14 undefined on input line 307.
-
-<Gambar/homotopy_fail1.pdf, id=703, 228.35544pt x 194.79173pt>
-File: Gambar/homotopy_fail1.pdf Graphic file (type pdf)
- <use Gambar/homotopy_fail1.pdf>
-Package pdftex.def Info: Gambar/homotopy_fail1.pdf used on input line 311.
-(pdftex.def)             Requested size: 228.35486pt x 194.79126pt.
- [14 <E:/Unpar/Skripsi-1/Skripsi/Template Skripsi FTIS v7/Gambar/homotopy_fail0.pdf> <E:/Unpar/Skripsi-1/Skripsi/Templat
-e Skripsi FTIS v7/Gambar/homotopy_fail1.pdf>] [15]
-Underfull \vbox (badness 1694) has occurred while \output is active []
-
- [16]) [17]
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab4.tex" [18
-
-
-
-]
-Bab 4.
-File: Gambar/2d_trj.pdf Graphic file (type pdf)
-<use Gambar/2d_trj.pdf>
-Package pdftex.def Info: Gambar/2d_trj.pdf used on input line 17.
-(pdftex.def)             Requested size: 225.13956pt x 165.18674pt.
-
-
-LaTeX Warning: Reference `fig:2d_trj' on page 19 undefined on input line 23.
-
-[19]
-
-LaTeX Warning: Reference `fig:mean_dis' on page 20 undefined on input line 43.
-
-File: Gambar/mean_dis.pdf Graphic file (type pdf)
-<use Gambar/mean_dis.pdf>
-Package pdftex.def Info: Gambar/mean_dis.pdf used on input line 52.
-(pdftex.def)             Requested size: 343.6205pt x 76.74251pt.
-
-
-LaTeX Warning: Reference `fig:robust_med' on page 20 undefined on input line 58.
-
-
-LaTeX Warning: Reference `fig:mean_dis' on page 20 undefined on input line 59.
-
-File: Gambar/robust_med.pdf Graphic file (type pdf)
-<use Gambar/robust_med.pdf>
-Package pdftex.def Info: Gambar/robust_med.pdf used on input line 63.
-(pdftex.def)             Requested size: 339.97592pt x 132.43846pt.
- [20]
-File: Gambar/all30_visual.pdf Graphic file (type pdf)
- <use Gambar/all30_visual.pdf>
-Package pdftex.def Info: Gambar/all30_visual.pdf used on input line 94.
-(pdftex.def)             Requested size: 209.97092pt x 181.39323pt.
-File: Gambar/med_visual.pdf Graphic file (type pdf)
- <use Gambar/med_visual.pdf>
-Package pdftex.def Info: Gambar/med_visual.pdf used on input line 101.
-(pdftex.def)             Requested size: 208.76242pt x 180.35133pt.
-
-
-LaTeX Warning: Reference `fig:all30_visual' on page 21 undefined on input line 106.
-
-[21] [22]
-
-LaTeX Warning: Reference `fig:med_visual' on page 23 undefined on input line 110.
-
-[23]
-File: Gambar/switch_fail0.pdf Graphic file (type pdf)
- <use Gambar/switch_fail0.pdf>
-Package pdftex.def Info: Gambar/switch_fail0.pdf used on input line 168.
-(pdftex.def)             Requested size: 329.0726pt x 70.18604pt.
-File: Gambar/switch_fail1.pdf Graphic file (type pdf)
- <use Gambar/switch_fail1.pdf>
-Package pdftex.def Info: Gambar/switch_fail1.pdf used on input line 175.
-(pdftex.def)             Requested size: 256.08871pt x 124.83507pt.
-
-
-LaTeX Warning: Reference `fig:switch_fail0' on page 24 undefined on input line 180.
-
-
-LaTeX Warning: Reference `fig:switch_fail0' on page 24 undefined on input line 181.
-
-
-LaTeX Warning: Reference `fig:switch_fail1' on page 24 undefined on input line 185.
-
-File: Gambar/switch_fail2.pdf Graphic file (type pdf)
-<use Gambar/switch_fail2.pdf>
-Package pdftex.def Info: Gambar/switch_fail2.pdf used on input line 189.
-(pdftex.def)             Requested size: 243.26222pt x 120.53pt.
- [24]
-
-LaTeX Warning: Reference `fig:switch_fail2' on page 25 undefined on input line 194.
-
-
-LaTeX Warning: Reference `fig:switch_fail3' on page 25 undefined on input line 195.
-
-File: Gambar/switch_fail3.pdf Graphic file (type pdf)
-<use Gambar/switch_fail3.pdf>
-Package pdftex.def Info: Gambar/switch_fail3.pdf used on input line 200.
-(pdftex.def)             Requested size: 217.89029pt x 240.55814pt.
-
-
-LaTeX Warning: Reference `fig:homotopy' on page 25 undefined on input line 210.
-
-File: Gambar/homotopy.pdf Graphic file (type pdf)
-<use Gambar/homotopy.pdf>
-Package pdftex.def Info: Gambar/homotopy.pdf used on input line 214.
-(pdftex.def)             Requested size: 187.27219pt x 106.97438pt.
-
-
-LaTeX Warning: Reference `fig:base_sign' on page 25 undefined on input line 220.
-
-
-LaTeX Warning: Reference `fig:base_sign' on page 25 undefined on input line 225.
-
-[25]
-File: Gambar/base_sign.pdf Graphic file (type pdf)
- <use Gambar/base_sign.pdf>
-Package pdftex.def Info: Gambar/base_sign.pdf used on input line 230.
-(pdftex.def)             Requested size: 306.60342pt x 135.43866pt.
-
-
-LaTeX Warning: Reference `fig:diff_sign' on page 26 undefined on input line 241.
-
-
-LaTeX Warning: Reference `fig:diff_sign' on page 26 undefined on input line 245.
-
-File: Gambar/diff_sign.pdf Graphic file (type pdf)
-<use Gambar/diff_sign.pdf>
-Package pdftex.def Info: Gambar/diff_sign.pdf used on input line 255.
-(pdftex.def)             Requested size: 289.01938pt x 161.27812pt.
- [26]
-
-LaTeX Warning: Reference `fig:homotopy_algo' on page 27 undefined on input line 271.
-
-File: Gambar/hmtp_works.pdf Graphic file (type pdf)
-<use Gambar/hmtp_works.pdf>
-Package pdftex.def Info: Gambar/hmtp_works.pdf used on input line 277.
-(pdftex.def)             Requested size: 314.45683pt x 108.9086pt.
- [27]
-
-LaTeX Warning: Reference `fig:homotopy_fail0' on page 28 undefined on input line 294.
-
-File: Gambar/homotopy_fail0.pdf Graphic file (type pdf)
-<use Gambar/homotopy_fail0.pdf>
-Package pdftex.def Info: Gambar/homotopy_fail0.pdf used on input line 299.
-(pdftex.def)             Requested size: 330.02315pt x 116.7248pt.
-
-
-LaTeX Warning: Reference `fig:homotopy_fail1' on page 28 undefined on input line 307.
-
-File: Gambar/homotopy_fail1.pdf Graphic file (type pdf)
-<use Gambar/homotopy_fail1.pdf>
-Package pdftex.def Info: Gambar/homotopy_fail1.pdf used on input line 311.
-(pdftex.def)             Requested size: 228.35486pt x 194.79126pt.
- [28] [29]
-Underfull \vbox (badness 1694) has occurred while \output is active []
-
- [30]) [31]
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab5.tex" [32
-
-
-
-]
-Bab 5.
-File: Gambar/2d_trj.pdf Graphic file (type pdf)
-<use Gambar/2d_trj.pdf>
-Package pdftex.def Info: Gambar/2d_trj.pdf used on input line 17.
-(pdftex.def)             Requested size: 225.13956pt x 165.18674pt.
-
-
-LaTeX Warning: Reference `fig:2d_trj' on page 33 undefined on input line 23.
-
-[33]
-
-LaTeX Warning: Reference `fig:mean_dis' on page 34 undefined on input line 43.
-
-File: Gambar/mean_dis.pdf Graphic file (type pdf)
-<use Gambar/mean_dis.pdf>
-Package pdftex.def Info: Gambar/mean_dis.pdf used on input line 52.
-(pdftex.def)             Requested size: 343.6205pt x 76.74251pt.
-
-
-LaTeX Warning: Reference `fig:robust_med' on page 34 undefined on input line 58.
-
-
-LaTeX Warning: Reference `fig:mean_dis' on page 34 undefined on input line 59.
-
-File: Gambar/robust_med.pdf Graphic file (type pdf)
-<use Gambar/robust_med.pdf>
-Package pdftex.def Info: Gambar/robust_med.pdf used on input line 63.
-(pdftex.def)             Requested size: 339.97592pt x 132.43846pt.
- [34]
-File: Gambar/all30_visual.pdf Graphic file (type pdf)
- <use Gambar/all30_visual.pdf>
-Package pdftex.def Info: Gambar/all30_visual.pdf used on input line 94.
-(pdftex.def)             Requested size: 209.97092pt x 181.39323pt.
-File: Gambar/med_visual.pdf Graphic file (type pdf)
- <use Gambar/med_visual.pdf>
-Package pdftex.def Info: Gambar/med_visual.pdf used on input line 101.
-(pdftex.def)             Requested size: 208.76242pt x 180.35133pt.
-
-
-LaTeX Warning: Reference `fig:all30_visual' on page 35 undefined on input line 106.
-
-[35] [36]
-
-LaTeX Warning: Reference `fig:med_visual' on page 37 undefined on input line 110.
-
-[37]
-File: Gambar/switch_fail0.pdf Graphic file (type pdf)
- <use Gambar/switch_fail0.pdf>
-Package pdftex.def Info: Gambar/switch_fail0.pdf used on input line 168.
-(pdftex.def)             Requested size: 329.0726pt x 70.18604pt.
-File: Gambar/switch_fail1.pdf Graphic file (type pdf)
- <use Gambar/switch_fail1.pdf>
-Package pdftex.def Info: Gambar/switch_fail1.pdf used on input line 175.
-(pdftex.def)             Requested size: 256.08871pt x 124.83507pt.
-
-
-LaTeX Warning: Reference `fig:switch_fail0' on page 38 undefined on input line 180.
-
-
-LaTeX Warning: Reference `fig:switch_fail0' on page 38 undefined on input line 181.
-
-
-LaTeX Warning: Reference `fig:switch_fail1' on page 38 undefined on input line 185.
-
-File: Gambar/switch_fail2.pdf Graphic file (type pdf)
-<use Gambar/switch_fail2.pdf>
-Package pdftex.def Info: Gambar/switch_fail2.pdf used on input line 189.
-(pdftex.def)             Requested size: 243.26222pt x 120.53pt.
- [38]
-
-LaTeX Warning: Reference `fig:switch_fail2' on page 39 undefined on input line 194.
-
-
-LaTeX Warning: Reference `fig:switch_fail3' on page 39 undefined on input line 195.
-
-File: Gambar/switch_fail3.pdf Graphic file (type pdf)
-<use Gambar/switch_fail3.pdf>
-Package pdftex.def Info: Gambar/switch_fail3.pdf used on input line 200.
-(pdftex.def)             Requested size: 217.89029pt x 240.55814pt.
-
-
-LaTeX Warning: Reference `fig:homotopy' on page 39 undefined on input line 210.
-
-File: Gambar/homotopy.pdf Graphic file (type pdf)
-<use Gambar/homotopy.pdf>
-Package pdftex.def Info: Gambar/homotopy.pdf used on input line 214.
-(pdftex.def)             Requested size: 187.27219pt x 106.97438pt.
-
-
-LaTeX Warning: Reference `fig:base_sign' on page 39 undefined on input line 220.
-
-
-LaTeX Warning: Reference `fig:base_sign' on page 39 undefined on input line 225.
-
-[39]
-File: Gambar/base_sign.pdf Graphic file (type pdf)
- <use Gambar/base_sign.pdf>
-Package pdftex.def Info: Gambar/base_sign.pdf used on input line 230.
-(pdftex.def)             Requested size: 306.60342pt x 135.43866pt.
-
-
-LaTeX Warning: Reference `fig:diff_sign' on page 40 undefined on input line 241.
-
-
-LaTeX Warning: Reference `fig:diff_sign' on page 40 undefined on input line 245.
-
-File: Gambar/diff_sign.pdf Graphic file (type pdf)
-<use Gambar/diff_sign.pdf>
-Package pdftex.def Info: Gambar/diff_sign.pdf used on input line 255.
-(pdftex.def)             Requested size: 289.01938pt x 161.27812pt.
- [40]
-
-LaTeX Warning: Reference `fig:homotopy_algo' on page 41 undefined on input line 271.
-
-File: Gambar/hmtp_works.pdf Graphic file (type pdf)
-<use Gambar/hmtp_works.pdf>
-Package pdftex.def Info: Gambar/hmtp_works.pdf used on input line 277.
-(pdftex.def)             Requested size: 314.45683pt x 108.9086pt.
- [41]
-
-LaTeX Warning: Reference `fig:homotopy_fail0' on page 42 undefined on input line 294.
-
-File: Gambar/homotopy_fail0.pdf Graphic file (type pdf)
-<use Gambar/homotopy_fail0.pdf>
-Package pdftex.def Info: Gambar/homotopy_fail0.pdf used on input line 299.
-(pdftex.def)             Requested size: 330.02315pt x 116.7248pt.
-
-
-LaTeX Warning: Reference `fig:homotopy_fail1' on page 42 undefined on input line 307.
-
-File: Gambar/homotopy_fail1.pdf Graphic file (type pdf)
-<use Gambar/homotopy_fail1.pdf>
-Package pdftex.def Info: Gambar/homotopy_fail1.pdf used on input line 311.
-(pdftex.def)             Requested size: 228.35486pt x 194.79126pt.
- [42] [43]
-Underfull \vbox (badness 1694) has occurred while \output is active []
-
- [44]) [45]
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab6.tex")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab7.tex")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab8.tex")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab9.tex")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\main.bbl" [46
-
-
-
-
-
-
-
-
-
-
-] [47] [48]) [49]
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Lampiran/lampA.tex" [50
-
-
-]
-Lampiran A.
-<Gambar/appxa2.pdf, id=963, 319.56189pt x 418.09pt>
-File: Gambar/appxa2.pdf Graphic file (type pdf)
- <use Gambar/appxa2.pdf>
-Package pdftex.def Info: Gambar/appxa2.pdf used on input line 8.
-(pdftex.def)             Requested size: 319.5611pt x 418.08896pt.
- [51 <E:/Unpar/Skripsi-1/Skripsi/Template Skripsi FTIS v7/Gambar/appxa2.pdf>]) [52] ("E:\Unpar\Skripsi-1\Skripsi\Templat
-e Skripsi FTIS v7\Lampiran/lampB.tex"
-Lampiran B.
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
-File: lstlang1.sty 2014/03/04 1.5c listings language file
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 19.
-) [53
-
-
-
-]
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Lampiran/lampC.tex" [54
-
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 512.
+ [7
 
 
 ]
-Lampiran C.
-[55]) [56] ("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Lampiran/lampD.tex")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Lampiran/lampE.tex")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Lampiran/lampF.tex")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Lampiran/lampG.tex")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Lampiran/lampH.tex")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Lampiran/lampI.tex")
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 513.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 513.
-
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\main.aux"
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab1.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab2.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab3.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab4.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab5.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab6.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab7.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab8.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab9.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Lampiran/lampA.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Lampiran/lampB.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Lampiran/lampC.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Lampiran/lampD.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Lampiran/lampE.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Lampiran/lampF.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Lampiran/lampG.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Lampiran/lampH.aux")
-("E:\Unpar\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Lampiran/lampI.aux"))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 513.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 513.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 512.
+ ("D:\Tugas\Skripsi-1\Skripsi\Template Skripsi FTIS v7\main.aux"
+("D:\Tugas\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab1.aux")
+("D:\Tugas\Skripsi-1\Skripsi\Template Skripsi FTIS v7\Bab/bab2.aux"))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 512.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 512.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4DDB937BACA1249A0596B95499BFD4A8;8865.
-
-
-LaTeX Warning: There were undefined references.
-
+(rerunfilecheck)             Checksum: 6C55F3A58AD5E678588FE0259E4BF189;3073.
  ) 
 Here is how much of TeX's memory you used:
- 14549 strings out of 493921
- 205463 string characters out of 3147258
- 629071 words of memory out of 3000000
- 17118 multiletter control sequences out of 15000+200000
- 22269 words of font info for 52 fonts, out of 3000000 for 9000
+ 13810 strings out of 493921
+ 190045 string characters out of 3147258
+ 391449 words of memory out of 3000000
+ 16833 multiletter control sequences out of 15000+200000
+ 20012 words of font info for 43 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
- 45i,12n,44p,814b,1770s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx0600.pk> <C:\Users\Jovan Guna
-wan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTe
-X\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\j
-knappen\ec\dpi600\ecrm0600.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0
-800.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1000.pk> <C:\Users\Jovan
- Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\
-MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
-our\jknappen\ec\dpi600\ecti1440.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
-ecbx1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\
-Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Jovan Gunawan\AppData\L
-ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (78 pages, 1114352 bytes).
+ 45i,11n,43p,814b,421s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1000.pk> <C:\Users\Jovan Guna
+wan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbl1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTe
+X\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbl1200.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\j
+knappen\ec\dpi600\ecbl1440.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1
+000.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1095.pk> <C:\Users\Jovan
+ Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1440.pk> <C:\Users\Jovan Gunawan\AppData\Local\
+MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi600\ecsl1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
+ecbx1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\
+Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on main.pdf (23 pages, 327555 bytes).
 PDF statistics:
- 1805 PDF objects out of 2073 (max. 8388607)
- 370 named destinations out of 1000 (max. 500000)
- 499 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 652 PDF objects out of 1000 (max. 8388607)
+ 56 named destinations out of 1000 (max. 500000)
+ 195 words of extra memory for PDF output out of 10000 (max. 10000000)
 

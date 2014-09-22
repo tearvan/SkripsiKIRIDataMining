@@ -366,7 +366,6 @@
 							\centering Pembimbing Utama \\ \vspace{2.25cm} \vpembu \\
 						\end{minipage} \hspace{0.5cm}
 						\begin{minipage}[b]{0.46\linewidth}
-							\centering Pembimbing Pendamping \\	\vspace{2.25cm} \vpembs \\
 						\end{minipage}	
 					}
 		\end{centering}
@@ -387,33 +386,33 @@
 \cleardoublepage
 
 % Lembar Pernyataan
-\vspace*{4cm}
-{\Large\bf \centering PERNYATAAN\\} \vspace{1cm}
-\noindent
-Dengan ini saya yang bertandatangan di bawah ini menyatakan bahwa \MakeLowercase{\vstaINA} dengan judul:  \vspace{0.5cm}
-\begin{center}
-	{\large \bf \vjudulINA \\}
-\end{center}
-\vspace{0.75cm}
-adalah benar-benar karya saya sendiri, dan saya tidak melakukan penjiplakan atau pengutipan dengan cara-cara yang tidak sesuai dengan etika keilmuan yang berlaku dalam masyarakat keilmuan.
-			
-Atas pernyataan ini, saya siap menanggung segala risiko dan sanksi yang dijatuhkan kepada saya, apabila di kemudian hari ditemukan adanya pelanggaran terhadap etika keilmuan dalam karya saya, atau jika ada tuntutan formal atau non-formal dari pihak lain berkaitan dengan keaslian karya saya ini.\\
-\vspace{0.25cm}
+%\vspace*{4cm}
+%{\Large\bf \centering PERNYATAAN\\} \vspace{1cm}
+%\noindent
+%Dengan ini saya yang bertandatangan di bawah ini menyatakan bahwa \MakeLowercase{\vstaINA} dengan judul:  \vspace{0.5cm}
+%\begin{center}
+%	{\large \bf \vjudulINA \\}
+%\end{center}
+%\vspace{0.75cm}
+%adalah benar-benar karya saya sendiri, dan saya tidak melakukan penjiplakan atau pengutipan dengan cara-cara yang tidak sesuai dengan etika keilmuan yang berlaku %dalam masyarakat keilmuan.
+%			
+%Atas pernyataan ini, saya siap menanggung segala risiko dan sanksi yang dijatuhkan kepada saya, apabila di kemudian hari ditemukan adanya pelanggaran terhadap %etika keilmuan dalam karya saya, atau jika ada tuntutan formal atau non-formal dari pihak lain berkaitan dengan keaslian karya saya ini.\\
+%\vspace{0.25cm}
 
-\begin{flushright}	
-	Dinyatakan di Bandung,\\
-	Tanggal \vtanggal\ \vbulan\ \vtahun \\ \vspace{0.5cm}
-	\begin{tabular}{|p{1.75cm}|}
-		\hline
-		\\ Meterai \\ \\  
-		\hline
-	\end{tabular}\\
-	\vspace{0.5cm} 
-	\vlnama \\
-	NPM: \vnpm
-\end{flushright}
- \cleardoublepage
-}{}
+%\begin{flushright}	
+%	Dinyatakan di Bandung,\\
+%	Tanggal \vtanggal\ \vbulan\ \vtahun \\ \vspace{0.5cm}
+%	\begin{tabular}{|p{1.75cm}|}
+%		\hline
+%		\\ Meterai \\ \\  
+%		\hline
+%	\end{tabular}\\
+%	\vspace{0.5cm} 
+%	\vlnama \\
+%	NPM: \vnpm
+%\end{flushright}
+% \cleardoublepage
+%}{}
 
 % Abstrak & Abstract
 \ifthenelse{{\equal{\vmode}{sidang_akhir}}\or{\equal{\vmode}{final}}}{
@@ -455,13 +454,13 @@ Atas pernyataan ini, saya siap menanggung segala risiko dan sanksi yang dijatuhk
 	  {	\chapter*{Kata Pengantar}
 		\label{ch:prakata}
 		\addcontentsline{toc}{chapter}{Kata Pengantar}
-		\vprakata \vspace{0.25cm}
+%		\vprakata \vspace{0.25cm}
 		\begin{flushright}	
 			Bandung,\ \vbulan\ \vtahun \\ \vspace{1cm}
 			Penulis \\
 		\end{flushright}
 		\cleardoublepage		
-	  }
+	  }}
 }{}
 
 \ifthenelse{{\equal{\vmode}{kosong}}\or{\equal{\vmode}{cover}}}{}
@@ -485,13 +484,13 @@ Atas pernyataan ini, saya siap menanggung segala risiko dan sanksi yang dijatuhk
 \tampilbab{\vbab}
 \ifdefstring{\vbaba}{1}{\include{Bab/bab1}}{}
 \ifdefstring{\vbabb}{1}{\include{Bab/bab2}}{}
-\ifdefstring{\vbabc}{1}{\include{Bab/bab3}}{}
-\ifdefstring{\vbabd}{1}{\include{Bab/bab4}}{}
-\ifdefstring{\vbabe}{1}{\include{Bab/bab5}}{}
-\ifdefstring{\vbabf}{1}{\include{Bab/bab6}}{}
-\ifdefstring{\vbabg}{1}{\include{Bab/bab7}}{}
-\ifdefstring{\vbabh}{1}{\include{Bab/bab8}}{}
-\ifdefstring{\vbabi}{1}{\include{Bab/bab9}}{}
+%\ifdefstring{\vbabc}{1}{\include{Bab/bab3}}{}
+%\ifdefstring{\vbabd}{1}{\include{Bab/bab4}}{}
+%\ifdefstring{\vbabe}{1}{\include{Bab/bab5}}{}
+%\ifdefstring{\vbabf}{1}{\include{Bab/bab6}}{}
+%\ifdefstring{\vbabg}{1}{\include{Bab/bab7}}{}
+%\ifdefstring{\vbabh}{1}{\include{Bab/bab8}}{}
+%\ifdefstring{\vbabi}{1}{\include{Bab/bab9}}{}
 
 \bibliographystyle{ieeetr}
 \bibliography{pustaka}
@@ -499,15 +498,15 @@ Atas pernyataan ini, saya siap menanggung segala risiko dan sanksi yang dijatuhk
 \appendix
 \apptoc
 
-\tampillmp{\vlmp}
-\ifdefstring{\vlmpa}{1}{\include{Lampiran/lampA}}{}
-\ifdefstring{\vlmpb}{1}{\include{Lampiran/lampB}}{}
-\ifdefstring{\vlmpc}{1}{\include{Lampiran/lampC}}{}
-\ifdefstring{\vlmpd}{1}{\include{Lampiran/lampD}}{}
-\ifdefstring{\vlmpe}{1}{\include{Lampiran/lampE}}{}
-\ifdefstring{\vlmpf}{1}{\include{Lampiran/lampF}}{}
-\ifdefstring{\vlmpg}{1}{\include{Lampiran/lampG}}{}
-\ifdefstring{\vlmph}{1}{\include{Lampiran/lampH}}{}
-\ifdefstring{\vlmpi}{1}{\include{Lampiran/lampI}}{}
+%\tampillmp{\vlmp}
+%\ifdefstring{\vlmpa}{1}{\include{Lampiran/lampA}}{}
+%\ifdefstring{\vlmpb}{1}{\include{Lampiran/lampB}}{}
+%\ifdefstring{\vlmpc}{1}{\include{Lampiran/lampC}}{}
+%\ifdefstring{\vlmpd}{1}{\include{Lampiran/lampD}}{}
+%\ifdefstring{\vlmpe}{1}{\include{Lampiran/lampE}}{}
+%\ifdefstring{\vlmpf}{1}{\include{Lampiran/lampF}}{}
+%\ifdefstring{\vlmpg}{1}{\include{Lampiran/lampG}}{}
+%\ifdefstring{\vlmph}{1}{\include{Lampiran/lampH}}{}
+%\ifdefstring{\vlmpi}{1}{\include{Lampiran/lampI}}{}
 
 \end{document}

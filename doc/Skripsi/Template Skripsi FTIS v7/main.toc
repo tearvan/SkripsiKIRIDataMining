@@ -1,53 +1,33 @@
 \select@language {bahasa}
-\contentsline {chapter}{Kata Pengantar}{xv}{chapter*.1}
-\contentsline {chapter}{Daftar Isi}{xvii}{section*.2}
-\contentsline {chapter}{Daftar Gambar}{xix}{section*.3}
-\contentsline {chapter}{Daftar Tabel}{xxi}{section*.4}
+\contentsline {chapter}{Kata Pengantar}{xi}{chapter*.1}
+\contentsline {chapter}{Daftar Isi}{xiii}{section*.2}
+\contentsline {chapter}{Daftar Gambar}{xiv}{section*.3}
+\contentsline {chapter}{Daftar Tabel}{xv}{section*.4}
 \contentsline {chapter}{\numberline {1}Pendahuluan}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Latar Belakang}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Perumusan Masalah}{1}{section.1.2}
-\contentsline {section}{\numberline {1.3}Tujuan dan Manfaat}{2}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Tujuan}{2}{subsection.1.3.1}
-\contentsline {subsection}{\numberline {1.3.2}Manfaat}{2}{subsection.1.3.2}
-\contentsline {section}{\numberline {1.4}Ruang Lingkup Masalah}{2}{section.1.4}
-\contentsline {section}{\numberline {1.5}Metode Penelitian dan Teknik Pengumpulan Data}{2}{section.1.5}
-\contentsline {subsection}{\numberline {1.5.1}Metode Penelitian}{2}{subsection.1.5.1}
-\contentsline {subsection}{\numberline {1.5.2}Teknik Pengumpulan Data}{2}{subsection.1.5.2}
+\contentsline {section}{\numberline {1.3}Tujuan}{1}{section.1.3}
+\contentsline {section}{\numberline {1.4}Batasan Masalah}{2}{section.1.4}
+\contentsline {section}{\numberline {1.5}Metode Penelitian}{2}{section.1.5}
 \contentsline {section}{\numberline {1.6}Sistematika Pembahasan}{2}{section.1.6}
-\contentsline {chapter}{\numberline {2}Ladasan Teori}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}Tahap Data Mining}{3}{section.2.1}
-\contentsline {chapter}{\numberline {3}Introduction}{5}{chapter.3}
-\contentsline {section}{\numberline {3.1}Motivation}{5}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Determine the most typical trajectory}{7}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Better visualization for a set of trajectories}{7}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}$k$-medoid clustering}{9}{subsection.3.1.3}
-\contentsline {section}{\numberline {3.2}Basic Idea of the Research}{10}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}The Simple Switching Method }{10}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}The Algorithm Using the Concept of Homotopy}{11}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}The Proposed Solutions}{14}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Outline of the Thesis}{15}{section.3.3}
-\contentsline {chapter}{\numberline {4}Introduction}{19}{chapter.4}
-\contentsline {section}{\numberline {4.1}Motivation}{19}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Determine the most typical trajectory}{21}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Better visualization for a set of trajectories}{21}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}$k$-medoid clustering}{23}{subsection.4.1.3}
-\contentsline {section}{\numberline {4.2}Basic Idea of the Research}{24}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}The Simple Switching Method }{24}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}The Algorithm Using the Concept of Homotopy}{25}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}The Proposed Solutions}{28}{subsection.4.2.3}
-\contentsline {section}{\numberline {4.3}Outline of the Thesis}{29}{section.4.3}
-\contentsline {chapter}{\numberline {5}Introduction}{33}{chapter.5}
-\contentsline {section}{\numberline {5.1}Motivation}{33}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Determine the most typical trajectory}{35}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Better visualization for a set of trajectories}{35}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}$k$-medoid clustering}{37}{subsection.5.1.3}
-\contentsline {section}{\numberline {5.2}Basic Idea of the Research}{38}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}The Simple Switching Method }{38}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}The Algorithm Using the Concept of Homotopy}{39}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}The Proposed Solutions}{42}{subsection.5.2.3}
-\contentsline {section}{\numberline {5.3}Outline of the Thesis}{43}{section.5.3}
-\contentsline {chapter}{Daftar Referensi}{47}{chapter*.5}
+\contentsline {chapter}{\numberline {2}Landasan Teori}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}\textsl {Data Mining}}{3}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Tahap \textsl {Data Mining}}{3}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}\textsl {Data Cleaning}}{3}{subsection.2.1.2}
+\contentsline {subsubsection}{\textsl {Missing Values}}{3}{subsubsection*.5}
+\contentsline {subsubsection}{\textsl {Noisy Data}}{5}{subsubsection*.6}
+\contentsline {subsection}{\numberline {2.1.3}\textsl {Data integration}}{5}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}\textsl {Data selection}}{5}{subsection.2.1.4}
+\contentsline {subsection}{\numberline {2.1.5}\textsl {Data Transformation}}{5}{subsection.2.1.5}
+\contentsline {subsubsection}{\textsl {Data Reduction}}{5}{subsubsection*.7}
+\contentsline {subsubsection}{\textsl {Data Cube Aggregation}}{6}{subsubsection*.8}
+\contentsline {subsubsection}{\textsl {Attribute Subset Selection}}{6}{subsubsection*.9}
+\contentsline {subsubsection}{\textsl {Dimensionality Reduction}}{6}{subsubsection*.10}
+\contentsline {subsubsection}{\textsl {Numerosity Reduction}}{6}{subsubsection*.11}
+\contentsline {subsubsection}{\textsl {Discretization and Concept Hierarchy Generation}}{6}{subsubsection*.12}
+\contentsline {subsection}{\numberline {2.1.6}\textsl {Data Mining}}{6}{subsection.2.1.6}
+\contentsline {subsection}{\numberline {2.1.7}\textsl {Pattern Evaluation}}{6}{subsection.2.1.7}
+\contentsline {subsection}{\numberline {2.1.8}\textsl {Knowledge Presentation}}{6}{subsection.2.1.8}
+\contentsline {section}{\numberline {2.2}\textsl {Spatial and Spatiotemporal}}{6}{section.2.2}
+\contentsline {chapter}{Daftar Referensi}{7}{chapter*.13}
 \renewcommand {\cftchappresnum }{\bf \scshape }
-\contentsline {chapter}{\numberline {A}The Program}{51}{appendix.A}
-\contentsline {chapter}{\numberline {B}The Source Code}{53}{appendix.B}
-\contentsline {chapter}{\numberline {C}The Source Code}{55}{appendix.C}

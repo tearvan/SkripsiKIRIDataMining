@@ -4,20 +4,11 @@
 \section{Latar Belakang}
 \label{sec:motivation}
 
-\textsl{Data mining} merupakan teknik untuk mengolah \textsl{data}, mencari suatu pola, kemudian dievaluasi untuk mendapatkan \textsl{knowledge}. Pola yang dihasilkan oleh \textsl{data mining} dapat digunakan untuk mencari suatu hal yang menarik dan unik. Dari pola tersebutlah, akan didapatkan suatu informasi yang sangat bermakna yang biasa disebut sebagai \textsl{knowledge}.
+KIRI merupakan suatu organisasi yang memiliki tujuan untuk mengurangi pemanasan global, kemacetan, dan harga BBM tinggi. Untuk mencapai hal tersebut, KIRI memberikan solusi dengan mengajak Indonesia untuk menggunakan fasilitas transportasi publik. Maka dari itu, KIRI bergerak di bidang transportasi publik dengan memberikan petunjuk jalan menggunakan transportasi publik yang dapat diakses melalui website atau handphone. Hingga saat ini, KIRI sudah menyentuh 3 wilayah, yaitu Bandung, Jakarta, dan Surabaya.
 
-Pada penelitian ini, akan dilakukan analisis data penggunaan KIRI dengan menggunakan teori-teori \textsl{data mining}. Pada penelitian ini, diharapkan dapat ditemukan suatu pola yang menarik dan menghasilkan suatu ide atau gagasan yang baru. Maka dari itu, penelitian ini akan membutuhkan banyak \textsl{data} penggunaan KIRI, yang dapat diperoleh dari \textsl{log} histori KIRI.
+Pertumbuhan teknologi hingga saat ini telah menghasilkan banyak sekali data-data, namun sering kali pemilik data hanya menggunakan data tersebut seperlunya saja. Jika dilihat lebih rinci, sebenarnya jika data tersebut diolah lebih lanjut, dapat menghasilkan sesuatu yang lebih. Perusahaan KIRI, telah menghasilkan banyak data log histori setiap bulan namun masih belum dilakukan tindakan pengolahan data. Salah satu cara mengolah data tersebut adalah dengan menggunakan teknik \textsl{data mining}. Dengan menggunakan teknik \textsl{data mining} akan mempermudah menganalisa masalah, pengambilan kesimpulan, bahkan mempermudah konsumen dalam menggunakan jasa.
 
-\textsl{Log} tersebut memiliki 5 \textsl{field} untuk setiap \textsl{entry} sebagai berikut:
-\begin{itemize}
-	\item statisticId, primary key dari entry
-	\item verifier, mengidentifikasikan sumber dari pencarian ini
-	\item \textsl{timestamp}, waktu ketika pengguna KIRI mencari rute angkot
-	\item \textsl{type}, tipe log, untuk penelitian ini selalu berisi FINDROUTE
-	\item additionalInfo, mencatat koordinat awal, koordinat akhir, dan banyak rute yang ditemukan pada pencarian ini
-\end{itemize}
-
-Dengan menggunakan \textsl{data log} histori pencarian rute angkot dari KIRI, diharapkan bisa diperoleh pola yang menarik. Pola tersebut memiliki kemungkinan untuk digunakan kembali sebagai informasi tambahan pada perangkat lunak navigasi lain seperti KIRI.
+Dengan menggunakan proses \textsl{data mining}, data log histori KIRI yang berisi informasi seorang pengguna berangkat dari suatu lokasi ke lokasi tertentu, dimungkinkan dapat menghasilkan suatu \textsl{pattern} yang menarik dan berguna baik untuk KIRI ataupun pemerintah. 
 
 \section{Perumusan Masalah}
 Dengan mengacu pada uraian diskripsi diatas, maka permasalahan yang dibahas dan diteliti oleh penulis adalah
@@ -26,28 +17,21 @@ Dengan mengacu pada uraian diskripsi diatas, maka permasalahan yang dibahas dan 
 	\item Bagaimana membuat perangkat lunak untuk melakukan data mining pada data log history?
 \end{itemize}
 
-\section{Tujuan dan Manfaat}
-\subsection{Tujuan}
+\section{Tujuan}
 Penelitian ini bertujuan untuk 
 \begin{itemize}
 	\item Mencari pola dan informasi yang menarik dari \textsl{log histori} KIRI
 	\item Perangkat lunak dapat melakukan data mining dari \textsl{log histori} KIRI
 \end{itemize}
-\subsection{Manfaat}
-\begin{itemize}
-	\item Agar \textsl{data log histori} KIRI dapat diolah dan didapat informasi yang menarik dan bermakna
-	\item Mendapatkan sebuah perangkat lunak yang dapat melakukan \textsl{data mining} dari \textsl{log histori} KIRI
-\end{itemize}
 
-\section{Ruang Lingkup Masalah}
+\section{Batasan Masalah}
 Penelitian \textsl{data mining} yang diatas akan ditentukan batasan masalah yang diteliti berupa : 
 \begin{itemize}
 	\item Penelitian ini dibatasi hanya pada permasalahan pada penerapan \textsl{data mining} pada \textsl{data log} KIRI
 	\item Data log yang merupakan masukan akan dibatasi sebanyak 10000 buah data
 \end{itemize}
 
-\section{Metode Penelitian dan Teknik Pengumpulan Data}
-\subsection{Metode Penelitian}
+\section{Metode Penelitian}
 Berikut adalah Metode Penelitian yang digunakan : 
 	\begin{itemize}
 		\item Melakukan studi literatur tentang algoritma-algoritma yang berkaitan dengan pemrosesan \textsl{data mining}
@@ -56,10 +40,11 @@ Berikut adalah Metode Penelitian yang digunakan :
 		\item Mengimplementasikan pembangkit pola \textsl{data mining}
 		\item Melakukan pengujian dan eksperimen
 	\end{itemize}
-\subsection{Teknik Pengumpulan Data}
-Berikut adalah teknik pengumpulan data yang digunakan : 
-\begin{itemize}
-	\item Mengunduh dari \textsl{data log history} KIRI
-\end{itemize}
 
 \section{Sistematika Pembahasan}
+Sitematika pembahasan dalam penelitian ini adalah:
+Bab 1: Pendahuluan, berisi latar belakang dari penelitian ini, rumusan masalah yang timbul, tujuan yang ingin dicapain, ruang lingkup atau batasan masalah dari penelitian ini, serta metode penelitian yang akan digunakan dan sistematika pembahasan dari penelitian ini.
+Bab 2: Landasan Teori, berisi dasar teori mengenai \textsl{data mining} dan \textsl{spatial and Spatiotemporal}
+Bab 3:
+Bab 4:
+Bab 5:
