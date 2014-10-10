@@ -3,10 +3,10 @@
 
 \section{\textsl{Data Mining}}
 
-\textsl{Data mining} merupakan proses yang melakukan pengambilan inti sari atau penggalian \textsl{knowledge} dari data yang besar atau sering disebut juga sebagai "`\textsl{knowledge mining}"' [1].
+\textsl{Data mining} merupakan merupakan proses yang melakukan pengambilan inti sari atau penggalian \textsl{knowledge} dari data yang besar dan merupakan salah satu langkah dari \textsl{knowledge discovery}.
 
-Menurut [1], data mining dapat dibagi menjadi 7 tahap (gambar 2.1):
-\begin{itemize}
+Menurut [1], \textsl{knowledge discovery} dapat dibagi menjadi 7 tahap (gambar 2.1):
+\begin{enumerate}
 	\item \textsl{Data cleaning}
 	\item \textsl{Data integration}
 	\item \textsl{Data selection}
@@ -14,7 +14,7 @@ Menurut [1], data mining dapat dibagi menjadi 7 tahap (gambar 2.1):
 	\item \textsl {Data mining}
 	\item \textsl{Pattern Evaluation}
 	\item \textsl{Knowledge presentation}
-\end{itemize}
+\end{enumerate}
 
 \begin{figure}
 \includegraphics[scale=1]{Gambar/tahapdatamining.jpg}
@@ -59,7 +59,18 @@ Tahap pertama hingga keempat merupakan bagian dari \textsl{data preprocessing}, 
 \textsl{Data integration} yang baik merupakan integrasi yang dapat memaksimalkan kecepatan dan meningkatkan akurasi dari proses \textsl{data mining}. 
 
 \subsection{\textsl{Data Selection}}
-Proses dimana data-data yang relevan dengan analisis akan diambil dari database.
+Proses dimana data-data yang relevan dengan analisis akan diambil dari database dan data yang tidak relevan akan dibuang. Sebagai contoh kasus, jika akan dilakukan analisa mengenai nilai mahasiswa dalam satu semester, atribut pada tabel nilai sebagai berikut
+	\begin{itemize}
+		\item NPMMahasiswa
+		\item NamaMahasiswa
+		\item JenisKelamin
+		\item Alamat
+		\item MataKuliah
+		\item NilaiART
+		\item NilaiUTS
+		\item NilaiUAS
+	\end{itemize}
+Maka, atribut yang akan diambil adalah MataKuliah, NilaiART, NilaiUTS, NilaiUAS, sedangkan atribut yang akan dibuang adalah NPMMahasiswa, NamaMahasiswa JenisKelamin, dan Alamat karena tidak terlalu berhubungan dengan analisa.
 
 \subsection{\textsl{Data Transformation}}
 \textsl{Data transformation} merupakan tahap pengubahan data agar siap dilakukan proses \textsl{data mining}. \textsl{Data transformation} bisa melibatkan,
@@ -98,7 +109,7 @@ lewat dulu
 \subsection{\textsl{Pattern Evaluation}}
 \subsection{\textsl{Knowledge Presentation}}
 
-\section{\textsl{Spatial and Spatiotemporal}}
+%\section{\textsl{Spatial and Spatiotemporal}}
 
 \section{Log Histori KIRI}
 
@@ -116,14 +127,14 @@ APIKey merupakan \textsl{field} dengan tipe data varchar yang digunakan untuk me
 \textsl{Timestamp} (UTC) merupakan \textsl{field} dengan tipe data \textsl{timestamp} yang digunakan untuk mencatat waktu penggunaan KIRI oleh user, diisi dengan menggunakan fungsi \textsl{current time}. \textsl{Current time} merupakan fungsi untuk pengisian data pada database dengan mengambil waktu pada komputer ketika record dibuat.
 \textsl{Action} merupakan \textsl{field} dengan tipe data varchar yang digunakan untuk memeriksa fungsi apa yang dipanggil dari API KIRI. Terdapat beberapa tipe pada \textsl{field} ini, yaitu
 /\begin{itemize}
-	\item ADDAPIKEY
-	\item FINDROUTE
-	\item LOGIN
-	\item NEARBYTRANSPORT
-	\item PAGELOAD
-	\item REGISTER
-	\item SEARCHPLACE
-	\item WIDGETERROR
-	\item WIDGETLOAD
+	\item \textsl{ADDAPIKEY}, \textsl{action} yang dicatat ke dalam log ketika fungsi pembuatan \textsl{API key} yang baru dipanggil.
+	\item \textsl{FINDROUTE}, \textsl{action} yang dicatat ketika user melakukan pencarian rute
+	\item \textsl{LOGIN}, \textsl{action} yang dicatat ketika developers melakukan login dengan menggunakan \textsl{API key}
+	\item \textsl{NEARBYTRANSPORT}, \textsl{action} yang dicatat ketika user mencari transportasi di daerah rute sedang dicari
+	\item \textsl{PAGELOAD}, \textsl{action} yang dicatat ketika user memasuki halaman KIRI
+ 	\item \textsl{REGISTER},\textsl{action} yang dicatat ketika developers melakukan pendaftaran pada KIRI \textsl{API key}
+	\item \textsl{SEARCHPLACE}, \textsl{action} yang dicatat ketika user memanggil fungsi pencarian lokasi dengan menggunakan nama tempat
+	\item \textsl{WIDGETERROR}, mencatat log tersebut ketika user menerima error dari \textit{widget}
+	\item \textsl{WIDGETLOAD}, mencatat log tersebut ketika user mengdownload widget
 \end{itemize}
 AdditionalData, merupakan \textsl{field} dengan tipe data varchar yang digunakan untuk mencatat informasi yang dibutuhkan sesuai dengan \textsl{field action}.
