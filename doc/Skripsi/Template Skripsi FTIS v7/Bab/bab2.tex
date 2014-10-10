@@ -3,30 +3,32 @@
 
 \section{\textsl{Data Mining}}
 
-\subsection{Tahap \textsl{Data Mining}}
-Proses pada \textsl{data mining} dapat dibagi menjadi beberapa tahap seperti pada gambar 2.1
+\textsl{Data mining} merupakan proses yang melakukan pengambilan inti sari atau penggalian \textsl{knowledge} dari data yang besar atau sering disebut juga sebagai "`\textsl{knowledge mining}"' [1].
+
+Menurut [1], data mining dapat dibagi menjadi 7 tahap (gambar 2.1):
+\begin{itemize}
+	\item \textsl{Data cleaning}
+	\item \textsl{Data integration}
+	\item \textsl{Data selection}
+	\item \textsl{Data transformation}
+	\item \textsl {Data mining}
+	\item \textsl{Pattern Evaluation}
+	\item \textsl{Knowledge presentation}
+\end{itemize}
 
 \begin{figure}
 \includegraphics[scale=1]{Gambar/tahapdatamining.jpg}
 \caption[Tahap \textsl{Data Mining}, Sumber Data Mining Concepts and Techniques]{Tahap \textsl{Data Mining}, Sumber Data Mining Concepts and Techniques} 
 \end{figure}
 
-Terdapat 7 tahap pada \textsl{data Mining}:
-\begin{itemize}
-	\item \textsl{Data cleaning}
-	\item \textsl{Data integration}
-	\item \textsl{Data selection}
-	\item \textsl{Data transformation}
-	\item \textsl{Data mining}
-	\item \textsl{Pattern Evaluation}
-	\item \textsl{Knowledge presentation}
-\end{itemize}
+Tahap pertama hingga keempat merupakan bagian dari \textsl{data preprocessing}, dimana data-data disiapkan untuk dilakukan penggalian data. Tahap \textsl{data mining} merupakan tahap dimana melakukan penggalian data. Tahap keenam merupakan tahap pencarian pola yang merepresentasikan \textsl{knowledge}. Sedangkan tahap terakhir merupakan visualisasi dan representasi dari \textsl{knowledge} yang sudah diperoleh dari tahap sebelumnya.
+
 
 \subsection{\textsl{Data Cleaning}}
-\textsl{Data cleaning} merupakan tahap \textsl{data mining} untuk menghilangkan \textsl{missing value} dan \textsl{noisy data}. Pada umumnya, \textsl{data} yang diperoleh dari \textsl{database} terdapat nilai yang tidak sempurna seperti nilai yang hilang, nilai yang tidak \textsl{valid} atau bahkan salah ketik. Nilai-nilai tersebut dapat diatasi dengan cara \textsl{smoothing techniques}. Atribut dari suatu \textsl{database} yang tidak relevan atau redudansi bisa diatasi dengan menghapus atribut tersebut. 
+\textsl{Data cleaning} merupakan tahap \textsl{data mining} untuk menghilangkan \textsl{missing value} dan \textsl{noisy data}. Pada umumnya, \textsl{data} yang diperoleh dari \textsl{database} terdapat nilai yang tidak sempurna seperti nilai yang hilang, nilai yang tidak valid atau bahkan salah ketik. Nilai-nilai tersebut dapat diatasi dengan cara \textsl{smoothing techniques}. Atribut dari suatu \textsl{database} yang tidak relevan atau redudansi bisa diatasi dengan menghapus atribut tersebut. 
 
 \subsubsection{\textsl{Missing Values}}
-\textsl{Missing values} tentu akan mengganggu proses \textsl{data mining} pada komputer dan dapat menghasilkan nilai akhir yang tidak sesuai. Terdapat beberapa teknik untuk mengatasi \textsl{missing values} yaitu
+\textsl{Missing values} akan mengganggu proses \textsl{data mining} pada komputer dan dapat menghasilkan nilai akhir yang tidak sesuai. Terdapat beberapa teknik untuk mengatasi \textsl{missing values} yaitu
 	\begin{itemize}
 		\item Membuang tuple yang terdapat nilai yang hilang
 		\item Mengisi nilai yang hilang secara manual
@@ -34,12 +36,12 @@ Terdapat 7 tahap pada \textsl{data Mining}:
 		\item Menggunakan nilai rata-rata dari suatu atribut untuk mengisi nilai yang hilang
 	\end{itemize}
 \subsubsection{\textsl{Noisy Data}}
-%\textsl{Noisy data} merupakan nilai yang berasal dari error atau tidak \textsl{valid}. \textsl{Noisy data} dapat dihilangkan dengan menggunakan teknik \textsl{smoothing}. Terdapat 3 metode untuk menghilangkan \textsl{noisy data} yaitu
-%	\begin{itemize}
-%		\item \textsl{Binning}, merupakan metode pengisian data sesuai dengan proses yang dilakukan pada data tersebut
-%		\item \textsl{Regression}, merupakan metode yang mencari persamaan atribut untuk memprediksikan suatu nilai
-%		\item	\textsl{Clustering}, merupakan metode pengelompokan dimana ditemukan \textsl{outliers} yang dapat dibuang
-%	\end{itemize}
+\textsl{Noisy data} merupakan nilai yang berasal dari error atau tidak valid. \textsl{Noisy data} dapat dihilangkan dengan menggunakan teknik \textsl{smoothing}. Terdapat 3 metode untuk menghilangkan \textsl{noisy data} yaitu
+	\begin{itemize}
+		\item \textsl{Binning}, merupakan metode pengisian data sesuai dengan proses yang dilakukan pada data tersebut
+		\item \textsl{Regression}, merupakan metode yang mencari persamaan atribut untuk memprediksikan suatu nilai
+		\item	\textsl{Clustering}, merupakan metode pengelompokan dimana ditemukan \textsl{outliers} yang dapat dibuang
+	\end{itemize}
 
 %\subsubsection{\textsl{Data Cleaning as a Process}}
 %Tahap pertama pada \textsl{data cleaning} adalah \textsl{discrepancy detection}. Ketidakcocokan dapat dikarenakan oleh beberapa faktor, termasuk desain data yang buruk, kesalahan manusia ketika memasukan data, dan data yang sudah kadarluarsa. Ketidakcocokan ini juga dapat disebabkan tidak konsisten representasi data dan kode atau dikarenakan kesalahan perangkat ketika melakukan pemasukan data.
@@ -52,12 +54,12 @@ Terdapat 7 tahap pada \textsl{data Mining}:
 
 %Beberapa data dapat diperbaiki dengan cara manual, namun sebagian besar data akan membutuhkan \textsl{data transformation} untuk membetulkan data tersebut.
 
-\subsection{\textsl{Data integration}}
+\subsection{\textsl{Data Integration}}
 \textsl{Data integration} merupakan tahap menggabungkan data dari berbagai sumber. Sumber tersebut bisa termasuk beberapa \textsl{database}, \textsl{data cubes}, atau bahkan \textsl{flat data}. Tahap ini harus dilakukan secara teliti terutama ketika dalam memasangkan nilai-nilai yang berasal dari sumber yang berbeda. Pada tahap ini, perlu dilakukan identifikasi data apakah data tersebut dapat diturunkan atau tidak agar data yang diperoleh tidak terlalu besar.
 \textsl{Data integration} yang baik merupakan integrasi yang dapat memaksimalkan kecepatan dan meningkatkan akurasi dari proses \textsl{data mining}. 
 
-\subsection{\textsl{Data selection}}
-
+\subsection{\textsl{Data Selection}}
+Proses dimana data-data yang relevan dengan analisis akan diambil dari database.
 
 \subsection{\textsl{Data Transformation}}
 \textsl{Data transformation} merupakan tahap pengubahan data agar siap dilakukan proses \textsl{data mining}. \textsl{Data transformation} bisa melibatkan,
@@ -74,21 +76,17 @@ Terdapat 7 tahap pada \textsl{data Mining}:
 Proses \textsl{aggregation} dan \textsl{generalization} akan dilakukan dalam bentuk proses \textsl{data reduction} dan \textsl{Data Cube Aggregation}.
 \textsl{Data reduction} dan dilakukan untuk mendapatkan nilai yang representif namun tetap menjaga keakuratan hasil \textsl{data mining}. Terdapat beberapa cara dalam mengimplementasikan \textsl{data reduction} yaitu
 	\begin{itemize}
-		\item \textsl{Data cube aggregation}
 		\item \textsl{Data subset selection}
 		\item \textsl{Dimensionality reduction}
 		\item \textsl{Numerosity reduction}
 		\item \textsl{Discretization and concept hierarchy generation}
-	\end{itemize}
-
-\subsubsection{\textsl{Data Cube Aggregation}}
-\textsl{Data cube} menyimpan semua informasi agregat dalam bentuk kubus, guna melakukan analisis. gambar 2.1 merupakan contoh dari \textsl{data cube}. Setiap sel, terdapat nilai data agregat yang saling berhubungan untuk menjadi data multidimensional point. \textsl{Data cube} dapat membuat proses \textsl{data mining} menjadi cepat untuk diakses dan membuat kesimpulan data. 
+	\end{itemize}	
 
 \subsubsection {\textsl{Attribute Subset Selection}}
 \textsl{Attribute subset selection} merupakan salah satu cara melakukan \textsl{data reduction} dengan menghilangkan atribut-atribut yang tidak relevan atau data yang redudansi. Hal ini dapat mempermudah pencarian pola dikarenakan banyak atribut yang muncul akan berkurangnya. 
 
 \subsubsection {\textsl{Dimensionality Reduction}}
-\textsl{Dimensionality Reduction} merupakan metode pengurangan nilai secara random dengan cara melakukan konversi data. Jika data original dapat dibuat ulang dari data yang sudah dikompresi tanpa kehilangan informasi, maka akan dikatakan \textsl{lossless}, namun jika hanya mendapatkan data pendekatannya saja, akan disebut lossly [1].
+\textsl{Dimensionality Reduction} merupakan metode pengurangan nilai secara acak dengan cara melakukan konversi data. Jika data original dapat dibuat ulang dari data yang sudah dikompresi tanpa kehilangan informasi, maka akan dikatakan \textsl{lossless}, namun jika hanya mendapatkan data pendekatannya saja, akan disebut lossly [1].
 
 \subsubsection {\textsl{Numerosity Reduction}}
 \textsl{Numerosity Reduction} merupakan metode dimana data diganti atau ditentukan dengan cara parametik atau nonparametrik.
@@ -101,3 +99,31 @@ lewat dulu
 \subsection{\textsl{Knowledge Presentation}}
 
 \section{\textsl{Spatial and Spatiotemporal}}
+
+\section{Log Histori KIRI}
+
+KIRI memiliki log histori yang melakukan pencatatan untuk setiap user ketika menggunakan KIRI. \textsl{Log} tersebut memiliki 5 \textsl{field} untuk setiap \textsl{entry} sebagai berikut:
+\begin{itemize}
+	\item logId, primary key dari entry
+	\item APIKey, mengidentifikasikan sumber dari pencarian ini
+	\item \textsl{Timestamp} (UTC), waktu ketika pengguna KIRI mencari rute angkot menggunakan waktu UTC / GMT
+	\item \textsl{Action}, tipe log, untuk penelitian ini selalu berisi FINDROUTE
+	\item AdditionalData, mencatat koordinat awal, koordinat akhir, dan banyak rute yang ditemukan pada pencarian ini
+\end{itemize}
+
+LogId merupakan \textsl{field} dengan tipe data int dengan batas 6 karakter yang digunakan sebagai \textsl{primary key} dari tabel tersebut. LogId diisi dengan menggunakan fungsi \textsl{increment integer}. \textsl{Increment integer} merupakan fungsi untuk pengisian data pada database dengan menambahkan nilai 1 dari nilai yang terakhir kali diisi.
+APIKey merupakan \textsl{field} dengan tipe data varchar yang digunakan untuk memeriksa pengguna KIRI ketika menggunakan KIRI.
+\textsl{Timestamp} (UTC) merupakan \textsl{field} dengan tipe data \textsl{timestamp} yang digunakan untuk mencatat waktu penggunaan KIRI oleh user, diisi dengan menggunakan fungsi \textsl{current time}. \textsl{Current time} merupakan fungsi untuk pengisian data pada database dengan mengambil waktu pada komputer ketika record dibuat.
+\textsl{Action} merupakan \textsl{field} dengan tipe data varchar yang digunakan untuk memeriksa fungsi apa yang dipanggil dari API KIRI. Terdapat beberapa tipe pada \textsl{field} ini, yaitu
+/\begin{itemize}
+	\item ADDAPIKEY
+	\item FINDROUTE
+	\item LOGIN
+	\item NEARBYTRANSPORT
+	\item PAGELOAD
+	\item REGISTER
+	\item SEARCHPLACE
+	\item WIDGETERROR
+	\item WIDGETLOAD
+\end{itemize}
+AdditionalData, merupakan \textsl{field} dengan tipe data varchar yang digunakan untuk mencatat informasi yang dibutuhkan sesuai dengan \textsl{field action}.

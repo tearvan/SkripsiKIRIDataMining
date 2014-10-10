@@ -4,11 +4,28 @@
 \section{Latar Belakang}
 \label{sec:motivation}
 
-KIRI merupakan suatu organisasi yang memiliki tujuan untuk mengurangi pemanasan global, kemacetan, dan harga BBM tinggi. Untuk mencapai hal tersebut, KIRI memberikan solusi dengan mengajak Indonesia untuk menggunakan fasilitas transportasi publik. Maka dari itu, KIRI bergerak di bidang transportasi publik dengan memberikan petunjuk jalan menggunakan transportasi publik yang dapat diakses melalui website atau handphone. Hingga saat ini, KIRI sudah menyentuh 3 wilayah, yaitu Bandung, Jakarta, dan Surabaya.
+%Tujuan dll dari datamining
+Pertumbuhan teknologi hingga saat ini telah menghasilkan banyak sekali data-data, namun sering kali pemilik data hanya menggunakan data tersebut seperlunya saja. Jika dilihat lebih rinci, sebenarnya jika data tersebut diolah lebih lanjut, dapat menghasilkan sesuatu yang lebih. Salah satu cara mengolah data tersebut adalah dengan menggunakan teknik \textsl{data mining}. Dengan menggunakan teknik \textsl{data mining} akan mempermudah menganalisa masalah, pengambilan kesimpulan, bahkan mempermudah konsumen dalam membeli jasa atau barang.
 
-Pertumbuhan teknologi hingga saat ini telah menghasilkan banyak sekali data-data, namun sering kali pemilik data hanya menggunakan data tersebut seperlunya saja. Jika dilihat lebih rinci, sebenarnya jika data tersebut diolah lebih lanjut, dapat menghasilkan sesuatu yang lebih. Perusahaan KIRI, telah menghasilkan banyak data log histori setiap bulan namun masih belum dilakukan tindakan pengolahan data. Salah satu cara mengolah data tersebut adalah dengan menggunakan teknik \textsl{data mining}. Dengan menggunakan teknik \textsl{data mining} akan mempermudah menganalisa masalah, pengambilan kesimpulan, bahkan mempermudah konsumen dalam menggunakan jasa.
+Tujuan utama dari \textsl{data mining} adalah \textsl{knowledge}. \textsl{Knowledge} merupakan suatu informasi yang berharga dan dapat dijadikan landasan untuk menganalisa atau membuat kesimpulan. Untuk mendapatkan \textsl{knowledge}, dapat dilakukan dengan cara melakukan pencarian \textsl{pattern} atau pola yang merupakan salah satu tahap dari \textsl{data mining}. Pola inilah yang akan memperlihatkan data manakah yang menarik dan dapat dijadikan \textsl{knowledge} yang akan digunakan untuk menganalisa data tersebut.
 
-Dengan menggunakan proses \textsl{data mining}, data log histori KIRI yang berisi informasi seorang pengguna berangkat dari suatu lokasi ke lokasi tertentu, dimungkinkan dapat menghasilkan suatu \textsl{pattern} yang menarik dan berguna baik untuk KIRI ataupun pemerintah. 
+Pada penelitian \textsl{data mining} ini, penulis memiliki data \textsl{log} histori KIRI selama 1 bulan. Data tersebut akan diimplementasikan proses \textsl{data mining} untuk mendapatkan \textsl{pattern} dan \textsl{knowledge} yang terkandung pada data \textsl{log} KIRI. Data \textsl{log} tersebut memiliki 5 \textsl{field} untuk setiap \textsl{entry} sebagai berikut:
+\begin{itemize}
+	\item statisticId, primary key dari entry
+	\item verifier, mengidentifikasikan sumber dari pencarian ini
+	\item \textsl{timestamp}, waktu ketika pengguna KIRI mencari rute angkot
+	\item \textsl{type}, tipe fungsi yang digunakan
+	\item additionalInfo, mencatat koordinat awal, koordinat akhir, dan banyak rute yang ditemukan pada pencarian ini
+\end{itemize}
+  
+Berdasarkan hal diatas, penulis ingin mendapatkan pola yang menarik dan menghasilkan \textsl{knowledge} yang berguna dan dapat dipakai baik untuk KIRI ataupun pemerintah.
+
+
+%KIRI merupakan suatu organisasi yang memiliki tujuan untuk mengurangi pemanasan global, kemacetan, dan harga BBM tinggi. Untuk mencapai hal tersebut, KIRI memberikan solusi dengan mengajak Indonesia untuk menggunakan fasilitas transportasi publik. Maka dari itu, KIRI bergerak di bidang transportasi publik dengan memberikan petunjuk jalan menggunakan transportasi publik yang dapat diakses melalui website atau handphone. Hingga saat ini, KIRI sudah menyentuh 3 wilayah, yaitu Bandung, Jakarta, dan Surabaya.
+
+%Pertumbuhan teknologi hingga saat ini telah menghasilkan banyak sekali data-data, namun sering kali pemilik data hanya menggunakan data tersebut seperlunya saja. Jika dilihat lebih rinci, sebenarnya jika data tersebut diolah lebih lanjut, dapat menghasilkan sesuatu yang lebih. Perusahaan KIRI, telah menghasilkan banyak data log histori setiap bulan namun masih belum dilakukan tindakan pengolahan data. Salah satu cara mengolah data tersebut adalah dengan menggunakan teknik \textsl{data mining}. Dengan menggunakan teknik \textsl{data mining} akan mempermudah menganalisa masalah, pengambilan kesimpulan, bahkan mempermudah konsumen dalam menggunakan jasa.
+
+%Dengan menggunakan proses \textsl{data mining}, data log histori KIRI yang berisi informasi seorang pengguna berangkat dari suatu lokasi ke lokasi tertentu, dimungkinkan dapat menghasilkan suatu \textsl{pattern} yang menarik dan berguna baik untuk KIRI ataupun pemerintah. 
 
 \section{Perumusan Masalah}
 Dengan mengacu pada uraian diskripsi diatas, maka permasalahan yang dibahas dan diteliti oleh penulis adalah
