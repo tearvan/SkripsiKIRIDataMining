@@ -30,7 +30,7 @@ Tahap pertama hingga keempat merupakan bagian dari \textsl{data preprocessing}, 
 \subsubsection{\textsl{Missing Values}}
 \textsl{Missing values} akan mengganggu proses \textsl{data mining} pada komputer dan dapat menghasilkan nilai akhir yang tidak sesuai. Terdapat beberapa teknik untuk mengatasi \textsl{missing values} yaitu
 	\begin{itemize}
-		\item Membuang tuple yang terdapat nilai yang hilang
+		\item Membuang tuple yang terdapat nilai yang hilang\textit{\textit{}}
 		\item Mengisi nilai yang hilang secara manual
 		\item Mengisi nilai yang hilang dengan menggunakan nilai konstan yang bersifat umum
 		\item Menggunakan nilai rata-rata dari suatu atribut untuk mengisi nilai yang hilang
@@ -82,6 +82,24 @@ Maka, atribut yang akan diambil adalah MataKuliah, NilaiART, NilaiUTS, NilaiUAS,
 		\item \textsl{Attribute construction}, proses membuat atribut baru yang berasal dari beberapa atribut untuk membantu proses data mining
 	\end{itemize}
 --tanyakan!!!-->Proses \textsl{smoothing} merupakan proses yang sama seperti pada tahap \textsl{data cleaning}.<---tanyakan!!!--
+
+\subsubsection{\textsl{Normalization}}
+Atribut dapat dinormalisasi dengan memberi skala pada nilainya sehingga nilai tersebut menjadi suatu range yang lebih spesifik dan kecil seperti 0,0 sampai 1,0.
+Dua teknik nnormalisasi yaitu, \textsl{min-max normalization} dan \textsl{z-score normalization}. \textsl{Min-max normalization} akan mengubah semua nilai menjadi nilai dengan skala tertentu. Dengan menggunakan rumus 
+
+\nu' = \frac{\nu-min_{A}}{max_{A}-min_{A}}(newMax_{A}-newMin_{A})+newMin_{A}	
+
+Contoh kasus, misalkan nilai minimun dan maximum dari suatu pendapatan adalah 12.000 dan 98.000, akan diubah menjadi berskala antara 0,0 sampai 1,0. Jika ada nilai pendapat yang baru, yaitu 73.600, maka akan menjadi
+
+\frac{73.600-12.000}{98.000-12.000} (1,0-0)+0 = 0,716
+
+\textsl{z-score normalization} merupakan normalisasi berdasarkan nilai rata-rata dan standar deviasi dari nilai-nilai atribut dengan cara
+
+\nu' = \frac{\nu-\overline{A}}{\sigma_{A}}
+
+Contoh kasus, misal nilai rata-rata dan standar deviasi dari nilai-nilai atribut pendapatan adalah 54.000 dan 16.000. Dengan \textsl{z-score}, jika ada nilai pendapatan baru yaitu 73600, maka akan diubah menjadi
+
+\frac{73.600-54.000}{16.000} = 1,225 
 
 \subsubsection{\textsl{Data Reduction}}
 Proses \textsl{aggregation} dan \textsl{generalization} akan dilakukan dalam bentuk proses \textsl{data reduction} dan \textsl{Data Cube Aggregation}.
