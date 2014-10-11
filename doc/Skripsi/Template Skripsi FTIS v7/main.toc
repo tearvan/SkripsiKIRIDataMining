@@ -19,14 +19,15 @@
 \contentsline {subsection}{\numberline {2.1.3}\textsl {Data Selection}}{5}{subsection.2.1.3}
 \contentsline {subsection}{\numberline {2.1.4}\textsl {Data Transformation}}{6}{subsection.2.1.4}
 \contentsline {subsubsection}{\textsl {Normalization}}{6}{subsubsection*.7}
-\contentsline {subsubsection}{\textsl {Data Reduction}}{7}{subsubsection*.8}
-\contentsline {subsubsection}{\textsl {Attribute Subset Selection}}{7}{subsubsection*.9}
-\contentsline {subsubsection}{\textsl {Dimensionality Reduction}}{7}{subsubsection*.10}
-\contentsline {subsubsection}{\textsl {Numerosity Reduction}}{7}{subsubsection*.11}
-\contentsline {subsubsection}{\textsl {Discretization and Concept Hierarchy Generation}}{7}{subsubsection*.12}
-\contentsline {subsection}{\numberline {2.1.5}\textsl {Data Mining}}{7}{subsection.2.1.5}
-\contentsline {subsection}{\numberline {2.1.6}\textsl {Pattern Evaluation}}{7}{subsection.2.1.6}
-\contentsline {subsection}{\numberline {2.1.7}\textsl {Knowledge Presentation}}{7}{subsection.2.1.7}
-\contentsline {section}{\numberline {2.2}Log Histori KIRI}{7}{section.2.2}
-\contentsline {chapter}{Daftar Referensi}{9}{chapter*.13}
+\contentsline {subsubsection}{\textsl {Attribute Construction}}{7}{subsubsection*.8}
+\contentsline {subsubsection}{\textsl {Data Reduction}}{7}{subsubsection*.9}
+\contentsline {subsubsection}{\textsl {Attribute Subset Selection}}{7}{subsubsection*.10}
+\contentsline {subsubsection}{\textsl {Dimensionality Reduction}}{7}{subsubsection*.11}
+\contentsline {subsubsection}{\textsl {Numerosity Reduction}}{7}{subsubsection*.12}
+\contentsline {subsubsection}{\textsl {Discretization and Concept Hierarchy Generation}}{7}{subsubsection*.13}
+\contentsline {subsection}{\numberline {2.1.5}\textsl {Data Mining}}{8}{subsection.2.1.5}
+\contentsline {subsection}{\numberline {2.1.6}\textsl {Pattern Evaluation}}{8}{subsection.2.1.6}
+\contentsline {subsection}{\numberline {2.1.7}\textsl {Knowledge Presentation}}{8}{subsection.2.1.7}
+\contentsline {section}{\numberline {2.2}Log Histori KIRI}{8}{section.2.2}
+\contentsline {chapter}{Daftar Referensi}{11}{chapter*.14}
 \renewcommand {\cftchappresnum }{\bf \scshape }
