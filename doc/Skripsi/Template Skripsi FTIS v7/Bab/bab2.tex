@@ -135,6 +135,23 @@ Proses \textsl{aggregation} dan \textsl{generalization} akan dilakukan dalam ben
 lewat dulu
 
 \subsection{\textsl{Data Mining}}
+
+\subsubsection{\textsl{Classification and Prediction}}
+\textsl{Classification} merupakan pemodelan yang dibangun untuk memprediksikan label kategori, seperti "`baik"', "`cukup"', dan "`buruk"' dalam sistem penilaian sikap seorang siswa atau "`mini bus"', "`bus"', atau "`sedan"' dalam kategori tipe mobil. Kategori tersebut dapat direpresentasikan dengan menggunakan nilai \textsl{discrete}. Nilai \textsl{discrete} merupakan nilai yang terpisah dan berbeda, seperti 1 atau 5. Kategori yang direpresentasikan oleh nilai \textsl{discrete} maka akan menjadi nilai yang terurut dan tidak memiliki arti, seperti 1,2,3 untuk merepresentasikan kategori tipe mobil "`mini bus"', "`bus"', dan "`sedan"'.
+
+\textsl{Prediction} merupakan model yang dibangun untuk meramalkan \textsl{continuous-value function} atau \textsl{ordered value}. \textsl{Ordered value} merupakan nilai yang terurut dan berlanjut. contoh studi kasus untuk pemodelan prediction adalah seorang marketing ingin meramalkan seberapa banyak konsumen yang akan belanja di sebuah toko dalam waktu satu bulan. Pemodelan tersebut disebut \textsl{predictor}.\textsl{Regression Analysis}, merupakan metodologi statistik yang digunakan untuk \textsl{numeric prediction}. \textsl{Classification} dan \textsl{numeric prediction} merupakan dua jenis utama dalam masalah prediksi.
+
+\textsl{Data Classification} merupakan proses untuk melakukan klasifikasi. \textsl{Data classification} memiliki dua tahap proses, yaitu \textsl{learning step} dan tahap klasifikasi seperti pada ilustrasi di gambar 2.2. \textsl{Learning step} merupakan langkah pembelajaran, di mana algoritma klasifikasi membangun \textsl{classification rules} (yang berisi syarat atau aturan sebuah nilai masuk ke dalam kategori tertentu) dengan cara menganalisis \textsl{training set} yang merupakan \textsl{database tuple}. Karena pembuatan \textsl{classification rules} menggunakan \textsl{training set}, yang dikenal juga sebagai \textsl{supervised learning}. 
+Pada tahap kedua, dilakukan proses klasifikasi nilai berdasarkan \textsl{classification rules} yang sudah dibangun dari tahap pertama.
+
+\begin{figure}
+\includegraphics[scale=1]{Gambar/tahapdataclassification.jpg}
+\caption[Tahap \textsl{Data Mining}, Sumber Data Mining Concepts and Techniques]{proses \textsl{data classification}, Sumber Data Mining Concepts and Techniques} 
+\end{figure}
+
+\subsection{\textsl{Decision Tree}}
+Salah satu cara pembuatan \textsl{classification rules} pada \textsl{Data Classification} adalah dengan membuat \textsl{decision tree} (pohon keputusan). Terdapat tiga teknik untuk membuat \textsl{decission tree} yaitu ID3, C4.5 dan Classification and Regression Trees (CART). ketiga teknik tersebut menggunakan pendekatan \textsl{greedy} yang merupakan \textsl{decission tree} yang dibangun secara \textsl{top-down recursive divide and conquer}. 
+
 \subsection{\textsl{Pattern Evaluation}}
 \textsl{Pattern evaluation} merupakan tahap mengidentifikasi apakah \textsl{pattern} atau pola tersebut menarik dan merepresentasikan \textsl{knowledge} berdasarkan beberapa \textsl{interestingness measures}.
 Suatu \textsl{pattern} atau pola dapat dinyatakan menarik apabila
