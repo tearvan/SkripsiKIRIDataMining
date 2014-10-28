@@ -150,7 +150,60 @@ Pada tahap kedua, dilakukan proses klasifikasi nilai berdasarkan \textsl{classif
 \end{figure}
 
 \subsection{\textsl{Decision Tree}}
-Salah satu cara pembuatan \textsl{classification rules} pada \textsl{Data Classification} adalah dengan membuat \textsl{decision tree} (pohon keputusan). Terdapat tiga teknik untuk membuat \textsl{decission tree} yaitu ID3, C4.5 dan Classification and Regression Trees (CART). ketiga teknik tersebut menggunakan pendekatan \textsl{greedy} yang merupakan \textsl{decission tree} yang dibangun secara \textsl{top-down recursive divide and conquer}. 
+Salah satu cara pembuatan \textsl{classification rules} pada \textsl{Data Classification} adalah dengan membuat \textsl{decision tree} (pohon keputusan). \textsl{Decision tree} merupakan \textsl{flowchart} yang berbentuk pohon, dimana setiap node internal (\textsl{nonleaf} node) merupakan hasil test dari atribut, setiap cabang merepresentasikan output dari test, dan setiap node daun memiliki \textsl{class label}. Bagian paling atas dari pohon disebut \textsl{root node}. Contoh studi kasus, pohon keputusan untuk menentukan apakah seorang konsumen akan membeli komputer atau tidak (ilustrasi pohon keputusan pada gambar 2.3) 
+
+\begin{figure}
+\includegraphics[scale=1]{Gambar/decisiontree.jpg}
+\caption[Tahap \textsl{Data Mining}, Sumber Data Mining Concepts and Techniques]{proses \textsl{data classification}, Sumber Data Mining Concepts and Techniques} 
+\end{figure}
+
+subsubsection{\textsl{Decision Tree Induction}}
+\textsl{Decision tree induction} merupakan pelatihan pohon keputusan dari tupel pelatihan kelas berlabel. Terdapat tiga teknik untuk membuat \textsl{decission tree} yaitu ID3, C4.5 dan Classification and Regression Trees (CART). ketiga teknik tersebut menggunakan pendekatan \textsl{greedy} yang merupakan \textsl{decission tree} yang dibangun secara \textsl{top-down recursive divide and conquer}. Berikut algoritma untuk membuat pohon keputusan dari suatu tupel pelatihan.
+
+Input:
+\begin{itemize}
+	\item Partisi data, D, merupakan set data pelatihan dan kelas label
+	\item \textsl{attribute\_list}, merupakan set dari atribut kandidat
+	\item \textsl{Attribute\_selection\_method}, prosedur untuk menentukan \textsl{splitting criterion}. Pada input ini, terdapat juga data \textsl{splitting\_attribute} dan mungkin salah satu dari \textsl{split point} atau \textsl{splitting subset}
+\end{itemize}
+
+Output: pohon keputusan
+
+Method:
+
+(1) create a node N;
+
+(2) if tuples in D are all of the same class, C then
+
+(3)	return N as a leaf node labeled with the class C;
+
+(4)	if attribute\_list is empty then
+
+(5) return N as leaf node labeled with the majority class in D; //majority voting
+
+(6)	apply Attribute\_selection\_method(D, atribute\_list) to find the "`best"' splitting\_criterion;
+
+(7) label node N with splitting\_criterion;
+
+(8) if splitting\_attribute is discrete valued and
+				multiway splits allowed then //not restricted to binary trees
+				attribute\_
+
+(9) attribute\_list <- attribute\_list - splitting\_attribute; //remove splitting\_attribute
+
+(10)for each outcome j of splitting\_criterion // partition the tuples and from subtrees for each partition
+
+(11)let D\lowercase{j} be the set of data tuples in D satisfying outcome j; //a partition
+
+(12) if D\lowercase{j} is empty then
+
+(13) attach a leaf labeled with the majority class in D to node N;
+
+(14) else attach the node returned by generate\_decision\_tree(D\lowercase{j}, attribute\_list) to node N;
+
+endfor
+
+(15) return N;
 
 \subsection{\textsl{Pattern Evaluation}}
 \textsl{Pattern evaluation} merupakan tahap mengidentifikasi apakah \textsl{pattern} atau pola tersebut menarik dan merepresentasikan \textsl{knowledge} berdasarkan beberapa \textsl{interestingness measures}.
