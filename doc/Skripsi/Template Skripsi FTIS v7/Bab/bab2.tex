@@ -187,7 +187,6 @@ Method:
 
 (8) if splitting\_attribute is discrete valued and
 				multiway splits allowed then //not restricted to binary trees
-				attribute\_
 
 (9) attribute\_list <- attribute\_list - splitting\_attribute; //remove splitting\_attribute
 
@@ -232,7 +231,14 @@ Rekursif tersebut akan berhenti ketika salah satu dari kondisi terpenuhi, yaitu
 
 Pada langkah 15, akan dikembalikan nilai \textsl{decision tree} yang telah dibuat.
 
-subsubsection{\textsl{Attribute Selection Measures}}
+subsubsection{\textsl{Attribute Selection Measure}}
+
+\textsl{Attribute Selection Measure} merupakan suatu hirarki untuk pemilihan \textsl{splitting criterion} yang terbaik yang memisah partisi data (D), tuple pelatihan kelas label ke dalam kelas masing-masing. \textsl{Attribute Selection Measure} menyediakan peringkat untuk setiap atribut pada training tuple. Jika \textsl{splitting criterion} merupakan nilai \textsl{continous} atau \textsl{binary trees}, maka nilai \textsl{split point} dan \textsl{splitting subset} harus ditentukan sebagai bagian dari \textsl{splitting criterion}. Contoh dari \textsl{attribute selection measure} adalah \textsl{information gain}, \textsl{gain ratio}, dan \textsl{gini index}.
+
+Notasi yang digunakan adalah sebagai berikut. D merupakan data partisi, set pelatihan dari \textsl{class-labeled} tuple. Jika label kelas atribut memiliki m nilai yang berbeda yang mendifinisikan m kelas yang berbeda, Ci (for i=1,...,m). Ci,d menjadi kelas tuple dari Ci di D. |D| dan |Ci,d| merupakan banyak tuple pada D dan Ci,d.
+
+\subsubsection{\textsl{Information Gain}}
+ID3 menggunakan \textsl{information gain} sebagai \textsl{attribute selection measure} yang melakukan pemilihan atribut berdasarkan informasi yang terkandung dalam pesan. 
 
 
 \subsection{\textsl{Pattern Evaluation}}
