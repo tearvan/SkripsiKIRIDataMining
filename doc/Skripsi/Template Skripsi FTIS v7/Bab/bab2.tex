@@ -81,8 +81,7 @@ Maka, atribut yang akan diambil adalah MataKuliah, NilaiART, NilaiUTS, NilaiUAS,
 		\item \textsl{Normalization}, proses dimana suatu nilai dapat diubah skalanya menjadi nilai yang lebih kecil dan spesifik
 		\item \textsl{Attribute construction}, proses membuat atribut baru yang berasal dari beberapa atribut untuk membantu proses data mining
 	\end{itemize}
---tanyakan!!!-->Proses \textsl{smoothing} merupakan proses yang sama seperti pada tahap \textsl{data cleaning}.<---tanyakan!!!--
-
+	
 \subsubsection{\textsl{Normalization}}
 Atribut dapat dinormalisasi dengan memberi skala pada nilainya sehingga nilai tersebut menjadi suatu range yang lebih spesifik dan kecil seperti 0,0 sampai 1,0.
 Dua teknik nnormalisasi yaitu, \textsl{min-max normalization} dan \textsl{z-score normalization}. \textsl{Min-max normalization} akan mengubah semua nilai menjadi nilai dengan skala tertentu. Dengan menggunakan rumus 
@@ -204,6 +203,36 @@ Method:
 endfor
 
 (15) return N;
+
+
+Pohon keputusan akan dimulai dengan satu node, yaitu N, merepresentasikan tuple pelatihan pada D (langkah 1)
+
+Jika tuple di D memiliki kelas yang sama semua, maka node N akan menjadi daun dan diberi label dari kelas tersebut (langkah 2 dan 3). Perlu diketahui bahwa langkah 4 dan 5 akan mengakhiri kondisi.
+
+Jika tuple di D ada kelas yang berbeda, maka algoritma akan memanggil \textsl{attribute\_selection\_method} untuk menentukan \textsl{splitting criterion}. \textsl{Splitting criterion} akan menentukan atribut pada node N yang merupakan nilai terbaik untuk memecah nilai atribut pada tuple ke dalam kelas masing-masing. (langkah 6)
+
+Node N akan diisi dengan hasil dari \textsl{splitting criterion} (langkah 7). Kemudian kriteria tersebut agak dibentuk cabangnya masing-masing sesuai pada langkah 10 dan 11. Terdapat tiga kemungkinan bentuk kriteria jika A merupakan \textsl{splitting\_attribute} yang memiliki nilai unik seperti \{a1, a2, ..., av\}, yaitu,
+
+\begin{enumerate}
+	\item \textsl{Discrete valued}: cabang yang dihasilkan memiliki kelas dengan nilai diskret. Karena kelas yang dihasilkan diskret dan hanya memiliki nilai yang sama pada cabang tersebut, maka \textsl{attribut\_list} akan dihapus (langkah 8 dan 9)
+	\item \textsl{Continuous values}: cabang yang dihasilkan memiliki jarak nilai untuk memenuhi suatu kondisi (contoh: A <= split\_point), dimana nilai \textsl{split\_point} adalah nilai pembagi yang dikembalikan oleh \textsl{attribute\_selection\_method}
+	\item \textsl{Dicrete valued and a binary tree}: cabang yang dihasilkan adalah dua berupa nilai iya atau tidak dari "`apakah A anggota Sa"', dimana Sa merupakan subset dari A, yang dikembalikan oleh \textsl{Attribute\_selection\_method}
+\end{enumerate}
+
+Kemudian, akan dipanggil kembali algoritma \textsl{decision tree} untuk setiap nilai hasil pembagian pada tuple, Dj  (langkah 14).
+
+Rekursif tersebut akan berhenti ketika salah satu dari kondisi terpenuhi, yaitu
+
+\begin{enumerate}
+	\item Semua tuple pada partisi D merupakan bagian dari kelas yang sama.
+	\item Sudah tidak ada atribut yang dapat dilakukan pembagian lagi (dilakukan pengecekan pada langkah 4). Disini, akan dilakukan \textsl{majority voting} (langkah 5) yang akan mengkonversi node N menjadi \textsl{leaf} dan diberi label dengan kelas yang terbanyak pada D.
+	\item Sudah tidak ada tuple yang dapat diberi cabang, Dj sudah kosong (langkah 12) dan \textsl{leaf} akan dibuat dengan \textsl{majority class} pada D (langkah 13).
+\end{enumerate}
+
+Pada langkah 15, akan dikembalikan nilai \textsl{decision tree} yang telah dibuat.
+
+subsubsection{\textsl{Attribute Selection Measures}}
+
 
 \subsection{\textsl{Pattern Evaluation}}
 \textsl{Pattern evaluation} merupakan tahap mengidentifikasi apakah \textsl{pattern} atau pola tersebut menarik dan merepresentasikan \textsl{knowledge} berdasarkan beberapa \textsl{interestingness measures}.
