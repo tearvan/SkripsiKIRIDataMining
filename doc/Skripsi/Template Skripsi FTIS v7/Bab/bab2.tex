@@ -211,13 +211,19 @@ Jika tuple di D memiliki kelas yang sama semua, maka node N akan menjadi daun da
 
 Jika tuple di D ada kelas yang berbeda, maka algoritma akan memanggil \textsl{attribute\_selection\_method} untuk menentukan \textsl{splitting criterion}. \textsl{Splitting criterion} akan menentukan atribut pada node N yang merupakan nilai terbaik untuk memecah nilai atribut pada tuple ke dalam kelas masing-masing. (langkah 6)
 
-Node N akan diisi dengan hasil dari \textsl{splitting criterion} (langkah 7). Kemudian kriteria tersebut agak dibentuk cabangnya masing-masing sesuai pada langkah 10 dan 11. Terdapat tiga kemungkinan bentuk kriteria jika A merupakan \textsl{splitting\_attribute} yang memiliki nilai unik seperti \{a1, a2, ..., av\}, yaitu,
+Node N akan diisi dengan hasil dari \textsl{splitting criterion} (langkah 7). Kemudian kriteria tersebut agak dibentuk cabangnya masing-masing sesuai pada langkah 10 dan 11. Terdapat tiga kemungkinan bentuk kriteria jika A merupakan \textsl{splitting\_attribute} yang memiliki nilai unik seperti \{a1, a2, ..., av\} seperti pada gambar 2.4, yaitu,
 
 \begin{enumerate}
 	\item \textsl{Discrete valued}: cabang yang dihasilkan memiliki kelas dengan nilai diskret. Karena kelas yang dihasilkan diskret dan hanya memiliki nilai yang sama pada cabang tersebut, maka \textsl{attribut\_list} akan dihapus (langkah 8 dan 9)
 	\item \textsl{Continuous values}: cabang yang dihasilkan memiliki jarak nilai untuk memenuhi suatu kondisi (contoh: A <= split\_point), dimana nilai \textsl{split\_point} adalah nilai pembagi yang dikembalikan oleh \textsl{attribute\_selection\_method}
 	\item \textsl{Dicrete valued and a binary tree}: cabang yang dihasilkan adalah dua berupa nilai iya atau tidak dari "`apakah A anggota Sa"', dimana Sa merupakan subset dari A, yang dikembalikan oleh \textsl{Attribute\_selection\_method}
 \end{enumerate}
+
+
+\begin{figure}
+\includegraphics[scale=1]{Gambar/jenishasilsplitpoint.jpg}
+\caption[Tahap \textsl{Data Mining}, Sumber Data Mining Concepts and Techniques]{tiga kemungkinan bentuk kriteria, Sumber Data Mining Concepts and Techniques} 
+\end{figure}
 
 Kemudian, akan dipanggil kembali algoritma \textsl{decision tree} untuk setiap nilai hasil pembagian pada tuple, Dj  (langkah 14).
 
@@ -238,8 +244,77 @@ subsubsection{\textsl{Attribute Selection Measure}}
 Notasi yang digunakan adalah sebagai berikut. D merupakan data partisi, set pelatihan dari \textsl{class-labeled} tuple. Jika label kelas atribut memiliki m nilai yang berbeda yang mendifinisikan m kelas yang berbeda, Ci (for i=1,...,m). Ci,d menjadi kelas tuple dari Ci di D. |D| dan |Ci,d| merupakan banyak tuple pada D dan Ci,d.
 
 \subsubsection{\textsl{Information Gain}}
-ID3 menggunakan \textsl{information gain} sebagai \textsl{attribute selection measure} yang melakukan pemilihan atribut berdasarkan informasi yang terkandung dalam pesan. 
+\textsl{Information} menurut Claude Shannon dalam \textsl{information theory} adalah ukuran \textsl{pure} dari suatu data. ID3 menggunakan \textsl{information gain} sebagai \textsl{attribute selection measure} yang melakukan pemilihan atribut berdasarkan informasi yang terkandung dalam pesan. Cara ID3 mendapatkan \textsl{information gain} dengan menggunakan \textsl{entropy}. \textsl{Entropy} adalah ukuran \textsl{impurity} dari suatu data. Cara mendapatkan nilai \textsl{entropy} adalah
 
+\begin{displaymath}
+	Info(D) = -\sum_{i=1}^{m} pi \log_2(pi)
+\end{displaymath}
+
+Dimana pi merupakan probabilitas tuple pada D terhadap class Ci, dapat diperoleh dengan |ci,d|/|D|. Info(D) merupakan nilai rata-rata \textsl{entropy} dari suatu label kelas pada tuple D. Untuk mengetahui atribut mana yang paling baik untuk dijadikan \textsl{splitting attribute}, adalah dengan cara menghitung nilai \textsl{entrophy} dari suatu atribut kemudian diselisihkan dengan nilai \textsl{entropy} dari D. Jika pada tuple D, memiliki atribut A dengan v nilai yang berbeda, maka menghitung \textsl{entropy} dari suatu atribut adalah
+
+\begin{displaymath}
+	Info_A(D) = \sum_{j=1}^v \frac{|D_j|}{|D|} \times Info(D_j)
+\end{displaymath}
+
+|Dj|/D merupakan angka yang menghitung bobot dari suatu partisi. Semakin kecil nilai dari InfoA(Dj), maka atribut tersebut masih memerlukan informasi, semakin besar nilai InfoA(Dj), semakin tinggi pula tingkat \textsl{pure} dari suatu partisi.
+
+Setelah mendapatkan nilai Info(D) dan InfoA(Dj), \textsl{information gain} dapat diperoleh dari selisih nilai Info(D) dan InfoA(Dj)
+
+\begin{displaymath}
+	Gain(A) = Info(D) - Info_A(D)
+\end{displaymath}
+
+contoh kasus untuk ID3, dalam pencarian\textsl{information gain}
+
+\begin{table}[h]
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+RID & age          & income & student & credit\_rating & Class: buys\_computer \\ \hline
+1   & youth        & high   & no      & fair           & no                    \\ \hline
+2   & youth        & high   & no      & excellent      & no                    \\ \hline
+3   & middle\_aged & high   & no      & fair           & yes                   \\ \hline
+4   & senior       & medium & no      & fair           & yes                   \\ \hline
+5   & senior       & low    & yes     & fair           & yes                   \\ \hline
+6   & senior       & low    & yes     & excellent      & no                    \\ \hline
+7   & middle\_aged & low    & yes     & excellent      & yes                   \\ \hline
+8   & youth        & medium & no      & fair           & no                    \\ \hline
+9   & youth        & low    & yes     & fair           & yes                   \\ \hline
+10  & senior       & medium & yes     & fair           & yes                   \\ \hline
+11  & youth        & medium & yes     & excellent      & yes                   \\ \hline
+12  & middle\_aged & medium & no      & excellent      & yes                   \\ \hline
+13  & middle\_aged & high   & yes     & fair           & yes                   \\ \hline
+14  & senior       & medium & no      & excellent      & no                    \\ \hline
+\end{tabular}
+\end{table}
+
+Pada tabel 2.1, terdapat \textsl{training set}, D. Atribut kelas label merupakan dua nilai yang berbeda yaitu \textsl{yes} atau \textsl{no}, maka dari itu, nilai m = 2. C1 diisi dengan kelas label bernilai \textsl{yes}, sedangkan C2 diisi dengan kelas label bernilai \textsl{no}. Terdapat sembilan tuple atribut kelas label dengan nilai \textsl{yes} dan lima tuple dengan nilai \textsl{no}. Untuk dapat menentukan \textsl{splitting criterion}, \textsl{information gain} harus dihitung untuk setiap atribut terlebih dahulu. Perhitungan \textsl{entropy} untuk D adalah
+
+\begin{displaymath}
+	Info(D) = - \frac{9}{14}\log2(\frac{9}{14}) - \frac{5}{14}\log_2(\frac{5}{14}) = 0.940 bits
+\end{displaymath}
+
+Setelah diperoleh nilai \textsl{entropy} dari D, kemudian akan dihitung nilai \textsl{entropy} atribut dimulai dari atribut age. Pada kategori \textsl{youth}, terdapat dua tuple dengan kelas \textsl{yes} dan tiga tuple dengan kelas \textsl{no}. Untuk kategori \textsl{middle\_age}, terdapat empat tuple dengan kelas \textsl{yes} dan nol tuple dengan kelas \textsl{no}. Pada kategori \textsl{senior}, terdapat tiga dengan kelas \textsl{yes} dan dua dengan kelas \textsl{no}. Perhitungan nilai \textsl{entropy} atribut \textsl{age} terhadap D sebagai berikut
+
+\begin{displaymath}
+	Info_{age}(D) = \frac{5}{14} \times (-\frac{2}{5}\log_2\frac{2}{5} - \frac{3}{5}\log_2\frac{3}{5}) + \frac{4}{14} \times (-\frac{4}{4}\log_2\frac{4}{4} - \frac{0}{4}\log_2\frac{0}{4}) + \frac{5}{14} \times (-\frac{3}{5}\log_2\frac{3}{5} - \frac{2}{5}\log_2\frac{2}{5}) = 0.694 bits
+\end{displaymath}
+
+Setelah mendapatkan \textsl{entropy} dari atribut \textsl{age}, maka nilai \textsl{gain information} dari atribut \textsl{age} adalah
+
+\begin{displaymath}
+	Gain_{(age)} = Info(D) - Info_{age}(D) = 0.940 - 0.694 = 0.246 bits
+\end{displaymath}
+
+Dengan melakukan hal yang sama, dapat diperoleh nilai \textsl{gain} untuk atribut \textsl{income} adalah 0.029 \textsl{bits}, untuk nilai \textsl{gain(student)} adalah 0.151 \textsl{bits}, dan \textsl{gain(credit\_rating)} = 0.048 \textsl{bits}. Karena nilai \textsl{gain} dari atribut \textsl{age} merupakan nilai terbesar diantara semua atribut, maka atribut \textsl{age} dipilih menjadi \textsl{splitting attribute}. Setelah ditentukan, node N akan membentuk cabang berdasarkan nilai dari atribut \textsl{age} seperti pada gambar 2.5.
+
+\begin{figure}
+\includegraphics[scale=1]{Gambar/hasilcabangid3.jpg}
+\caption[Tahap \textsl{Data Mining}, Sumber Data Mining Concepts and Techniques]{hasil cabang dari atribut \textsl{age}, Sumber Data Mining Concepts and Techniques} 
+\end{figure}
+
+Untuk atribut yang merupakan nilai \textsl{continuous}, harus dicari nilai \textsl{split point} untuk A. Nilai-nilai dari dua angka yang bersebelahan dapat diambil nilai tengahnya untuk dijadikan \textsl{split-point}. Jika terdapat v nilai yang berbeda dari A, maka akan terdapat v-1 kemungkinan \textsl{split point}. Kemudian nilai \textsl{split point} akan dijadikan sebagai nilai pembagi, sebagai contoh: A <= \textsl{split-point} merupakan cabang pertama, dan A > \textsl{split-point} merupakan cabang kedua.
+
+ 
 
 \subsection{\textsl{Pattern Evaluation}}
 \textsl{Pattern evaluation} merupakan tahap mengidentifikasi apakah \textsl{pattern} atau pola tersebut menarik dan merepresentasikan \textsl{knowledge} berdasarkan beberapa \textsl{interestingness measures}.

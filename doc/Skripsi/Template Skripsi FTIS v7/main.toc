@@ -28,8 +28,9 @@
 \contentsline {subsection}{\numberline {2.1.5}\textsl {Data Mining}}{10}{subsection.2.1.5}
 \contentsline {subsubsection}{\textsl {Classification and Prediction}}{10}{subsubsection*.14}
 \contentsline {subsection}{\numberline {2.1.6}\textsl {Decision Tree}}{10}{subsection.2.1.6}
-\contentsline {subsection}{\numberline {2.1.7}\textsl {Pattern Evaluation}}{14}{subsection.2.1.7}
-\contentsline {subsection}{\numberline {2.1.8}\textsl {Knowledge Presentation}}{14}{subsection.2.1.8}
-\contentsline {section}{\numberline {2.2}Log Histori KIRI}{14}{section.2.2}
-\contentsline {chapter}{Daftar Referensi}{17}{chapter*.15}
+\contentsline {subsubsection}{\textsl {Information Gain}}{14}{subsubsection*.15}
+\contentsline {subsection}{\numberline {2.1.7}\textsl {Pattern Evaluation}}{16}{subsection.2.1.7}
+\contentsline {subsection}{\numberline {2.1.8}\textsl {Knowledge Presentation}}{17}{subsection.2.1.8}
+\contentsline {section}{\numberline {2.2}Log Histori KIRI}{17}{section.2.2}
+\contentsline {chapter}{Daftar Referensi}{19}{chapter*.16}
 \renewcommand {\cftchappresnum }{\bf \scshape }
