@@ -1,8 +1,7 @@
 \select@language {bahasa}
-\contentsline {chapter}{Kata Pengantar}{xi}{chapter*.1}
-\contentsline {chapter}{Daftar Isi}{xiii}{section*.2}
-\contentsline {chapter}{Daftar Gambar}{xiv}{section*.3}
-\contentsline {chapter}{Daftar Tabel}{xv}{section*.4}
+\contentsline {chapter}{Daftar Isi}{iii}{section*.1}
+\contentsline {chapter}{Daftar Gambar}{iv}{section*.2}
+\contentsline {chapter}{Daftar Tabel}{v}{section*.3}
 \contentsline {chapter}{\numberline {1}Pendahuluan}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Latar Belakang}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Perumusan Masalah}{2}{section.1.2}
@@ -13,24 +12,20 @@
 \contentsline {chapter}{\numberline {2}Landasan Teori}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}\textsl {Data Mining}}{5}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}\textsl {Data Cleaning}}{5}{subsection.2.1.1}
-\contentsline {subsubsection}{\textsl {Missing Values}}{5}{subsubsection*.5}
-\contentsline {subsubsection}{\textsl {Noisy Data}}{7}{subsubsection*.6}
+\contentsline {subsubsection}{\textsl {Missing Values}}{5}{subsubsection*.4}
+\contentsline {subsubsection}{\textsl {Noisy Data}}{7}{subsubsection*.5}
 \contentsline {subsection}{\numberline {2.1.2}\textsl {Data Integration}}{7}{subsection.2.1.2}
 \contentsline {subsection}{\numberline {2.1.3}\textsl {Data Selection}}{7}{subsection.2.1.3}
 \contentsline {subsection}{\numberline {2.1.4}\textsl {Data Transformation}}{8}{subsection.2.1.4}
-\contentsline {subsubsection}{\textsl {Normalization}}{8}{subsubsection*.7}
-\contentsline {subsubsection}{\textsl {Attribute Construction}}{9}{subsubsection*.8}
-\contentsline {subsubsection}{\textsl {Data Reduction}}{9}{subsubsection*.9}
-\contentsline {subsubsection}{\textsl {Attribute Subset Selection}}{9}{subsubsection*.10}
-\contentsline {subsubsection}{\textsl {Dimensionality Reduction}}{9}{subsubsection*.11}
-\contentsline {subsubsection}{\textsl {Numerosity Reduction}}{10}{subsubsection*.12}
-\contentsline {subsubsection}{\textsl {Discretization and Concept Hierarchy Generation}}{10}{subsubsection*.13}
-\contentsline {subsection}{\numberline {2.1.5}\textsl {Data Mining}}{10}{subsection.2.1.5}
-\contentsline {subsubsection}{\textsl {Classification and Prediction}}{10}{subsubsection*.14}
-\contentsline {subsection}{\numberline {2.1.6}\textsl {Decision Tree}}{10}{subsection.2.1.6}
-\contentsline {subsubsection}{\textsl {Information Gain}}{14}{subsubsection*.15}
+\contentsline {subsubsection}{\textsl {Normalization}}{8}{subsubsection*.6}
+\contentsline {subsubsection}{\textsl {Attribute Construction}}{9}{subsubsection*.7}
+\contentsline {subsection}{\numberline {2.1.5}\textsl {Data Mining}}{9}{subsection.2.1.5}
+\contentsline {subsubsection}{\textsl {Classification and Prediction}}{9}{subsubsection*.8}
+\contentsline {subsection}{\numberline {2.1.6}\textsl {Decision Tree}}{11}{subsection.2.1.6}
+\contentsline {subsubsection}{\textsl {Decision Tree Induction}}{11}{subsubsection*.9}
+\contentsline {subsubsection}{\textsl {Information Gain}}{13}{subsubsection*.10}
 \contentsline {subsection}{\numberline {2.1.7}\textsl {Pattern Evaluation}}{16}{subsection.2.1.7}
-\contentsline {subsection}{\numberline {2.1.8}\textsl {Knowledge Presentation}}{17}{subsection.2.1.8}
-\contentsline {section}{\numberline {2.2}Log Histori KIRI}{17}{section.2.2}
-\contentsline {chapter}{Daftar Referensi}{19}{chapter*.16}
+\contentsline {subsection}{\numberline {2.1.8}\textsl {Knowledge Presentation}}{16}{subsection.2.1.8}
+\contentsline {section}{\numberline {2.2}Log Histori KIRI}{16}{section.2.2}
+\contentsline {chapter}{Daftar Referensi}{19}{chapter*.11}
 \renewcommand {\cftchappresnum }{\bf \scshape }

@@ -332,58 +332,58 @@
 \cleardoublepage
 
 %cover ENG
-\begin{center}
-	{\Large\bf \vstaENG \\} 	\vspace{1.5cm}
-	{\Large \bf \vjudulENG \\} \vspace{2.5cm}
-	\includegraphics[scale=0.4]{Gambar/logo-unpar}\\ \vspace{1cm}
-	{\Large \bf \vnama \\} \vspace{0.5cm}
-	{\Large \bf NPM: \vnpm \\}
-	\vfill
-	\Large{ \textbf { 
-		DEPARTMENT OF \vprodiENG \\
-		FACULTY OF INFORMATION TECHNOLOGY AND SCIENCES\\
-		PARAHYANGAN CATHOLIC UNIVERSITY\\
-		\vtahun 
-	}}
-\end{center}
-\cleardoublepage
+%\begin{center}
+%	{\Large\bf \vstaENG \\} 	\vspace{1.5cm}
+%	{\Large \bf \vjudulENG \\} \vspace{2.5cm}
+%	\includegraphics[scale=0.4]{Gambar/logo-unpar}\\ \vspace{1cm}
+%	{\Large \bf \vnama \\} \vspace{0.5cm}
+%	{\Large \bf NPM: \vnpm \\}
+%	\vfill
+%	\Large{ \textbf { 
+%		DEPARTMENT OF \vprodiENG \\
+%		FACULTY OF INFORMATION TECHNOLOGY AND SCIENCES\\
+%		PARAHYANGAN CATHOLIC UNIVERSITY\\
+%		\vtahun 
+%	}}
+%\end{center}
+%\cleardoublepage
 
 
 % Lembar pengesahan
-\ifdefstring{\vmode}{final}{
-\begin{center}
-	{\Large\bf LEMBAR PENGESAHAN \\} 	\vspace{1.5cm}
-	{\Large \bf \vjudulINA \\} 			\vspace{1cm}
-	{\Large \bf \vnama \\}				\vspace{0.5cm}
-	{\Large \bf NPM: \vnpm \\}			\vspace{1.5cm}
-	\large{ \bfseries{
-		\begin{centering} 
-			Bandung, \vtanggal\ \vbulan\ \vtahun \\ \vspace{0.25cm} Menyetujui,\\
-			\vspace{0.75cm}
-			\ifdefempty{\vpembs}
-					{\centering Pembimbing Tunggal\\ \vspace{2cm} \vpembu\\}
-					{ 	\begin{minipage}[b]{0.46\linewidth}
-							\centering Pembimbing Utama \\ \vspace{2.25cm} \vpembu \\
-						\end{minipage} \hspace{0.5cm}
-						\begin{minipage}[b]{0.46\linewidth}
-						\end{minipage}	
-					}
-		\end{centering}
-		\vspace{1.25cm}
-		\begin{centering}	
-			\begin{minipage}[b]{0.46\linewidth}
-				\centering Ketua Tim Penguji \\ \vspace{2.25cm} \vpengi \\
-			\end{minipage} \hspace{0.5cm}
-			\begin{minipage}[b]{0.46\linewidth}
-				\centering Anggota Tim Penguji \\ \vspace{2.25cm} \vpengii 
-			\end{minipage}
-		\end{centering}
-		\vspace{1.5cm} \\
-		\centering Mengetahui,\\ \vspace{0.5cm}	
-		Ketua Program Studi \\ \vspace{2.25cm} \vkajur\\
-	}}			
-\end{center}
-\cleardoublepage
+%\ifdefstring{\vmode}{final}{
+%\begin{center}
+%	{\Large\bf LEMBAR PENGESAHAN \\} 	\vspace{1.5cm}
+%	{\Large \bf \vjudulINA \\} 			\vspace{1cm}
+%	{\Large \bf \vnama \\}				\vspace{0.5cm}
+%	{\Large \bf NPM: \vnpm \\}			\vspace{1.5cm}
+%	\large{ \bfseries{
+%		\begin{centering} 
+%			Bandung, \vtanggal\ \vbulan\ \vtahun \\ \vspace{0.25cm} Menyetujui,\\
+%			\vspace{0.75cm}
+%			\ifdefempty{\vpembs}
+%					{\centering Pembimbing Tunggal\\ \vspace{2cm} \vpembu\\}
+%					{ 	\begin{minipage}[b]{0.46\linewidth}
+%							\centering Pembimbing Utama \\ \vspace{2.25cm} \vpembu \\
+%						\end{minipage} \hspace{0.5cm}
+%						\begin{minipage}[b]{0.46\linewidth}
+%						\end{minipage}	
+%					}
+%		\end{centering}
+%		\vspace{1.25cm}
+%		\begin{centering}	
+%			\begin{minipage}[b]{0.46\linewidth}
+%				\centering Ketua Tim Penguji \\ \vspace{2.25cm} \vpengi \\
+%			\end{minipage} \hspace{0.5cm}
+%			\begin{minipage}[b]{0.46\linewidth}
+%				\centering Anggota Tim Penguji \\ \vspace{2.25cm} \vpengii 
+%			\end{minipage}
+%		\end{centering}
+%		\vspace{1.5cm} \\
+%		\centering Mengetahui,\\ \vspace{0.5cm}	
+%		Ketua Program Studi \\ \vspace{2.25cm} \vkajur\\
+%	}}			
+%\end{center}
+%\cleardoublepage
 
 % Lembar Pernyataan
 %\vspace*{4cm}
@@ -415,54 +415,54 @@
 %}{}
 
 % Abstrak & Abstract
-\ifthenelse{{\equal{\vmode}{sidang_akhir}}\or{\equal{\vmode}{final}}}{
-\ifdefempty{\vabstrakina}{}
-	  { \vspace*{4cm}
-		\begin{abstract}
-			%\noindent \normalsize{\onehalfspacing{\vabstrakina \vspace*{1cm}\\
-			\noindent \normalsize{\vabstrakina \vspace*{1cm}\\
-			{\bfseries Kata-kata kunci:\ } \vkunciina}
-		\end{abstract}
-  		\cleardoublepage
-	  }
-\ifdefempty{\vabstrakeng}{}
-	  { \def\abstractname{Abstract}
-		\vspace*{4cm}
-		\begin{abstract}
-			%\noindent \normalsize{\onehalfspacing{\vabstrakeng \vspace*{1cm}\\
-			\noindent \normalsize{\vabstrakeng \vspace*{1cm}\\
-			{\bfseries Keywords:\ } \vkuncieng}
-		\end{abstract}			
- 		\cleardoublepage
-	  }
-}{}
+%\ifthenelse{{\equal{\vmode}{sidang_akhir}}\or{\equal{\vmode}{final}}}{
+%\ifdefempty{\vabstrakina}{}
+%	  { \vspace*{4cm}
+%		\begin{abstract}
+%			%\noindent \normalsize{\onehalfspacing{\vabstrakina \vspace*{1cm}\\
+%			\noindent \normalsize{\vabstrakina \vspace*{1cm}\\
+%			{\bfseries Kata-kata kunci:\ } \vkunciina}
+%		\end{abstract}
+%  		\cleardoublepage
+%	  }
+%\ifdefempty{\vabstrakeng}{}
+%	  { \def\abstractname{Abstract}
+%		\vspace*{4cm}
+%		\begin{abstract}
+%			%\noindent \normalsize{\onehalfspacing{\vabstrakeng \vspace*{1cm}\\
+%			\noindent \normalsize{\vabstrakeng \vspace*{1cm}\\
+%			{\bfseries Keywords:\ } \vkuncieng}
+%		\end{abstract}			
+% 		\cleardoublepage
+%	  }
+%}{}
 
 % Lembar persembahan
-\ifdefstring{\vmode}{final}{
-\ifdefempty{\vuntuk}{}
-	  { \vspace*{5cm}
-		\begin{quote}
-			\em \raggedleft \Large{\vuntuk} 
-		\end{quote}
- 		\cleardoublepage
-	  }
+%\ifdefstring{\vmode}{final}{
+%\ifdefempty{\vuntuk}{}
+%	  { \vspace*{5cm}
+%		\begin{quote}
+%			\em \raggedleft \Large{\vuntuk} 
+%		\end{quote}
+% 		\cleardoublepage
+%	  }
 
 \pagestyle{plain}
 	
 % Kata pengantar
-\ifdefempty{\vprakata}{}
-	  {	\chapter*{Kata Pengantar}
-		\label{ch:prakata}
-		\addcontentsline{toc}{chapter}{Kata Pengantar}
+%\ifdefempty{\vprakata}{}
+%	  {	\chapter*{Kata Pengantar}
+%		\label{ch:prakata}
+%		\addcontentsline{toc}{chapter}{Kata Pengantar}
 %		\vprakata \vspace{0.25cm}
-		\begin{flushright}	
-			Bandung,\ \vbulan\ \vtahun \\ \vspace{1cm}
-			Penulis \\
-		\end{flushright}
-		\cleardoublepage		
-	  }}
-}{}
-
+%		\begin{flushright}	
+%			Bandung,\ \vbulan\ \vtahun \\ \vspace{1cm}
+%			Penulis \\
+%		\end{flushright}
+%		\cleardoublepage		
+%	  }}
+%}{}
+	
 \ifthenelse{{\equal{\vmode}{kosong}}\or{\equal{\vmode}{cover}}}{}
 	{ \tableofcontents \newpage 	% Daftar isi
 	  \listoffigures \newpage 	% Daftar gambar

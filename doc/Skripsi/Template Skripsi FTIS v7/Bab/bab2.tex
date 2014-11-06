@@ -18,19 +18,19 @@ Menurut [1], \textsl{knowledge discovery} dapat dibagi menjadi 7 tahap (gambar 2
 
 \begin{figure}
 \includegraphics[scale=1]{Gambar/tahapdatamining.jpg}
-\caption[Tahap \textsl{Data Mining}, Sumber Data Mining Concepts and Techniques]{Tahap \textsl{Data Mining}, Sumber Data Mining Concepts and Techniques} 
+\caption[Tahap \textsl{Data Mining}, [1]{Tahap \textsl{Data Mining}, [1]} 
 \end{figure}
 
 Tahap pertama hingga keempat merupakan bagian dari \textsl{data preprocessing}, dimana data-data disiapkan untuk dilakukan penggalian data. Tahap \textsl{data mining} merupakan tahap dimana melakukan penggalian data. Tahap keenam merupakan tahap pencarian pola yang merepresentasikan \textsl{knowledge}. Sedangkan tahap terakhir merupakan visualisasi dan representasi dari \textsl{knowledge} yang sudah diperoleh dari tahap sebelumnya.
 
 
 \subsection{\textsl{Data Cleaning}}
-\textsl{Data cleaning} merupakan tahap \textsl{data mining} untuk menghilangkan \textsl{missing value} dan \textsl{noisy data}. Pada umumnya, \textsl{data} yang diperoleh dari \textsl{database} terdapat nilai yang tidak sempurna seperti nilai yang hilang, nilai yang tidak valid atau bahkan salah ketik. Nilai-nilai tersebut dapat diatasi dengan cara \textsl{smoothing techniques}. Atribut dari suatu \textsl{database} yang tidak relevan atau redudansi bisa diatasi dengan menghapus atribut tersebut. 
+\textsl{Data cleaning} merupakan tahap \textsl{data mining} untuk menghilangkan \textsl{missing value} dan \textsl{noisy data}. Pada umumnya, \textsl{data} yang diperoleh dari \textsl{database} terdapat nilai yang tidak sempurna seperti nilai yang hilang, nilai yang tidak valid atau salah ketik. Atribut dari suatu \textsl{database} yang tidak relevan atau redudansi bisa diatasi dengan menghapus atribut tersebut. 
 
 \subsubsection{\textsl{Missing Values}}
 \textsl{Missing values} akan mengganggu proses \textsl{data mining} pada komputer dan dapat menghasilkan nilai akhir yang tidak sesuai. Terdapat beberapa teknik untuk mengatasi \textsl{missing values} yaitu
 	\begin{itemize}
-		\item Membuang tuple yang terdapat nilai yang hilang\textit{\textit{}}
+		\item Membuang tuple yang mengandung nilai yang hilang\textit{\textit{}}
 		\item Mengisi nilai yang hilang secara manual
 		\item Mengisi nilai yang hilang dengan menggunakan nilai konstan yang bersifat umum
 		\item Menggunakan nilai rata-rata dari suatu atribut untuk mengisi nilai yang hilang
@@ -39,7 +39,7 @@ Tahap pertama hingga keempat merupakan bagian dari \textsl{data preprocessing}, 
 \textsl{Noisy data} merupakan nilai yang berasal dari error atau tidak valid. \textsl{Noisy data} dapat dihilangkan dengan menggunakan teknik \textsl{smoothing}. Terdapat 3 metode untuk menghilangkan \textsl{noisy data} yaitu
 	\begin{itemize}
 		\item \textsl{Binning}, merupakan metode pengisian data sesuai dengan proses yang dilakukan pada data tersebut
-		\item \textsl{Regression}, merupakan metode yang mencari persamaan atribut untuk memprediksikan suatu nilai
+		\item \textsl{Regression}, merupakan metode yang mencari detail persamaan atribut untuk memprediksikan suatu nilai
 		\item	\textsl{Clustering}, merupakan metode pengelompokan dimana ditemukan \textsl{outliers} yang dapat dibuang
 	\end{itemize}
 
@@ -71,10 +71,10 @@ Proses dimana data-data yang relevan dengan analisis akan diambil dari database 
 		\item NilaiUTS
 		\item NilaiUAS
 	\end{itemize}
-Maka, atribut yang akan diambil adalah MataKuliah, NilaiART, NilaiUTS, NilaiUAS, sedangkan atribut yang akan dibuang adalah NPMMahasiswa, NamaMahasiswa JenisKelamin, dan Alamat karena tidak terlalu berhubungan dengan analisa.
+Maka, atribut yang berpotensi diambil adalah MataKuliah, NilaiART, NilaiUTS, NilaiUAS, sedangkan atribut yang akan dibuang adalah NPMMahasiswa, NamaMahasiswa JenisKelamin, dan Alamat karena tidak terlalu berhubungan dengan analisa.
 
 \subsection{\textsl{Data Transformation}}
-\textsl{Data transformation} merupakan tahap pengubahan data agar siap dilakukan proses \textsl{data mining}. \textsl{Data transformation} bisa melibatkan,
+\textsl{Data transformation} merupakan tahap pengubahan data agar siap dilakukan proses \textsl{data mining}. \textsl{Data transformation} bisa melibatkan:
 	\begin{itemize}
 		\item \textsl{Smoothing}, proses untuk membuang \textsl{noise} seperti yang dilakukan pada tahap \textsl{data cleaning}
 		\item \textsl{Aggregation}, proses mengganti nilai-nilai menjadi suatu nilai yang dapat mewakili nilai sebelumnya
@@ -112,41 +112,42 @@ Contoh kasus, misal nilai rata-rata dan standar deviasi dari nilai-nilai atribut
 \subsubsection{\textsl{Attribute Construction}}
 \textsl{Attribute Construction} merupakan teknik menambahkan atribut baru yang berdasarkan dari atribut yang sudah ada guna menambah akurasi. Contoh kasus, dibuat atribut baru bernama area berdasarkan atribut panjang dan lebar. 
 
-\subsubsection{\textsl{Data Reduction}}
-Proses \textsl{aggregation} dan \textsl{generalization} akan dilakukan dalam bentuk proses \textsl{data reduction} dan \textsl{Data Cube Aggregation}.
-\textsl{Data reduction} dan dilakukan untuk mendapatkan nilai yang representif namun tetap menjaga keakuratan hasil \textsl{data mining}. Terdapat beberapa cara dalam mengimplementasikan \textsl{data reduction} yaitu
-	\begin{itemize}
-		\item \textsl{Data subset selection}
-		\item \textsl{Dimensionality reduction}
-		\item \textsl{Numerosity reduction}
-		\item \textsl{Discretization and concept hierarchy generation}
-	\end{itemize}	
+%\subsubsection{\textsl{Data Reduction}}
+%Proses \textsl{aggregation} dan \textsl{generalization} akan dilakukan dalam bentuk proses \textsl{data reduction} dan \textsl{Data Cube Aggregation}.
+%\textsl{Data reduction} dan dilakukan untuk mendapatkan nilai yang representif namun tetap menjaga keakuratan hasil \textsl{data mining}. Terdapat beberapa cara dalam mengimplementasikan \textsl{data reduction} yaitu
+%	\begin{itemize}
+%		\item \textsl{Data subset selection}
+%		\item \textsl{Dimensionality reduction}
+%		\item \textsl{Numerosity reduction}
+%		\item \textsl{Discretization and concept hierarchy generation}
+%	\end{itemize}	
 
-\subsubsection {\textsl{Attribute Subset Selection}}
-\textsl{Attribute subset selection} merupakan salah satu cara melakukan \textsl{data reduction} dengan menghilangkan atribut-atribut yang tidak relevan atau data yang redudansi. Hal ini dapat mempermudah pencarian pola dikarenakan banyak atribut yang muncul akan berkurangnya. 
+%\subsubsection {\textsl{Attribute Subset Selection}}
+%\textsl{Attribute subset selection} merupakan salah satu cara melakukan \textsl{data reduction} dengan menghilangkan atribut-atribut yang tidak relevan atau data yang redudansi. Hal ini dapat mempermudah pencarian pola dikarenakan atribut yang tidak relevan tidak ada. Tujuan dari \textsl{attribute subset selection} adalah memperoleh set data yang paling sedikit yang tetap menghasilkan probabilitas penyebaran data kelas tetap mirip dengan set data sebelum dikurangi atributnya. 
+%Contoh studi kasus, jika toko CD ingin mencari apakah para konsumen tertarik dan membeli CD baru, maka atribut nama dan nomor telepon dari data konsumen tidak terlalu relevan dengan tujuan \textsl{mining} pada kasus ini, sedangkan jenis\_kelamin dan musik\_kesukaan dari konsumen bisa menjadi atribut yang relevan. 
 
-\subsubsection {\textsl{Dimensionality Reduction}}
-\textsl{Dimensionality Reduction} merupakan metode pengurangan nilai secara acak dengan cara melakukan konversi data. Jika data original dapat dibuat ulang dari data yang sudah dikompresi tanpa kehilangan informasi, maka akan dikatakan \textsl{lossless}, namun jika hanya mendapatkan data pendekatannya saja, akan disebut lossly [1].
+%\subsubsection {\textsl{Dimensionality Reduction}}
+%\textsl{Dimensionality Reduction} merupakan metode pengurangan nilai secara acak dengan cara melakukan konversi data. Jika data original dapat dibuat ulang dari data yang sudah dikompresi tanpa kehilangan informasi, maka akan dikatakan \textsl{lossless}, namun jika hanya mendapatkan data pendekatannya saja, akan disebut lossly [1].
 
-\subsubsection {\textsl{Numerosity Reduction}}
-\textsl{Numerosity Reduction} merupakan metode dimana data diganti atau ditentukan dengan cara parametik atau nonparametrik.
+%\subsubsection {\textsl{Numerosity Reduction}}
+%\textsl{Numerosity Reduction} merupakan metode dimana data diganti atau ditentukan dengan cara parametik atau nonparametrik.
 
-\subsubsection {\textsl{Discretization and Concept Hierarchy Generation}}
-lewat dulu
+%\subsubsection {\textsl{Discretization and Concept Hierarchy Generation}}
+%lewat dulu
 
 \subsection{\textsl{Data Mining}}
 
 \subsubsection{\textsl{Classification and Prediction}}
-\textsl{Classification} merupakan pemodelan yang dibangun untuk memprediksikan label kategori, seperti "`baik"', "`cukup"', dan "`buruk"' dalam sistem penilaian sikap seorang siswa atau "`mini bus"', "`bus"', atau "`sedan"' dalam kategori tipe mobil. Kategori tersebut dapat direpresentasikan dengan menggunakan nilai \textsl{discrete}. Nilai \textsl{discrete} merupakan nilai yang terpisah dan berbeda, seperti 1 atau 5. Kategori yang direpresentasikan oleh nilai \textsl{discrete} maka akan menjadi nilai yang terurut dan tidak memiliki arti, seperti 1,2,3 untuk merepresentasikan kategori tipe mobil "`mini bus"', "`bus"', dan "`sedan"'.
+\textsl{Classification} merupakan pemodelan yang dibangun untuk memprediksikan label kategori, seperti "`baik"', "`cukup"', dan "`buruk"' dalam sistem penilaian sikap seorang siswa atau "`mini bus"', "`bus"', atau "`sedan"' dalam kategori tipe mobil. Kategori tersebut dapat direpresentasikan dengan menggunakan nilai diskret. Nilai diskret merupakan nilai yang terpisah dan berbeda, seperti 1 atau 5. Kategori yang direpresentasikan oleh nilai diskret maka akan menjadi nilai yang terurut dan tidak memiliki arti, seperti 1,2,3 untuk merepresentasikan kategori tipe mobil "`mini bus"', "`bus"', dan "`sedan"'.
 
-\textsl{Prediction} merupakan model yang dibangun untuk meramalkan \textsl{continuous-value function} atau \textsl{ordered value}. \textsl{Ordered value} merupakan nilai yang terurut dan berlanjut. contoh studi kasus untuk pemodelan prediction adalah seorang marketing ingin meramalkan seberapa banyak konsumen yang akan belanja di sebuah toko dalam waktu satu bulan. Pemodelan tersebut disebut \textsl{predictor}.\textsl{Regression Analysis}, merupakan metodologi statistik yang digunakan untuk \textsl{numeric prediction}. \textsl{Classification} dan \textsl{numeric prediction} merupakan dua jenis utama dalam masalah prediksi.
+\textsl{Prediction} merupakan model yang dibangun untuk meramalkan fungsi nilai kontinu atau \textsl{ordered value}. \textsl{Ordered value} merupakan nilai yang terurut dan berlanjut. Contoh studi kasus untuk pemodelan prediction adalah seorang marketing ingin meramalkan seberapa banyak konsumen yang akan belanja di sebuah toko dalam waktu satu bulan. Pemodelan tersebut disebut \textsl{predictor}. \textsl{Regression Analysis}, merupakan metodologi statistik yang digunakan untuk \textsl{numeric prediction}. \textsl{Classification} dan \textsl{numeric prediction} merupakan dua jenis utama dalam masalah prediksi.
 
 \textsl{Data Classification} merupakan proses untuk melakukan klasifikasi. \textsl{Data classification} memiliki dua tahap proses, yaitu \textsl{learning step} dan tahap klasifikasi seperti pada ilustrasi di gambar 2.2. \textsl{Learning step} merupakan langkah pembelajaran, di mana algoritma klasifikasi membangun \textsl{classification rules} (yang berisi syarat atau aturan sebuah nilai masuk ke dalam kategori tertentu) dengan cara menganalisis \textsl{training set} yang merupakan \textsl{database tuple}. Karena pembuatan \textsl{classification rules} menggunakan \textsl{training set}, yang dikenal juga sebagai \textsl{supervised learning}. 
 Pada tahap kedua, dilakukan proses klasifikasi nilai berdasarkan \textsl{classification rules} yang sudah dibangun dari tahap pertama.
 
 \begin{figure}
 \includegraphics[scale=1]{Gambar/tahapdataclassification.jpg}
-\caption[Tahap \textsl{Data Mining}, Sumber Data Mining Concepts and Techniques]{proses \textsl{data classification}, Sumber Data Mining Concepts and Techniques} 
+\caption[Tahap \textsl{data classification}, [1]{Tahap \textsl{data classification}, [1]} 
 \end{figure}
 
 \subsection{\textsl{Decision Tree}}
@@ -154,11 +155,11 @@ Salah satu cara pembuatan \textsl{classification rules} pada \textsl{Data Classi
 
 \begin{figure}
 \includegraphics[scale=1]{Gambar/decisiontree.jpg}
-\caption[Tahap \textsl{Data Mining}, Sumber Data Mining Concepts and Techniques]{proses \textsl{data classification}, Sumber Data Mining Concepts and Techniques} 
+\caption[Contoh \textsl{decision tree}, [1]{Contoh \textsl{decision tree}, [1]} 
 \end{figure}
 
-subsubsection{\textsl{Decision Tree Induction}}
-\textsl{Decision tree induction} merupakan pelatihan pohon keputusan dari tupel pelatihan kelas berlabel. Terdapat tiga teknik untuk membuat \textsl{decission tree} yaitu ID3, C4.5 dan Classification and Regression Trees (CART). ketiga teknik tersebut menggunakan pendekatan \textsl{greedy} yang merupakan \textsl{decission tree} yang dibangun secara \textsl{top-down recursive divide and conquer}. Berikut algoritma untuk membuat pohon keputusan dari suatu tupel pelatihan.
+\subsubsection{\textsl{Decision Tree Induction}}
+\textsl{Decision tree induction} merupakan pelatihan pohon keputusan dari tupel pelatihan kelas berlabel. Terdapat tiga teknik untuk membuat \textsl{decission tree} diantaranya adalah ID3 dan C4.5. Teknik tersebut menggunakan pendekatan \textsl{greedy} yang merupakan \textsl{decission tree} yang dibangun secara \textsl{top-down recursive divide and conquer}. Algoritma yang diperlukan secara umum sama, hanya berbeda pada \textsl{attribute\_selection\_method}. Berikut algoritma untuk membuat pohon keputusan dari suatu tupel pelatihan.
 
 Input:
 \begin{itemize}
@@ -222,7 +223,7 @@ Node N akan diisi dengan hasil dari \textsl{splitting criterion} (langkah 7). Ke
 
 \begin{figure}
 \includegraphics[scale=1]{Gambar/jenishasilsplitpoint.jpg}
-\caption[Tahap \textsl{Data Mining}, Sumber Data Mining Concepts and Techniques]{tiga kemungkinan bentuk kriteria, Sumber Data Mining Concepts and Techniques} 
+\caption[Jenis-jenis \textsl{split point}, [1]{Jenis-jenis \textsl{split point}, [1]} 
 \end{figure}
 
 Kemudian, akan dipanggil kembali algoritma \textsl{decision tree} untuk setiap nilai hasil pembagian pada tuple, Dj  (langkah 14).
@@ -309,7 +310,7 @@ Dengan melakukan hal yang sama, dapat diperoleh nilai \textsl{gain} untuk atribu
 
 \begin{figure}
 \includegraphics[scale=1]{Gambar/hasilcabangid3.jpg}
-\caption[Tahap \textsl{Data Mining}, Sumber Data Mining Concepts and Techniques]{hasil cabang dari atribut \textsl{age}, Sumber Data Mining Concepts and Techniques} 
+\caption[Hasil pohon faktor pada atribut \textsl{age} dari table 2.1, [1]{Hasil cabang dari atribut \textsl{age}, [1]} 
 \end{figure}
 
 Untuk atribut yang merupakan nilai \textsl{continuous}, harus dicari nilai \textsl{split point} untuk A. Nilai-nilai dari dua angka yang bersebelahan dapat diambil nilai tengahnya untuk dijadikan \textsl{split-point}. Jika terdapat v nilai yang berbeda dari A, maka akan terdapat v-1 kemungkinan \textsl{split point}. Kemudian nilai \textsl{split point} akan dijadikan sebagai nilai pembagi, sebagai contoh: A <= \textsl{split-point} merupakan cabang pertama, dan A > \textsl{split-point} merupakan cabang kedua.
