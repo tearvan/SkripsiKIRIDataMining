@@ -29,3 +29,4 @@
 \contentsline {section}{\numberline {2.2}Log Histori KIRI}{16}{section.2.2}
 \contentsline {chapter}{Daftar Referensi}{19}{chapter*.11}
 \renewcommand {\cftchappresnum }{\bf \scshape }
+\contentsline {chapter}{\numberline {A}100 data pertama dari \textsl {log} histori KIRI}{21}{appendix.A}

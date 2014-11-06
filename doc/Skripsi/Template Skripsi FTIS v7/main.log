@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.8.19)  7 NOV 2014 04:34
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.8.19)  7 NOV 2014 06:34
 entering extended mode
 **main.tex
 ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.tex"
@@ -749,22 +749,46 @@ g>] [16]) [17]
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-)
+) [19] ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Lampiran/lampA.tex"
+[20
+
+
+]
+Lampiran A.
+
+Overfull \hbox (1063.78595pt too wide) in paragraph at lines 5--110
+[][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 725.61536pt on input line 110.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [21] [22]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 512.
- [19]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 512.
  ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.aux"
 ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab1.aux")
-("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab2.aux"))
+("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab2.aux")
+("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Lampiran/lampA.aux"))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 512.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 512.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: BC63DF1F0BE66C3E07AE6E3795EA1A09;2881.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: BC63DF1F0BE66C3E07AE6E3795EA1A09;2881
+(rerunfilecheck)             After:  8668E23818DFC1177072FC495DC9BEB4;3135.
  ) 
 Here is how much of TeX's memory you used:
- 13842 strings out of 493921
- 192065 string characters out of 3147258
- 392137 words of memory out of 3000000
+ 13853 strings out of 493921
+ 192641 string characters out of 3147258
+ 413137 words of memory out of 3000000
  16845 multiletter control sequences out of 15000+200000
  19325 words of font info for 42 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
@@ -783,9 +807,9 @@ Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx14
 Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
 r10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (25 pages, 574656 bytes).
+Output written on main.pdf (28 pages, 597753 bytes).
 PDF statistics:
- 673 PDF objects out of 1000 (max. 8388607)
- 73 named destinations out of 1000 (max. 500000)
+ 725 PDF objects out of 1000 (max. 8388607)
+ 77 named destinations out of 1000 (max. 500000)
  207 words of extra memory for PDF output out of 10000 (max. 10000000)
 
