@@ -324,7 +324,37 @@ Dengan melakukan hal yang sama, dapat diperoleh nilai \textsl{gain} untuk atribu
 
 Untuk atribut yang merupakan nilai \textsl{continuous}, harus dicari nilai \textsl{split point} untuk A. Nilai-nilai dari dua angka yang bersebelahan dapat diambil nilai tengahnya untuk dijadikan \textsl{split-point}. Jika terdapat v nilai yang berbeda dari A, maka akan terdapat v-1 kemungkinan \textsl{split point}. Kemudian nilai \textsl{split point} akan dijadikan sebagai nilai pembagi, sebagai contoh: A <= \textsl{split-point} merupakan cabang pertama, dan A > \textsl{split-point} merupakan cabang kedua.
 
- 
+\subsubsection{\textsl{Gain Ratio}}
+\textsl{Information gain} akan memiliki nilai yang baik jika suatu atribut memiliki banyak nilai yang berbeda, namun hal itu tidak selalu bagus. Sebagai contoh kasus, jika nilai id suatu table yang memiliki nilai unik, maka akan terdapat banyak sekali cabang. Namun setiap cabang hanya akan berisi satu tuple dan bersifat \textsl{pure}, maka nilai \textsl{entropy} yang dihasilkan adalah 0. Oleh karena itu, informasi yang diperoleh pada atribut ini akan bernilai maksimum namun tidak akan berguna untuk \textsl{classification} [1].
+
+C4.5, menggunakan nilai tambahan dari \textsl{information gain} yaitu \textsl{gain ratio}, yang dapat mengatasi permasalahan \textsl{information gain} tentang nilai yang banyak namun tidak baik untuk \textsl{classification}. C4.5 melakukan teknik normalisasi terhadap \textsl{gain information} dengan menggunakan \textsl{split information} yang memiliki rumus sebagai berikut:
+
+\begin{displaymath}
+	SplitInfo_A(D) = - \sum_{j=1}^v \frac{|D_j|}{|D|} \times \log_2 (\frac{|D_j|}{|D|})
+\end{displaymath}
+
+Setelah mendapatkan nilai \textsl{split info} dari suatu atribut, dapat diperoleh nilai \textsl{gain ratio} dengan rumus sebagai berikut:
+
+\begin{displaymath}
+	GainRatio(A) = \frac{Gain(A)}{SplitInfo(A)}
+\end{displaymath}
+
+Nilai dari \textsl{gain ratio} terbesar yang akan dipilih. Perlu diketahui [1] jika nilai hasil mendekati 0, maka rasio menjadi tidak stabil, oleh karena itu, \textsl{gain information} yang dipilih harus besar, minimal sama besarnya dengan nilai rata-rata dari semua test yang diperiksa.
+
+Contoh studi kasus, akan dilakukan perhitungan \textsl{gain ratio} dengan menggunakan training set pada tabel 2.1. Dapat dilihat pada atribut \textsl{income} memiliki tiga partisi yaitu \textsl{low}, \textsl{medium}, dan \textsl{high}. Terdapat empat tuple dengan nilai \textsl{low}, enam tuple dengan nilai \textsl{medium}, dan empat tuple dengan nilai \textsl{high}. Untuk menghitung \textsl{gain ratio}, perlu dihitung nilai \textsl{split information} terlebih dahulu dengan cara:
+
+\begin{displaymath}
+	SplitInfo_A(D) = - \frac{4}{14} \times \log_2 (\frac{4}{14}) - \frac{6}{14} \times \log_2 (\frac{6}{14}) - \frac{4}{14} \times \log_2 (\frac{4}{14})
+	SplitInfo_A(D) = 0.926 bits
+\end{displaymath} 
+
+Jika nilai \textsl{gain information} dari \textsl{income} adalah 0.029, maka, dapat diperoleh \textsl{gain rasio} dari \textsl{income} adalah
+
+\begin{displaymath}
+	GainRasio(D) = \frac{0.029}{0.926} = 0.031 bits
+\end{displaymath}
+
+\subsubsection{Tree Pruning}
 
 \subsection{\textsl{Pattern Evaluation}}
 \textsl{Pattern evaluation} merupakan tahap mengidentifikasi apakah \textsl{pattern} atau pola tersebut menarik dan merepresentasikan \textsl{knowledge} berdasarkan beberapa \textsl{interestingness measures}.

@@ -27,9 +27,10 @@
 \contentsline {subsection}{\numberline {2.1.6}\textsl {Decision Tree}}{10}{subsection.2.1.6}
 \contentsline {subsubsection}{\textsl {Decision Tree Induction}}{10}{subsubsection*.12}
 \contentsline {subsubsection}{\textsl {Information Gain}}{14}{subsubsection*.13}
+\contentsline {subsubsection}{\textsl {Gain Ratio}}{16}{subsubsection*.14}
 \contentsline {subsection}{\numberline {2.1.7}\textsl {Pattern Evaluation}}{16}{subsection.2.1.7}
-\contentsline {subsection}{\numberline {2.1.8}\textsl {Knowledge Presentation}}{16}{subsection.2.1.8}
-\contentsline {section}{\numberline {2.2}Log Histori KIRI}{16}{section.2.2}
+\contentsline {subsection}{\numberline {2.1.8}\textsl {Knowledge Presentation}}{17}{subsection.2.1.8}
+\contentsline {section}{\numberline {2.2}Log Histori KIRI}{17}{section.2.2}
 \contentsline {chapter}{\numberline {3}Analisa dan Perancangan Aplikasi \textsl {Data Mining}}{19}{chapter.3}
 \contentsline {section}{\numberline {3.1}Analisis Data}{19}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}\textsl {Data Cleaning}}{19}{subsection.3.1.1}
@@ -37,6 +38,6 @@
 \contentsline {subsection}{\numberline {3.1.3}\textsl {Data Transformation}}{19}{subsection.3.1.3}
 \contentsline {section}{\numberline {3.2}Analisis Perangkat Lunak}{19}{section.3.2}
 \contentsline {section}{\numberline {3.3}Analisis Perancangan Perangkat Lunak}{19}{section.3.3}
-\contentsline {chapter}{Daftar Referensi}{21}{chapter*.14}
+\contentsline {chapter}{Daftar Referensi}{21}{chapter*.15}
 \renewcommand {\cftchappresnum }{\bf \scshape }
 \contentsline {chapter}{\numberline {A}100 data pertama dari \textsl {log} histori KIRI}{23}{appendix.A}
