@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.8.19)  7 NOV 2014 17:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.8.19)  7 NOV 2014 18:18
 entering extended mode
 **main.tex
 ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.tex"
@@ -718,7 +718,12 @@ emplate Skripsi FTIS v7/Gambar/logo-unpar.png>] [2
 
 ] ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.toc")
 \tf@toc=\write5
- [3] ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.lof")
+ [3] ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.lof"
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 9.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+))
 \tf@lof=\write6
  [4]
 ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.lot")
@@ -745,14 +750,14 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 
 ]
 Bab 2.
-<Gambar/tahapdatamining.jpg, id=218, 355.3275pt x 477.28313pt>
+<Gambar/tahapdatamining.jpg, id=221, 355.3275pt x 477.28313pt>
 File: Gambar/tahapdatamining.jpg Graphic file (type jpg)
  <use Gambar/tahapdatamining.jpg>
 Package pdftex.def Info: Gambar/tahapdatamining.jpg used on input line 20.
 (pdftex.def)             Requested size: 355.32661pt x 477.28195pt.
  [5] [6 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/tahapdataminin
 g.jpg>] [7] [8] [9]
-<Gambar/tahapdataclassification.jpg, id=263, 482.55281pt x 496.85625pt>
+<Gambar/tahapdataclassification.jpg, id=266, 482.55281pt x 496.85625pt>
 File: Gambar/tahapdataclassification.jpg Graphic file (type jpg)
  <use Gambar/tahapdataclassification.jpg>
 Package pdftex.def Info: Gambar/tahapdataclassification.jpg used on input line 158.
@@ -762,7 +767,7 @@ Overfull \hbox (13.08113pt too wide) in paragraph at lines 158--159
 [][] 
  []
 
-<Gambar/decisiontree.jpg, id=264, 286.06876pt x 165.61874pt>
+<Gambar/decisiontree.jpg, id=267, 286.06876pt x 165.61874pt>
 File: Gambar/decisiontree.jpg Graphic file (type jpg)
  <use Gambar/decisiontree.jpg>
 Package pdftex.def Info: Gambar/decisiontree.jpg used on input line 166.
@@ -775,7 +780,7 @@ at-tri-bu-te_selection_method
  []
 
 [12 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/decisiontree.jpg>]
-<Gambar/jenishasilsplitpoint.jpg, id=278, 420.06938pt x 274.77657pt>
+<Gambar/jenishasilsplitpoint.jpg, id=281, 420.06938pt x 274.77657pt>
 File: Gambar/jenishasilsplitpoint.jpg Graphic file (type jpg)
  <use Gambar/jenishasilsplitpoint.jpg>
 Package pdftex.def Info: Gambar/jenishasilsplitpoint.jpg used on input line 233.
@@ -794,28 +799,35 @@ OMS/cmsy/m/n/10.95  [] [][] []   [] [][] []\OT1/cmr/m/n/10.95 ) = 0\OML/cmm/m/it
 /it/10.95 bits
  []
 
-<Gambar/hasilcabangid3.jpg, id=297, 455.45157pt x 301.8778pt>
+<Gambar/hasilcabangid3.jpg, id=300, 455.45157pt x 301.8778pt>
 File: Gambar/hasilcabangid3.jpg Graphic file (type jpg)
  <use Gambar/hasilcabangid3.jpg>
 Package pdftex.def Info: Gambar/hasilcabangid3.jpg used on input line 321.
 (pdftex.def)             Requested size: 455.45045pt x 301.87706pt.
  [15] [16 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/hasilcabangi
-d3.jpg>] [17]) [18]
-("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab3.tex"
+d3.jpg>]
+<Gambar/treepruning.jpg, id=310, 352.31625pt x 167.12437pt>
+File: Gambar/treepruning.jpg Graphic file (type jpg)
+ <use Gambar/treepruning.jpg>
+Package pdftex.def Info: Gambar/treepruning.jpg used on input line 361.
+(pdftex.def)             Requested size: 352.31538pt x 167.12395pt.
+ [17 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/treepruning.jpg>]
+ [18]) [19]
+("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab3.tex" [20
+
+
+
+]
 Bab 3.
-) [19
-
-
-
-] ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.bbl" [20
+) [21] ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.bbl" [22
 
 
 ]
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [21] ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Lampiran/lampA.tex"
-[22
+) [23] ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Lampiran/lampA.tex"
+[24
 
 
 
@@ -1025,7 +1037,7 @@ Overfull \hbox (4.21089pt too wide) in paragraph at lines 46--46
 []|\T1/cmr/m/n/10.95 113947| 
  []
 
-[23]
+[25]
 Overfull \hbox (4.21089pt too wide) in paragraph at lines 47--47
 []|\T1/cmr/m/n/10.95 113948| 
  []
@@ -1260,7 +1272,7 @@ Overfull \hbox (130.07062pt too wide) in paragraph at lines 86--86
 \T1/cmr/m/n/10.95 +Jalan+Gatot+Subroto+No.+289&f=Sukamekar&l=en/180.214.232.82/m| 
  []
 
-[24]
+[26]
 Overfull \hbox (4.21089pt too wide) in paragraph at lines 87--87
 []|\T1/cmr/m/n/10.95 113988| 
  []
@@ -1365,7 +1377,7 @@ Overfull \hbox (4.21089pt too wide) in paragraph at lines 106--106
 []|\T1/cmr/m/n/10.95 114007| 
  []
 
-[25]
+[27]
 Overfull \hbox (4.21089pt too wide) in paragraph at lines 107--107
 []|\T1/cmr/m/n/10.95 114008| 
  []
@@ -1380,7 +1392,7 @@ Overfull \hbox (4.21089pt too wide) in paragraph at lines 108--108
 []|\T1/cmr/m/n/10.95 114009| 
  []
 
-[26]) [27]
+[28]) [29]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 517.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 517.
  ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.aux"
@@ -1390,43 +1402,35 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 517.
 ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Lampiran/lampA.aux"))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 517.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 517.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: C06DF1F983D7795746BFFDCB8E182C38;4394
-(rerunfilecheck)             After:  F77489C5A4D3D9E2CF08626CD8D6DF56;4394.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 3B9FECBB4AB7EE843474DFD49564F279;4394.
  ) 
 Here is how much of TeX's memory you used:
- 15242 strings out of 493921
- 213108 string characters out of 3147258
+ 15269 strings out of 493921
+ 213860 string characters out of 3147258
  466535 words of memory out of 3000000
- 18193 multiletter control sequences out of 15000+200000
- 19325 words of font info for 42 fonts, out of 3000000 for 9000
+ 18212 multiletter control sequences out of 15000+200000
+ 19639 words of font info for 43 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
  45i,12n,43p,1084b,531s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{chapter*.14} has been referenced but does not exist, replaced by a fixed one
-
- <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk> <C:\Users\Jovan Gunawa
-n\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1000.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\
-2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbl1200.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
-appen\ec\dpi600\ecbx1200.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbl144
-0.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1000.pk> <C:\Users\Jovan G
-unawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbl1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\Mi
-KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
-r\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ec
-bx1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1095.pk> <C:\Users\Jo
-van Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr1
-0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (33 pages, 618722 bytes).
+ <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk> <C:\Users\Jovan Guna
+wan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1000.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTe
+X\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbl1200.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\j
+knappen\ec\dpi600\ecbx1200.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbl1
+440.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1000.pk> <C:\Users\Jovan
+ Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\
+MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbl1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi600\ecsl1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
+ecrm1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\
+Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1095.pk> <C:\Users\Jovan Gunawan\AppData\L
+ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on main.pdf (35 pages, 655767 bytes).
 PDF statistics:
- 814 PDF objects out of 1000 (max. 8388607)
- 96 named destinations out of 1000 (max. 500000)
- 271 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 844 PDF objects out of 1000 (max. 8388607)
+ 99 named destinations out of 1000 (max. 500000)
+ 276 words of extra memory for PDF output out of 10000 (max. 10000000)
 

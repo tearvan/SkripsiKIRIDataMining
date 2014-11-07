@@ -355,6 +355,18 @@ Jika nilai \textsl{gain information} dari \textsl{income} adalah 0.029, maka, da
 \end{displaymath}
 
 \subsubsection{Tree Pruning}
+\textsl{Tree pruning} merupakan proses pemotongan \textsl{decision tree} agar lebih efisien dan tidak terlalu mempengaruhi nilai keputusan yang dihasilkan. \textsl{decision tree} yang sudah dipotong akan lebih kecil ukuran pohonnya, tidak serumit dengan pohon yang asli, namun lebih mudah untuk diproses. \textsl{Decision tree} yang sudah dipotong memiliki kecepatan serta ketepatan mengklasifikasikan yang lebih baik [1]. Perbedaan \textsl{decision tree} yang sudah dipotong dan belum dapat dilihat pada gambar 2.6.
+
+\begin{figure}
+\includegraphics[scale=1]{Gambar/treepruning.jpg}
+\caption[\texttt{Decision Tree Pruned}]{\texttt{Decision tree} yang belum dipotong dan yang sudah dipotong, [1]} 
+\end{figure}
+
+Terdapat dua pendekatan dalam melakukan \textsl{pruning}, yaitu \textsl{prepruning} dan \textsl{postpruning}.
+
+Pada \textsl{prepruning}, pemotongan pohon dilakukan dengan cara menahan dan tidak melanjutkan pembuatan cabang atau partisi dari sebuah node, dan membuat node tersebut menjadi \textsl{leaf}. 
+
+Pada \textsl{postpruning}, pemotongan pohon dilakukan ketika \textsl{decision tree} sudah selesai dibangun dengan cara menggubah cabang pohon menjadi \textsl{leaf}.
 
 \subsection{\textsl{Pattern Evaluation}}
 \textsl{Pattern evaluation} merupakan tahap mengidentifikasi apakah \textsl{pattern} atau pola tersebut menarik dan merepresentasikan \textsl{knowledge} berdasarkan beberapa \textsl{interestingness measures}.
