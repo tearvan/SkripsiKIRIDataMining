@@ -61,6 +61,7 @@
 % \usepackage{helvet}
 % \usepackage{fouriernc} 
 \usepackage{abstract} %manipulasi abstract
+\usepackage[]{algorithm2e} %untuk membuat algo
 \usepackage{chappg} % format daftar isi 
 \usepackage{color} %warna
 \usepackage{etoolbox} %untuk programming if-then
@@ -70,10 +71,12 @@
 \usepackage{graphicx} %gambar
 \usepackage{listings} %source code
 \usepackage{lscape} %landscape untuk source code
+\usepackage{pdflscape} %landscape untuk doc
 \usepackage{multicol} %multiple column
 \usepackage{ifthen} % if then
 \usepackage[pagewise]{lineno} %line numbering
-\usepackage{lipsum} % untuk testing
+\usepackage{lipsum} % untuk testing		
+\usepackage{longtable} % untuk membuat table panjang
 \usepackage{titlesec} %judul header
 \usepackage{tocbibind} %daftar isi, gambar, tabel dll
 \usepackage{tocloft} % format daftar isi 
@@ -499,7 +502,9 @@
 \apptoc
 
 \tampillmp{\vlmp}
+\begin{landscape}
 \ifdefstring{\vlmpa}{1}{\include{Lampiran/lampA}}{}
+\end{landscape}
 %\ifdefstring{\vlmpb}{1}{\include{Lampiran/lampB}}{}
 %\ifdefstring{\vlmpc}{1}{\include{Lampiran/lampC}}{}
 %\ifdefstring{\vlmpd}{1}{\include{Lampiran/lampD}}{}

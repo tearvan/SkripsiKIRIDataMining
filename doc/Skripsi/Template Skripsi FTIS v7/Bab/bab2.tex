@@ -18,7 +18,7 @@ Menurut [1], \textsl{knowledge discovery} dapat dibagi menjadi 7 tahap (gambar 2
 
 \begin{figure}
 \includegraphics[scale=1]{Gambar/tahapdatamining.jpg}
-\caption[Tahap \textsl{Data Mining}, [1]{Tahap \textsl{Data Mining}, [1]} 
+\caption[Tahap \textsl{Data Mining}]{Tahap \textsl{Data Mining}, [1]} 
 \end{figure}
 
 Tahap pertama hingga keempat merupakan bagian dari \textsl{data preprocessing}, dimana data-data disiapkan untuk dilakukan penggalian data. Tahap \textsl{data mining} merupakan tahap dimana melakukan penggalian data. Tahap keenam merupakan tahap pencarian pola yang merepresentasikan \textsl{knowledge}. Sedangkan tahap terakhir merupakan visualisasi dan representasi dari \textsl{knowledge} yang sudah diperoleh dari tahap sebelumnya.
@@ -82,6 +82,15 @@ Maka, atribut yang berpotensi diambil adalah MataKuliah, NilaiART, NilaiUTS, Nil
 		\item \textsl{Normalization}, proses dimana suatu nilai dapat diubah skalanya menjadi nilai yang lebih kecil dan spesifik
 		\item \textsl{Attribute construction}, proses membuat atribut baru yang berasal dari beberapa atribut untuk membantu proses data mining
 	\end{itemize}
+	
+\subsubsection{\textsl{Smoothing}}
+\textsl{Smoothing} merupakan bagian dari \textsl{data cleaning} untuk menghilangkan \textsl{noise} pada database. Teknik dari \textsl{smoothing} adalah \textsl{binning}, \textsl{regression}, dan \textsl{clustering}. Penjelasan teknik \textsl{smoothing} dapat dilihat pada 2.1.1, bagian \textsl{noisy data}.
+
+\subsubsection{\textsl{Aggregation}}
+\textsl{Aggregation}, dimana suatu kesimpulan atau hasil dari \textsl{aggregation operation} yang disimpan dalam database. Contoh studi kasus, jika terdapat suatu database dari toko A, kita dapat menggunakan operasi \textsl{aggregation} untuk mencari total pendapatan dengan rentang hari tertentu.
+
+\subsubsection{\textsl{Generalization}}	
+\textsl{generalization}, dimana suatu data yang memiliki nilai \textsl{primitive} atau \textsl{low level} diubah menjadi \textsl{high level} dengan menggunakan konsep hirarki. Contoh studi kasus, nilai pada atribut umur dapat dikelompokkan menjadi muda, dewasa, tua.	
 	
 \subsubsection{\textsl{Normalization}}
 Atribut dapat dinormalisasi dengan memberi skala pada nilainya sehingga nilai tersebut menjadi suatu range yang lebih spesifik dan kecil seperti 0,0 sampai 1,0.
@@ -147,7 +156,7 @@ Pada tahap kedua, dilakukan proses klasifikasi nilai berdasarkan \textsl{classif
 
 \begin{figure}
 \includegraphics[scale=1]{Gambar/tahapdataclassification.jpg}
-\caption[Tahap \textsl{data classification}, [1]{Tahap \textsl{data classification}, [1]} 
+\caption[Tahap \textsl{data classification}]{Tahap \textsl{data classification}, [1]} 
 \end{figure}
 
 \subsection{\textsl{Decision Tree}}
@@ -155,7 +164,7 @@ Salah satu cara pembuatan \textsl{classification rules} pada \textsl{Data Classi
 
 \begin{figure}
 \includegraphics[scale=1]{Gambar/decisiontree.jpg}
-\caption[Contoh \textsl{decision tree}, [1]{Contoh \textsl{decision tree}, [1]} 
+\caption[Contoh \textsl{decision tree}]{Contoh \textsl{decision tree}, [1]} 
 \end{figure}
 
 \subsubsection{\textsl{Decision Tree Induction}}
@@ -205,7 +214,6 @@ endfor
 
 (15) return N;
 
-
 Pohon keputusan akan dimulai dengan satu node, yaitu N, merepresentasikan tuple pelatihan pada D (langkah 1)
 
 Jika tuple di D memiliki kelas yang sama semua, maka node N akan menjadi daun dan diberi label dari kelas tersebut (langkah 2 dan 3). Perlu diketahui bahwa langkah 4 dan 5 akan mengakhiri kondisi.
@@ -223,7 +231,7 @@ Node N akan diisi dengan hasil dari \textsl{splitting criterion} (langkah 7). Ke
 
 \begin{figure}
 \includegraphics[scale=1]{Gambar/jenishasilsplitpoint.jpg}
-\caption[Jenis-jenis \textsl{split point}, [1]{Jenis-jenis \textsl{split point}, [1]} 
+\caption[Jenis-jenis \textsl{split point}]{Jenis-jenis \textsl{split point}, [1]} 
 \end{figure}
 
 Kemudian, akan dipanggil kembali algoritma \textsl{decision tree} untuk setiap nilai hasil pembagian pada tuple, Dj  (langkah 14).
@@ -268,6 +276,7 @@ Setelah mendapatkan nilai Info(D) dan InfoA(Dj), \textsl{information gain} dapat
 contoh kasus untuk ID3, dalam pencarian\textsl{information gain}
 
 \begin{table}[h]
+\caption{Contoh training set}
 \begin{tabular}{|l|l|l|l|l|l|}
 \hline
 RID & age          & income & student & credit\_rating & Class: buys\_computer \\ \hline
@@ -310,7 +319,7 @@ Dengan melakukan hal yang sama, dapat diperoleh nilai \textsl{gain} untuk atribu
 
 \begin{figure}
 \includegraphics[scale=1]{Gambar/hasilcabangid3.jpg}
-\caption[Hasil pohon faktor pada atribut \textsl{age} dari table 2.1, [1]{Hasil cabang dari atribut \textsl{age}, [1]} 
+\caption[Hasil pohon faktor pada atribut \textsl{age} dari table 2.1]{Hasil cabang dari atribut \textsl{age}, [1]} 
 \end{figure}
 
 Untuk atribut yang merupakan nilai \textsl{continuous}, harus dicari nilai \textsl{split point} untuk A. Nilai-nilai dari dua angka yang bersebelahan dapat diambil nilai tengahnya untuk dijadikan \textsl{split-point}. Jika terdapat v nilai yang berbeda dari A, maka akan terdapat v-1 kemungkinan \textsl{split point}. Kemudian nilai \textsl{split point} akan dijadikan sebagai nilai pembagi, sebagai contoh: A <= \textsl{split-point} merupakan cabang pertama, dan A > \textsl{split-point} merupakan cabang kedua.
