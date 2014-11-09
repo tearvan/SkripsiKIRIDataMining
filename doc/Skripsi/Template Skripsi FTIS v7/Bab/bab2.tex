@@ -390,7 +390,7 @@ KIRI memiliki log histori yang melakukan pencatatan untuk setiap user ketika men
 	\item APIKey, mengidentifikasikan sumber dari pencarian ini
 	\item \textsl{Timestamp} (UTC), waktu ketika pengguna KIRI mencari rute angkot menggunakan waktu UTC / GMT
 	\item \textsl{Action}, tipe dari log yang dibuat.
-	\item AdditionalData, mencatat koordinat awal, koordinat akhir, dan banyak rute yang ditemukan pada pencarian ini
+	\item AdditionalData, mencatat data-data yang berhubungan sesuai dengan nilai atribut\textsl{action}
 \end{itemize}
 
 LogId merupakan \textsl{field} dengan tipe data int dengan batas 6 karakter yang digunakan sebagai \textsl{primary key} dari tabel tersebut. LogId diisi dengan menggunakan fungsi \textsl{increment integer}. \textsl{Increment integer} merupakan fungsi untuk pengisian data pada database dengan menambahkan nilai 1 dari nilai yang terakhir kali diisi.
