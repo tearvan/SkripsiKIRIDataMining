@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.8.19)  9 NOV 2014 19:13
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.8.19)  9 NOV 2014 19:21
 entering extended mode
 **main.tex
 ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.tex"
@@ -1257,26 +1257,6 @@ Overfull \hbox (4.21089pt too wide) in paragraph at lines 86--86
 []|\T1/cmr/m/n/10.95 113987| 
  []
 
-
-Overfull \hbox (126.84189pt too wide) in paragraph at lines 86--86
-[]|\T1/cmr/m/n/10.95 http://www.kiri.travel/m/r/?qs=trans+studio+mall&qf=sukamekar&ls=-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--86
-\T1/cmr/m/n/10.95 6.92600%2C107.63628&lf=-
- []
-
-
-Overfull \hbox (78.84554pt too wide) in paragraph at lines 86--86
-\T1/cmr/m/n/10.95 6.88936%2C107.57533&s=Trans+Studio+Mall+%28TSM%29+-
- []
-
-
-Overfull \hbox (130.07062pt too wide) in paragraph at lines 86--86
-\T1/cmr/m/n/10.95 +Jalan+Gatot+Subroto+No.+289&f=Sukamekar&l=en/180.214.232.82/m| 
- []
-
 [28]
 Overfull \hbox (4.21089pt too wide) in paragraph at lines 87--87
 []|\T1/cmr/m/n/10.95 113988| 
@@ -1388,12 +1368,7 @@ Overfull \hbox (4.21089pt too wide) in paragraph at lines 107--107
  []
 
 
-Overfull \hbox (66.24849pt too wide) in paragraph at lines 107--107
-[]|\T1/cmr/m/n/10.95 http://www.cendekialeadershipschool.sch.id//112.215.36.143/| 
- []
-
-
-Overfull \hbox (4.21089pt too wide) in paragraph at lines 108--108
+Overfull \hbox (4.21089pt too wide) in paragraph at lines 109--109
 []|\T1/cmr/m/n/10.95 114009| 
  []
 
@@ -1433,9 +1408,9 @@ cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10
 type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (37 pages, 659797 bytes).
+Output written on main.pdf (37 pages, 658676 bytes).
 PDF statistics:
- 851 PDF objects out of 1000 (max. 8388607)
+ 849 PDF objects out of 1000 (max. 8388607)
  104 named destinations out of 1000 (max. 500000)
  260 words of extra memory for PDF output out of 10000 (max. 10000000)
 
