@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.8.19)  7 NOV 2014 18:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.8.19)  9 NOV 2014 19:13
 entering extended mode
 **main.tex
 ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.tex"
@@ -702,7 +702,7 @@ LaTeX Info: Redefining \nameref on input line 308.
 ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.out")
 \@outlinefile=\write4
 
-<Gambar/logo-unpar.png, id=123, 360.59718pt x 356.0803pt>
+<Gambar/logo-unpar.png, id=115, 360.59718pt x 356.0803pt>
 File: Gambar/logo-unpar.png Graphic file (type png)
  <use Gambar/logo-unpar.png>
 Package pdftex.def Info: Gambar/logo-unpar.png used on input line 475.
@@ -750,14 +750,14 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 
 ]
 Bab 2.
-<Gambar/tahapdatamining.jpg, id=221, 355.3275pt x 477.28313pt>
+<Gambar/tahapdatamining.jpg, id=215, 355.3275pt x 477.28313pt>
 File: Gambar/tahapdatamining.jpg Graphic file (type jpg)
  <use Gambar/tahapdatamining.jpg>
 Package pdftex.def Info: Gambar/tahapdatamining.jpg used on input line 20.
 (pdftex.def)             Requested size: 355.32661pt x 477.28195pt.
  [5] [6 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/tahapdataminin
 g.jpg>] [7] [8] [9]
-<Gambar/tahapdataclassification.jpg, id=266, 482.55281pt x 496.85625pt>
+<Gambar/tahapdataclassification.jpg, id=260, 482.55281pt x 496.85625pt>
 File: Gambar/tahapdataclassification.jpg Graphic file (type jpg)
  <use Gambar/tahapdataclassification.jpg>
 Package pdftex.def Info: Gambar/tahapdataclassification.jpg used on input line 158.
@@ -767,7 +767,7 @@ Overfull \hbox (13.08113pt too wide) in paragraph at lines 158--159
 [][] 
  []
 
-<Gambar/decisiontree.jpg, id=267, 286.06876pt x 165.61874pt>
+<Gambar/decisiontree.jpg, id=261, 286.06876pt x 165.61874pt>
 File: Gambar/decisiontree.jpg Graphic file (type jpg)
  <use Gambar/decisiontree.jpg>
 Package pdftex.def Info: Gambar/decisiontree.jpg used on input line 166.
@@ -780,7 +780,7 @@ at-tri-bu-te_selection_method
  []
 
 [12 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/decisiontree.jpg>]
-<Gambar/jenishasilsplitpoint.jpg, id=281, 420.06938pt x 274.77657pt>
+<Gambar/jenishasilsplitpoint.jpg, id=275, 420.06938pt x 274.77657pt>
 File: Gambar/jenishasilsplitpoint.jpg Graphic file (type jpg)
  <use Gambar/jenishasilsplitpoint.jpg>
 Package pdftex.def Info: Gambar/jenishasilsplitpoint.jpg used on input line 233.
@@ -799,14 +799,14 @@ OMS/cmsy/m/n/10.95  [] [][] []   [] [][] []\OT1/cmr/m/n/10.95 ) = 0\OML/cmm/m/it
 /it/10.95 bits
  []
 
-<Gambar/hasilcabangid3.jpg, id=300, 455.45157pt x 301.8778pt>
+<Gambar/hasilcabangid3.jpg, id=294, 455.45157pt x 301.8778pt>
 File: Gambar/hasilcabangid3.jpg Graphic file (type jpg)
  <use Gambar/hasilcabangid3.jpg>
 Package pdftex.def Info: Gambar/hasilcabangid3.jpg used on input line 321.
 (pdftex.def)             Requested size: 455.45045pt x 301.87706pt.
  [15] [16 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/hasilcabangi
 d3.jpg>]
-<Gambar/treepruning.jpg, id=310, 352.31625pt x 167.12437pt>
+<Gambar/treepruning.jpg, id=304, 352.31625pt x 167.12437pt>
 File: Gambar/treepruning.jpg Graphic file (type jpg)
  <use Gambar/treepruning.jpg>
 Package pdftex.def Info: Gambar/treepruning.jpg used on input line 361.
@@ -819,15 +819,20 @@ Package pdftex.def Info: Gambar/treepruning.jpg used on input line 361.
 
 ]
 Bab 3.
-) [21] ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.bbl" [22
+[21]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [22] [23] ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.bbl"
+[24
 
 
 ]
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [23] ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Lampiran/lampA.tex"
-[24
+) [25] ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Lampiran/lampA.tex"
+[26
 
 
 
@@ -1037,7 +1042,7 @@ Overfull \hbox (4.21089pt too wide) in paragraph at lines 46--46
 []|\T1/cmr/m/n/10.95 113947| 
  []
 
-[25]
+[27]
 Overfull \hbox (4.21089pt too wide) in paragraph at lines 47--47
 []|\T1/cmr/m/n/10.95 113948| 
  []
@@ -1272,7 +1277,7 @@ Overfull \hbox (130.07062pt too wide) in paragraph at lines 86--86
 \T1/cmr/m/n/10.95 +Jalan+Gatot+Subroto+No.+289&f=Sukamekar&l=en/180.214.232.82/m| 
  []
 
-[26]
+[28]
 Overfull \hbox (4.21089pt too wide) in paragraph at lines 87--87
 []|\T1/cmr/m/n/10.95 113988| 
  []
@@ -1377,7 +1382,7 @@ Overfull \hbox (4.21089pt too wide) in paragraph at lines 106--106
 []|\T1/cmr/m/n/10.95 114007| 
  []
 
-[27]
+[29]
 Overfull \hbox (4.21089pt too wide) in paragraph at lines 107--107
 []|\T1/cmr/m/n/10.95 114008| 
  []
@@ -1392,7 +1397,7 @@ Overfull \hbox (4.21089pt too wide) in paragraph at lines 108--108
 []|\T1/cmr/m/n/10.95 114009| 
  []
 
-[28]) [29]
+[30]) [31]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 517.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 517.
  ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.aux"
@@ -1403,13 +1408,13 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 517.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 517.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 517.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3B9FECBB4AB7EE843474DFD49564F279;4394.
+(rerunfilecheck)             Checksum: 3ADE917BD73EF3411C0CEE4E10FDCEA6;3818.
  ) 
 Here is how much of TeX's memory you used:
- 15269 strings out of 493921
- 213860 string characters out of 3147258
+ 15272 strings out of 493921
+ 213855 string characters out of 3147258
  466535 words of memory out of 3000000
- 18212 multiletter control sequences out of 15000+200000
+ 18210 multiletter control sequences out of 15000+200000
  19639 words of font info for 43 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
  45i,12n,43p,1084b,531s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1428,9 +1433,9 @@ cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10
 type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (35 pages, 655767 bytes).
+Output written on main.pdf (37 pages, 659797 bytes).
 PDF statistics:
- 844 PDF objects out of 1000 (max. 8388607)
- 99 named destinations out of 1000 (max. 500000)
- 276 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 851 PDF objects out of 1000 (max. 8388607)
+ 104 named destinations out of 1000 (max. 500000)
+ 260 words of extra memory for PDF output out of 10000 (max. 10000000)
 
