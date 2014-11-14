@@ -6,7 +6,7 @@ Pada bab ini, akan dilakukan analisa terhadap data yang akan diproses menggunaka
 Pada bab ini, akan dilakukan analisa \textsl{preprocessing data} yang meliputi \textsl{data selection} dan \textsl{data transformation}. Tahap \textsl{data cleaning} dan \textsl{data integration} dapat dilewat karena hingga saat ini, database yang digunakan belum ditemukan \textsl{noise} atau \textsl{missing value}, dan hanya satu tabel (yaitu tabel \textsl{statistics}) pada database KIRI yang digunakan pada penelitian ini.
 
 \subsection{\textsl{Data Selection}}
-Pada penelitian ini, akan dilakukan proses \textsl{data mining} mengenai lokasi keberangkatan dan tujuan dari seorang user yang menggunakan aplikasi KIRI. Oleh karena itu, pada atribut \textsl{action}, nilai yang akan dipilih hanya \textsl{FINDROUTE}. Karena seluruh \textsl{action} bernilai satu jenis yaitu \textsl{FINDROUTE}, maka atribut tersebut dapat dihilangkan. Selain itu, atribut logId dan APIKey tidak akan dimasukan ke dalam proses karena tidak memiliki hubungan dengan lokasi keberangkatan dan tujuan dari seorang user.
+Pada penelitian ini, akan dilakukan proses \textsl{data mining} mengenai lokasi keberangkatan dan tujuan dari seorang user yang menggunakan aplikasi KIRI. Oleh karena itu, pada atribut \textsl{action}, nilai yang akan dipilih hanya \textsl{FINDROUTE}. Hal ini dikarenakan, hanya \textsl{action FINDROUTE} yang menjelaskan posisi keberangkatan dan tujuan dari user. Selain itu, data tersebut terlihat menarik karena dapat dibuat \textsl{decision tree} yang membantu melakukan klasifikasi untuk tujuan tertentu mengenai perpindahan penduduk khususnya untuk daerah Bandung. Karena seluruh \textsl{action} bernilai satu jenis yaitu \textsl{FINDROUTE}, maka atribut tersebut dapat dihilangkan. Selain itu, atribut logId dan APIKey tidak akan dimasukan ke dalam proses karena tidak memiliki hubungan dengan lokasi keberangkatan dan tujuan dari seorang user.
 
 Dari analisis diatas, maka atribut yang dipilih untuk diproses ke dalam \textsl{data mining} adalah
 \begin{itemize}
@@ -41,12 +41,14 @@ Pada atribut \textsl{additionalData}, jika nilai atribut \textsl{action} adalah 
 \subsection{\textsl{Data Transformation}}
 Pada atribut yang dipilih, nilai dari atribut \textsl{timestamp} dan \textsl{additionaldata} perlu dilakukan transformasi agar program dapat membaca dan memproses data lebih cepat. 
 
-Pada atribut \textsl{timestamp}, data akan diubah menjadi tiga atribut, yaitu:
+Pada atribut \textsl{timestamp}, nilai waktu dari atribut tersebut akan diubah menjadi waktu GMT+8. Kemudian, data akan diubah menjadi tiga atribut, yaitu:
 \begin{itemize}
 	\item Tanggal, atribut ini akan menunjukkan tanggal ketika user KIRI memanggil \textsl{action FINDROUTE}
 	\item Hari, atribut ini akan menunjukkan hari ketika user KIRI memanggil \textsl{action FINDROUTE}
 	\item Jam, atribut ini akan menunjukkan jam ketika user KIRI memanggil \textsl{action FINDROUTE}
 \end{itemize}
+
+Data \textsl{timestamp} diubah menjadi tiga bagian, agar dapat dilakukan pengelompokan yang dilihat dari tanggal, hari, dan jam atau hasil dari \textsl{decision tree} dapat menghasilkan node yang menentukan tanggal, hari dan jam.
 
 Pada atribut \textsl{additionalData}, data akan diubah menjadi tiga atribut, yaitu:
 \begin{itemize}
@@ -54,6 +56,8 @@ Pada atribut \textsl{additionalData}, data akan diubah menjadi tiga atribut, yai
 	\item Tujuan, atribut ini berisi Nilai latitude dan longitude dari lokasi tujuan yang dipilih oleh user
 	\item Jalur, atribut ini berisi Nilai yang menunjukkan banyak jalur yang dihasilkan oleh sistem KIRI
 \end{itemize}
+
+Data \textsl{additionalData} diubah menjadi tiga bagian, agar program dapat membaca data tersebut lebih mudah.
 
 Dari analisis diatas, banyak atribut dari tabel \textsl{statistics} akan menjadi enam, yaitu:
 \begin{itemize}

@@ -25,7 +25,20 @@ Tahap pertama hingga keempat merupakan bagian dari \textsl{data preprocessing}, 
 
 
 \subsection{\textsl{Data Cleaning}}
-\textsl{Data cleaning} merupakan tahap \textsl{data mining} untuk menghilangkan \textsl{missing value} dan \textsl{noisy data}. Pada umumnya, \textsl{data} yang diperoleh dari \textsl{database} terdapat nilai yang tidak sempurna seperti nilai yang hilang, nilai yang tidak valid atau salah ketik. Atribut dari suatu \textsl{database} yang tidak relevan atau redudansi bisa diatasi dengan menghapus atribut tersebut. 
+\textsl{Data cleaning} merupakan tahap \textsl{data mining} untuk menghilangkan \textsl{missing value} dan \textsl{noisy data}. Pada umumnya, \textsl{data} yang diperoleh dari \textsl{database} terdapat nilai yang tidak sempurna seperti nilai yang hilang, nilai yang tidak valid atau salah ketik. Atribut dari suatu \textsl{database} yang tidak relevan atau redudansi bisa diatasi dengan menghapus atribut tersebut. Contoh studi data yang memiliki \textsl{missing value} dan \textsl{noisy data} dapat dilihat pada tabel 2.1
+
+\begin{table}[h]
+\caption{Tabel mengandung \textsl{missing value} dan \textsl{noisy}}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+IdPenjualan & NamaBarang & Costumer & Harga  & BanyakBarang \\ \hline
+1           & Mouse      & Elvin    & 45000  & 2            \\ \hline
+2           & Keyboard   & Alleria  & -35000 & 1            \\ \hline
+3           & Monitor    &          & 225000 & 1            \\ \hline
+\end{tabular}
+\end{table}
+
+Dapat dilihat, pada idPenjualan 2, harga dari keyboard adalah -35000, itu merupakan \textsl{noisy} karena tidak mungkin nilai harga suatu barang dibawah 0. Pada idPenjualan 3, kolom \textsl{costumer} tidak memiliki nilai, dan itu merupakan \textsl{missing value}.
 
 \subsubsection{\textsl{Missing Values}}
 \textsl{Missing values} akan mengganggu proses \textsl{data mining} pada komputer dan dapat menghasilkan nilai akhir yang tidak sesuai. Terdapat beberapa teknik untuk mengatasi \textsl{missing values} yaitu
@@ -146,6 +159,8 @@ Contoh kasus, misal nilai rata-rata dan standar deviasi dari nilai-nilai atribut
 
 \subsection{\textsl{Data Mining}}
 
+Pada tahap ini, akan dilakukan proses \textsl{data mining} dengan menggunakan input data yang sudah diproses pada tahap sebelumnya (\textsl{data cleaning, data selection, data integration,} dan /\textsl{data transformation}).
+
 \subsubsection{\textsl{Classification and Prediction}}
 \textsl{Classification} merupakan pemodelan yang dibangun untuk memprediksikan label kategori, seperti "`baik"', "`cukup"', dan "`buruk"' dalam sistem penilaian sikap seorang siswa atau "`mini bus"', "`bus"', atau "`sedan"' dalam kategori tipe mobil. Kategori tersebut dapat direpresentasikan dengan menggunakan nilai diskret. Nilai diskret merupakan nilai yang terpisah dan berbeda, seperti 1 atau 5. Kategori yang direpresentasikan oleh nilai diskret maka akan menjadi nilai yang terurut dan tidak memiliki arti, seperti 1,2,3 untuk merepresentasikan kategori tipe mobil "`mini bus"', "`bus"', dan "`sedan"'.
 
@@ -168,7 +183,7 @@ Salah satu cara pembuatan \textsl{classification rules} pada \textsl{Data Classi
 \end{figure}
 
 \subsubsection{\textsl{Decision Tree Induction}}
-\textsl{Decision tree induction} merupakan pelatihan pohon keputusan dari tupel pelatihan kelas berlabel. Terdapat tiga teknik untuk membuat \textsl{decission tree} diantaranya adalah ID3 dan C4.5. Teknik tersebut menggunakan pendekatan \textsl{greedy} yang merupakan \textsl{decission tree} yang dibangun secara \textsl{top-down recursive divide and conquer}. Algoritma yang diperlukan secara umum sama, hanya berbeda pada \textsl{attribute\_selection\_method}. Berikut algoritma untuk membuat pohon keputusan dari suatu tupel pelatihan.
+\textsl{Decision tree induction} merupakan pelatihan pohon keputusan dari tupel pelatihan kelas berlabel. Terdapat beberapa teknik untuk membuat \textsl{decission tree} dua diantaranya adalah ID3 dan C4.5. ID3 merupakan teknik pembuatan \textsl{decision tree} dengan memanfaatkan \textsl{entropy} dan \textsl{gain info} untuk menentukan atribut yang terbaik untuk node pada \textsl{decision tree}. Sedangkan C4.5 merupakan teknik lanjutan dari ID3 yang menggunakan \textsl{gain ratio} untuk melakukan pengecekan pada nilai \textsl{gain info}.Kedua teknik tersebut menggunakan pendekatan \textsl{greedy} yang merupakan \textsl{decission tree} yang dibangun secara \textsl{top-down recursive divide and conquer}. Algoritma yang diperlukan secara umum sama, hanya berbeda pada \textsl{attribute\_selection\_method}. Berikut algoritma untuk membuat pohon keputusan dari suatu tupel pelatihan.
 
 Input:
 \begin{itemize}
@@ -297,7 +312,7 @@ RID & age          & income & student & credit\_rating & Class: buys\_computer \
 \end{tabular}
 \end{table}
 
-Pada tabel 2.1, terdapat \textsl{training set}, D. Atribut kelas label merupakan dua nilai yang berbeda yaitu \textsl{yes} atau \textsl{no}, maka dari itu, nilai m = 2. C1 diisi dengan kelas label bernilai \textsl{yes}, sedangkan C2 diisi dengan kelas label bernilai \textsl{no}. Terdapat sembilan tuple atribut kelas label dengan nilai \textsl{yes} dan lima tuple dengan nilai \textsl{no}. Untuk dapat menentukan \textsl{splitting criterion}, \textsl{information gain} harus dihitung untuk setiap atribut terlebih dahulu. Perhitungan \textsl{entropy} untuk D adalah
+Pada tabel 2.2, terdapat \textsl{training set}, D. Atribut kelas label merupakan dua nilai yang berbeda yaitu \textsl{yes} atau \textsl{no}, maka dari itu, nilai m = 2. C1 diisi dengan kelas label bernilai \textsl{yes}, sedangkan C2 diisi dengan kelas label bernilai \textsl{no}. Terdapat sembilan tuple atribut kelas label dengan nilai \textsl{yes} dan lima tuple dengan nilai \textsl{no}. Untuk dapat menentukan \textsl{splitting criterion}, \textsl{information gain} harus dihitung untuk setiap atribut terlebih dahulu. Perhitungan \textsl{entropy} untuk D adalah
 
 \begin{displaymath}
 	Info(D) = - \frac{9}{14}\log2(\frac{9}{14}) - \frac{5}{14}\log_2(\frac{5}{14}) = 0.940 bits
@@ -339,19 +354,19 @@ Setelah mendapatkan nilai \textsl{split info} dari suatu atribut, dapat diperole
 	GainRatio(A) = \frac{Gain(A)}{SplitInfo(A)}
 \end{displaymath}
 
-Nilai dari \textsl{gain ratio} terbesar yang akan dipilih. Perlu diketahui [1] jika nilai hasil mendekati 0, maka rasio menjadi tidak stabil, oleh karena itu, \textsl{gain information} yang dipilih harus besar, minimal sama besarnya dengan nilai rata-rata dari semua test yang diperiksa.
+Nilai dari \textsl{gain ratio} terbesar yang akan dipilih. Perlu diketahui [1] jika nilai hasil mendekati 0, maka ratio menjadi tidak stabil, oleh karena itu, \textsl{gain information} yang dipilih harus besar, minimal sama besarnya dengan nilai rata-rata dari semua test yang diperiksa.
 
-Contoh studi kasus, akan dilakukan perhitungan \textsl{gain ratio} dengan menggunakan training set pada tabel 2.1. Dapat dilihat pada atribut \textsl{income} memiliki tiga partisi yaitu \textsl{low}, \textsl{medium}, dan \textsl{high}. Terdapat empat tuple dengan nilai \textsl{low}, enam tuple dengan nilai \textsl{medium}, dan empat tuple dengan nilai \textsl{high}. Untuk menghitung \textsl{gain ratio}, perlu dihitung nilai \textsl{split information} terlebih dahulu dengan cara:
+Contoh studi kasus, akan dilakukan perhitungan \textsl{gain ratio} dengan menggunakan training set pada tabel 2.2. Dapat dilihat pada atribut \textsl{income} memiliki tiga partisi yaitu \textsl{low}, \textsl{medium}, dan \textsl{high}. Terdapat empat tuple dengan nilai \textsl{low}, enam tuple dengan nilai \textsl{medium}, dan empat tuple dengan nilai \textsl{high}. Untuk menghitung \textsl{gain ratio}, perlu dihitung nilai \textsl{split information} terlebih dahulu dengan cara:
 
 \begin{displaymath}
 	SplitInfo_A(D) = - \frac{4}{14} \times \log_2 (\frac{4}{14}) - \frac{6}{14} \times \log_2 (\frac{6}{14}) - \frac{4}{14} \times \log_2 (\frac{4}{14})
 	SplitInfo_A(D) = 0.926 bits
 \end{displaymath} 
 
-Jika nilai \textsl{gain information} dari \textsl{income} adalah 0.029, maka, dapat diperoleh \textsl{gain rasio} dari \textsl{income} adalah
+Jika nilai \textsl{gain information} dari \textsl{income} adalah 0.029, maka, dapat diperoleh \textsl{gain ratio} dari \textsl{income} adalah
 
 \begin{displaymath}
-	GainRasio(D) = \frac{0.029}{0.926} = 0.031 bits
+	GainRatio(D) = \frac{0.029}{0.926} = 0.031 bits
 \end{displaymath}
 
 \subsubsection{Tree Pruning}
@@ -384,9 +399,11 @@ Suatu \textsl{pattern} atau pola dapat dinyatakan menarik apabila
 
 \section{Log Histori KIRI}
 
-KIRI memiliki log histori yang melakukan pencatatan untuk setiap user ketika menggunakan KIRI. \textsl{Log} tersebut memiliki 5 \textsl{field} untuk setiap \textsl{entry} sebagai berikut:
+KIRI memiliki log histori yang melakukan pencatatan untuk setiap user ketika menggunakan KIRI. Data log tersebut diperoleh dengan cara melakukan wawancara dengan CEO KIRI, yaitu Pascal Alfadian.
+
+\textsl{Log} tersebut memiliki 5 \textsl{field} untuk setiap tuple sebagai berikut:
 \begin{itemize}
-	\item logId, primary key dari entry
+	\item logId, primary key dari tuple
 	\item APIKey, mengidentifikasikan sumber dari pencarian ini
 	\item \textsl{Timestamp} (UTC), waktu ketika pengguna KIRI mencari rute angkot menggunakan waktu UTC / GMT
 	\item \textsl{Action}, tipe dari log yang dibuat.
@@ -397,7 +414,7 @@ LogId merupakan \textsl{field} dengan tipe data int dengan batas 6 karakter yang
 APIKey merupakan \textsl{field} dengan tipe data varchar yang digunakan untuk memeriksa pengguna KIRI ketika menggunakan KIRI.
 \textsl{Timestamp} (UTC) merupakan \textsl{field} dengan tipe data \textsl{timestamp} yang digunakan untuk mencatat waktu penggunaan KIRI oleh user, diisi dengan menggunakan fungsi \textsl{current time}. \textsl{Current time} merupakan fungsi untuk pengisian data pada database dengan mengambil waktu pada komputer ketika record dibuat.
 \textsl{Action} merupakan \textsl{field} dengan tipe data varchar yang digunakan untuk memeriksa fungsi apa yang dipanggil dari API KIRI. Terdapat beberapa tipe pada \textsl{field} ini, yaitu
-/\begin{itemize}
+\begin{itemize}
 	\item \textsl{ADDAPIKEY}, \textsl{action} yang dicatat ke dalam log ketika fungsi pembuatan \textsl{API key} yang baru dipanggil.
 	\item \textsl{FINDROUTE}, \textsl{action} yang dicatat ketika user melakukan pencarian rute
 	\item \textsl{LOGIN}, \textsl{action} yang dicatat ketika developers melakukan login dengan menggunakan \textsl{API key}
@@ -408,4 +425,15 @@ APIKey merupakan \textsl{field} dengan tipe data varchar yang digunakan untuk me
 	\item \textsl{WIDGETERROR}, mencatat log tersebut ketika user menerima error dari \textit{widget}
 	\item \textsl{WIDGETLOAD}, mencatat log tersebut ketika user mengdownload widget
 \end{itemize}
-AdditionalData, merupakan \textsl{field} dengan tipe data varchar yang digunakan untuk mencatat informasi yang dibutuhkan sesuai dengan \textsl{field action}.
+AdditionalData, merupakan \textsl{field} dengan tipe data varchar yang digunakan untuk mencatat informasi yang dibutuhkan sesuai dengan \textsl{field action}. Isi dari additionalData tersebut untuk setiap \textsl{action} adalah
+\begin{itemize}
+	\item Jika nilai atribut \textsl{action} adalah \textsl{ADDAPIKEY}, maka isi nilai dari additionalData adalah nilai \textsl{API key} yang dihasilkan
+	\item Jika nilai atribut \textsl{action} adalah \textsl{FINDROUTE}, maka isi nilai dari additionalData adalah \textsl{latitude} dan \textsl{longitude} lokasi awal dan tujuan serta banyak jalur yang dihasilkan dari aplikasi KIRI
+	\item Jika nilai atribut \textsl{action} adalah \textsl{LOGIN}, maka isi nilai dari additionalData adalah id dari user yang melakukan login serta status apakah user berhasil login atau tidak
+	\item Jika nilai atribut \textsl{action} adalah \textsl{NEARBYTRANSPORT}, maka isi dari additionalData adalah \textsl{latitude} dan \textsl{longitude} dari transportasi tersebut
+	\item Jika nilai atribut \textsl{action} adalah \textsl{PAGELOAD}, maka isi nilai dari additionalData adalah ip dari user
+	\item Jika nilai atribut \textsl{action} adalah \textsl{REGISTER}, maka isi nilai dari additionalData adalah alamat email yang digunakan untuk meregister dan nama user
+	\item Jika nilai atribut \textsl{action} adalah \textsl{SEARCHPLACE}, maka isi nilai dari additionalData adalah nama tempat yang dicari
+	\item Jika nilai atribut \textsl{action} adalah \textsl{WIDGETERROR}, maka isi nilai dari additionalData adalah isi pesan dari error yang terjadi
+	\item Jika nilai atribut \textsl{action} adalah \textsl{WIDGETLOAD}, maka isi nilai dari additionalData adalah ip dari user yang melakukan download widget
+\end{itemize}
