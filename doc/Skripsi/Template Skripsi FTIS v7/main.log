@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.8.19)  14 NOV 2014 16:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.8.19)  17 NOV 2014 11:40
 entering extended mode
 **main.tex
 ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.tex"
@@ -790,10 +790,7 @@ File: Gambar/jenishasilsplitpoint.jpg Graphic file (type jpg)
 Package pdftex.def Info: Gambar/jenishasilsplitpoint.jpg used on input line 248.
 (pdftex.def)             Requested size: 420.06836pt x 274.77588pt.
  [13] [14 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/jenishasilsp
-litpoint.jpg>]
-Underfull \vbox (badness 2662) has occurred while \output is active []
-
- [15]
+litpoint.jpg>] [15]
 Overfull \hbox (46.54514pt too wide) detected at line 325
 \OML/cmm/m/it/10.95 Info[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 D\OT1/cmr/m/n/10.95 ) = [] \OMS/cmsy/m/n/10.95  \OT1/
 cmr/m/n/10.95 (\OMS/cmsy/m/n/10.95  [] [][] []   [] [][] []\OT1/cmr/m/n/10.95 ) + [] \OMS/cmsy/m/n/10.95  \OT1/cmr/m/n/
@@ -807,18 +804,18 @@ File: Gambar/hasilcabangid3.jpg Graphic file (type jpg)
  <use Gambar/hasilcabangid3.jpg>
 Package pdftex.def Info: Gambar/hasilcabangid3.jpg used on input line 336.
 (pdftex.def)             Requested size: 455.45045pt x 301.87706pt.
+
+Underfull \vbox (badness 6775) has occurred while \output is active []
+
  [16 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/hasilcabangid3.jp
 g>]
-Underfull \vbox (badness 1968) has occurred while \output is active []
-
- [17]
-<Gambar/treepruning.jpg, id=306, 352.31625pt x 167.12437pt>
+<Gambar/treepruning.jpg, id=301, 352.31625pt x 167.12437pt>
 File: Gambar/treepruning.jpg Graphic file (type jpg)
  <use Gambar/treepruning.jpg>
 Package pdftex.def Info: Gambar/treepruning.jpg used on input line 376.
 (pdftex.def)             Requested size: 352.31538pt x 167.12395pt.
- [18 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/treepruning.jpg>]
- [19]) [20]
+ [17] [18 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/treepruning.
+jpg>] [19]) [20]
 ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab3.tex"
 Bab 3.
 
@@ -1387,14 +1384,21 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 517.
 ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Lampiran/lampA.aux"))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 517.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 517.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 77739FE2CBB394FDE190CA9A5A6B4153;3687.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 77739FE2CBB394FDE190CA9A5A6B4153;3687
+(rerunfilecheck)             After:  53CBAB229FD22D6C62D289FFE918675D;4129.
  ) 
 Here is how much of TeX's memory you used:
- 15272 strings out of 493921
- 213847 string characters out of 3147258
+ 15280 strings out of 493921
+ 213969 string characters out of 3147258
  466535 words of memory out of 3000000
- 18209 multiletter control sequences out of 15000+200000
+ 18214 multiletter control sequences out of 15000+200000
  19639 words of font info for 43 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
  45i,12n,43p,1084b,531s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1413,9 +1417,9 @@ cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10
 type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (37 pages, 661699 bytes).
+Output written on main.pdf (37 pages, 667523 bytes).
 PDF statistics:
- 847 PDF objects out of 1000 (max. 8388607)
- 105 named destinations out of 1000 (max. 500000)
+ 864 PDF objects out of 1000 (max. 8388607)
+ 108 named destinations out of 1000 (max. 500000)
  252 words of extra memory for PDF output out of 10000 (max. 10000000)
 
