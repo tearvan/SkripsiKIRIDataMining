@@ -31,7 +31,7 @@ Tahap pertama hingga keempat merupakan bagian dari \textsl{data preprocessing}, 
 \caption{Tabel mengandung \textsl{missing value} dan \textsl{noisy}}
 \begin{tabular}{|l|l|l|l|l|}
 \hline
-IdPenjualan & NamaBarang & Costumer & Harga  & BanyakBarang \\ \hline
+IdPenjualan & NamaBarang & Custumer & Harga  & BanyakBarang \\ \hline
 1           & Mouse      & Elvin    & 45000  & 2            \\ \hline
 2           & Keyboard   & Alleria  & -35000 & 1            \\ \hline
 3           & Monitor    &          & 225000 & 1            \\ \hline
@@ -183,6 +183,7 @@ Salah satu cara pembuatan \textsl{classification rules} pada \textsl{Data Classi
 \end{figure}
 
 \paragraph{\textsl{Decision Tree Induction}}
+
 \textsl{Decision tree induction} merupakan pelatihan pohon keputusan dari tupel pelatihan kelas berlabel. Terdapat beberapa teknik untuk membuat \textsl{decission tree} dua diantaranya adalah ID3 dan C4.5. ID3 merupakan teknik pembuatan \textsl{decision tree} dengan memanfaatkan \textsl{entropy} dan \textsl{gain info} untuk menentukan atribut yang terbaik untuk node pada \textsl{decision tree}. Sedangkan C4.5 merupakan teknik lanjutan dari ID3 yang menggunakan \textsl{gain ratio} untuk melakukan pengecekan pada nilai \textsl{gain info}.Kedua teknik tersebut menggunakan pendekatan \textsl{greedy} yang merupakan \textsl{decission tree} yang dibangun secara \textsl{top-down recursive divide and conquer}. Algoritma yang diperlukan secara umum sama, hanya berbeda pada \textsl{attribute\_selection\_method}. Berikut algoritma untuk membuat pohon keputusan dari suatu tupel pelatihan.
 
 Input:
@@ -195,7 +196,6 @@ Input:
 Output: pohon keputusan
 
 Method:
-
 (1) create a node N;
 
 (2) if tuples in D are all of the same class, C then
@@ -267,7 +267,8 @@ subsubsection{\textsl{Attribute Selection Measure}}
 
 Notasi yang digunakan adalah sebagai berikut. D merupakan data partisi, set pelatihan dari \textsl{class-labeled} tuple. Jika label kelas atribut memiliki m nilai yang berbeda yang mendifinisikan m kelas yang berbeda, Ci (for i=1,...,m). Ci,d menjadi kelas tuple dari Ci di D. |D| dan |Ci,d| merupakan banyak tuple pada D dan Ci,d.
 
-\subsubsection{\textsl{Information Gain}}
+\paragraph{\textsl{Information Gain}}
+
 \textsl{Information} menurut Claude Shannon dalam \textsl{information theory} adalah ukuran \textsl{pure} dari suatu data. ID3 menggunakan \textsl{information gain} sebagai \textsl{attribute selection measure} yang melakukan pemilihan atribut berdasarkan informasi yang terkandung dalam pesan. Cara ID3 mendapatkan \textsl{information gain} dengan menggunakan \textsl{entropy}. \textsl{Entropy} adalah ukuran \textsl{impurity} dari suatu data. Cara mendapatkan nilai \textsl{entropy} adalah
 
 \begin{displaymath}
@@ -339,7 +340,8 @@ Dengan melakukan hal yang sama, dapat diperoleh nilai \textsl{gain} untuk atribu
 
 Untuk atribut yang merupakan nilai \textsl{continuous}, harus dicari nilai \textsl{split point} untuk A. Nilai-nilai dari dua angka yang bersebelahan dapat diambil nilai tengahnya untuk dijadikan \textsl{split-point}. Jika terdapat v nilai yang berbeda dari A, maka akan terdapat v-1 kemungkinan \textsl{split point}. Kemudian nilai \textsl{split point} akan dijadikan sebagai nilai pembagi, sebagai contoh: A <= \textsl{split-point} merupakan cabang pertama, dan A > \textsl{split-point} merupakan cabang kedua.
 
-\subsubsection{\textsl{Gain Ratio}}
+\paragraph{\textsl{Gain Ratio}}
+
 \textsl{Information gain} akan memiliki nilai yang baik jika suatu atribut memiliki banyak nilai yang berbeda, namun hal itu tidak selalu bagus. Sebagai contoh kasus, jika nilai id suatu table yang memiliki nilai unik, maka akan terdapat banyak sekali cabang. Namun setiap cabang hanya akan berisi satu tuple dan bersifat \textsl{pure}, maka nilai \textsl{entropy} yang dihasilkan adalah 0. Oleh karena itu, informasi yang diperoleh pada atribut ini akan bernilai maksimum namun tidak akan berguna untuk \textsl{classification} [1].
 
 C4.5, menggunakan nilai tambahan dari \textsl{information gain} yaitu \textsl{gain ratio}, yang dapat mengatasi permasalahan \textsl{information gain} tentang nilai yang banyak namun tidak baik untuk \textsl{classification}. C4.5 melakukan teknik normalisasi terhadap \textsl{gain information} dengan menggunakan \textsl{split information} yang memiliki rumus sebagai berikut:
@@ -369,7 +371,8 @@ Jika nilai \textsl{gain information} dari \textsl{income} adalah 0.029, maka, da
 	GainRatio(D) = \frac{0.029}{0.926} = 0.031 bits
 \end{displaymath}
 
-\subsubsection{Tree Pruning}
+\paragraph{Tree Pruning}
+	
 \textsl{Tree pruning} merupakan proses pemotongan \textsl{decision tree} agar lebih efisien dan tidak terlalu mempengaruhi nilai keputusan yang dihasilkan. \textsl{decision tree} yang sudah dipotong akan lebih kecil ukuran pohonnya, tidak serumit dengan pohon yang asli, namun lebih mudah untuk diproses. \textsl{Decision tree} yang sudah dipotong memiliki kecepatan serta ketepatan mengklasifikasikan yang lebih baik [1]. Perbedaan \textsl{decision tree} yang sudah dipotong dan belum dapat dilihat pada gambar 2.6.
 
 \begin{figure}
@@ -399,7 +402,7 @@ Suatu \textsl{pattern} atau pola dapat dinyatakan menarik apabila
 
 \section{Log Histori KIRI}
 
-KIRI memiliki log histori yang melakukan pencatatan untuk setiap user ketika menggunakan KIRI. Data log tersebut diperoleh dengan cara melakukan wawancara dengan CEO KIRI, yaitu Pascal Alfadian.
+KIRI memiliki log histori yang melakukan pencatatan untuk setiap user ketika menggunakan KIRI. Data log tersebut diperoleh dengan cara melakukan wawancara dengan CEO KIRI, yaitu Pascal Alfadian. Data log yang diberikan sudah dalam format excel.
 
 \textsl{Log} tersebut memiliki 5 \textsl{field} untuk setiap tuple sebagai berikut:
 \begin{itemize}
