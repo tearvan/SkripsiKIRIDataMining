@@ -89,7 +89,7 @@ Contoh hasil data transformasi jika input merupakan data dari tabel 3.1 dapat di
 
 \begin{table}[h]
 \caption{Contoh hasil data transformasi}
-\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+\begin{longtable}{|l|l|l|l|l|l|l|l|l|l|}
 \hline
 \textbf{Tanggal}	& \textbf{Bulan}	& \textbf{Tahun} 	& \textbf{Hari} & \textbf{Jam}	& \textbf{Menit} & \textbf{Latitude Keberangkatan} & \textbf{Longitude Keberangkatan} & \textbf{Latitude Tujuan} & \textbf{Longitude Tujuan}      \\ \hline
 01				         	& 02								& 2014						& Sabtu         & 00         	& 11						 & -6.8972513										 & 107.6185574 							  & -6.91358                & 107.62718 \\ \hline
@@ -99,8 +99,44 @@ Contoh hasil data transformasi jika input merupakan data dari tabel 3.1 dapat di
 01				          & 02								& 2014						& Sabtu         & 00         	& 25						 & -6.90608										   & 107.61530     						  & -6.89140					 &107.61060 \\ \hline
 01				          & 02								& 2014						& Sabtu         & 00         	& 27						 & -6.89459											 & 107.58818     							& -6.89876						&107.60886 \\ \hline
 01				          & 02								& 2014						& Sabtu         & 00         	& 28						 & -6.89459											 &107.58818  								   & -6.86031					 &107.61287 \\ \hline
-\end{tabular}
+\end{longtable}
 \end{table} 
+
+Setelah nilai tersebut diperoleh, nilai \textsl{longitude} serta \textsl{latitude} dari data lokasi keberangkatan dan tujuan akan diubah sekali lagi menjadi nilai yang menunjukkan apakah daerah lokasi tersebut menunjukkan perjalan keluar dari Bandung atau tidak. Hal ini dilakukan agar diperoleh data perbandingan pergerakan penduduk, apakah mereka lebih banyak yang keluar dari Bandung atau sebaliknya berdasarkan waktu tertentu. Untuk menentukan hal tersebut, maka akan dibutuhkan klasifikasi daerah agar mudah dilakukan penentuan apakan \textsl{user} akan berangkat ke Bandung atau tidak. \textsl{Classification} daerah yang ditentukan setelah melihat peta Bandung dapat dilihat pada gambar 3.1.
+
+\begin{figure}
+\includegraphics[scale=1]{Gambar/classificationmap.jpg}
+\caption[\textsl{Classification} pada daerah Bandung]{\textsl{Classification} pada daerah Bandung} 
+\end{figure}
+
+Penentuan \textsl{classification} tersebut berdasarkan perkiraaan titik pusat yang sudah ditentukan, yaitu -6.92036,107.60500 dalam latitude dan longitude. Untuk mencari nilai rusuk dari lingkaran tersebut, maka akan diambil nilai titik kedua dari sisi lingkaran tersebut. Nilai sisi yang dipilih adalah -6.92036,107.67023 dalam latitude dan longitude. Maka untuk mendapatkan nilai rusuk dari lingkaran dapat diperoleh dengan cara menghitung \textsl{euclidean} dari kedua titik tersebut.
+
+\begin{displaymath}
+	r = \sqrt{(-6.92036 - (-6.92036))^{2} + (107.60500 - 107.67023)^{2}}
+	r = 0.06523
+\end{displaymath}
+
+Dari perhitungan tersebut, maka dapat disimpulkan jika suatu nilai latitude dan longitude yang dihitung perbedaan jaraknya dengan titik pusat yang sudah ditentukan dan diperoleh nilainya kurang dari 0.06523, dapat dikatakan bahwa lokasinya berada di Bandung. Jika jaraknya lebih besar dari 0.06523, maka lokasinya berada di luar Bandung.
+
+Nilai jarak dari lokasi keberangkatan terhadap titik pusat dan lokasi tujuan terhadap titik pusat, dapat dijadikan acuan untuk menentukan apakah \textsl{user} tersebut menuju daerah Bandung atau keluar dari Bandung. Kondisi yang menentukan apakah \textsl{user} menuju Bandung yaitu, jika jarak dari lokasi keberangkatan dengan titik pusat lebih besar daripada 0.06523 (dari luar Bandung) dan jarak dari lokasi tujuan dengan titik pusat lebih kecil dari 0.06523 (di dalam Bandung), maka dapat ditentukan bahwa \textsl{user} tersebut menuju Bandung.
+
+Maka dari itu, nilai latitude dan longitude dari lokasi keberangkatan dan tujuan akan dibuang dan diganti oleh atribut menujuBandung dengan tipe data \textsl{integer}. Jika isi dari atribut tersebut bernilai 1, maka \textsl{user} tersebut menuju Bandung sedangkan nilai 0 bearti \textsl{user} tidak menuju Bandung, dan jika nilai atribut tersebut adalah 2, maka \textsl{user} tersebut memiliki lokasi keberangkatan dan tujuan di dalam Bandung. Contoh hasil data setelah dilakukan \textsl{transformation} terhadap latitude dan longitude terdapat pada tabel 3.3.
+
+\begin{table}[h]
+\caption{Contoh hasil data transformasi latitude longitude}
+\begin{longtable}{|l|l|l|l|l|l|l|}
+\hline
+\textbf{Tanggal}	& \textbf{Bulan}	& \textbf{Tahun} 	& \textbf{Hari} & \textbf{Jam}	& \textbf{Menit} & \textbf{MenujuBandung} \\ \hline
+01				         	& 02								& 2014						& Sabtu         & 00         	& 11						 & 2                    \\ \hline
+01				         	& 02								& 2014						& Sabtu         & 00         	& 13						 & 1        					  \\ \hline
+01				          & 02								& 2014						& Sabtu         & 00         	& 16						 & 1       							\\ \hline
+01				          & 02								& 2014						& Sabtu         & 00         	& 18						 & 0         						\\ \hline
+01				          & 02								& 2014						& Sabtu         & 00         	& 25						 & 1          					\\ \hline
+01				          & 02								& 2014						& Sabtu         & 00         	& 27						 & 2      							\\ \hline
+01				          & 02								& 2014						& Sabtu         & 00         	& 28						 & 0       							\\ \hline
+\end{longtable}
+\end{table} 
+
 
 \section{Analisis Perangkat Lunak}
 Agar analisis pola dari lokasi keberangkatan dan tujuan dari data \textsl{log} histori lebih mudah, maka akan dibangun sebuah perangkat lunak yang dapat melakukan proses \textsl{data mining} dengan menggunakan teknik ID3 dan C4.5, serta dapat melakukan visualisasi hasil dari \textsl{data mining} yang diperoleh setelah proses dijalankan yaitu perangkat lunak \textsl{data mining log} histori KIRI. 
@@ -149,8 +185,18 @@ setelah proses \textsl{transform} berhasil dilaksanakan, maka data sudah siap un
 \subsubsection{Pemodelan Fungsi pada Perangkat Lunak \textsl{Data Mining Log} Histori KIRI}
 Setelah \textsl{preprocessing} data selesai dilaksanakan, maka program akan menjalankan proses \textsl{data mining}. Proses tersebut memiliki tahap sebagai berikut
 \begin{enumerate}
-	\item 
+	\item Program akan menjalankan algoritma pembuat \textsl{decision tree} yang terdapat pada \ref{method_pohon_keputusan}
+	\item Program akan menampilkan \textsl{decision tree}
 \end{enumerate}  
+
+Pada tahap pertama, isi method pada \textsl{attribute_selection_method} akan memiliki tahap proses sebagai berikut
+\begin{enumerate}
+	\item Program akan menghitung nilai entropy \textsl{class}
+	\item Program akan menghitung nilai entropy dan mendapatkan nilai \textsl{gain info} untuk setiap atribut pada \textsl{attribute_list}
+	\item Jika \textsl{user} memilih untuk menggunakan algoritma C4.5, maka program akan menghitung \textsl{splitInfo} dan menghitung \textsl{gainRasio}
+	\item Program akan memilih atribut yang terbaik untuk dijadikan \textsl{node} (jika ID3 maka nilai \textsl{gainInfo} yang akan digunakan untuk memilih atribut, jika C4.5 maka nilai \textsl{gain Rasio} yang akan digunakan untuk memilih atribut)
+	\item Program akan mengembalikan \textsl{node} yang dipilih berserta nilai tuple yang terdapat pada cabang masing-masing
+\end{enumerate}
 
 \subsection{Diagram \textsl{Use Case} Perangkat Lunak}
 \subsection{Diagram kelas Perangkat Lunak}

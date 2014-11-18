@@ -194,8 +194,9 @@ Input:
 \end{itemize}
 
 Output: pohon keputusan
-
+\label{method_pohon_keputusan}
 Method:
+
 (1) create a node N;
 
 (2) if tuples in D are all of the same class, C then
@@ -269,7 +270,7 @@ Notasi yang digunakan adalah sebagai berikut. D merupakan data partisi, set pela
 
 \paragraph{\textsl{Information Gain}}
 
-\textsl{Information} menurut Claude Shannon dalam \textsl{information theory} adalah ukuran \textsl{pure} dari suatu data. ID3 menggunakan \textsl{information gain} sebagai \textsl{attribute selection measure} yang melakukan pemilihan atribut berdasarkan informasi yang terkandung dalam pesan. Cara ID3 mendapatkan \textsl{information gain} dengan menggunakan \textsl{entropy}. \textsl{Entropy} adalah ukuran \textsl{impurity} dari suatu data. Cara mendapatkan nilai \textsl{entropy} adalah
+\textsl{Information} menurut Claude Shannon dalam \textsl{information theory} adalah ukuran \textsl{pure} dari suatu data. Suatu data yang \textsl{pure} jika data tersebut memiliki tuple dengan \textsl{class} yang sama. ID3 menggunakan \textsl{information gain} sebagai \textsl{attribute selection measure} yang melakukan pemilihan atribut berdasarkan informasi yang terkandung dalam pesan. Cara ID3 mendapatkan \textsl{information gain} dengan menggunakan \textsl{entropy}. \textsl{Entropy} adalah ukuran \textsl{impurity} dari suatu data. Cara mendapatkan nilai \textsl{entropy} adalah
 
 \begin{displaymath}
 	Info(D) = -\sum_{i=1}^{m} pi \log_2(pi)
@@ -440,3 +441,44 @@ AdditionalData, merupakan \textsl{field} dengan tipe data varchar yang digunakan
 	\item Jika nilai atribut \textsl{action} adalah \textsl{WIDGETERROR}, maka isi nilai dari additionalData adalah isi pesan dari error yang terjadi
 	\item Jika nilai atribut \textsl{action} adalah \textsl{WIDGETLOAD}, maka isi nilai dari additionalData adalah ip dari user yang melakukan download widget
 \end{itemize}
+
+\subsection{Perhitungan Nilai Jarak Menggunakan \textsl{Euclidean}}
+\textsl{Euclidean} dapat menghasilkan nilai jarak antar dua objek. Misal kita memiliki dua objek (p dan q). Jika kedua objek tersebut merupakan objek dengan satu dimensi, maka rumus \textsl{euclidean} akan menjadi
+
+\begin{displaymath}
+	\sqrt{(p - q)^{2}} = |p - q|
+\end{displaymath} 
+
+Jika objek p dan q merupakan objek dua dimensi, maka rumus \textsl{euclidean} akan menjadi
+
+\begin{displaymath}
+	d(p,q) = \sqrt{(p_{1} - q_{1})^{2} + (p_{2} - q_{2})^{2}}
+\end{displaymath}
+
+Jika objek p dan q merupakan objek tiga dimensi, maka rumus \textsl{euclidean} akan menjadi
+
+\begin{displaymath}
+	d(p,q) = \sqrt{(p_{1} - q_{1})^{2} + (p_{2} - q_{2})^{2} + (p_{3} - q_{3})^{2}}
+\end{displaymath}
+
+Jika objek p dan q merupakan objek n dimensi, maka rumus \textsl{euclidean} akan menjadi
+
+\begin{displaymath}
+	d(p,q) = \sqrt{(p_{1} - q_{1})^{2} + (p_{2} - q_{2})^{2} + ..... + (p_{n-1} - q_{n-1})^{2} + (p_{n} - q_{n})^{2}}
+\end{displaymath}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
