@@ -189,17 +189,74 @@ Setelah \textsl{preprocessing} data selesai dilaksanakan, maka program akan menj
 	\item Program akan menampilkan \textsl{decision tree}
 \end{enumerate}  
 
-Pada tahap pertama, isi method pada \textsl{attribute_selection_method} akan memiliki tahap proses sebagai berikut
+Pada tahap pertama, isi method pada \textsl{attribute\_selection\_method} akan memiliki tahap proses sebagai berikut
 \begin{enumerate}
 	\item Program akan menghitung nilai entropy \textsl{class}
-	\item Program akan menghitung nilai entropy dan mendapatkan nilai \textsl{gain info} untuk setiap atribut pada \textsl{attribute_list}
+	\item Program akan menghitung nilai entropy dan mendapatkan nilai \textsl{gain info} untuk setiap atribut pada \textsl{attribute\_list}
 	\item Jika \textsl{user} memilih untuk menggunakan algoritma C4.5, maka program akan menghitung \textsl{splitInfo} dan menghitung \textsl{gainRasio}
 	\item Program akan memilih atribut yang terbaik untuk dijadikan \textsl{node} (jika ID3 maka nilai \textsl{gainInfo} yang akan digunakan untuk memilih atribut, jika C4.5 maka nilai \textsl{gain Rasio} yang akan digunakan untuk memilih atribut)
 	\item Program akan mengembalikan \textsl{node} yang dipilih berserta nilai tuple yang terdapat pada cabang masing-masing
 \end{enumerate}
 
-\subsection{Diagram \textsl{Use Case} Perangkat Lunak}
-\subsection{Diagram kelas Perangkat Lunak}
+\subsection{Diagram \textsl{Use Case} Perangkat Lunak \textsl{Data Mining Log} Histori KIRI}
+
+Diagram \textsl{use case} merupakan diagram yang mendeskripsikan sistem dengan lingkungannya. Pada penelitian ini, lingkungan yang pada sistem yang dibangun adalah \textsl{user}. Berdasarkan analisa yang telah dilakukan, maka \textsl{user} dapat melakukan:
+\begin{itemize}
+	\item Melakukan \textsl{load} data yang digunakan sebagai input data dengan cara memasukan alamat data pada program
+	\item Memilih algoritma yang akan digunakan, terdapat dua algoritma, yaitu ID3 dan C4.5
+	\item Melakukan proses \textsl{data mining} dengan input data dari alamat data yang sudah dimasukan. Setelah proses berhasil dilaksanakan, program akan menampilkan hasil yang diperoleh
+\end{itemize}
+
+Diagram \textsl{use case} saat \textsl{user} menjalankan perangkat lunak \textsl{data mining log} histori KIRI dapat dilihat pada gambar 3.2
+
+\begin{figure}
+\includegraphics[scale=1]{Gambar/usecase.jpg}
+\caption[Diagram \textsl{Use Case} Perangkat Lunak \textsl{Data Mining Log} Histori KIRI]{Diagram \textsl{Use Case} Perangkat Lunak \textsl{Data Mining Log} Histori KIRI} 
+\end{figure}
+
+\begin{table}[h]
+\caption{Skenario Melakukan \textsl{load} Data}
+\begin{tabular}{|l|l|}
+\hline
+Nama           & Load data                                                       \\ \hline
+Aktor          & \textit{User}                                                   \\ \hline
+Deskripsi      & Memasukan alamat data yang akan dijadikan sebagai input program \\ \hline
+Kondisi awal   & \textsl{Textbox} belum terisi                                   \\ \hline
+Kondisi akhir  & \textsl{Textbox} sudah terisi dengan alamat data                \\ \hline
+Skenario utama & \textit{User} memasukan alamat data pada textbox                \\ \hline
+Eksespi        & Data tidak ditemukan                                            \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\caption{Skenario Melakukan \textsl{Data Mining}}
+\begin{tabular}{|l|l|}
+\hline
+Nama           & Proses \textsl{Data Mining }                      								\\ \hline
+Aktor          & \textit{User}                                 										\\ \hline
+Deskripsi      & Menekan tombol proses pada \textsl{interface}       					    \\ \hline
+Kondisi awal   & \textsl{Textbox} belum terisi                          					\\ \hline
+Kondisi akhir  & \textsl{Textbox} sudah terisi dengan hasil \textsl{data mining}  \\ \hline
+Skenario utama & \textit{User} menekan tombol proses         										  \\ \hline
+Eksespi        & Data tidak ditemukan atau data tidak dapat diproses    		  	  \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\caption{Skenario Memilih Algoritma yang Akan Digunakan}
+\begin{tabular}{|l|l|}
+\hline
+Nama           & Memilih algoritma ID3 atau C4.5                     \\ \hline
+Aktor          & \textit{User}                                       \\ \hline
+Deskripsi      & User memilih algoritma yang akan dipakai            \\ \hline
+Kondisi awal   & \textsl{Radiobutton} terpilih pada ID3              \\ \hline
+Kondisi akhir  & \textsl{Radiobutton} terpilih pada ID3 atau C4.5    \\ \hline
+Skenario utama & \textit{User} memilih algoritma yang akan digunakan \\ \hline
+Eksespi        & Tidak ada																					 \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{Diagram kelas Perangkat Lunak \textsl{Data Mining Log} Histori KIRI}
 
 
 

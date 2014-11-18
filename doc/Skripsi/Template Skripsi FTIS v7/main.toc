@@ -44,8 +44,8 @@
 \contentsline {subsubsection}{Pemodelan Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{26}{subsubsection*.18}
 \contentsline {subsubsection}{Pemodelan Data pada Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{26}{subsubsection*.19}
 \contentsline {subsubsection}{Pemodelan Fungsi pada Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{27}{subsubsection*.20}
-\contentsline {subsection}{\numberline {3.2.1}Diagram \textsl {Use Case} Perangkat Lunak}{27}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Diagram kelas Perangkat Lunak}{27}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.1}Diagram \textsl {Use Case} Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{27}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Diagram kelas Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{27}{subsection.3.2.2}
 \contentsline {chapter}{Daftar Referensi}{29}{chapter*.21}
 \renewcommand {\cftchappresnum }{\bf \scshape }
 \contentsline {chapter}{\numberline {A}100 data pertama dari \textsl {log} histori KIRI}{31}{appendix.A}
