@@ -236,12 +236,12 @@ Jika tuple di D memiliki kelas yang sama semua, maka node N akan menjadi daun da
 
 Jika tuple di D ada kelas yang berbeda, maka algoritma akan memanggil \textsl{attribute\_selection\_method} untuk menentukan \textsl{splitting criterion}. \textsl{Splitting criterion} akan menentukan atribut pada node N yang merupakan nilai terbaik untuk memecah nilai atribut pada tuple ke dalam kelas masing-masing. (langkah 6)
 
-Node N akan diisi dengan hasil dari \textsl{splitting criterion} (langkah 7). Kemudian kriteria tersebut agak dibentuk cabangnya masing-masing sesuai pada langkah 10 dan 11. Terdapat tiga kemungkinan bentuk kriteria jika A merupakan \textsl{splitting\_attribute} yang memiliki nilai unik seperti \{a1, a2, ..., av\} seperti pada gambar 2.4, yaitu,
+Node N akan diisi dengan hasil dari \textsl{splitting criterion} (langkah 7). Kemudian kriteria tersebut agak dibentuk cabangnya masing-masing sesuai pada langkah 10 dan 11. Terdapat tiga kemungkinan bentuk kriteria jika A merupakan \textsl{splitting\_attribute} yang memiliki nilai unik seperti \{a$_{1}$, a$_{2}$, ..., a$_{v}$\} seperti pada gambar 2.4, yaitu,
 
 \begin{enumerate}
 	\item \textsl{Discrete valued}: cabang yang dihasilkan memiliki kelas dengan nilai diskret. Karena kelas yang dihasilkan diskret dan hanya memiliki nilai yang sama pada cabang tersebut, maka \textsl{attribut\_list} akan dihapus (langkah 8 dan 9)
 	\item \textsl{Continuous values}: cabang yang dihasilkan memiliki jarak nilai untuk memenuhi suatu kondisi (contoh: A <= split\_point), dimana nilai \textsl{split\_point} adalah nilai pembagi yang dikembalikan oleh \textsl{attribute\_selection\_method}
-	\item \textsl{Dicrete valued and a binary tree}: cabang yang dihasilkan adalah dua berupa nilai iya atau tidak dari "`apakah A anggota Sa"', dimana Sa merupakan subset dari A, yang dikembalikan oleh \textsl{Attribute\_selection\_method}
+	\item \textsl{Dicrete valued and a binary tree}: cabang yang dihasilkan adalah dua berupa nilai iya atau tidak dari "`apakah A anggota S$_{a}$"', dimana S$_{a}$ merupakan subset dari A, yang dikembalikan oleh \textsl{Attribute\_selection\_method}
 \end{enumerate}
 
 
@@ -250,14 +250,14 @@ Node N akan diisi dengan hasil dari \textsl{splitting criterion} (langkah 7). Ke
 \caption[Jenis-jenis \textsl{split point}]{Jenis-jenis \textsl{split point}, [1]} 
 \end{figure}
 
-Kemudian, akan dipanggil kembali algoritma \textsl{decision tree} untuk setiap nilai hasil pembagian pada tuple, Dj  (langkah 14).
+Kemudian, akan dipanggil kembali algoritma \textsl{decision tree} untuk setiap nilai hasil pembagian pada tuple, D$_{j}$  (langkah 14).
 
 Rekursif tersebut akan berhenti ketika salah satu dari kondisi terpenuhi, yaitu
 
 \begin{enumerate}
 	\item Semua tuple pada partisi D merupakan bagian dari kelas yang sama.
 	\item Sudah tidak ada atribut yang dapat dilakukan pembagian lagi (dilakukan pengecekan pada langkah 4). Disini, akan dilakukan \textsl{majority voting} (langkah 5) yang akan mengkonversi node N menjadi \textsl{leaf} dan diberi label dengan kelas yang terbanyak pada D.
-	\item Sudah tidak ada tuple yang dapat diberi cabang, Dj sudah kosong (langkah 12) dan \textsl{leaf} akan dibuat dengan \textsl{majority class} pada D (langkah 13).
+	\item Sudah tidak ada tuple yang dapat diberi cabang, D$_{j}$ sudah kosong (langkah 12) dan \textsl{leaf} akan dibuat dengan \textsl{majority class} pada D (langkah 13).
 \end{enumerate}
 
 Pada langkah 15, akan dikembalikan nilai \textsl{decision tree} yang telah dibuat.
@@ -266,7 +266,7 @@ subsubsection{\textsl{Attribute Selection Measure}}
 
 \textsl{Attribute Selection Measure} merupakan suatu hirarki untuk pemilihan \textsl{splitting criterion} yang terbaik yang memisah partisi data (D), tuple pelatihan kelas label ke dalam kelas masing-masing. \textsl{Attribute Selection Measure} menyediakan peringkat untuk setiap atribut pada training tuple. Jika \textsl{splitting criterion} merupakan nilai \textsl{continous} atau \textsl{binary trees}, maka nilai \textsl{split point} dan \textsl{splitting subset} harus ditentukan sebagai bagian dari \textsl{splitting criterion}. Contoh dari \textsl{attribute selection measure} adalah \textsl{information gain}, \textsl{gain ratio}, dan \textsl{gini index}.
 
-Notasi yang digunakan adalah sebagai berikut. D merupakan data partisi, set pelatihan dari \textsl{class-labeled} tuple. Jika label kelas atribut memiliki m nilai yang berbeda yang mendifinisikan m kelas yang berbeda, Ci (for i=1,...,m). Ci,d menjadi kelas tuple dari Ci di D. |D| dan |Ci,d| merupakan banyak tuple pada D dan Ci,d.
+Notasi yang digunakan adalah sebagai berikut. D merupakan data partisi, set pelatihan dari \textsl{class-labeled} tuple. Jika label kelas atribut memiliki m nilai yang berbeda yang mendifinisikan m kelas yang berbeda, Ci (for i=1,...,m). C$_{i,d}$ menjadi kelas tuple dari C$_{i}$ di D. |D| dan |C$_{i,d}$| merupakan banyak tuple pada D dan C$_{i,d}$.
 
 \paragraph{\textsl{Information Gain}}
 
@@ -276,15 +276,15 @@ Notasi yang digunakan adalah sebagai berikut. D merupakan data partisi, set pela
 	Info(D) = -\sum_{i=1}^{m} pi \log_2(pi)
 \end{displaymath}
 
-Dimana pi merupakan probabilitas tuple pada D terhadap class Ci, dapat diperoleh dengan |ci,d|/|D|. Info(D) merupakan nilai rata-rata \textsl{entropy} dari suatu label kelas pada tuple D. Untuk mengetahui atribut mana yang paling baik untuk dijadikan \textsl{splitting attribute}, adalah dengan cara menghitung nilai \textsl{entrophy} dari suatu atribut kemudian diselisihkan dengan nilai \textsl{entropy} dari D. Jika pada tuple D, memiliki atribut A dengan v nilai yang berbeda, maka menghitung \textsl{entropy} dari suatu atribut adalah
+Dimana pi merupakan probabilitas tuple pada D terhadap class C$_{i}$, dapat diperoleh dengan |C$_{i,d}$|/|D|. Info(D) merupakan nilai rata-rata \textsl{entropy} dari suatu label kelas pada tuple D. Untuk mengetahui atribut mana yang paling baik untuk dijadikan \textsl{splitting attribute}, adalah dengan cara menghitung nilai \textsl{entrophy} dari suatu atribut kemudian diselisihkan dengan nilai \textsl{entropy} dari D. Jika pada tuple D, memiliki atribut A dengan v nilai yang berbeda, maka menghitung \textsl{entropy} dari suatu atribut adalah
 
 \begin{displaymath}
 	Info_A(D) = \sum_{j=1}^v \frac{|D_j|}{|D|} \times Info(D_j)
 \end{displaymath}
 
-|Dj|/D merupakan angka yang menghitung bobot dari suatu partisi. Semakin kecil nilai dari InfoA(Dj), maka atribut tersebut masih memerlukan informasi, semakin besar nilai InfoA(Dj), semakin tinggi pula tingkat \textsl{pure} dari suatu partisi.
+|D$_{j}$|/D merupakan angka yang menghitung bobot dari suatu partisi. Semakin kecil nilai dari Info$_{A}(D)$, maka atribut tersebut masih memerlukan informasi, semakin besar nilai Info$_{A}$(D), semakin tinggi pula tingkat \textsl{pure} dari suatu partisi.
 
-Setelah mendapatkan nilai Info(D) dan InfoA(Dj), \textsl{information gain} dapat diperoleh dari selisih nilai Info(D) dan InfoA(Dj)
+Setelah mendapatkan nilai Info(D) dan Info$_{A}$(D), \textsl{information gain} dapat diperoleh dari selisih nilai Info(D) dan Info$_{A}$(D)
 
 \begin{displaymath}
 	Gain(A) = Info(D) - Info_A(D)
@@ -314,7 +314,7 @@ RID & age          & income & student & credit\_rating & Class: buys\_computer \
 \end{tabular}
 \end{table}
 
-Pada tabel 2.2, terdapat \textsl{training set}, D. Atribut kelas label merupakan dua nilai yang berbeda yaitu \textsl{yes} atau \textsl{no}, maka dari itu, nilai m = 2. C1 diisi dengan kelas label bernilai \textsl{yes}, sedangkan C2 diisi dengan kelas label bernilai \textsl{no}. Terdapat sembilan tuple atribut kelas label dengan nilai \textsl{yes} dan lima tuple dengan nilai \textsl{no}. Untuk dapat menentukan \textsl{splitting criterion}, \textsl{information gain} harus dihitung untuk setiap atribut terlebih dahulu. Perhitungan \textsl{entropy} untuk D adalah
+Pada tabel 2.2, terdapat \textsl{training set}, D. Atribut kelas label merupakan dua nilai yang berbeda yaitu \textsl{yes} atau \textsl{no}, maka dari itu, nilai m = 2. C$_{1}$ diisi dengan kelas label bernilai \textsl{yes}, sedangkan C$_{2}$ diisi dengan kelas label bernilai \textsl{no}. Terdapat sembilan tuple atribut kelas label dengan nilai \textsl{yes} dan lima tuple dengan nilai \textsl{no}. Untuk dapat menentukan \textsl{splitting criterion}, \textsl{information gain} harus dihitung untuk setiap atribut terlebih dahulu. Perhitungan \textsl{entropy} untuk D adalah
 
 \begin{displaymath}
 	Info(D) = - \frac{9}{14}\log2(\frac{9}{14}) - \frac{5}{14}\log_2(\frac{5}{14}) = 0.940 bits
@@ -467,6 +467,12 @@ Jika objek p dan q merupakan objek n dimensi, maka rumus \textsl{euclidean} akan
 	d(p,q) = \sqrt{(p_{1} - q_{1})^{2} + (p_{2} - q_{2})^{2} + ..... + (p_{n-1} - q_{n-1})^{2} + (p_{n} - q_{n})^{2}}
 \end{displaymath}
 
+Contoh studi kasus untuk perhitungan dua objek dengan dimensi dua, misal terdapat dua objek dengan nilai posisi (x,y). Objek pertama terletak pada posisi 3,5 sedangkan objek kedua terletak pada posisi 4,7. Maka perhitungan jarak kedua objek tersebut adalah
+
+\begin{displaymath}
+	d(o1,o2) = \sqrt{(3 - 4)^{2} + (5 - 7)^{2}}
+	d(o1,o2) = 2.236068
+\end{displaymath}
 
 
 
