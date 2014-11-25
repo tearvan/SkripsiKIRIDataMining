@@ -1,8 +1,9 @@
-\chapter{Analisa}
+	\chapter{Analisa}
 
 Pada bab ini, akan dilakukan analisa terhadap data yang akan diproses menggunakan \textsl{data mining} dan perangkat lunak yang akan dibangun untuk melakukan proses data tersebut.
 
 \section{Analisis Data}
+\label{analisisData}
 Pada bab ini, akan dilakukan analisa \textsl{preprocessing data} yang meliputi \textsl{data cleaning}, \textsl{data integration}, \textsl{data selection} dan \textsl{data transformation}. Setelah membaca dan menganalisis data \textsl{log} histori KIRI, maka penelitian ini akan lebih fokus untuk meneliti mengenai lokasi keberangkatan dan tujuan dari user yang menggunakan aplikasi KIRI.
 
 \subsection{Data Cleaning}
@@ -20,9 +21,10 @@ Dari analisis diatas, maka atribut yang dipilih untuk diproses ke dalam \textsl{
 	\item \textsl{AdditionalData}
 \end{itemize}
 
-Berikut contoh data dari atribut tersebut dapat dilihat pada tabel 3.1
+Berikut contoh data dari atribut tersebut dapat dilihat pada tabel \ref{table:contohDataLog}
 \begin{table}[h]
 \caption{Contoh data \textsl{log} KIRI setelah \textsl{data selection}}
+\label{table:contohDataLog}
 \begin{tabular}{|l|l|}
 \hline
 \textbf{Timestamp (UTC)} & \textbf{AdditionalData}                     \\ \hline
@@ -85,10 +87,11 @@ Dari analisis diatas, banyak atribut dari tabel \textsl{statistics} akan menjadi
 	\item Longitude Tujuan
 \end{itemize}
 
-Contoh hasil data transformasi jika input merupakan data dari tabel 3.1 dapat dilihat pada tabel 3.2.
+Contoh hasil data transformasi jika input merupakan data dari tabel 3.1 dapat dilihat pada tabel \ref{table:contohHasilDataTransformasi}	.
 
 \begin{table}[h]
 \caption{Contoh hasil data transformasi}
+\label{table:contohHasilDataTransformasi}
 \begin{longtable}{|l|l|l|l|l|l|l|l|l|l|}
 \hline
 \textbf{Tanggal}	& \textbf{Bulan}	& \textbf{Tahun} 	& \textbf{Hari} & \textbf{Jam}	& \textbf{Menit} & \textbf{Latitude Keberangkatan} & \textbf{Longitude Keberangkatan} & \textbf{Latitude Tujuan} & \textbf{Longitude Tujuan}      \\ \hline
@@ -102,11 +105,12 @@ Contoh hasil data transformasi jika input merupakan data dari tabel 3.1 dapat di
 \end{longtable}
 \end{table} 
 
-Setelah nilai tersebut diperoleh, nilai \textsl{longitude} serta \textsl{latitude} dari data lokasi keberangkatan dan tujuan akan diubah sekali lagi menjadi nilai yang menunjukkan apakah daerah lokasi tersebut menunjukkan perjalan keluar dari Bandung atau tidak. Hal ini dilakukan agar diperoleh data perbandingan pergerakan penduduk, apakah mereka lebih banyak yang keluar dari Bandung atau sebaliknya berdasarkan waktu tertentu. Untuk menentukan hal tersebut, maka akan dibutuhkan klasifikasi daerah agar mudah dilakukan penentuan apakan \textsl{user} akan berangkat ke Bandung atau tidak. \textsl{Classification} daerah yang ditentukan setelah melihat peta Bandung dapat dilihat pada gambar 3.1.
+Setelah nilai tersebut diperoleh, nilai \textsl{longitude} serta \textsl{latitude} dari data lokasi keberangkatan dan tujuan akan diubah sekali lagi menjadi nilai yang menunjukkan apakah daerah lokasi tersebut menunjukkan perjalan keluar dari Bandung atau tidak. Hal ini dilakukan agar diperoleh data perbandingan pergerakan penduduk, apakah mereka lebih banyak yang keluar dari Bandung atau sebaliknya berdasarkan waktu tertentu. Untuk menentukan hal tersebut, maka akan dibutuhkan klasifikasi daerah agar mudah dilakukan penentuan apakan \textsl{user} akan berangkat ke Bandung atau tidak. \textsl{Classification} daerah yang ditentukan setelah melihat peta Bandung dapat dilihat pada gambar \ref{fig:classificationMap}.
 
 \begin{figure}
 \includegraphics[scale=1]{Gambar/classificationmap.jpg}
-\caption[\textsl{Classification} pada daerah Bandung]{\textsl{Classification} pada daerah Bandung} 
+\caption[\textsl{Classification} pada daerah Bandung]{\textsl{Classification} pada daerah Bandung}
+\label{fig:classificationMap} 
 \end{figure}
 
 Penentuan \textsl{classification} tersebut berdasarkan perkiraaan titik pusat yang sudah ditentukan, yaitu -6.92036,107.60500 dalam latitude dan longitude. Untuk mencari nilai rusuk dari lingkaran tersebut, maka akan diambil nilai titik kedua dari sisi lingkaran tersebut. Nilai sisi yang dipilih adalah -6.92036,107.67023 dalam latitude dan longitude. Maka untuk mendapatkan nilai rusuk dari lingkaran dapat diperoleh dengan cara menghitung \textsl{euclidean} dari kedua titik tersebut.
@@ -120,10 +124,11 @@ Dari perhitungan tersebut, maka dapat disimpulkan jika suatu nilai latitude dan 
 
 Nilai jarak dari lokasi keberangkatan terhadap titik pusat dan lokasi tujuan terhadap titik pusat, dapat dijadikan acuan untuk menentukan apakah \textsl{user} tersebut menuju daerah Bandung atau keluar dari Bandung. Kondisi yang menentukan apakah \textsl{user} menuju Bandung yaitu, jika jarak dari lokasi keberangkatan dengan titik pusat lebih besar daripada 0.06523 (dari luar Bandung) dan jarak dari lokasi tujuan dengan titik pusat lebih kecil dari 0.06523 (di dalam Bandung), maka dapat ditentukan bahwa \textsl{user} tersebut menuju Bandung.
 
-Maka dari itu, nilai latitude dan longitude dari lokasi keberangkatan dan tujuan akan dibuang dan diganti oleh atribut menujuBandung dengan tipe data \textsl{integer}. Jika isi dari atribut tersebut bernilai 1, maka \textsl{user} tersebut menuju Bandung sedangkan nilai 0 bearti \textsl{user} tidak menuju Bandung, dan jika nilai atribut tersebut adalah 2, maka \textsl{user} tersebut memiliki lokasi keberangkatan dan tujuan di dalam Bandung. Contoh hasil data setelah dilakukan \textsl{transformation} terhadap latitude dan longitude terdapat pada tabel 3.3.
+Maka dari itu, nilai latitude dan longitude dari lokasi keberangkatan dan tujuan akan dibuang dan diganti oleh atribut menujuBandung dengan tipe data \textsl{integer}. Jika isi dari atribut tersebut bernilai 1, maka \textsl{user} tersebut menuju Bandung sedangkan nilai 0 bearti \textsl{user} tidak menuju Bandung, dan jika nilai atribut tersebut adalah 2, maka \textsl{user} tersebut memiliki lokasi keberangkatan dan tujuan di dalam Bandung. Contoh hasil data setelah dilakukan \textsl{transformation} terhadap latitude dan longitude terdapat pada tabel \ref{table:contohHasilDataTransformasiLatLong}.
 
 \begin{table}[h]
 \caption{Contoh hasil data transformasi latitude longitude}
+\label{table:contohHasilDataTransformasiLatLong}
 \begin{longtable}{|l|l|l|l|l|l|l|}
 \hline
 \textbf{Tanggal}	& \textbf{Bulan}	& \textbf{Tahun} 	& \textbf{Hari} & \textbf{Jam}	& \textbf{Menit} & \textbf{MenujuBandung} \\ \hline
@@ -153,7 +158,7 @@ Spesifikasi kebutuhan perangkat lunak yang akan dibangun untuk melakukan \textsl
 \end{enumerate}
 
 \subsubsection{Pemodelan Perangkat Lunak \textsl{Data Mining Log} Histori KIRI}
-Perangkat lunak \textsl{data mining log} histori KIRI akan mendapat input data text dengan format .txt. Setelah program mendapatkan input dan user menekan tombol proses, maka data tersebut akan diubah terlebih dahulu sesuai pada bab analisis data(bab 3.1) dengan melakukan proses \textsl{data transform} dan menghasilkan data dengan format seperti pada tabel 3.2.
+Perangkat lunak \textsl{data mining log} histori KIRI akan mendapat input data text dengan format .txt. Setelah program mendapatkan input dan user menekan tombol proses, maka data tersebut akan diubah terlebih dahulu sesuai pada bab analisis data(bab \ref{analisisData}) dengan melakukan proses \textsl{data transform} dan menghasilkan data dengan format seperti pada tabel \ref{table:contohHasilDataTransformasiLatLong}.
 
 Program akan melakukan tahap \textsl{data mining} dengan menggunakan teknik ID3 atau C4.5 sesuai dengan permintaan \textsl{user}. Setelah proses \textsl{data mining} selesai dilakukan, program akan melakukan \textsl{visualisasi decision tree} dan nilai klasifikasi yang diperoleh.  
 
@@ -207,14 +212,15 @@ Diagram \textsl{use case} merupakan diagram yang mendeskripsikan sistem dengan l
 	\item Melakukan proses \textsl{data mining} dengan input data dari alamat data yang sudah dimasukan. Setelah proses berhasil dilaksanakan, program akan menampilkan hasil yang diperoleh
 \end{itemize}
 
-Diagram \textsl{use case} saat \textsl{user} menjalankan perangkat lunak \textsl{data mining log} histori KIRI dapat dilihat pada gambar 3.2
+Diagram \textsl{use case} saat \textsl{user} menjalankan perangkat lunak \textsl{data mining log} histori KIRI dapat dilihat pada gambar \ref{fig:diagramUseCase}.
 
 \begin{figure}
 \includegraphics[scale=1]{Gambar/usecase.jpg}
 \caption[Diagram \textsl{Use Case} Perangkat Lunak \textsl{Data Mining Log} Histori KIRI]{Diagram \textsl{Use Case} Perangkat Lunak \textsl{Data Mining Log} Histori KIRI} 
+\label{fig:diagramUseCase}
 \end{figure}
 
-\begin{table}[h]
+\begin{table}[H]
 \caption{Skenario Melakukan \textsl{load} Data}
 \begin{tabular}{|l|l|}
 \hline
@@ -228,7 +234,7 @@ Eksespi        & Data tidak ditemukan                                           
 \end{tabular}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[H]
 \caption{Skenario Melakukan \textsl{Data Mining}}
 \begin{tabular}{|l|l|}
 \hline
@@ -242,7 +248,7 @@ Eksespi        & Data tidak ditemukan atau data tidak dapat diproses    		  	  \
 \end{tabular}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[H]
 \caption{Skenario Memilih Algoritma yang Akan Digunakan}
 \begin{tabular}{|l|l|}
 \hline
@@ -256,13 +262,15 @@ Eksespi        & Tidak ada																					 \\ \hline
 \end{tabular}
 \end{table}
 
+
 \subsection{Diagram kelas Perangkat Lunak \textsl{Data Mining Log} Histori KIRI}
 
-Pembuatan diagram \textsl{class} untuk memenuhi semua tujuan dari diagram \textsl{use case} dan skenario terdapat pada gambar 3.3
+Pembuatan diagram \textsl{class} untuk memenuhi semua tujuan dari diagram \textsl{use case} dan skenario terdapat pada gambar \ref{fig:classDiagram}.
 
-\begin{figure}
-\includegraphics[scale=1]{Gambar/classdiagram.jpg}
+\begin{figure}[h]
+\includegraphics[scale=0.8]{Gambar/classdiagram.jpg}
 \caption[Diagram \textsl{Class} Perangkat Lunak \textsl{Data Mining Log} Histori KIRI]{Diagram \textsl{Class} Perangkat Lunak \textsl{Data Mining Log} Histori KIRI} 
+\label{fig:classDiagram}
 \end{figure}
 
 Berikut deskripsi kelas diagram \textsl{class}:
@@ -271,7 +279,7 @@ Berikut deskripsi kelas diagram \textsl{class}:
 	\item \textsl{MethodDecisionTree}, merupakan kelas yang menjalankan algoritma pemilihan atribut untuk pembuatan pohon (pada penelitian ini, algoritma yang dapat dipilih adalah ID3 dan C4.5)
 	\item \textsl{Node}, merupakan kelas yang digunakan sebagai struktur data untuk \textsl{decision tree}
 \end{itemize}
-
+	
 
 
 

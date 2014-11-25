@@ -5,7 +5,14 @@
 
 \textsl{Data mining} merupakan merupakan proses yang melakukan pengambilan inti sari atau penggalian \textsl{knowledge} dari data yang besar dan merupakan salah satu langkah dari \textsl{knowledge discovery}.
 
-Menurut [1], \textsl{knowledge discovery} dapat dibagi menjadi 7 tahap (gambar 2.1):
+
+\begin{figure}[H]
+\includegraphics[scale=0.9]{Gambar/tahapdatamining.jpg}
+\caption[Tahap \textsl{Data Mining}]{Tahap \textsl{Data Mining}, \cite{DM}} 
+\label{fig:tahapDataMining}
+\end{figure}
+
+Menurut \cite{DM}, \textsl{knowledge discovery} dapat dibagi menjadi 7 tahap (gambar \ref{fig:tahapDataMining}):
 \begin{enumerate}
 	\item \textsl{Data cleaning}
 	\item \textsl{Data integration}
@@ -16,19 +23,16 @@ Menurut [1], \textsl{knowledge discovery} dapat dibagi menjadi 7 tahap (gambar 2
 	\item \textsl{Knowledge presentation}
 \end{enumerate}
 
-\begin{figure}
-\includegraphics[scale=1]{Gambar/tahapdatamining.jpg}
-\caption[Tahap \textsl{Data Mining}]{Tahap \textsl{Data Mining}, [1]} 
-\end{figure}
 
 Tahap pertama hingga keempat merupakan bagian dari \textsl{data preprocessing}, dimana data-data disiapkan untuk dilakukan penggalian data. Tahap \textsl{data mining} merupakan tahap dimana melakukan penggalian data. Tahap keenam merupakan tahap pencarian pola yang merepresentasikan \textsl{knowledge}. Sedangkan tahap terakhir merupakan visualisasi dan representasi dari \textsl{knowledge} yang sudah diperoleh dari tahap sebelumnya.
 
 
 \subsection{\textsl{Data Cleaning}}
-\textsl{Data cleaning} merupakan tahap \textsl{data mining} untuk menghilangkan \textsl{missing value} dan \textsl{noisy data}. Pada umumnya, \textsl{data} yang diperoleh dari \textsl{database} terdapat nilai yang tidak sempurna seperti nilai yang hilang, nilai yang tidak valid atau salah ketik. Atribut dari suatu \textsl{database} yang tidak relevan atau redudansi bisa diatasi dengan menghapus atribut tersebut. Contoh studi data yang memiliki \textsl{missing value} dan \textsl{noisy data} dapat dilihat pada tabel 2.1
+\textsl{Data cleaning} merupakan tahap \textsl{data mining} untuk menghilangkan \textsl{missing value} dan \textsl{noisy data}. Pada umumnya, \textsl{data} yang diperoleh dari \textsl{database} terdapat nilai yang tidak sempurna seperti nilai yang hilang, nilai yang tidak valid atau salah ketik. Atribut dari suatu \textsl{database} yang tidak relevan atau redudansi bisa diatasi dengan menghapus atribut tersebut. Contoh studi data yang memiliki \textsl{missing value} dan \textsl{noisy data} dapat dilihat pada tabel \ref{table:contohMissingNNoisy}
 
 \begin{table}[h]
 \caption{Tabel mengandung \textsl{missing value} dan \textsl{noisy}}
+\label{table:contohMissingNNoisy}
 \begin{tabular}{|l|l|l|l|l|}
 \hline
 IdPenjualan & NamaBarang & Custumer & Harga  & BanyakBarang \\ \hline
@@ -50,6 +54,7 @@ Dapat dilihat, pada idPenjualan 2, harga dari keyboard adalah -35000, itu merupa
 	\end{itemize}
 \subsubsection{\textsl{Noisy Data}}
 \textsl{Noisy data} merupakan nilai yang berasal dari error atau tidak valid. \textsl{Noisy data} dapat dihilangkan dengan menggunakan teknik \textsl{smoothing}. Terdapat 3 metode untuk menghilangkan \textsl{noisy data} yaitu
+	\label{teknikBinning}
 	\begin{itemize}
 		\item \textsl{Binning}, merupakan metode pengisian data sesuai dengan proses yang dilakukan pada data tersebut
 		\item \textsl{Regression}, merupakan metode yang mencari detail persamaan atribut untuk memprediksikan suatu nilai
@@ -97,7 +102,7 @@ Maka, atribut yang berpotensi diambil adalah MataKuliah, NilaiART, NilaiUTS, Nil
 	\end{itemize}
 	
 \subsubsection{\textsl{Smoothing}}
-\textsl{Smoothing} merupakan bagian dari \textsl{data cleaning} untuk menghilangkan \textsl{noise} pada database. Teknik dari \textsl{smoothing} adalah \textsl{binning}, \textsl{regression}, dan \textsl{clustering}. Penjelasan teknik \textsl{smoothing} dapat dilihat pada 2.1.1, bagian \textsl{noisy data}.
+\textsl{Smoothing} merupakan bagian dari \textsl{data cleaning} untuk menghilangkan \textsl{noise} pada database. Teknik dari \textsl{smoothing} adalah \textsl{binning}, \textsl{regression}, dan \textsl{clustering}. Penjelasan teknik \textsl{smoothing} dapat dilihat pada \ref{teknikBinning}, bagian \textsl{noisy data}.
 
 \subsubsection{\textsl{Aggregation}}
 \textsl{Aggregation}, dimana suatu kesimpulan atau hasil dari \textsl{aggregation operation} yang disimpan dalam database. Contoh studi kasus, jika terdapat suatu database dari toko A, kita dapat menggunakan operasi \textsl{aggregation} untuk mencari total pendapatan dengan rentang hari tertentu.
@@ -149,7 +154,7 @@ Contoh kasus, misal nilai rata-rata dan standar deviasi dari nilai-nilai atribut
 %Contoh studi kasus, jika toko CD ingin mencari apakah para konsumen tertarik dan membeli CD baru, maka atribut nama dan nomor telepon dari data konsumen tidak terlalu relevan dengan tujuan \textsl{mining} pada kasus ini, sedangkan jenis\_kelamin dan musik\_kesukaan dari konsumen bisa menjadi atribut yang relevan. 
 
 %\subsubsection {\textsl{Dimensionality Reduction}}
-%\textsl{Dimensionality Reduction} merupakan metode pengurangan nilai secara acak dengan cara melakukan konversi data. Jika data original dapat dibuat ulang dari data yang sudah dikompresi tanpa kehilangan informasi, maka akan dikatakan \textsl{lossless}, namun jika hanya mendapatkan data pendekatannya saja, akan disebut lossly [1].
+%\textsl{Dimensionality Reduction} merupakan metode pengurangan nilai secara acak dengan cara melakukan konversi data. Jika data original dapat dibuat ulang dari data yang sudah dikompresi tanpa kehilangan informasi, maka akan dikatakan \textsl{lossless}, namun jika hanya mendapatkan data pendekatannya saja, akan disebut lossly \cite{DM}.
 
 %\subsubsection {\textsl{Numerosity Reduction}}
 %\textsl{Numerosity Reduction} merupakan metode dimana data diganti atau ditentukan dengan cara parametik atau nonparametrik.
@@ -166,20 +171,22 @@ Pada tahap ini, akan dilakukan proses \textsl{data mining} dengan menggunakan in
 
 \textsl{Prediction} merupakan model yang dibangun untuk meramalkan fungsi nilai kontinu atau \textsl{ordered value}. \textsl{Ordered value} merupakan nilai yang terurut dan berlanjut. Contoh studi kasus untuk pemodelan prediction adalah seorang marketing ingin meramalkan seberapa banyak konsumen yang akan belanja di sebuah toko dalam waktu satu bulan. Pemodelan tersebut disebut \textsl{predictor}. \textsl{Regression Analysis}, merupakan metodologi statistik yang digunakan untuk \textsl{numeric prediction}. \textsl{Classification} dan \textsl{numeric prediction} merupakan dua jenis utama dalam masalah prediksi.
 
-\textsl{Data Classification} merupakan proses untuk melakukan klasifikasi. \textsl{Data classification} memiliki dua tahap proses, yaitu \textsl{learning step} dan tahap klasifikasi seperti pada ilustrasi di gambar 2.2. \textsl{Learning step} merupakan langkah pembelajaran, di mana algoritma klasifikasi membangun \textsl{classification rules} (yang berisi syarat atau aturan sebuah nilai masuk ke dalam kategori tertentu) dengan cara menganalisis \textsl{training set} yang merupakan \textsl{database tuple}. Karena pembuatan \textsl{classification rules} menggunakan \textsl{training set}, yang dikenal juga sebagai \textsl{supervised learning}. 
+\textsl{Data Classification} merupakan proses untuk melakukan klasifikasi. \textsl{Data classification} memiliki dua tahap proses, yaitu \textsl{learning step} dan tahap klasifikasi seperti pada ilustrasi di gambar \ref{fig:tahapDataClassification}. \textsl{Learning step} merupakan langkah pembelajaran, di mana algoritma klasifikasi membangun \textsl{classification rules} (yang berisi syarat atau aturan sebuah nilai masuk ke dalam kategori tertentu) dengan cara menganalisis \textsl{training set} yang merupakan \textsl{database tuple}. Karena pembuatan \textsl{classification rules} menggunakan \textsl{training set}, yang dikenal juga sebagai \textsl{supervised learning}. 
 Pada tahap kedua, dilakukan proses klasifikasi nilai berdasarkan \textsl{classification rules} yang sudah dibangun dari tahap pertama.
 
 \begin{figure}
 \includegraphics[scale=1]{Gambar/tahapdataclassification.jpg}
-\caption[Tahap \textsl{data classification}]{Tahap \textsl{data classification}, [1]} 
+\caption[Tahap \textsl{data classification}]{Tahap \textsl{data classification}, \cite{DM}} 
+\label{fig:tahapDataClassification}
 \end{figure}
 
 \subsubsection{\textsl{Decision Tree}}
-Salah satu cara pembuatan \textsl{classification rules} pada \textsl{Data Classification} adalah dengan membuat \textsl{decision tree} (pohon keputusan). \textsl{Decision tree} merupakan \textsl{flowchart} yang berbentuk pohon, dimana setiap node internal (\textsl{nonleaf} node) merupakan hasil test dari atribut, setiap cabang merepresentasikan output dari test, dan setiap node daun memiliki \textsl{class label}. Bagian paling atas dari pohon disebut \textsl{root node}. Contoh studi kasus, pohon keputusan untuk menentukan apakah seorang konsumen akan membeli komputer atau tidak (ilustrasi pohon keputusan pada gambar 2.3) 
+Salah satu cara pembuatan \textsl{classification rules} pada \textsl{Data Classification} adalah dengan membuat \textsl{decision tree} (pohon keputusan). \textsl{Decision tree} merupakan \textsl{flowchart} yang berbentuk pohon, dimana setiap node internal (\textsl{nonleaf} node) merupakan hasil test dari atribut, setiap cabang merepresentasikan output dari test, dan setiap node daun memiliki \textsl{class label}. Bagian paling atas dari pohon disebut \textsl{root node}. Contoh studi kasus, pohon keputusan untuk menentukan apakah seorang konsumen akan membeli komputer atau tidak (ilustrasi pohon keputusan pada gambar \ref{fig:decisionTree}) 
 
 \begin{figure}
 \includegraphics[scale=1]{Gambar/decisiontree.jpg}
-\caption[Contoh \textsl{decision tree}]{Contoh \textsl{decision tree}, [1]} 
+\caption[Contoh \textsl{decision tree}]{Contoh \textsl{decision tree}, \cite{DM}} 
+\label{fig:decisionTree}
 \end{figure}
 
 \paragraph{\textsl{Decision Tree Induction}}
@@ -236,7 +243,7 @@ Jika tuple di D memiliki kelas yang sama semua, maka node N akan menjadi daun da
 
 Jika tuple di D ada kelas yang berbeda, maka algoritma akan memanggil \textsl{attribute\_selection\_method} untuk menentukan \textsl{splitting criterion}. \textsl{Splitting criterion} akan menentukan atribut pada node N yang merupakan nilai terbaik untuk memecah nilai atribut pada tuple ke dalam kelas masing-masing. (langkah 6)
 
-Node N akan diisi dengan hasil dari \textsl{splitting criterion} (langkah 7). Kemudian kriteria tersebut agak dibentuk cabangnya masing-masing sesuai pada langkah 10 dan 11. Terdapat tiga kemungkinan bentuk kriteria jika A merupakan \textsl{splitting\_attribute} yang memiliki nilai unik seperti \{a$_{1}$, a$_{2}$, ..., a$_{v}$\} seperti pada gambar 2.4, yaitu,
+Node N akan diisi dengan hasil dari \textsl{splitting criterion} (langkah 7). Kemudian kriteria tersebut agak dibentuk cabangnya masing-masing sesuai pada langkah 10 dan 11. Terdapat tiga kemungkinan bentuk kriteria jika A merupakan \textsl{splitting\_attribute} yang memiliki nilai unik seperti \{a$_{1}$, a$_{2}$, ..., a$_{v}$\} seperti pada gambar \ref{fig:splitPoint}, yaitu,
 
 \begin{enumerate}
 	\item \textsl{Discrete valued}: cabang yang dihasilkan memiliki kelas dengan nilai diskret. Karena kelas yang dihasilkan diskret dan hanya memiliki nilai yang sama pada cabang tersebut, maka \textsl{attribut\_list} akan dihapus (langkah 8 dan 9)
@@ -247,7 +254,8 @@ Node N akan diisi dengan hasil dari \textsl{splitting criterion} (langkah 7). Ke
 
 \begin{figure}
 \includegraphics[scale=1]{Gambar/jenishasilsplitpoint.jpg}
-\caption[Jenis-jenis \textsl{split point}]{Jenis-jenis \textsl{split point}, [1]} 
+\caption[Jenis-jenis \textsl{split point}]{Jenis-jenis \textsl{split point}, \cite{DM}} 
+\label{fig:splitPoint}
 \end{figure}
 
 Kemudian, akan dipanggil kembali algoritma \textsl{decision tree} untuk setiap nilai hasil pembagian pada tuple, D$_{j}$  (langkah 14).
@@ -266,7 +274,7 @@ subsubsection{\textsl{Attribute Selection Measure}}
 
 \textsl{Attribute Selection Measure} merupakan suatu hirarki untuk pemilihan \textsl{splitting criterion} yang terbaik yang memisah partisi data (D), tuple pelatihan kelas label ke dalam kelas masing-masing. \textsl{Attribute Selection Measure} menyediakan peringkat untuk setiap atribut pada training tuple. Jika \textsl{splitting criterion} merupakan nilai \textsl{continous} atau \textsl{binary trees}, maka nilai \textsl{split point} dan \textsl{splitting subset} harus ditentukan sebagai bagian dari \textsl{splitting criterion}. Contoh dari \textsl{attribute selection measure} adalah \textsl{information gain}, \textsl{gain ratio}, dan \textsl{gini index}.
 
-Notasi yang digunakan adalah sebagai berikut. D merupakan data partisi, set pelatihan dari \textsl{class-labeled} tuple. Jika label kelas atribut memiliki m nilai yang berbeda yang mendifinisikan m kelas yang berbeda, Ci (for i=1,...,m). C$_{i,d}$ menjadi kelas tuple dari C$_{i}$ di D. |D| dan |C$_{i,d}$| merupakan banyak tuple pada D dan C$_{i,d}$.
+Notasi yang digunakan adalah sebagai berikut. D merupakan data partisi, set pelatihan dari \textsl{class-labeled} tuple. Jika label kelas atribut memiliki m nilai yang berbeda yang mendifinisikan m kelas yang berbeda, $C_{i}$ (for i=1,...,m). C$_{i,d}$ menjadi kelas tuple dari C$_{i}$ di D. |D| dan |C$_{i,d}$| merupakan banyak tuple pada D dan C$_{i,d}$.
 
 \paragraph{\textsl{Information Gain}}
 
@@ -294,6 +302,7 @@ contoh kasus untuk ID3, dalam pencarian\textsl{information gain}
 
 \begin{table}[h]
 \caption{Contoh training set}
+\label{table:contohTrainingSet}
 \begin{tabular}{|l|l|l|l|l|l|}
 \hline
 RID & age          & income & student & credit\_rating & Class: buys\_computer \\ \hline
@@ -314,7 +323,7 @@ RID & age          & income & student & credit\_rating & Class: buys\_computer \
 \end{tabular}
 \end{table}
 
-Pada tabel 2.2, terdapat \textsl{training set}, D. Atribut kelas label merupakan dua nilai yang berbeda yaitu \textsl{yes} atau \textsl{no}, maka dari itu, nilai m = 2. C$_{1}$ diisi dengan kelas label bernilai \textsl{yes}, sedangkan C$_{2}$ diisi dengan kelas label bernilai \textsl{no}. Terdapat sembilan tuple atribut kelas label dengan nilai \textsl{yes} dan lima tuple dengan nilai \textsl{no}. Untuk dapat menentukan \textsl{splitting criterion}, \textsl{information gain} harus dihitung untuk setiap atribut terlebih dahulu. Perhitungan \textsl{entropy} untuk D adalah
+Pada tabel \ref{table:contohTrainingSet}, terdapat \textsl{training set}, D. Atribut kelas label merupakan dua nilai yang berbeda yaitu \textsl{yes} atau \textsl{no}, maka dari itu, nilai m = 2. C$_{1}$ diisi dengan kelas label bernilai \textsl{yes}, sedangkan C$_{2}$ diisi dengan kelas label bernilai \textsl{no}. Terdapat sembilan tuple atribut kelas label dengan nilai \textsl{yes} dan lima tuple dengan nilai \textsl{no}. Untuk dapat menentukan \textsl{splitting criterion}, \textsl{information gain} harus dihitung untuk setiap atribut terlebih dahulu. Perhitungan \textsl{entropy} untuk D adalah
 
 \begin{displaymath}
 	Info(D) = - \frac{9}{14}\log2(\frac{9}{14}) - \frac{5}{14}\log_2(\frac{5}{14}) = 0.940 bits
@@ -332,18 +341,19 @@ Setelah mendapatkan \textsl{entropy} dari atribut \textsl{age}, maka nilai \text
 	Gain_{(age)} = Info(D) - Info_{age}(D) = 0.940 - 0.694 = 0.246 bits
 \end{displaymath}
 
-Dengan melakukan hal yang sama, dapat diperoleh nilai \textsl{gain} untuk atribut \textsl{income} adalah 0.029 \textsl{bits}, untuk nilai \textsl{gain(student)} adalah 0.151 \textsl{bits}, dan \textsl{gain(credit\_rating)} = 0.048 \textsl{bits}. Karena nilai \textsl{gain} dari atribut \textsl{age} merupakan nilai terbesar diantara semua atribut, maka atribut \textsl{age} dipilih menjadi \textsl{splitting attribute}. Setelah ditentukan, node N akan membentuk cabang berdasarkan nilai dari atribut \textsl{age} seperti pada gambar 2.5.
+Dengan melakukan hal yang sama, dapat diperoleh nilai \textsl{gain} untuk atribut \textsl{income} adalah 0.029 \textsl{bits}, untuk nilai \textsl{gain(student)} adalah 0.151 \textsl{bits}, dan \textsl{gain(credit\_rating)} = 0.048 \textsl{bits}. Karena nilai \textsl{gain} dari atribut \textsl{age} merupakan nilai terbesar diantara semua atribut, maka atribut \textsl{age} dipilih menjadi \textsl{splitting attribute}. Setelah ditentukan, node N akan membentuk cabang berdasarkan nilai dari atribut \textsl{age} seperti pada gambar \ref{fig:hasilCabang}.
 
 \begin{figure}
 \includegraphics[scale=1]{Gambar/hasilcabangid3.jpg}
-\caption[Hasil pohon faktor pada atribut \textsl{age} dari table 2.1]{Hasil cabang dari atribut \textsl{age}, [1]} 
+\caption[Hasil pohon faktor pada atribut \textsl{age} dari table 2.1]{Hasil cabang dari atribut \textsl{age}, \cite{DM}} 
+\label{fig:hasilCabang}
 \end{figure}
 
 Untuk atribut yang merupakan nilai \textsl{continuous}, harus dicari nilai \textsl{split point} untuk A. Nilai-nilai dari dua angka yang bersebelahan dapat diambil nilai tengahnya untuk dijadikan \textsl{split-point}. Jika terdapat v nilai yang berbeda dari A, maka akan terdapat v-1 kemungkinan \textsl{split point}. Kemudian nilai \textsl{split point} akan dijadikan sebagai nilai pembagi, sebagai contoh: A <= \textsl{split-point} merupakan cabang pertama, dan A > \textsl{split-point} merupakan cabang kedua.
 
 \paragraph{\textsl{Gain Ratio}}
 
-\textsl{Information gain} akan memiliki nilai yang baik jika suatu atribut memiliki banyak nilai yang berbeda, namun hal itu tidak selalu bagus. Sebagai contoh kasus, jika nilai id suatu table yang memiliki nilai unik, maka akan terdapat banyak sekali cabang. Namun setiap cabang hanya akan berisi satu tuple dan bersifat \textsl{pure}, maka nilai \textsl{entropy} yang dihasilkan adalah 0. Oleh karena itu, informasi yang diperoleh pada atribut ini akan bernilai maksimum namun tidak akan berguna untuk \textsl{classification} [1].
+\textsl{Information gain} akan memiliki nilai yang baik jika suatu atribut memiliki banyak nilai yang berbeda, namun hal itu tidak selalu bagus. Sebagai contoh kasus, jika nilai id suatu table yang memiliki nilai unik, maka akan terdapat banyak sekali cabang. Namun setiap cabang hanya akan berisi satu tuple dan bersifat \textsl{pure}, maka nilai \textsl{entropy} yang dihasilkan adalah 0. Oleh karena itu, informasi yang diperoleh pada atribut ini akan bernilai maksimum namun tidak akan berguna untuk \textsl{classification} \cite{DM}.
 
 C4.5, menggunakan nilai tambahan dari \textsl{information gain} yaitu \textsl{gain ratio}, yang dapat mengatasi permasalahan \textsl{information gain} tentang nilai yang banyak namun tidak baik untuk \textsl{classification}. C4.5 melakukan teknik normalisasi terhadap \textsl{gain information} dengan menggunakan \textsl{split information} yang memiliki rumus sebagai berikut:
 
@@ -357,9 +367,9 @@ Setelah mendapatkan nilai \textsl{split info} dari suatu atribut, dapat diperole
 	GainRatio(A) = \frac{Gain(A)}{SplitInfo(A)}
 \end{displaymath}
 
-Nilai dari \textsl{gain ratio} terbesar yang akan dipilih. Perlu diketahui [1] jika nilai hasil mendekati 0, maka ratio menjadi tidak stabil, oleh karena itu, \textsl{gain information} yang dipilih harus besar, minimal sama besarnya dengan nilai rata-rata dari semua test yang diperiksa.
+Nilai dari \textsl{gain ratio} terbesar yang akan dipilih. Perlu diketahui \cite{DM} jika nilai hasil mendekati 0, maka ratio menjadi tidak stabil, oleh karena itu, \textsl{gain information} yang dipilih harus besar, minimal sama besarnya dengan nilai rata-rata dari semua test yang diperiksa.
 
-Contoh studi kasus, akan dilakukan perhitungan \textsl{gain ratio} dengan menggunakan training set pada tabel 2.2. Dapat dilihat pada atribut \textsl{income} memiliki tiga partisi yaitu \textsl{low}, \textsl{medium}, dan \textsl{high}. Terdapat empat tuple dengan nilai \textsl{low}, enam tuple dengan nilai \textsl{medium}, dan empat tuple dengan nilai \textsl{high}. Untuk menghitung \textsl{gain ratio}, perlu dihitung nilai \textsl{split information} terlebih dahulu dengan cara:
+Contoh studi kasus, akan dilakukan perhitungan \textsl{gain ratio} dengan menggunakan training set pada tabel \ref{table:contohTrainingSet}. Dapat dilihat pada atribut \textsl{income} memiliki tiga partisi yaitu \textsl{low}, \textsl{medium}, dan \textsl{high}. Terdapat empat tuple dengan nilai \textsl{low}, enam tuple dengan nilai \textsl{medium}, dan empat tuple dengan nilai \textsl{high}. Untuk menghitung \textsl{gain ratio}, perlu dihitung nilai \textsl{split information} terlebih dahulu dengan cara:
 
 \begin{displaymath}
 	SplitInfo_A(D) = - \frac{4}{14} \times \log_2 (\frac{4}{14}) - \frac{6}{14} \times \log_2 (\frac{6}{14}) - \frac{4}{14} \times \log_2 (\frac{4}{14})
@@ -374,11 +384,12 @@ Jika nilai \textsl{gain information} dari \textsl{income} adalah 0.029, maka, da
 
 \paragraph{Tree Pruning}
 	
-\textsl{Tree pruning} merupakan proses pemotongan \textsl{decision tree} agar lebih efisien dan tidak terlalu mempengaruhi nilai keputusan yang dihasilkan. \textsl{decision tree} yang sudah dipotong akan lebih kecil ukuran pohonnya, tidak serumit dengan pohon yang asli, namun lebih mudah untuk diproses. \textsl{Decision tree} yang sudah dipotong memiliki kecepatan serta ketepatan mengklasifikasikan yang lebih baik [1]. Perbedaan \textsl{decision tree} yang sudah dipotong dan belum dapat dilihat pada gambar 2.6.
+\textsl{Tree pruning} merupakan proses pemotongan \textsl{decision tree} agar lebih efisien dan tidak terlalu mempengaruhi nilai keputusan yang dihasilkan. \textsl{decision tree} yang sudah dipotong akan lebih kecil ukuran pohonnya, tidak serumit dengan pohon yang asli, namun lebih mudah untuk diproses. \textsl{Decision tree} yang sudah dipotong memiliki kecepatan serta ketepatan mengklasifikasikan yang lebih baik \cite{DM}. Perbedaan \textsl{decision tree} yang sudah dipotong dan belum dapat dilihat pada gambar \ref{fig:treePruning}.
 
 \begin{figure}
 \includegraphics[scale=1]{Gambar/treepruning.jpg}
-\caption[\texttt{Decision Tree Pruned}]{\texttt{Decision tree} yang belum dipotong dan yang sudah dipotong, [1]} 
+\caption[\texttt{Decision Tree Pruned}]{\texttt{Decision tree} yang belum dipotong dan yang sudah dipotong, \cite{DM}} 
+\label{fig:treePruning}
 \end{figure}
 
 Terdapat dua pendekatan dalam melakukan \textsl{pruning}, yaitu \textsl{prepruning} dan \textsl{postpruning}.
