@@ -35,7 +35,7 @@ Tahap pertama hingga keempat merupakan bagian dari \textsl{data preprocessing}, 
 \label{table:contohMissingNNoisy}
 \begin{tabular}{|l|l|l|l|l|}
 \hline
-IdPenjualan & NamaBarang & Custumer & Harga  & BanyakBarang \\ \hline
+IdPenjualan & NamaBarang & Costumer & Harga  & BanyakBarang \\ \hline
 1           & Mouse      & Elvin    & 45000  & 2            \\ \hline
 2           & Keyboard   & Alleria  & -35000 & 1            \\ \hline
 3           & Monitor    &          & 225000 & 1            \\ \hline
@@ -78,7 +78,7 @@ Dapat dilihat, pada idPenjualan 2, harga dari keyboard adalah -35000, itu merupa
 Tahap ini harus dilakukan secara teliti terutama ketika dalam memasangkan nilai-nilai yang berasal dari sumber yang berbeda. Pada tahap ini, perlu dilakukan identifikasi data apakah data tersebut dapat diturunkan atau tidak agar data yang diperoleh tidak terlalu besar. \textsl{Data integration} yang baik merupakan integrasi yang dapat memaksimalkan kecepatan dan meningkatkan akurasi dari proses \textsl{data mining}. Contoh studi kasus dari \textsl{data integration}, jika suatu perusahaan sepatu A memiliki dua pabrik dengan \textsl{database} lokal pada masing-masing pabrik, jika akan dilakukan \textsl{data mining} pada kedua \textsl{database }tersebut, maka kedua \textsl{database} akan digabung dan perlu diperhatikan serta diperbaiki nilai-nilai seperti \textsl{primary key}, atribut, dan lain-lain agar tidak terjadi \textsl{error} pada \textsl{database} yang sudah digabung. Proses dari penggabungan hingga perbaikan nilai-nilai pada kedua database tersebut adalah proses \textsl{data integration}.
 
 \subsection{\textsl{Data Selection}}
-Proses dimana data-data yang relevan dengan analisis akan diambil dari database dan data yang tidak relevan akan dibuang. Sebagai contoh kasus, jika akan dilakukan analisa mengenai nilai mahasiswa dalam satu semester, atribut pada tabel nilai sebagai berikut
+Proses dimana data-data yang relevan dengan analisis akan diambil dari database dan data yang tidak relevan akan dibuang. Sebagai contoh kasus, jika akan dilakukan analisa mengenai nilai mahasiswa pada tabel nilai yang memiliki atribut sebagai berikut:
 	\begin{itemize}
 		\item NPMMahasiswa
 		\item NamaMahasiswa
@@ -305,43 +305,44 @@ contoh kasus untuk ID3, dalam pencarian\textsl{information gain}
 \label{table:contohTrainingSet}
 \begin{tabular}{|l|l|l|l|l|l|}
 \hline
-RID & age          & income & student & credit\_rating & Class: buys\_computer \\ \hline
-1   & youth        & high   & no      & fair           & no                    \\ \hline
-2   & youth        & high   & no      & excellent      & no                    \\ \hline
-3   & middle\_aged & high   & no      & fair           & yes                   \\ \hline
-4   & senior       & medium & no      & fair           & yes                   \\ \hline
-5   & senior       & low    & yes     & fair           & yes                   \\ \hline
-6   & senior       & low    & yes     & excellent      & no                    \\ \hline
-7   & middle\_aged & low    & yes     & excellent      & yes                   \\ \hline
-8   & youth        & medium & no      & fair           & no                    \\ \hline
-9   & youth        & low    & yes     & fair           & yes                   \\ \hline
-10  & senior       & medium & yes     & fair           & yes                   \\ \hline
-11  & youth        & medium & yes     & excellent      & yes                   \\ \hline
-12  & middle\_aged & medium & no      & excellent      & yes                   \\ \hline
-13  & middle\_aged & high   & yes     & fair           & yes                   \\ \hline
-14  & senior       & medium & no      & excellent      & no                    \\ \hline
+RID & umur          & pendapatan 	& siswa 		 & resiko\_kredit  & Class: membeli\_komputer \\ \hline
+1   & muda        	& tinggi   		& tidak      & cukup           & tidak                    \\ \hline
+2   & muda        	& tinggi   		& tidak      & baik			       & tidak                    \\ \hline
+3   & remaja 				& tinggi  	 	& tidak      & cukup           & ya                   \\ \hline
+4   & dewasa      	& sedang 			& tidak      & cukup           & ya                   \\ \hline
+5   & dewasa       	& rendah    	& ya    		 & cukup           & ya                   \\ \hline
+6   & dewasa       	& rendah    	& ya    		 & baik			       & tidak                    \\ \hline
+7   & remaja 				& rendah    	& ya    		 & baik			       & ya                   \\ \hline
+8   & muda        	& sedang 			& tidak      & cukup           & tidak                    \\ \hline
+9   & muda        	& rendah    	& ya    		 & cukup           & ya                   \\ \hline
+10  & dewasa       	& sedang 			& ya   		   & cukup           & ya                   \\ \hline
+11  & muda        	& sedang 			& ya   		   & baik 		       & ya                   \\ \hline
+12  & remaja 				& sedang 			& tidak      & baik 		       & ya                   \\ \hline
+13  & remaja 				& tinggi   		& ya    		 & cukup           & ya                   \\ \hline
+14  & dewasa       	& sedang 			& tidak      & baik  			     & tidak                    \\ \hline
 \end{tabular}
 \end{table}
 
-Pada tabel \ref{table:contohTrainingSet}, terdapat \textsl{training set}, D. Atribut kelas label merupakan dua nilai yang berbeda yaitu \textsl{yes} atau \textsl{no}, maka dari itu, nilai m = 2. C$_{1}$ diisi dengan kelas label bernilai \textsl{yes}, sedangkan C$_{2}$ diisi dengan kelas label bernilai \textsl{no}. Terdapat sembilan tuple atribut kelas label dengan nilai \textsl{yes} dan lima tuple dengan nilai \textsl{no}. Untuk dapat menentukan \textsl{splitting criterion}, \textsl{information gain} harus dihitung untuk setiap atribut terlebih dahulu. Perhitungan \textsl{entropy} untuk D adalah
+Pada tabel \ref{table:contohTrainingSet}, terdapat \textsl{training set}, D. Atribut kelas label merupakan dua nilai yang berbeda yaitu ya dan tidak, maka dari itu, nilai m = 2. C$_{1}$ diisi dengan kelas label bernilai ya, sedangkan C$_{2}$ diisi dengan kelas label bernilai tidak. Terdapat sembilan tuple atribut kelas label dengan nilai ya dan lima tuple dengan nilai tidak. Untuk dapat menentukan \textsl{splitting criterion}, \textsl{information gain} harus dihitung untuk setiap atribut terlebih dahulu. Perhitungan \textsl{entropy} untuk D adalah
 
 \begin{displaymath}
 	Info(D) = - \frac{9}{14}\log2(\frac{9}{14}) - \frac{5}{14}\log_2(\frac{5}{14}) = 0.940 bits
 \end{displaymath}
 
-Setelah diperoleh nilai \textsl{entropy} dari D, kemudian akan dihitung nilai \textsl{entropy} atribut dimulai dari atribut age. Pada kategori \textsl{youth}, terdapat dua tuple dengan kelas \textsl{yes} dan tiga tuple dengan kelas \textsl{no}. Untuk kategori \textsl{middle\_age}, terdapat empat tuple dengan kelas \textsl{yes} dan nol tuple dengan kelas \textsl{no}. Pada kategori \textsl{senior}, terdapat tiga dengan kelas \textsl{yes} dan dua dengan kelas \textsl{no}. Perhitungan nilai \textsl{entropy} atribut \textsl{age} terhadap D sebagai berikut
+Setelah diperoleh nilai \textsl{entropy} dari D, kemudian akan dihitung nilai \textsl{entropy} atribut dimulai dari atribut umur. Pada kategori muda, terdapat dua tuple dengan kelas ya dan tiga tuple dengan kelas tidak. Untuk kategori remaja, terdapat empat tuple dengan kelas ya dan nol tuple dengan kelas tidak. Pada kategori dewasa, terdapat tiga dengan kelas ya dan dua dengan kelas tidak. Perhitungan nilai \textsl{entropy} atribut umur terhadap D sebagai berikut
+
+\begin{align*}
+	Info_{umur}(D) = \frac{5}{14} \times (-\frac{2}{5}\log_2\frac{2}{5} - \frac{3}{5}\log_2\frac{3}{5}) + \frac{4}{14} \times (-\frac{4}{4}\log_2\frac{4}{4} - \frac{0}{4}\log_2\frac{0}{4}) + \\
+	\frac{5}{14} \times (-\frac{3}{5}\log_2\frac{3}{5} - \frac{2}{5}\log_2\frac{2}{5}) = 0.694 bits
+\end{align*}
+
+Setelah mendapatkan \textsl{entropy} dari atribut umur, maka nilai \textsl{gain information} dari atribut umur adalah
 
 \begin{displaymath}
-	Info_{age}(D) = \frac{5}{14} \times (-\frac{2}{5}\log_2\frac{2}{5} - \frac{3}{5}\log_2\frac{3}{5}) + \frac{4}{14} \times (-\frac{4}{4}\log_2\frac{4}{4} - \frac{0}{4}\log_2\frac{0}{4}) + \frac{5}{14} \times (-\frac{3}{5}\log_2\frac{3}{5} - \frac{2}{5}\log_2\frac{2}{5}) = 0.694 bits
+	Gain_{(umur)} = Info(D) - Info_{age}(D) = 0.940 - 0.694 = 0.246 bits
 \end{displaymath}
 
-Setelah mendapatkan \textsl{entropy} dari atribut \textsl{age}, maka nilai \textsl{gain information} dari atribut \textsl{age} adalah
-
-\begin{displaymath}
-	Gain_{(age)} = Info(D) - Info_{age}(D) = 0.940 - 0.694 = 0.246 bits
-\end{displaymath}
-
-Dengan melakukan hal yang sama, dapat diperoleh nilai \textsl{gain} untuk atribut \textsl{income} adalah 0.029 \textsl{bits}, untuk nilai \textsl{gain(student)} adalah 0.151 \textsl{bits}, dan \textsl{gain(credit\_rating)} = 0.048 \textsl{bits}. Karena nilai \textsl{gain} dari atribut \textsl{age} merupakan nilai terbesar diantara semua atribut, maka atribut \textsl{age} dipilih menjadi \textsl{splitting attribute}. Setelah ditentukan, node N akan membentuk cabang berdasarkan nilai dari atribut \textsl{age} seperti pada gambar \ref{fig:hasilCabang}.
+Dengan melakukan hal yang sama, dapat diperoleh nilai \textsl{gain} untuk atribut pendapatan adalah 0.029 \textsl{bits}, untuk nilai \textsl{gain}(siswa) adalah 0.151 \textsl{bits}, dan \textsl{gain}(resiko\_kredit) = 0.048 \textsl{bits}. Karena nilai \textsl{gain} dari atribut umur merupakan nilai terbesar diantara semua atribut, maka atribut umur dipilih menjadi \textsl{splitting attribute}. Setelah ditentukan, node N akan membentuk cabang berdasarkan nilai dari atribut umur seperti pada gambar \ref{fig:hasilCabang}.
 
 \begin{figure}
 \includegraphics[scale=1]{Gambar/hasilcabangid3.jpg}
@@ -369,17 +370,17 @@ Setelah mendapatkan nilai \textsl{split info} dari suatu atribut, dapat diperole
 
 Nilai dari \textsl{gain ratio} terbesar yang akan dipilih. Perlu diketahui \cite{DM} jika nilai hasil mendekati 0, maka ratio menjadi tidak stabil, oleh karena itu, \textsl{gain information} yang dipilih harus besar, minimal sama besarnya dengan nilai rata-rata dari semua test yang diperiksa.
 
-Contoh studi kasus, akan dilakukan perhitungan \textsl{gain ratio} dengan menggunakan training set pada tabel \ref{table:contohTrainingSet}. Dapat dilihat pada atribut \textsl{income} memiliki tiga partisi yaitu \textsl{low}, \textsl{medium}, dan \textsl{high}. Terdapat empat tuple dengan nilai \textsl{low}, enam tuple dengan nilai \textsl{medium}, dan empat tuple dengan nilai \textsl{high}. Untuk menghitung \textsl{gain ratio}, perlu dihitung nilai \textsl{split information} terlebih dahulu dengan cara:
+Contoh studi kasus, akan dilakukan perhitungan \textsl{gain ratio} dengan menggunakan training set pada tabel \ref{table:contohTrainingSet}. Dapat dilihat pada atribut pendapatan memiliki tiga partisi yaitu rendah, sedang, dan tinggi. Terdapat empat tuple dengan nilai rendah, enam tuple dengan nilai sedang, dan empat tuple dengan nilai tinggi. Untuk menghitung \textsl{gain ratio}, perlu dihitung nilai \textsl{split information} terlebih dahulu dengan cara:
 
 \begin{displaymath}
-	SplitInfo_A(D) = - \frac{4}{14} \times \log_2 (\frac{4}{14}) - \frac{6}{14} \times \log_2 (\frac{6}{14}) - \frac{4}{14} \times \log_2 (\frac{4}{14})
-	SplitInfo_A(D) = 0.926 bits
+	SplitInfo_A(pendapatan) = - \frac{4}{14} \times \log_2 (\frac{4}{14}) - \frac{6}{14} \times \log_2 (\frac{6}{14}) - \frac{4}{14} \times \log_2 (\frac{4}{14})
+	SplitInfo_A(pendapatan) = 0.926 bits
 \end{displaymath} 
 
-Jika nilai \textsl{gain information} dari \textsl{income} adalah 0.029, maka, dapat diperoleh \textsl{gain ratio} dari \textsl{income} adalah
+Jika nilai \textsl{gain information} dari \textsl{income} adalah 0.029, maka, dapat diperoleh \textsl{gain ratio} dari pendapatan adalah
 
 \begin{displaymath}
-	GainRatio(D) = \frac{0.029}{0.926} = 0.031 bits
+	GainRatio(pendapatan) = \frac{0.029}{0.926} = 0.031 bits
 \end{displaymath}
 
 \paragraph{Tree Pruning}
@@ -453,7 +454,7 @@ AdditionalData, merupakan \textsl{field} dengan tipe data varchar yang digunakan
 	\item Jika nilai atribut \textsl{action} adalah \textsl{WIDGETLOAD}, maka isi nilai dari additionalData adalah ip dari user yang melakukan download widget
 \end{itemize}
 
-\subsection{Perhitungan Nilai Jarak Menggunakan \textsl{Euclidean}}
+\section{Perhitungan Nilai Jarak Menggunakan \textsl{Euclidean}}
 \textsl{Euclidean} dapat menghasilkan nilai jarak antar dua objek. Misal kita memiliki dua objek (p dan q). Jika kedua objek tersebut merupakan objek dengan satu dimensi, maka rumus \textsl{euclidean} akan menjadi
 
 \begin{displaymath}

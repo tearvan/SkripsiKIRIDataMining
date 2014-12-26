@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.8.19)  25 NOV 2014 14:11
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.8.19)  26 DEC 2014 09:55
 entering extended mode
 **main.tex
 ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.tex"
@@ -750,18 +750,6 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 
 ]
 Bab 2.
-
-! Package keyval Error: center undefined.
-
-See the keyval package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.10 ...e=0.9, center]{Gambar/tahapdatamining.jpg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 <Gambar/tahapdatamining.jpg, id=253, 355.3275pt x 477.28313pt>
 File: Gambar/tahapdatamining.jpg Graphic file (type jpg)
  <use Gambar/tahapdatamining.jpg>
@@ -802,27 +790,28 @@ int.jpg>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[14]
-Overfull \hbox (46.54514pt too wide) detected at line 336
-\OML/cmm/m/it/10.95 Info[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 D\OT1/cmr/m/n/10.95 ) = [] \OMS/cmsy/m/n/10.95  \OT1/
-cmr/m/n/10.95 (\OMS/cmsy/m/n/10.95  [] [][] []   [] [][] []\OT1/cmr/m/n/10.95 ) + [] \OMS/cmsy/m/n/10.95  \OT1/cmr/m/n/
-10.95 (\OMS/cmsy/m/n/10.95  [] [][] []   [] [][] []\OT1/cmr/m/n/10.95 ) + [] \OMS/cmsy/m/n/10.95  \OT1/cmr/m/n/10.95 (\
-OMS/cmsy/m/n/10.95  [] [][] []   [] [][] []\OT1/cmr/m/n/10.95 ) = 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 694\OML/cmm/m
-/it/10.95 bits
- []
-
-<Gambar/hasilcabangid3.jpg, id=346, 455.45157pt x 301.8778pt>
+[14] <Gambar/hasilcabangid3.jpg, id=346, 455.45157pt x 301.8778pt>
 File: Gambar/hasilcabangid3.jpg Graphic file (type jpg)
  <use Gambar/hasilcabangid3.jpg>
-Package pdftex.def Info: Gambar/hasilcabangid3.jpg used on input line 347.
+Package pdftex.def Info: Gambar/hasilcabangid3.jpg used on input line 348.
 (pdftex.def)             Requested size: 455.45045pt x 301.87706pt.
  [15] [16 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/hasilcabangi
 d3.jpg>]
+Overfull \hbox (55.30159pt too wide) detected at line 378
+\OML/cmm/m/it/10.95 SplitInfo[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 pendapatan\OT1/cmr/m/n/10.95 ) = \OMS/cmsy/m/n/10
+.95  []  [][]\OT1/cmr/m/n/10.95 ([]) \OMS/cmsy/m/n/10.95   []  [][]\OT1/cmr/m/n/10.95 ([]) \OMS/cmsy/m/n/10.95   []  
+[][]\OT1/cmr/m/n/10.95 ([])\OML/cmm/m/it/10.95 SplitInfo[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 pendapatan\OT1/cmr/m/n
+/10.95 ) = 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 926\OML/cmm/m/it/10.95 bits
+ []
+
 <Gambar/treepruning.jpg, id=362, 352.31625pt x 167.12437pt>
 File: Gambar/treepruning.jpg Graphic file (type jpg)
  <use Gambar/treepruning.jpg>
-Package pdftex.def Info: Gambar/treepruning.jpg used on input line 390.
+Package pdftex.def Info: Gambar/treepruning.jpg used on input line 391.
 (pdftex.def)             Requested size: 352.31538pt x 167.12395pt.
+
+Underfull \vbox (badness 5771) has occurred while \output is active []
+
  [17 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/treepruning.jpg>]
  [18] [19]) [20]
 ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab3.tex"
@@ -832,46 +821,47 @@ Bab 3.
 
 
 ] [22]
-Overfull \hbox (309.77759pt too wide) in alignment at lines 95--105
- [] [] [] [] [] [] [] [] [] [] 
+Underfull \hbox (badness 10000) in paragraph at lines 107--107
+[]|\T1/cmr/bx/n/10.95 Longitude
  []
 
 
-Underfull \vbox (badness 10000) detected at line 105
+Underfull \hbox (badness 10000) in paragraph at lines 107--107
+\T1/cmr/bx/n/10.95 Ke-be-rang-
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 107--107
+[]|\T1/cmr/bx/n/10.95 Longitude
+ []
 
-<Gambar/classificationmap.jpg, id=397, 351.3125pt x 200.75pt>
+[23] [24] <Gambar/classificationmap.jpg, id=406, 351.3125pt x 200.75pt>
 File: Gambar/classificationmap.jpg Graphic file (type jpg)
  <use Gambar/classificationmap.jpg>
-Package pdftex.def Info: Gambar/classificationmap.jpg used on input line 111.
+Package pdftex.def Info: Gambar/classificationmap.jpg used on input line 117.
 (pdftex.def)             Requested size: 351.31163pt x 200.7495pt.
- [23] [24 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/classificati
-onmap.jpg>]
-Underfull \vbox (badness 10000) detected at line 142
+ [25 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/classificationmap
+.jpg>]
+Underfull \vbox (badness 10000) detected at line 147
  []
 
-[25] [26] <Gambar/usecase.jpg, id=436, 338.7054pt x 281.1303pt>
+[26] [27] <Gambar/usecase.jpg, id=441, 271.0125pt x 225.0006pt>
 File: Gambar/usecase.jpg Graphic file (type jpg)
  <use Gambar/usecase.jpg>
-Package pdftex.def Info: Gambar/usecase.jpg used on input line 218.
-(pdftex.def)             Requested size: 338.70457pt x 281.12961pt.
- [27]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [28 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/usecase.jpg>]
+Package pdftex.def Info: Gambar/usecase.jpg used on input line 223.
+(pdftex.def)             Requested size: 271.01183pt x 225.00003pt.
+ [28]
 <Gambar/classdiagram.jpg, id=455, 489.32813pt x 367.3725pt>
 File: Gambar/classdiagram.jpg Graphic file (type jpg)
  <use Gambar/classdiagram.jpg>
-Package pdftex.def Info: Gambar/classdiagram.jpg used on input line 271.
+Package pdftex.def Info: Gambar/classdiagram.jpg used on input line 276.
 (pdftex.def)             Requested size: 391.46303pt x 293.89838pt.
-) [29 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/classdiagram.jpg
->] [30
+ [29 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/usecase.jpg>]) [3
+0 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/classdiagram.jpg>] [
+31
 
 
-] [31]
+]
 ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Lampiran/lampA.tex" [32
 
 
@@ -1423,17 +1413,13 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 520.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 520.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 520.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 2071B92FA7E3C38DCF30381F55C8BDDB;5036.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+(rerunfilecheck)             Checksum: 0F9DB3263DD8352C1C524421D934500C;5029.
  ) 
 Here is how much of TeX's memory you used:
- 15361 strings out of 493921
- 215023 string characters out of 3147258
- 467889 words of memory out of 3000000
- 18254 multiletter control sequences out of 15000+200000
+ 15358 strings out of 493921
+ 214985 string characters out of 3147258
+ 467724 words of memory out of 3000000
+ 18252 multiletter control sequences out of 15000+200000
  19639 words of font info for 43 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
  45i,12n,43p,1084b,531s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1452,9 +1438,9 @@ cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10
 type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (43 pages, 1062228 bytes).
+Output written on main.pdf (43 pages, 1011489 bytes).
 PDF statistics:
- 1030 PDF objects out of 1200 (max. 8388607)
- 149 named destinations out of 1000 (max. 500000)
+ 1031 PDF objects out of 1200 (max. 8388607)
+ 148 named destinations out of 1000 (max. 500000)
  307 words of extra memory for PDF output out of 10000 (max. 10000000)
 

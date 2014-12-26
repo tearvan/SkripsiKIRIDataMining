@@ -29,23 +29,23 @@
 \contentsline {paragraph}{\textsl {Information Gain}}{14}{paragraph*.14}
 \contentsline {paragraph}{\textsl {Gain Ratio}}{16}{paragraph*.15}
 \contentsline {paragraph}{Tree Pruning}{17}{paragraph*.16}
-\contentsline {subsection}{\numberline {2.1.6}\textsl {Pattern Evaluation}}{17}{subsection.2.1.6}
+\contentsline {subsection}{\numberline {2.1.6}\textsl {Pattern Evaluation}}{18}{subsection.2.1.6}
 \contentsline {subsection}{\numberline {2.1.7}\textsl {Knowledge Presentation}}{18}{subsection.2.1.7}
 \contentsline {section}{\numberline {2.2}Log Histori KIRI}{18}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Perhitungan Nilai Jarak Menggunakan \textsl {Euclidean}}{20}{subsection.2.2.1}
+\contentsline {section}{\numberline {2.3}Perhitungan Nilai Jarak Menggunakan \textsl {Euclidean}}{20}{section.2.3}
 \contentsline {chapter}{\numberline {3}Analisa}{21}{chapter.3}
 \contentsline {section}{\numberline {3.1}Analisis Data}{21}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Data Cleaning}{21}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Data Integration}{21}{subsection.3.1.2}
 \contentsline {subsection}{\numberline {3.1.3}\textsl {Data Selection}}{21}{subsection.3.1.3}
 \contentsline {subsection}{\numberline {3.1.4}\textsl {Data Transformation}}{22}{subsection.3.1.4}
-\contentsline {section}{\numberline {3.2}Analisis Perangkat Lunak}{25}{section.3.2}
-\contentsline {subsubsection}{Spesifikasi Kebutuhan Fungsional Perangkat Lunak \textsl {Data Mining log} Histori KIRI}{25}{subsubsection*.17}
+\contentsline {section}{\numberline {3.2}Analisis Perangkat Lunak}{26}{section.3.2}
+\contentsline {subsubsection}{Spesifikasi Kebutuhan Fungsional Perangkat Lunak \textsl {Data Mining log} Histori KIRI}{26}{subsubsection*.17}
 \contentsline {subsubsection}{Pemodelan Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{26}{subsubsection*.18}
-\contentsline {subsubsection}{Pemodelan Data pada Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{26}{subsubsection*.19}
-\contentsline {subsubsection}{Pemodelan Fungsi pada Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{27}{subsubsection*.20}
-\contentsline {subsection}{\numberline {3.2.1}Diagram \textsl {Use Case} Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{27}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Diagram kelas Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{29}{subsection.3.2.2}
+\contentsline {subsubsection}{Pemodelan Data pada Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{27}{subsubsection*.19}
+\contentsline {subsubsection}{Pemodelan Fungsi pada Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{28}{subsubsection*.20}
+\contentsline {subsection}{\numberline {3.2.1}Diagram \textsl {Use Case} Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{28}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Diagram kelas Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{30}{subsection.3.2.2}
 \contentsline {chapter}{Daftar Referensi}{31}{chapter*.21}
 \renewcommand {\cftchappresnum }{\bf \scshape }
 \contentsline {chapter}{\numberline {A}100 data pertama dari \textsl {log} histori KIRI}{33}{appendix.A}
