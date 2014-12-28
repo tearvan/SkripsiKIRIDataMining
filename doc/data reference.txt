@@ -4,3 +4,8 @@ Perhitungan jarak latitude dan longitude
 perbedaan C4.5 dan ID3
 	http://www.scribd.com/doc/62722024/Slide#scribd
 	https://codemath.wordpress.com/2011/06/20/perbedaan-algoritma-id3-c4-5-dan-j48/
+
+Weka API
+	http://weka.wikispaces.com/Use+WEKA+in+your+Java+code
+	http://weka.wikispaces.com/Programmatic+Use
+	http://stackoverflow.com/questions/9175116/visualizing-weka-classification-tree
