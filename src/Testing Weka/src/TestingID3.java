@@ -21,9 +21,9 @@ import weka.gui.treevisualizer.PlaceNode1;
 import weka.gui.treevisualizer.PlaceNode2;
 import weka.gui.treevisualizer.TreeVisualizer;
 
-public class Testing 
+public class TestingID3 
 {
-    public Testing()
+    public TestingID3()
     {
     }
     
@@ -32,7 +32,7 @@ public class Testing
         //Testing test = new Testing();
         String[] option = new String[]{"-U"};
         Instances data;
-        J48 tree = new J48();
+        Id3 tree = new Id3();
         try {
             tree.setOptions(option);
             data = new Instances(new BufferedReader(new FileReader("D:\\Tugas\\Skripsi-1\\Skripsi GIT\\SkripsiKIRIDataMining\\src\\test data\\test data.arff")));
@@ -41,23 +41,6 @@ public class Testing
         } catch (Exception ex) {
             Logger.getLogger(Testing.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        // display classifier
-        final javax.swing.JFrame jf = 
-          new javax.swing.JFrame("Weka Classifier Tree Visualizer: J48");
-        jf.setSize(500,400);
-        jf.getContentPane().setLayout(new BorderLayout());
-        TreeVisualizer tv = new TreeVisualizer(null, tree.graph(), new PlaceNode2());
-        jf.getContentPane().add(tv, BorderLayout.CENTER);
-        jf.addWindowListener(new java.awt.event.WindowAdapter() {
-          public void windowClosing(java.awt.event.WindowEvent e) {
-            jf.dispose();
-          }
-        });
-        
-        jf.setVisible(true);
-        tv.fitToScreen();
-        
         // nilai yang harus dibuat untuk dijadikan tree!!
         System.out.println(tree.toString());
     }
