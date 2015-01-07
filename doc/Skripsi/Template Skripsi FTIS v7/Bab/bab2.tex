@@ -193,49 +193,49 @@ Salah satu cara pembuatan \textsl{classification rules} pada \textsl{Data Classi
 
 \textsl{Decision tree induction} merupakan pelatihan pohon keputusan dari tupel pelatihan kelas berlabel. Terdapat beberapa teknik untuk membuat \textsl{decission tree} dua diantaranya adalah ID3 dan C4.5. ID3 merupakan teknik pembuatan \textsl{decision tree} dengan memanfaatkan \textsl{entropy} dan \textsl{gain info} untuk menentukan atribut yang terbaik untuk node pada \textsl{decision tree}. Sedangkan C4.5 merupakan teknik lanjutan dari ID3 yang menggunakan \textsl{gain ratio} untuk melakukan pengecekan pada nilai \textsl{gain info}.Kedua teknik tersebut menggunakan pendekatan \textsl{greedy} yang merupakan \textsl{decission tree} yang dibangun secara \textsl{top-down recursive divide and conquer}. Algoritma yang diperlukan secara umum sama, hanya berbeda pada \textsl{attribute\_selection\_method}. Berikut algoritma untuk membuat pohon keputusan dari suatu tupel pelatihan.
 
-Input:
-\begin{itemize}
-	\item Partisi data, D, merupakan set data pelatihan dan kelas label
-	\item \textsl{attribute\_list}, merupakan set dari atribut kandidat
-	\item \textsl{Attribute\_selection\_method}, prosedur untuk menentukan \textsl{splitting criterion}. Pada input ini, terdapat juga data \textsl{splitting\_attribute} dan mungkin salah satu dari \textsl{split point} atau \textsl{splitting subset}
-\end{itemize}
 
-Output: pohon keputusan
-\label{method_pohon_keputusan}
-Method:
+\begin{algorithmic}[1]
+	\REQUIRE Partisi data, D, merupakan set data pelatihan dan kelas label
+	\REQUIRE \textsl{attribute\_list}, merupakan set dari atribut kandidat
+	\REQUIRE \textsl{Attribute\_selection\_method}, prosedur untuk menentukan \textsl{splitting criterion}. Pada input ini, terdapat juga data \textsl{splitting\_attribute} dan mungkin salah satu dari \textsl{split point} atau \textsl{splitting subset}
+	\ENSURE Pohon keputusan
+	\STATE create a node N;
+	\IF{tuples in D are all of the same class C} 
+	  \RETURN N as a leaf node labeled with the class C;
+	\ENDIF
+	\IF{attribute\_list is empty}
+		\RETURN  N as leaf node labeled with the majority class in D; \COMMENT {majority voting}
+	\ENDIF
+	\STATE apply Attribute\_selection\_method(D, atribute\_list) to find the "`best"' splitting\_criterion;
+	\STATE label node N with splitting\_criterion;
+	\IF{splitting\_attribute is discrete valued and multiway splits allowed}
+		\STATE attribute\_list $\leftarrow$ attribute\_list - splitting\_attribute; \COMMENT{remove splitting\_attribute}
+	\ENDIF
+	\FORALL{outcome j of splitting\_criterion}
+		\STATE let D\lowercase{j} be the set of data tuples in D satisfying outcome j; \COMMENT{a partition}
+		\IF{D\lowercase{j} is empty}
+			\STATE attach a leaf labeled with the majority class in D to node N;
+		\ELSE
+			\STATE attach the node returned by generate\_decision\_tree(D\lowercase{j}, attribute\_list) to node N;
+		\ENDIF
+	\ENDFOR
+\RETURN N;
+\end{algorithmic}
 
-(1) create a node N;
+%for each outcome j of splitting\_criterion // partition the tuples and from subtrees for each partition
 
-(2) if tuples in D are all of the same class, C then
+%let D\lowercase{j} be the set of data tuples in D satisfying outcome j; //a partition
 
-(3)	return N as a leaf node labeled with the class C;
+%if  then
 
-(4)	if attribute\_list is empty then
+%
 
-(5) return N as leaf node labeled with the majority class in D; //majority voting
+%else 
 
-(6)	apply Attribute\_selection\_method(D, atribute\_list) to find the "`best"' splitting\_criterion;
+%endfor
 
-(7) label node N with splitting\_criterion;
+%return N;
 
-(8) if splitting\_attribute is discrete valued and
-				multiway splits allowed then //not restricted to binary trees
-
-(9) attribute\_list <- attribute\_list - splitting\_attribute; //remove splitting\_attribute
-
-(10)for each outcome j of splitting\_criterion // partition the tuples and from subtrees for each partition
-
-(11)let D\lowercase{j} be the set of data tuples in D satisfying outcome j; //a partition
-
-(12) if D\lowercase{j} is empty then
-
-(13) attach a leaf labeled with the majority class in D to node N;
-
-(14) else attach the node returned by generate\_decision\_tree(D\lowercase{j}, attribute\_list) to node N;
-
-endfor
-
-(15) return N;
 
 Pohon keputusan akan dimulai dengan satu node, yaitu N, merepresentasikan tuple pelatihan pada D (langkah 1)
 
@@ -454,41 +454,20 @@ AdditionalData, merupakan \textsl{field} dengan tipe data varchar yang digunakan
 	\item Jika nilai atribut \textsl{action} adalah \textsl{WIDGETLOAD}, maka isi nilai dari additionalData adalah ip dari user yang melakukan download widget
 \end{itemize}
 
-\section{Perhitungan Nilai Jarak Menggunakan \textsl{Euclidean}}
-\textsl{Euclidean} dapat menghasilkan nilai jarak antar dua objek. Misal kita memiliki dua objek (p dan q). Jika kedua objek tersebut merupakan objek dengan satu dimensi, maka rumus \textsl{euclidean} akan menjadi
+\section{\textsl{Haversine Formula}}
+\textsl{Haversine Formula} dapat menghasilkan nilai jarak antar dua titik pada bola dari garis bujur dan garis lintang titik tersebut. Berikut rumus Haversine:
 
 \begin{displaymath}
-	\sqrt{(p - q)^{2}} = |p - q|
-\end{displaymath} 
-
-Jika objek p dan q merupakan objek dua dimensi, maka rumus \textsl{euclidean} akan menjadi
-
+	a = \sin^{2}(\Delta\varphi/2) + \cos\varphi_{1} . \cos\varphi_{2} . \sin^{2}(\Delta\lambda/2)
+\end{displaymath}
 \begin{displaymath}
-	d(p,q) = \sqrt{(p_{1} - q_{1})^{2} + (p_{2} - q_{2})^{2}}
+	c = 2 . a\tan^{2}(\sqrt{a}, \sqrt{1-a})
+\end{displaymath}
+\begin{displaymath}
+	d = R . c
 \end{displaymath}
 
-Jika objek p dan q merupakan objek tiga dimensi, maka rumus \textsl{euclidean} akan menjadi
-
-\begin{displaymath}
-	d(p,q) = \sqrt{(p_{1} - q_{1})^{2} + (p_{2} - q_{2})^{2} + (p_{3} - q_{3})^{2}}
-\end{displaymath}
-
-Jika objek p dan q merupakan objek n dimensi, maka rumus \textsl{euclidean} akan menjadi
-
-\begin{displaymath}
-	d(p,q) = \sqrt{(p_{1} - q_{1})^{2} + (p_{2} - q_{2})^{2} + ..... + (p_{n-1} - q_{n-1})^{2} + (p_{n} - q_{n})^{2}}
-\end{displaymath}
-
-Contoh studi kasus untuk perhitungan dua objek dengan dimensi dua, misal terdapat dua objek dengan nilai posisi (x,y). Objek pertama terletak pada posisi 3,5 sedangkan objek kedua terletak pada posisi 4,7. Maka perhitungan jarak kedua objek tersebut adalah
-
-\begin{displaymath}
-	d(o1,o2) = \sqrt{(3 - 4)^{2} + (5 - 7)^{2}}
-	d(o1,o2) = 2.236068
-\end{displaymath}
-
-
-
-
+Dimana $\varphi$ adalah latitude, $\lambda$ adalah longitude, R adalah radius bumi (radius = 6,371km) dan nilai latitude serta longitude harus dalam radians.
 
 
 

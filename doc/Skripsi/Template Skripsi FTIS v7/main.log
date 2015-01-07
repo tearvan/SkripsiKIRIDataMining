@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.8.19)  26 DEC 2014 09:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.8.19)  7 JAN 2015 11:11
 entering extended mode
 **main.tex
 ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.tex"
@@ -56,63 +56,26 @@ Package: abstract 2009/06/08 v1.2a configurable abstracts
 \absparindent=\skip46
 \absparsep=\skip47
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\algorithm2e\algorithm2e.sty"
-Package: algorithm2e 2013/01/06 v5.00 algorithms environments
-\c@AlgoLine=\count89
+("C:\Program Files\MiKTeX 2.9\tex\latex\algorithms\algorithmic.sty"
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\xspace.sty"
-Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\relsize.sty"
-Package: relsize 2003/07/04 ver 3.1
-)
-********************************************************
-Package `algorithm2e' Release 5.0 -- january 06 2013 --
-- algorithm2e-announce@lirmm.fr mailing list for announcement about releases
-- algorithm2e-discussion@lirmm.fr mailing list for discussion about package
-subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
-- Author: Christophe Fiorio (cfiorio@um2.fr)
-********************************************************
-\skiptotal=\skip48
-\skiplinenumber=\skip49
-\skiprule=\skip50
-\skiphlne=\skip51
-\skiptext=\skip52
-\skiplength=\skip53
-\algomargin=\skip54
-\skipalgocfslide=\skip55
-\algowidth=\dimen104
-\inoutsize=\dimen105
-\inoutindent=\dimen106
-\interspacetitleruled=\dimen107
-\interspacealgoruled=\dimen108
-\interspacetitleboxruled=\dimen109
-\algocf@inoutbox=\box26
-\algocf@inputbox=\box27
-\AlCapSkip=\skip56
-\AlCapHSkip=\skip57
-\algoskipindent=\skip58
-\algocf@nlbox=\box28
-\algocf@hangingbox=\box29
-\algocf@untilbox=\box30
-\algocf@skipuntil=\skip59
-\algocf@capbox=\box31
-\algoheightruledefault=\skip60
-\algoheightrule=\skip61
-\algotitleheightruledefault=\skip62
-\algotitleheightrule=\skip63
-\c@algocfline=\count90
-\c@algocfproc=\count91
-\c@algocf=\count92
-\algocf@algoframe=\box32
-\algocf@algobox=\box33
+\c@ALC@unique=\count89
+\c@ALC@line=\count90
+\c@ALC@rem=\count91
+\c@ALC@depth=\count92
+\ALC@tlm=\skip48
+\algorithmicindent=\skip49
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\chappg\chappg.sty"
 Package: chappg 2006/05/09 v2.1b page numbering by chapter number pages by chapter (or other unit)
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
- ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 130.
@@ -137,29 +100,25 @@ Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
 \etb@tempcnta=\count95
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
-\fancy@headwidth=\skip64
-\f@ncyO@elh=\skip65
-\f@ncyO@erh=\skip66
-\f@ncyO@olh=\skip67
-\f@ncyO@orh=\skip68
-\f@ncyO@elf=\skip69
-\f@ncyO@erf=\skip70
-\f@ncyO@olf=\skip71
-\f@ncyO@orf=\skip72
+\fancy@headwidth=\skip50
+\f@ncyO@elh=\skip51
+\f@ncyO@erh=\skip52
+\f@ncyO@olh=\skip53
+\f@ncyO@orh=\skip54
+\f@ncyO@elf=\skip55
+\f@ncyO@erf=\skip56
+\f@ncyO@olf=\skip57
+\f@ncyO@orf=\skip58
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count96
-\float@exts=\toks14
-\float@box=\box34
-\@float@everytoks=\toks15
-\@floatcapt=\box35
+\float@exts=\toks15
+\float@box=\box26
+\@float@everytoks=\toks16
+\@floatcapt=\box27
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks16
-)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
@@ -174,14 +133,14 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@cnth=\count97
 \Gm@cntv=\count98
 \c@Gm@tempcnt=\count99
-\Gm@bindingoffset=\dimen110
-\Gm@wd@mp=\dimen111
-\Gm@odd@mp=\dimen112
-\Gm@even@mp=\dimen113
-\Gm@layoutwidth=\dimen114
-\Gm@layoutheight=\dimen115
-\Gm@layouthoffset=\dimen116
-\Gm@layoutvoffset=\dimen117
+\Gm@bindingoffset=\dimen104
+\Gm@wd@mp=\dimen105
+\Gm@odd@mp=\dimen106
+\Gm@even@mp=\dimen107
+\Gm@layoutwidth=\dimen108
+\Gm@layoutheight=\dimen109
+\Gm@layouthoffset=\dimen110
+\Gm@layoutvoffset=\dimen111
 \Gm@dimlist=\toks17
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
@@ -197,28 +156,28 @@ File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 )
-\Gin@req@height=\dimen118
-\Gin@req@width=\dimen119
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
 \lst@mode=\count100
-\lst@gtempboxa=\box36
+\lst@gtempboxa=\box28
 \lst@token=\toks18
 \lst@length=\count101
-\lst@currlwidth=\dimen120
+\lst@currlwidth=\dimen114
 \lst@column=\count102
 \lst@pos=\count103
-\lst@lostspace=\dimen121
-\lst@width=\dimen122
+\lst@lostspace=\dimen115
+\lst@width=\dimen116
 \lst@newlines=\count104
 \lst@lineno=\count105
-\lst@maxwidth=\dimen123
+\lst@maxwidth=\dimen117
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
 \c@lstnumber=\count106
 \lst@skipnumbers=\count107
-\lst@framebox=\box37
+\lst@framebox=\box29
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
 File: listings.cfg 2014/09/06 1.5e listings configuration
@@ -235,25 +194,33 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\multicol.sty"
 Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \c@tracingmulticols=\count108
-\mult@box=\box38
-\multicol@leftmargin=\dimen124
+\mult@box=\box30
+\multicol@leftmargin=\dimen118
 \c@unbalance=\count109
 \c@collectmore=\count110
 \doublecol@number=\count111
 \multicoltolerance=\count112
 \multicolpretolerance=\count113
-\full@width=\dimen125
-\page@free=\dimen126
-\premulticols=\dimen127
-\postmulticols=\dimen128
-\multicolsep=\skip73
-\multicolbaselineskip=\skip74
-\partial@page=\box39
-\last@line=\box40
-\mult@rightbox=\box41
-\mult@grightbox=\box42
-\mult@gfirstbox=\box43
-\mult@firstbox=\box44
+\full@width=\dimen119
+\page@free=\dimen120
+\premulticols=\dimen121
+\postmulticols=\dimen122
+\multicolsep=\skip59
+\multicolbaselineskip=\skip60
+\partial@page=\box31
+\last@line=\box32
+\mult@rightbox=\box33
+\mult@grightbox=\box34
+\mult@gfirstbox=\box35
+\mult@firstbox=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
 \@tempa=\box45
 \@tempa=\box46
 \@tempa=\box47
@@ -263,54 +230,46 @@ Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \@tempa=\box51
 \@tempa=\box52
 \@tempa=\box53
-\@tempa=\box54
-\@tempa=\box55
-\@tempa=\box56
-\@tempa=\box57
-\@tempa=\box58
-\@tempa=\box59
-\@tempa=\box60
-\@tempa=\box61
 \c@columnbadness=\count114
 \c@finalcolumnbadness=\count115
-\last@try=\dimen129
-\multicolovershoot=\dimen130
-\multicolundershoot=\dimen131
-\mult@nat@firstbox=\box62
-\colbreak@box=\box63
+\last@try=\dimen123
+\multicolovershoot=\dimen124
+\multicolundershoot=\dimen125
+\mult@nat@firstbox=\box54
+\colbreak@box=\box55
 \multicol@sort@counter=\count116
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\lineno\lineno.sty"
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \linenopenalty=\count117
 \output=\toks19
 \linenoprevgraf=\count118
-\linenumbersep=\dimen132
-\linenumberwidth=\dimen133
+\linenumbersep=\dimen126
+\linenumberwidth=\dimen127
 \c@linenumber=\count119
 \c@pagewiselinenumber=\count120
 \c@LN@truepage=\count121
 \c@internallinenumber=\count122
 \c@internallinenumbers=\count123
-\quotelinenumbersep=\dimen134
-\bframerule=\dimen135
-\bframesep=\dimen136
-\bframebox=\box64
+\quotelinenumbersep=\dimen128
+\bframerule=\dimen129
+\bframesep=\dimen130
+\bframebox=\box56
 LaTeX Info: Redefining \\ on input line 3056.
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\lipsum\lipsum.sty"
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
 \c@lips@count=\count124
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\longtable.sty"
 Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
-\LTleft=\skip75
-\LTright=\skip76
-\LTpre=\skip77
-\LTpost=\skip78
+\LTleft=\skip61
+\LTright=\skip62
+\LTpre=\skip63
+\LTpost=\skip64
 \LTchunksize=\count125
-\LTcapwidth=\dimen137
-\LT@head=\box65
-\LT@firsthead=\box66
-\LT@foot=\box67
-\LT@lastfoot=\box68
+\LTcapwidth=\dimen131
+\LT@head=\box57
+\LT@firsthead=\box58
+\LT@foot=\box59
+\LT@lastfoot=\box60
 \LT@cols=\count126
 \LT@rows=\count127
 \c@LT@tables=\count128
@@ -318,15 +277,15 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \LT@p@ftn=\toks20
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\titlesec\titlesec.sty"
 Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
-\ttl@box=\box69
-\beforetitleunit=\skip79
-\aftertitleunit=\skip80
-\ttl@plus=\dimen138
-\ttl@minus=\dimen139
+\ttl@box=\box61
+\beforetitleunit=\skip65
+\aftertitleunit=\skip66
+\ttl@plus=\dimen132
+\ttl@minus=\dimen133
 \ttl@toksa=\toks21
-\titlewidth=\dimen140
-\titlewidthlast=\dimen141
-\titlewidthfirst=\dimen142
+\titlewidth=\dimen134
+\titlewidthlast=\dimen135
+\titlewidthfirst=\dimen136
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tocbibind\tocbibind.sty"
 Package: tocbibind 2010/10/13 v1.5k extra ToC listings
@@ -338,42 +297,42 @@ Package tocbibind Note: Using chapter style headings, unless overridden.
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\tocloft\tocloft.sty"
 Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
 Package tocloft Info: The document has chapter divisions on input line 44.
-\cftparskip=\skip81
-\cftbeforetoctitleskip=\skip82
-\cftaftertoctitleskip=\skip83
-\cftbeforepartskip=\skip84
-\cftpartnumwidth=\skip85
-\cftpartindent=\skip86
-\cftbeforechapskip=\skip87
-\cftchapindent=\skip88
-\cftchapnumwidth=\skip89
-\cftbeforesecskip=\skip90
-\cftsecindent=\skip91
-\cftsecnumwidth=\skip92
-\cftbeforesubsecskip=\skip93
-\cftsubsecindent=\skip94
-\cftsubsecnumwidth=\skip95
-\cftbeforesubsubsecskip=\skip96
-\cftsubsubsecindent=\skip97
-\cftsubsubsecnumwidth=\skip98
-\cftbeforeparaskip=\skip99
-\cftparaindent=\skip100
-\cftparanumwidth=\skip101
-\cftbeforesubparaskip=\skip102
-\cftsubparaindent=\skip103
-\cftsubparanumwidth=\skip104
-\cftbeforeloftitleskip=\skip105
-\cftafterloftitleskip=\skip106
-\cftbeforefigskip=\skip107
-\cftfigindent=\skip108
-\cftfignumwidth=\skip109
+\cftparskip=\skip67
+\cftbeforetoctitleskip=\skip68
+\cftaftertoctitleskip=\skip69
+\cftbeforepartskip=\skip70
+\cftpartnumwidth=\skip71
+\cftpartindent=\skip72
+\cftbeforechapskip=\skip73
+\cftchapindent=\skip74
+\cftchapnumwidth=\skip75
+\cftbeforesecskip=\skip76
+\cftsecindent=\skip77
+\cftsecnumwidth=\skip78
+\cftbeforesubsecskip=\skip79
+\cftsubsecindent=\skip80
+\cftsubsecnumwidth=\skip81
+\cftbeforesubsubsecskip=\skip82
+\cftsubsubsecindent=\skip83
+\cftsubsubsecnumwidth=\skip84
+\cftbeforeparaskip=\skip85
+\cftparaindent=\skip86
+\cftparanumwidth=\skip87
+\cftbeforesubparaskip=\skip88
+\cftsubparaindent=\skip89
+\cftsubparanumwidth=\skip90
+\cftbeforeloftitleskip=\skip91
+\cftafterloftitleskip=\skip92
+\cftbeforefigskip=\skip93
+\cftfigindent=\skip94
+\cftfignumwidth=\skip95
 \c@lofdepth=\count130
 \c@lotdepth=\count131
-\cftbeforelottitleskip=\skip110
-\cftafterlottitleskip=\skip111
-\cftbeforetabskip=\skip112
-\cfttabindent=\skip113
-\cfttabnumwidth=\skip114
+\cftbeforelottitleskip=\skip96
+\cftafterlottitleskip=\skip97
+\cftbeforetabskip=\skip98
+\cfttabindent=\skip99
+\cfttabnumwidth=\skip100
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
@@ -434,7 +393,7 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen143
+\@linkdim=\dimen137
 \Hy@linkcounter=\count134
 \Hy@pagecounter=\count135
 
@@ -466,10 +425,10 @@ Package hyperref Info: Bookmarks ON on input line 4688.
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen144
+\XeTeXLinkMargin=\dimen138
 \Fld@menulength=\count138
-\Field@Width=\dimen145
-\Fld@charsize=\dimen146
+\Field@Width=\dimen139
+\Fld@charsize=\dimen140
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -495,7 +454,7 @@ File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
 )
-\Hy@SectionHShift=\skip115
+\Hy@SectionHShift=\skip101
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\emptypage\emptypage.sty"
 Package: emptypage 2010/05/30 v1.2 Suppress page numbers and headings on empty pages
@@ -507,23 +466,23 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 293.
 ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\data.tex"
 ("C:\Program Files\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
-\heavyrulewidth=\dimen147
-\lightrulewidth=\dimen148
-\cmidrulewidth=\dimen149
-\belowrulesep=\dimen150
-\belowbottomsep=\dimen151
-\aboverulesep=\dimen152
-\abovetopsep=\dimen153
-\cmidrulesep=\dimen154
-\cmidrulekern=\dimen155
-\defaultaddspace=\dimen156
+\heavyrulewidth=\dimen141
+\lightrulewidth=\dimen142
+\cmidrulewidth=\dimen143
+\belowrulesep=\dimen144
+\belowbottomsep=\dimen145
+\aboverulesep=\dimen146
+\abovetopsep=\dimen147
+\cmidrulesep=\dimen148
+\cmidrulekern=\dimen149
+\defaultaddspace=\dimen150
 \@cmidla=\count144
 \@cmidlb=\count145
-\@aboverulesep=\dimen157
-\@belowrulesep=\dimen158
+\@aboverulesep=\dimen151
+\@belowrulesep=\dimen152
 \@thisruleclass=\count146
 \@lastruleclass=\count147
-\@thisrulewidth=\dimen159
+\@thisrulewidth=\dimen153
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
  ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
@@ -535,14 +494,14 @@ Package xcolor Info: Driver file: pdftex.def on input line 225.
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
  ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen160
-\extrarowheight=\dimen161
+\col@sep=\dimen154
+\extrarowheight=\dimen155
 \NC@list=\toks22
-\extratabsurround=\skip116
-\backup@length=\skip117
+\extratabsurround=\skip102
+\backup@length=\skip103
 )
 \everycr=\toks23
-\minrowclearance=\skip118
+\minrowclearance=\skip104
 )
 LaTeX Info: Redefining \color on input line 702.
 \rownum=\count148
@@ -557,7 +516,7 @@ Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
-\@mathmargin=\skip119
+\@mathmargin=\skip105
 
 For additional information on amsmath, use the `?' option.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
@@ -565,10 +524,10 @@ Package: amstext 2000/06/29 v2.01
  ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks24
-\ex@=\dimen162
+\ex@=\dimen156
 )) ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen163
+\pmbraise@=\dimen157
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
@@ -583,9 +542,9 @@ LaTeX Info: Redefining \overline on input line 306.
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
-\Mathstrutbox@=\box70
-\strutbox@=\box71
-\big@size=\dimen164
+\Mathstrutbox@=\box62
+\strutbox@=\box63
+\big@size=\dimen158
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \macc@depth=\count154
@@ -598,15 +557,15 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \column@=\count159
 \maxfields@=\count160
 \andhelp@=\toks26
-\eqnshift@=\dimen165
-\alignsep@=\dimen166
-\tagshift@=\dimen167
-\tagwidth@=\dimen168
-\totwidth@=\dimen169
-\lineht@=\dimen170
+\eqnshift@=\dimen159
+\alignsep@=\dimen160
+\tagshift@=\dimen161
+\tagwidth@=\dimen162
+\totwidth@=\dimen163
+\lineht@=\dimen164
 \@envbody=\toks27
-\multlinegap=\skip120
-\multlinetaggap=\skip121
+\multlinegap=\skip106
+\multlinetaggap=\skip107
 \mathdisplay@stack=\toks28
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
@@ -638,13 +597,13 @@ LaTeX Font Info:    ... okay on input line 308.
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count161
-\scratchdimen=\dimen171
-\scratchbox=\box72
+\scratchdimen=\dimen165
+\scratchbox=\box64
 \nofMPsegments=\count162
 \nofMParguments=\count163
 \everyMPshowfont=\toks29
 \MPscratchCnt=\count164
-\MPscratchDim=\dimen172
+\MPscratchDim=\dimen166
 \MPnumerator=\count165
 \makeMPintoPDFobject=\count166
 \everyMPtoPDFconversion=\toks30
@@ -684,7 +643,7 @@ LaTeX Font Info:    ... okay on input line 308.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \c@lstlisting=\count167
-\AtBeginShipoutBox=\box73
+\AtBeginShipoutBox=\box65
 Package hyperref Info: Link coloring ON on input line 308.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -702,7 +661,7 @@ LaTeX Info: Redefining \nameref on input line 308.
 ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.out")
 \@outlinefile=\write4
 
-<Gambar/logo-unpar.png, id=131, 360.59718pt x 356.0803pt>
+<Gambar/logo-unpar.png, id=135, 360.59718pt x 356.0803pt>
 File: Gambar/logo-unpar.png Graphic file (type png)
  <use Gambar/logo-unpar.png>
 Package pdftex.def Info: Gambar/logo-unpar.png used on input line 475.
@@ -750,14 +709,14 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 
 ]
 Bab 2.
-<Gambar/tahapdatamining.jpg, id=253, 355.3275pt x 477.28313pt>
+<Gambar/tahapdatamining.jpg, id=258, 355.3275pt x 477.28313pt>
 File: Gambar/tahapdatamining.jpg Graphic file (type jpg)
  <use Gambar/tahapdatamining.jpg>
 Package pdftex.def Info: Gambar/tahapdatamining.jpg used on input line 10.
 (pdftex.def)             Requested size: 319.79178pt x 429.55084pt.
  [5 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/tahapdatamining.jp
 g>] [6] [7] [8] [9]
-<Gambar/tahapdataclassification.jpg, id=304, 482.55281pt x 496.85625pt>
+<Gambar/tahapdataclassification.jpg, id=309, 482.55281pt x 496.85625pt>
 File: Gambar/tahapdataclassification.jpg Graphic file (type jpg)
  <use Gambar/tahapdataclassification.jpg>
 Package pdftex.def Info: Gambar/tahapdataclassification.jpg used on input line 178.
@@ -767,7 +726,7 @@ Overfull \hbox (13.08113pt too wide) in paragraph at lines 178--179
 [][] 
  []
 
-<Gambar/decisiontree.jpg, id=307, 286.06876pt x 165.61874pt>
+<Gambar/decisiontree.jpg, id=312, 286.06876pt x 165.61874pt>
 File: Gambar/decisiontree.jpg Graphic file (type jpg)
  <use Gambar/decisiontree.jpg>
 Package pdftex.def Info: Gambar/decisiontree.jpg used on input line 187.
@@ -779,8 +738,12 @@ Overfull \hbox (20.93987pt too wide) in paragraph at lines 244--245
 at-tri-bu-te_selection_method
  []
 
-[12 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/decisiontree.jpg>]
-<Gambar/jenishasilsplitpoint.jpg, id=324, 420.06938pt x 274.77657pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/decisiontree.jpg>
+]
+<Gambar/jenishasilsplitpoint.jpg, id=351, 420.06938pt x 274.77657pt>
 File: Gambar/jenishasilsplitpoint.jpg Graphic file (type jpg)
  <use Gambar/jenishasilsplitpoint.jpg>
 Package pdftex.def Info: Gambar/jenishasilsplitpoint.jpg used on input line 256.
@@ -790,7 +753,7 @@ int.jpg>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[14] <Gambar/hasilcabangid3.jpg, id=346, 455.45157pt x 301.8778pt>
+[14] <Gambar/hasilcabangid3.jpg, id=373, 455.45157pt x 301.8778pt>
 File: Gambar/hasilcabangid3.jpg Graphic file (type jpg)
  <use Gambar/hasilcabangid3.jpg>
 Package pdftex.def Info: Gambar/hasilcabangid3.jpg used on input line 348.
@@ -804,14 +767,11 @@ Overfull \hbox (55.30159pt too wide) detected at line 378
 /10.95 ) = 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 926\OML/cmm/m/it/10.95 bits
  []
 
-<Gambar/treepruning.jpg, id=362, 352.31625pt x 167.12437pt>
+<Gambar/treepruning.jpg, id=389, 352.31625pt x 167.12437pt>
 File: Gambar/treepruning.jpg Graphic file (type jpg)
  <use Gambar/treepruning.jpg>
 Package pdftex.def Info: Gambar/treepruning.jpg used on input line 391.
 (pdftex.def)             Requested size: 352.31538pt x 167.12395pt.
-
-Underfull \vbox (badness 5771) has occurred while \output is active []
-
  [17 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/treepruning.jpg>]
  [18] [19]) [20]
 ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab3.tex"
@@ -835,7 +795,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 107--107
 []|\T1/cmr/bx/n/10.95 Longitude
  []
 
-[23] [24] <Gambar/classificationmap.jpg, id=406, 351.3125pt x 200.75pt>
+[23] [24] <Gambar/classificationmap.jpg, id=433, 351.3125pt x 200.75pt>
 File: Gambar/classificationmap.jpg Graphic file (type jpg)
  <use Gambar/classificationmap.jpg>
 Package pdftex.def Info: Gambar/classificationmap.jpg used on input line 117.
@@ -845,20 +805,26 @@ Package pdftex.def Info: Gambar/classificationmap.jpg used on input line 117.
 Underfull \vbox (badness 10000) detected at line 147
  []
 
-[26] [27] <Gambar/usecase.jpg, id=441, 271.0125pt x 225.0006pt>
+[26] [27]
+
+LaTeX Warning: Reference `method_pohon_keputusan' on page 28 undefined on input line 201.
+
+<Gambar/usecase.jpg, id=468, 271.0125pt x 225.0006pt>
 File: Gambar/usecase.jpg Graphic file (type jpg)
  <use Gambar/usecase.jpg>
-Package pdftex.def Info: Gambar/usecase.jpg used on input line 223.
+Package pdftex.def Info: Gambar/usecase.jpg used on input line 226.
 (pdftex.def)             Requested size: 271.01183pt x 225.00003pt.
  [28]
-<Gambar/classdiagram.jpg, id=455, 489.32813pt x 367.3725pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/usecase.jpg>]
+<Gambar/classdiagram.jpg, id=488, 489.32813pt x 367.3725pt>
 File: Gambar/classdiagram.jpg Graphic file (type jpg)
  <use Gambar/classdiagram.jpg>
-Package pdftex.def Info: Gambar/classdiagram.jpg used on input line 276.
+Package pdftex.def Info: Gambar/classdiagram.jpg used on input line 279.
 (pdftex.def)             Requested size: 391.46303pt x 293.89838pt.
- [29 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/usecase.jpg>]) [3
-0 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/classdiagram.jpg>] [
-31
+) [30 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/classdiagram.jpg
+>] [31
 
 
 ]
@@ -1413,34 +1379,39 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 520.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 520.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 520.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0F9DB3263DD8352C1C524421D934500C;5029.
+(rerunfilecheck)             Checksum: 92CF8F9A74E6E21A02CDC2C966C28779;5173.
+
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 15358 strings out of 493921
- 214985 string characters out of 3147258
- 467724 words of memory out of 3000000
- 18252 multiletter control sequences out of 15000+200000
- 19639 words of font info for 43 fonts, out of 3000000 for 9000
+ 14189 strings out of 493921
+ 197938 string characters out of 3147258
+ 426598 words of memory out of 3000000
+ 17062 multiletter control sequences out of 15000+200000
+ 20404 words of font info for 44 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
- 45i,12n,43p,1084b,531s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,12n,43p,1084b,681s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk> <C:\Users\Jovan Guna
-wan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1000.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTe
-X\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbl1200.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\j
-knappen\ec\dpi600\ecbx1200.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbl1
-440.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1000.pk> <C:\Users\Jovan
- Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\
-MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbl1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
-our\jknappen\ec\dpi600\ecsl1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
-ecrm1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\
-Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1095.pk> <C:\Users\Jovan Gunawan\AppData\L
-ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (43 pages, 1011489 bytes).
+wan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTe
+X\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1000.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\j
+knappen\ec\dpi600\ecbl1200.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1
+200.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbl1440.pk> <C:\Users\Jovan
+ Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1000.pk> <C:\Users\Jovan Gunawan\AppData\Local\
+MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi600\ecbl1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
+ecsl1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\
+Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\Jovan Gunawan\AppData\L
+ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\p
+k\ljfour\jknappen\ec\dpi600\ecbx1440.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on main.pdf (43 pages, 1027430 bytes).
 PDF statistics:
- 1031 PDF objects out of 1200 (max. 8388607)
- 148 named destinations out of 1000 (max. 500000)
- 307 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1090 PDF objects out of 1200 (max. 8388607)
+ 173 named destinations out of 1000 (max. 500000)
+ 315 words of extra memory for PDF output out of 10000 (max. 10000000)
 
