@@ -199,54 +199,39 @@ Salah satu cara pembuatan \textsl{classification rules} pada \textsl{Data Classi
 	\REQUIRE \textsl{attribute\_list}, merupakan set dari atribut kandidat
 	\REQUIRE \textsl{Attribute\_selection\_method}, prosedur untuk menentukan \textsl{splitting criterion}. Pada input ini, terdapat juga data \textsl{splitting\_attribute} dan mungkin salah satu dari \textsl{split point} atau \textsl{splitting subset}
 	\ENSURE Pohon keputusan
-	\STATE create a node N;
-	\IF{tuples in D are all of the same class C} 
-	  \RETURN N as a leaf node labeled with the class C;
+	\STATE Membuat node N;
+	\IF{tuple pada D merupakan kelas yang sama, C} 
+	  \RETURN N sebagai node daun dengan label kelas C;
 	\ENDIF
-	\IF{attribute\_list is empty}
-		\RETURN  N as leaf node labeled with the majority class in D; \COMMENT {majority voting}
+	\IF{attribute\_list tidak ada nilai atau kosong}
+		\RETURN N sebagai node daun dengan label kelas yang terpaling banyak pada D; \COMMENT {majority voting}
 	\ENDIF
-	\STATE apply Attribute\_selection\_method(D, atribute\_list) to find the "`best"' splitting\_criterion;
-	\STATE label node N with splitting\_criterion;
-	\IF{splitting\_attribute is discrete valued and multiway splits allowed}
-		\STATE attribute\_list $\leftarrow$ attribute\_list - splitting\_attribute; \COMMENT{remove splitting\_attribute}
+	\STATE memanggil method Attribute\_selection\_method(D, atribute\_list) untuk mencari nilai terbaik splitting\_criterion;
+	\STATE menamakan node N dengan splitting\_criterion;
+	\IF{splitting\_attribute merupakan nilai discrete and multiway splits diizinkan}
+		\STATE attribute\_list $\leftarrow$ attribute\_list - splitting\_attribute; \COMMENT{menghapus splitting\_attribute}
 	\ENDIF
-	\FORALL{outcome j of splitting\_criterion}
-		\STATE let D\lowercase{j} be the set of data tuples in D satisfying outcome j; \COMMENT{a partition}
-		\IF{D\lowercase{j} is empty}
-			\STATE attach a leaf labeled with the majority class in D to node N;
+	\FORALL{hasil j dari splitting\_criterion}
+		\STATE D\lowercase{j} merupakan himpunan data tupel D yang sesuai dengan j;
+		\IF{D\lowercase{j} tidak ada nilai atau kosong}
+			\STATE melampirkan daun yang diberi label dengan kelas mayoritas di D ke node N;
 		\ELSE
-			\STATE attach the node returned by generate\_decision\_tree(D\lowercase{j}, attribute\_list) to node N;
+			\STATE melampirkan node yang dikembalikan oleh generate\_decision\_tree(D\lowercase{j}, attribute\_list) ke node N;
 		\ENDIF
 	\ENDFOR
 \RETURN N;
 \end{algorithmic}
 
-%for each outcome j of splitting\_criterion // partition the tuples and from subtrees for each partition
+Pohon keputusan akan dimulai dengan satu node, yaitu N, merepresentasikan tuple pelatihan pada D (baris 1)
 
-%let D\lowercase{j} be the set of data tuples in D satisfying outcome j; //a partition
+Jika tuple di D memiliki kelas yang sama semua, maka node N akan menjadi daun dan diberi label dari kelas tersebut (baris 2 sampai 4). Perlu diketahui bahwa baris 5 sampai 7 akan mengakhiri kondisi.
 
-%if  then
+Jika tuple di D ada kelas yang berbeda, maka algoritma akan memanggil \textsl{attribute\_selection\_method} untuk menentukan \textsl{splitting criterion}. \textsl{Splitting criterion} akan menentukan atribut pada node N yang merupakan nilai terbaik untuk memecah nilai atribut pada tuple ke dalam kelas masing-masing. (baris 8)
 
-%
-
-%else 
-
-%endfor
-
-%return N;
-
-
-Pohon keputusan akan dimulai dengan satu node, yaitu N, merepresentasikan tuple pelatihan pada D (langkah 1)
-
-Jika tuple di D memiliki kelas yang sama semua, maka node N akan menjadi daun dan diberi label dari kelas tersebut (langkah 2 dan 3). Perlu diketahui bahwa langkah 4 dan 5 akan mengakhiri kondisi.
-
-Jika tuple di D ada kelas yang berbeda, maka algoritma akan memanggil \textsl{attribute\_selection\_method} untuk menentukan \textsl{splitting criterion}. \textsl{Splitting criterion} akan menentukan atribut pada node N yang merupakan nilai terbaik untuk memecah nilai atribut pada tuple ke dalam kelas masing-masing. (langkah 6)
-
-Node N akan diisi dengan hasil dari \textsl{splitting criterion} (langkah 7). Kemudian kriteria tersebut agak dibentuk cabangnya masing-masing sesuai pada langkah 10 dan 11. Terdapat tiga kemungkinan bentuk kriteria jika A merupakan \textsl{splitting\_attribute} yang memiliki nilai unik seperti \{a$_{1}$, a$_{2}$, ..., a$_{v}$\} seperti pada gambar \ref{fig:splitPoint}, yaitu,
+Node N akan diisi dengan hasil dari \textsl{splitting criterion} (baris 9). Kemudian kriteria tersebut agak dibentuk cabangnya masing-masing sesuai pada baris 13 dan 14. Terdapat tiga kemungkinan bentuk kriteria jika A merupakan \textsl{splitting\_attribute} yang memiliki nilai unik seperti \{a$_{1}$, a$_{2}$, ..., a$_{v}$\} seperti pada gambar \ref{fig:splitPoint}, yaitu,
 
 \begin{enumerate}
-	\item \textsl{Discrete valued}: cabang yang dihasilkan memiliki kelas dengan nilai diskret. Karena kelas yang dihasilkan diskret dan hanya memiliki nilai yang sama pada cabang tersebut, maka \textsl{attribut\_list} akan dihapus (langkah 8 dan 9)
+	\item \textsl{Discrete valued}: cabang yang dihasilkan memiliki kelas dengan nilai diskret. Karena kelas yang dihasilkan diskret dan hanya memiliki nilai yang sama pada cabang tersebut, maka \textsl{attribut\_list} akan dihapus (baris 10 sampai 12)
 	\item \textsl{Continuous values}: cabang yang dihasilkan memiliki jarak nilai untuk memenuhi suatu kondisi (contoh: A <= split\_point), dimana nilai \textsl{split\_point} adalah nilai pembagi yang dikembalikan oleh \textsl{attribute\_selection\_method}
 	\item \textsl{Dicrete valued and a binary tree}: cabang yang dihasilkan adalah dua berupa nilai iya atau tidak dari "`apakah A anggota S$_{a}$"', dimana S$_{a}$ merupakan subset dari A, yang dikembalikan oleh \textsl{Attribute\_selection\_method}
 \end{enumerate}
@@ -258,21 +243,21 @@ Node N akan diisi dengan hasil dari \textsl{splitting criterion} (langkah 7). Ke
 \label{fig:splitPoint}
 \end{figure}
 
-Kemudian, akan dipanggil kembali algoritma \textsl{decision tree} untuk setiap nilai hasil pembagian pada tuple, D$_{j}$  (langkah 14).
+Kemudian, akan dipanggil kembali algoritma \textsl{decision tree} untuk setiap nilai hasil pembagian pada tuple, D$_{j}$  (baris 18).
 
 Rekursif tersebut akan berhenti ketika salah satu dari kondisi terpenuhi, yaitu
 
 \begin{enumerate}
 	\item Semua tuple pada partisi D merupakan bagian dari kelas yang sama.
-	\item Sudah tidak ada atribut yang dapat dilakukan pembagian lagi (dilakukan pengecekan pada langkah 4). Disini, akan dilakukan \textsl{majority voting} (langkah 5) yang akan mengkonversi node N menjadi \textsl{leaf} dan diberi label dengan kelas yang terbanyak pada D.
-	\item Sudah tidak ada tuple yang dapat diberi cabang, D$_{j}$ sudah kosong (langkah 12) dan \textsl{leaf} akan dibuat dengan \textsl{majority class} pada D (langkah 13).
+	\item Sudah tidak ada atribut yang dapat dilakukan pembagian lagi (dilakukan pengecekan pada baris 4). Disini, akan dilakukan \textsl{majority voting} (baris 6) yang akan mengkonversi node N menjadi \textsl{leaf} dan diberi label dengan kelas yang terbanyak pada D.
+	\item Sudah tidak ada tuple yang dapat diberi cabang, D$_{j}$ sudah kosong (baris 15) dan \textsl{leaf} akan dibuat dengan \textsl{majority class} pada D (baris 16).
 \end{enumerate}
 
-Pada langkah 15, akan dikembalikan nilai \textsl{decision tree} yang telah dibuat.
+Pada baris 21, akan dikembalikan nilai \textsl{decision tree} yang telah dibuat.
 
 subsubsection{\textsl{Attribute Selection Measure}}
 
-\textsl{Attribute Selection Measure} merupakan suatu hirarki untuk pemilihan \textsl{splitting criterion} yang terbaik yang memisah partisi data (D), tuple pelatihan kelas label ke dalam kelas masing-masing. \textsl{Attribute Selection Measure} menyediakan peringkat untuk setiap atribut pada training tuple. Jika \textsl{splitting criterion} merupakan nilai \textsl{continous} atau \textsl{binary trees}, maka nilai \textsl{split point} dan \textsl{splitting subset} harus ditentukan sebagai bagian dari \textsl{splitting criterion}. Contoh dari \textsl{attribute selection measure} adalah \textsl{information gain}, \textsl{gain ratio}, dan \textsl{gini index}.
+\paragraph{\textsl{Attribute Selection Measure}} merupakan suatu hirarki untuk pemilihan \textsl{splitting criterion} yang terbaik yang memisah partisi data (D), tuple pelatihan kelas label ke dalam kelas masing-masing. \textsl{Attribute Selection Measure} menyediakan peringkat untuk setiap atribut pada training tuple. Jika \textsl{splitting criterion} merupakan nilai \textsl{continous} atau \textsl{binary trees}, maka nilai \textsl{split point} dan \textsl{splitting subset} harus ditentukan sebagai bagian dari \textsl{splitting criterion}. Contoh dari \textsl{attribute selection measure} adalah \textsl{information gain}, \textsl{gain ratio}, dan \textsl{gini index}.
 
 Notasi yang digunakan adalah sebagai berikut. D merupakan data partisi, set pelatihan dari \textsl{class-labeled} tuple. Jika label kelas atribut memiliki m nilai yang berbeda yang mendifinisikan m kelas yang berbeda, $C_{i}$ (for i=1,...,m). C$_{i,d}$ menjadi kelas tuple dari C$_{i}$ di D. |D| dan |C$_{i,d}$| merupakan banyak tuple pada D dan C$_{i,d}$.
 
@@ -374,6 +359,8 @@ Contoh studi kasus, akan dilakukan perhitungan \textsl{gain ratio} dengan menggu
 
 \begin{displaymath}
 	SplitInfo_A(pendapatan) = - \frac{4}{14} \times \log_2 (\frac{4}{14}) - \frac{6}{14} \times \log_2 (\frac{6}{14}) - \frac{4}{14} \times \log_2 (\frac{4}{14})
+\end{displaymath} 
+\begin{displaymath}
 	SplitInfo_A(pendapatan) = 0.926 bits
 \end{displaymath} 
 
@@ -468,6 +455,48 @@ AdditionalData, merupakan \textsl{field} dengan tipe data varchar yang digunakan
 \end{displaymath}
 
 Dimana $\varphi$ adalah latitude, $\lambda$ adalah longitude, R adalah radius bumi (radius = 6,371km) dan nilai latitude serta longitude harus dalam radians.
+
+
+\section{Weka}
+Weka merupakan aplikasi berbasis java yang berisi alat-alat untuk melakukan visualisasi dan algoritma untuk data analisis serta pemodelan prediksi. Berikut beberapa kelas yang dimiliki oleh Weka:
+
+\paragraph{\textsl{Classifier}} adalah sebuah \textsl{interface} yang digunakan sebagai skema untuk prediksi numerik ataupun nominal pada weka. Kelas tersebut memiliki \textsl{method} sebagai berikut:
+\begin{enumerate}
+	\item void buildClassifier(Instances data), untuk melakukan menghasilkan klasifikasi dengan parameter set data pelatihan.
+	\item double classfyInstance(Instances instance), untuk melakukan klasifikasi dari data dengan parameter contoh data yang akan dilakukan klasifikasi. Method tersebut akan mengebalikan nilai kelas yang sesuai dengan data tersebut.
+	\item double[] distributionForInstance(Instance instance), untuk memprediksi keanggotaan kelas untuk contoh yang diberikan dengan parameter contoh data yang akan dilakukan klasifikasi dan mengembalikan array yang berisi nilai keanggotaan dari contoh data.
+	\item Capabilities getCapabilities(), mengembalikan capabilities dari kelas tersebut.
+\end{enumerate}
+
+\paragraph{\textsl{Instances}} adalah kelas untuk menangani set data.
+
+Kelas tersebut memiliki atribut sebagai berikut:
+\begin{enumerate}
+	\item String ARFF\_DATA, digunakan untuk menunjukkan section arff data.
+	\item String ARFF\_RELATION, digunakan untuk menunjukkan header arff data.
+	\item String FILE\_EXTENSION, extension dari nama file yang digunakan untuk file arff.
+	\item String SERIALIZED\_OBJ\_FILE\_EXTENSION, ektension dari nama file yang digunakan untuk \textsl{bin}.
+\end{enumerate}
+
+Kelas Instances memiliki \textsl{Constructor} sebagai berikut:
+\begin{enumerate}
+	\item 
+\end{enumerate}
+
+Kelas Instances memiliki \textsl{method} sebagai berikut:
+\begin{enumerate}
+	\item 
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
 
 
 
