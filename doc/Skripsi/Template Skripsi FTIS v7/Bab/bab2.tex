@@ -261,9 +261,11 @@ subsubsection{\textsl{Attribute Selection Measure}}
 
 Notasi yang digunakan adalah sebagai berikut. D merupakan data partisi, set pelatihan dari \textsl{class-labeled} tuple. Jika label kelas atribut memiliki m nilai yang berbeda yang mendifinisikan m kelas yang berbeda, $C_{i}$ (for i=1,...,m). C$_{i,d}$ menjadi kelas tuple dari C$_{i}$ di D. |D| dan |C$_{i,d}$| merupakan banyak tuple pada D dan C$_{i,d}$.
 
-\paragraph{\textsl{Information Gain}}
+\subsubsection{ID3}
 
-\textsl{Information} menurut Claude Shannon dalam \textsl{information theory} adalah ukuran \textsl{pure} dari suatu data. Suatu data yang \textsl{pure} jika data tersebut memiliki tuple dengan \textsl{class} yang sama. ID3 menggunakan \textsl{information gain} sebagai \textsl{attribute selection measure} yang melakukan pemilihan atribut berdasarkan informasi yang terkandung dalam pesan. Cara ID3 mendapatkan \textsl{information gain} dengan menggunakan \textsl{entropy}. \textsl{Entropy} adalah ukuran \textsl{impurity} dari suatu data. Cara mendapatkan nilai \textsl{entropy} adalah
+ID3 merupakan teknik untuk membuat \textsl{decision tree} dengan menggunakan \textsl{information gain} sebagai \textsl{attribute selection measure} untuk memilih atribut. Cara ID3 mendapatkan \textsl{information gain} dengan menggunakan \textsl{entropy}. \textsl{Entropy} adalah ukuran \textsl{impurity} dari suatu data. Cara mendapatkan nilai \textsl{entropy} adalah
+
+%\textsl{Information} menurut Claude Shannon dalam \textsl{information theory} adalah ukuran \textsl{pure} dari suatu data. Suatu data yang \textsl{pure} jika data tersebut memiliki tuple dengan \textsl{class} yang sama. ID3 menggunakan \textsl{information gain} sebagai \textsl{attribute selection measure} yang melakukan pemilihan atribut berdasarkan informasi yang terkandung dalam pesan. Cara ID3 mendapatkan \textsl{information gain} dengan menggunakan \textsl{entropy}. \textsl{Entropy} adalah ukuran \textsl{impurity} dari suatu data. Cara mendapatkan nilai \textsl{entropy} adalah
 
 \begin{displaymath}
 	Info(D) = -\sum_{i=1}^{m} pi \log_2(pi)
@@ -337,9 +339,13 @@ Dengan melakukan hal yang sama, dapat diperoleh nilai \textsl{gain} untuk atribu
 
 Untuk atribut yang merupakan nilai \textsl{continuous}, harus dicari nilai \textsl{split point} untuk A. Nilai-nilai dari dua angka yang bersebelahan dapat diambil nilai tengahnya untuk dijadikan \textsl{split-point}. Jika terdapat v nilai yang berbeda dari A, maka akan terdapat v-1 kemungkinan \textsl{split point}. Kemudian nilai \textsl{split point} akan dijadikan sebagai nilai pembagi, sebagai contoh: A <= \textsl{split-point} merupakan cabang pertama, dan A > \textsl{split-point} merupakan cabang kedua.
 
-\paragraph{\textsl{Gain Ratio}}
+\subsubsection{C4.5}
 
-\textsl{Information gain} akan memiliki nilai yang baik jika suatu atribut memiliki banyak nilai yang berbeda, namun hal itu tidak selalu bagus. Sebagai contoh kasus, jika nilai id suatu table yang memiliki nilai unik, maka akan terdapat banyak sekali cabang. Namun setiap cabang hanya akan berisi satu tuple dan bersifat \textsl{pure}, maka nilai \textsl{entropy} yang dihasilkan adalah 0. Oleh karena itu, informasi yang diperoleh pada atribut ini akan bernilai maksimum namun tidak akan berguna untuk \textsl{classification} \cite{DM}.
+\textsl{Information gain} akan memiliki nilai yang baik jika suatu atribut memiliki banyak nilai yang berbeda, namun hal itu tidak selalu bagus. Sebagai contoh kasus, jika nilai id suatu table yang memiliki nilai unik, maka akan terdapat banyak sekali cabang. Namun setiap cabang hanya akan berisi satu tuple dan bersifat \textsl{pure}, maka nilai \textsl{entropy} yang dihasilkan adalah 0. Oleh karena itu, informasi yang diperoleh pada atribut ini akan bernilai maksimum namun tidak akan berguna untuk \textsl{classification} \cite{DM}. Selain itu, ID3 dapat menghasil \textsl{decision tree} yang memprediksi secara berlebihan (\textsl{overestimated}) atau disebut juga \textsl{overfitting}. Hal ini dikarenakan pohon yang dihasilkan terlalu detail sehingga data input memiliki hasil prediksi yang pasti. 
+
+C4.5 merupakan teknik lanjutan dari ID3, yang menggunakan \textsl{gain ratio} sebagai \textsl{attribute selection measure} untuk memilih atribut. Kemudian, C4.5 melakukan \textsl{tree pruning} untuk menghindari \textsl{overfitting}.
+
+%\textsl{Information gain} akan memiliki nilai yang baik jika suatu atribut memiliki banyak nilai yang berbeda, namun hal itu tidak selalu bagus. Sebagai contoh kasus, jika nilai id suatu table yang memiliki nilai unik, maka akan terdapat banyak sekali cabang. Namun setiap cabang hanya akan berisi satu tuple dan bersifat \textsl{pure}, maka nilai \textsl{entropy} yang dihasilkan adalah 0. Oleh karena itu, informasi yang diperoleh pada atribut ini akan bernilai maksimum namun tidak akan berguna untuk \textsl{classification} \cite{DM}.
 
 C4.5, menggunakan nilai tambahan dari \textsl{information gain} yaitu \textsl{gain ratio}, yang dapat mengatasi permasalahan \textsl{information gain} tentang nilai yang banyak namun tidak baik untuk \textsl{classification}. C4.5 melakukan teknik normalisasi terhadap \textsl{gain information} dengan menggunakan \textsl{split information} yang memiliki rumus sebagai berikut:
 
@@ -347,6 +353,7 @@ C4.5, menggunakan nilai tambahan dari \textsl{information gain} yaitu \textsl{ga
 	SplitInfo_A(D) = - \sum_{j=1}^v \frac{|D_j|}{|D|} \times \log_2 (\frac{|D_j|}{|D|})
 \end{displaymath}
 
+Dimana |D| merupakan banyak data dan $|D_{j}|$ merupakan banyak data suatu nilai pada atribut.
 Setelah mendapatkan nilai \textsl{split info} dari suatu atribut, dapat diperoleh nilai \textsl{gain ratio} dengan rumus sebagai berikut:
 
 \begin{displaymath}
@@ -358,7 +365,7 @@ Nilai dari \textsl{gain ratio} terbesar yang akan dipilih. Perlu diketahui \cite
 Contoh studi kasus, akan dilakukan perhitungan \textsl{gain ratio} dengan menggunakan training set pada tabel \ref{table:contohTrainingSet}. Dapat dilihat pada atribut pendapatan memiliki tiga partisi yaitu rendah, sedang, dan tinggi. Terdapat empat tuple dengan nilai rendah, enam tuple dengan nilai sedang, dan empat tuple dengan nilai tinggi. Untuk menghitung \textsl{gain ratio}, perlu dihitung nilai \textsl{split information} terlebih dahulu dengan cara:
 
 \begin{displaymath}
-	SplitInfo_A(pendapatan) = - \frac{4}{14} \times \log_2 (\frac{4}{14}) - \frac{6}{14} \times \log_2 (\frac{6}{14}) - \frac{4}{14} \times \log_2 (\frac{4}{14})
+	SplitInfo_A(D) = - \frac{4}{14} \times \log_2 (\frac{4}{14}) - \frac{6}{14} \times \log_2 (\frac{6}{14}) - \frac{4}{14} \times \log_2 (\frac{4}{14})
 \end{displaymath} 
 \begin{displaymath}
 	SplitInfo_A(pendapatan) = 0.926 bits
@@ -461,32 +468,389 @@ Dimana $\varphi$ adalah latitude, $\lambda$ adalah longitude, R adalah radius bu
 Weka merupakan aplikasi berbasis java yang berisi alat-alat untuk melakukan visualisasi dan algoritma untuk data analisis serta pemodelan prediksi. Berikut beberapa kelas yang dimiliki oleh Weka:
 
 \paragraph{\textsl{Classifier}} adalah sebuah \textsl{interface} yang digunakan sebagai skema untuk prediksi numerik ataupun nominal pada weka. Kelas tersebut memiliki \textsl{method} sebagai berikut:
-\begin{enumerate}
-	\item void buildClassifier(Instances data), untuk melakukan menghasilkan klasifikasi dengan parameter set data pelatihan.
-	\item double classfyInstance(Instances instance), untuk melakukan klasifikasi dari data dengan parameter contoh data yang akan dilakukan klasifikasi. Method tersebut akan mengebalikan nilai kelas yang sesuai dengan data tersebut.
-	\item double[] distributionForInstance(Instance instance), untuk memprediksi keanggotaan kelas untuk contoh yang diberikan dengan parameter contoh data yang akan dilakukan klasifikasi dan mengembalikan array yang berisi nilai keanggotaan dari contoh data.
-	\item Capabilities getCapabilities(), mengembalikan capabilities dari kelas tersebut.
-\end{enumerate}
+\begin{itemize}
+	
+	\item void buildClassifier(Instances data)
+	
+	untuk melakukan menghasilkan klasifikasi dengan parameter set data pelatihan.
+	
+	\item double classfyInstance(Instances instance)
+	
+	untuk melakukan klasifikasi dari data dengan parameter contoh data yang akan dilakukan klasifikasi. Method tersebut akan mengebalikan nilai kelas yang sesuai dengan data tersebut.
+	
+	\item double[] distributionForInstance(Instance instance)
+	
+	untuk memprediksi keanggotaan kelas untuk contoh yang diberikan dengan parameter contoh data yang akan dilakukan klasifikasi dan mengembalikan array yang berisi nilai keanggotaan dari contoh data.
+	
+	\item Capabilities getCapabilities()
+	
+	mengembalikan capabilities dari kelas tersebut.
+\end{itemize}
 
 \paragraph{\textsl{Instances}} adalah kelas untuk menangani set data.
 
-Kelas tersebut memiliki atribut sebagai berikut:
-\begin{enumerate}
-	\item String ARFF\_DATA, digunakan untuk menunjukkan section arff data.
-	\item String ARFF\_RELATION, digunakan untuk menunjukkan header arff data.
-	\item String FILE\_EXTENSION, extension dari nama file yang digunakan untuk file arff.
-	\item String SERIALIZED\_OBJ\_FILE\_EXTENSION, ektension dari nama file yang digunakan untuk \textsl{bin}.
-\end{enumerate}
+Atribut:
+\begin{itemize}
+	
+	\item String ARFF\_DATA
+	
+	digunakan untuk menunjukkan section arff data.
+	
+	\item String ARFF\_RELATION
+	
+	digunakan untuk menunjukkan header arff data.
+	
+	\item String FILE\_EXTENSION
+	
+	extension dari nama file yang digunakan untuk file arff.
+	
+	\item String SERIALIZED\_OBJ\_FILE\_EXTENSION
+	
+	ektension dari nama file yang digunakan untuk \textsl{bin}.
+\end{itemize}
 
-Kelas Instances memiliki \textsl{Constructor} sebagai berikut:
-\begin{enumerate}
-	\item 
-\end{enumerate}
+\textsl{Constructor}:
+\begin{itemize}
+	\item Instances(Instances dataset)
+	
+	Konstruktor menyalin semua contoh dan referensi untuk informasi header dari himpunan contoh.
+	
+	\item Instances(Instances dataset, int capacity)
+	
+	
+	Konstruktor menciptakan himpunan kosong contoh.
+	
+	\item Instances(Instances source, int first, int toCopy)
+	
+	Menciptakan satu set baru kasus dengan menyalin bagian dari satu set.
+	
+	\item Instances(java.io.Reader reader)
+	
+	Membaca file ARFF, dan memberikan bobot satu untuk setiap contoh.
+	
+	\item Instances(java.lang.String name, java.util.ArrayList<Attribute> attInfo, int capacity)
+	
+	Menciptakan himpunan kosong contoh.
+\end{itemize}
 
-Kelas Instances memiliki \textsl{method} sebagai berikut:
-\begin{enumerate}
-	\item 
-\end{enumerate}
+\textsl{Method}:
+\begin{itemize}
+	\item boolean add(Instance instance)
+	
+	Menambahkan set data.
+	
+	\item void add(int index, Instance instance)
+	
+	Menambahkan satu contoh di posisi tertentu dalam daftar.
+	
+	\item Attribute attribute(int index)
+	
+	Mengembalikan atribut.
+	
+	\item Attribute attribute(java.lang.String name)
+	
+	Mengembalikan atribut yang sesuai dengan nama yang diberikan.
+	
+	\item AttributeStats attributeStats(int index)
+	
+	Menghitung ringkasan statistik pada nilai-nilai yang muncul dalam rangkaian kasus untuk atribut tertentu.
+	
+	\item double[] attributeToDoubleArray(int index)
+	
+	Mendapat nilai semua contoh dalam dataset ini untuk atribut tertentu.
+	
+	\item boolean checkForAttributeType(int attType)
+	
+	Cek untuk atribut dari tipe yang diberikan dalam dataset.
+	
+	\item boolean checkForStringAttributes()
+	
+	Cek string atribut dalam dataset.
+	
+	\item boolean checkInstance(Instance instance)
+	
+	Memeriksa apakah contoh yang diberikan kompatibel dengan dataset ini.
+	
+	\item Attribute classAttribute()
+	
+	Mengembalikan atribut class.
+	
+	\item int classIndex()
+	
+	Mengembalikan indeks atribut kelas itu.
+	
+	\item void delete()
+	
+	Menghapus semua contoh dari set.
+	
+	\item void delete(int index)
+	
+	Menghapus sebuah contoh di posisi tertentu dari set.
+	
+	\item void deleteAttributeAt (int position)
+	
+	Menghapus atribut pada posisi tertentu. %(position sampai numAttributes () - 1).
+	
+	\item void deleteAttributeType(int attType)
+	
+	Menghapus semua atribut dari tipe yang diberikan dalam dataset.
+	
+	\item void deleteStringAttributes()
+	
+	Menghapus semua atribut string dalam dataset.
+	
+	\item void deleteWithMissing(Attribute att)
+	
+	Menghapus semua contoh dengan nilai-nilai yang hilang untuk atribut tertentu dari dataset.
+	
+	\item void deleteWithMissing(int attIndex)
+	
+	Menghapus semua contoh dengan nilai-nilai yang hilang untuk atribut tertentu dari dataset.
+	
+	\item void deleteWithMissingClass()
+	
+	Menghapus semua contoh dengan nilai kelas hilang dari dataset.
+	
+	\item java.util.Enumeration<Attribute> enumerateAttributes()
+	
+	Pengembalian penghitungan semua atribut.
+	
+	\item java.util.Enumeration<Instance> enumerateInstances()
+	
+	Pengembalian penghitungan semua contoh dalam dataset.
+	
+	\item boolean equalHeaders(Instances dataset)
+	
+	Cek jika dua header yang setara.
+	
+	\item java.lang.String equalHeadersMsg(Instances dataset)
+	
+	Cek jika dua header yang setara.
+	
+	\item Instance firstInstance()
+	
+	Mengembalikan contoh pertama di set.
+	
+	\item Instance get(int index)
+	
+	Mengembalikan contoh pada posisi tertentu.
+	
+	\item java.util.Random getRandomNumberGenerator(long seed)
+	
+	Mengembalikan nomor acak.
+	
+	\item java.lang.String getRevision()
+	
+	Mengembalikan string revisi.
+	
+	\item void insertAttributeAt(Attribute att, int position)
+	
+	Menyisipkan atribut pada posisi tertentu (0 numAttributes ()) dan menetapkan semua nilai hilang.
+	
+	\item Instance instance(int index)
+	
+	Mengembalikan contoh pada posisi tertentu.
+	
+	\item double kthSmallestValue(Attribute att, int k)
+	
+	Mengembalikan nilai atribut k-terkecil dari atribut numerik.
+	
+	\item double kthSmallestValue(int attIndex, int k)
+	
+	Mengembalikan nilai atribut k-terkecil dari atribut numerik.
+	
+	\item Instance lastInstance()
+	
+	Mengembalikan contoh terakhir di set.
+	
+	\item static void main(java.lang.String[] args)
+	
+	Metode utama untuk kelas ini.
+	
+	\item double meanOrMode(Attribute att)
+	
+	Mengembalikan rata (mode) untuk angka (nominal) atribut sebagai nilai floating-point.
+	
+	\item double meanOrMode(int attIndex)
+	
+	Mengembalikan rata (mode) untuk angka (nominal) atribut sebagai nilai floating-point.
+	
+	\item static Instances mergeInstances(Instances first, Instances second)
+	
+	Menggabungkan dua set Contoh bersama-sama
+	
+	\item int numAttributes()
+	
+	Mengembalikan jumlah atribut.
+	
+	\item int numClasses()
+	
+	Mengembalikan jumlah label kelas.
+	
+	\item int numDistinctValues(Attribute att)
+	
+	Mengembalikan jumlah nilai yang berbeda dari atribut yang diberikan.
+	
+	\item int numDistinctValues(int attIndex)
+	
+	Mengembalikan jumlah nilai yang berbeda dari atribut yang diberikan.
+	
+	\item int numInstances()
+	
+	Mengembalikan jumlah kasus dalam dataset.
+	
+	\item void randomize(java.util.Random random)
+	
+	Mengocok contoh di set sehingga mereka memerintahkan secara acak.
+	
+	\item java.lang.String relationName()
+	
+	Mengembalikan nama hubungan itu.
+	
+	\item Instance remove(int index)
+	
+	Menghapus contoh pada posisi tertentu.
+	
+	\item void renameAttribute(Attribute att, java.lang.String name)
+	
+	Mengganti nama atribut.
+	
+	\item void renameAttribute(int att, java.lang.String name)
+	
+	Mengganti nama atribut.
+	
+	\item void renameAttributeValue(Attribute att, java.lang.String val, java.lang.String name)
+	
+	Mengganti nama nilai nominal (atau string) nilai atribut
+	
+	\item void renameAttributeValue(int att, int val, java.lang.String name)
+	
+	Mengganti nama nilai nominal (atau string) nilai atribut.
+	
+	\item void replaceAttributeAt(Attribute att, int position)
+	
+	Menggantikan atribut pada posisi tertentu (0 numAttributes ()) dengan atribut yang diberikan dan menetapkan semua nilai yang hilang.
+	
+	\item Instances resample(java.util.Random random)
+	
+	Membuat dataset baru dengan ukuran yang sama dengan menggunakan random sampling dengan penggantian.
+	
+	\item Instances resampleWithWeights(java.util.Random random)
+	
+	Membuat dataset baru dengan ukuran yang sama dengan menggunakan random sampling dengan penggantian sesuai dengan contoh berat saat ini.
+	
+	\item Instances resampleWithWeights(java.util.Random random, boolean representUsingWeights)
+	
+	Membuat dataset baru dengan ukuran yang sama dengan menggunakan random sampling dengan penggantian sesuai dengan contoh berat saat ini.
+	
+	\item Instances resampleWithWeights(java.util.Random random, boolean[] sampled)
+	
+	Membuat dataset baru dengan ukuran yang sama dengan menggunakan random sampling dengan penggantian sesuai dengan contoh berat saat ini.
+	
+	\item Instances resampleWithWeights(java.util.Random random, boolean[] sampled, boolean representUsingWeights)
+	
+	Membuat dataset baru dengan ukuran yang sama dengan menggunakan random sampling dengan penggantian sesuai dengan contoh berat saat ini.
+	
+	\item Instances resampleWithWeights(java.util.Random random, double[] weights)
+	
+	Membuat dataset baru dengan ukuran yang sama dengan menggunakan random sampling dengan penggantian sesuai dengan vektor bobot yang diberikan.
+	
+	\item Instances resampleWithWeights(java.util.Random random, double[] weights, boolean[] sampled)
+	
+	Membuat dataset baru dengan ukuran yang sama dengan menggunakan random sampling dengan penggantian sesuai dengan vektor bobot yang diberikan.
+	
+	\item Instances resampleWithWeights(java.util.Random random, double[] weights, boolean[] sampled, boolean representUsingWeights)
+	
+	Membuat dataset baru dengan ukuran yang sama dengan menggunakan random sampling dengan penggantian sesuai dengan vektor bobot yang diberikan.
+
+	\item Instance set(int index, Instance instance)
+
+	Menggantikan contoh pada posisi tertentu.
+	
+	\item void setClass(Attribute att)
+	
+	Mengatur atribut class.
+	
+	\item void setClassIndex(int classIndex)
+	
+	Mengatur indeks kelas set.
+	
+	\item void setRelationName(java.lang.String newName)
+	
+	Mengatur nama hubungan itu.
+	
+	\item int size()
+	
+	Mengembalikan banyak data dalam dataset.
+	
+	\item void sort(Attribute att)
+	
+	Urutkan contoh berdasarkan atribut.
+	
+	\item void sort(int attIndex)
+	
+	Urutkan contoh berdasarkan atribut.
+	
+	\item void stableSort(Attribute att)
+	
+	Urutkan contoh berdasarkan atribut, menggunakan semacam stabil.
+	
+	\item void stableSort(int attIndex)
+	
+	Urutkan contoh berdasarkan atribut, menggunakan semacam stabil
+	
+	\item void stratify(int numFolds)
+	
+	Mengelompokkan satu set contoh sesuai dengan nilai-nilai kelasnya jika atribut kelas nominal (sehingga setelah cross-validasi berlapis dapat dilakukan).
+	
+	\item Instances stringFreeStructure()
+	
+	Buat salinan struktur. 
+	
+	\item double sumOfWeights()
+	
+	Menghitung jumlah semua bobot contoh.
+	
+	\item void swap(int i, int j)
+	
+	menukar posisi dua contoh di set.
+	
+	\item static void test(java.lang.String[] argv)
+	
+	Metode pengujian kelas ini.
+	
+	\item Instances testCV(int numFolds, int numFold)
+	
+	Menciptakan set tes untuk satu kali lipat dari cross-validasi pada dataset.
+	
+	\item java.lang.String toString()
+	
+	Mengembalikan dataset sebagai string dalam format ARFF.
+	
+	\item java.lang.String toSummaryString()
+	
+	Menghasilkan string meringkas set contoh
+	
+	\item Instances trainCV(int numFolds, int numFold)
+	
+	Menciptakan pelatihan ditetapkan untuk satu kali lipat dari cross-validasi pada dataset.
+	
+	\item Instances trainCV(int numFolds, int numFold, java.util.Random random)
+	
+	Menciptakan pelatihan ditetapkan untuk satu kali lipat dari cross-validasi pada dataset.
+	
+	\item double variance(Attribute att)
+	
+	Menghitung varians untuk atribut numerik.
+	
+	\item double variance(int attIndex)
+	
+	Menghitung varians untuk atribut numerik.
+	
+	\item double[] variances()
+	
+	Menghitung varians untuk semua atribut numerik secara bersamaan.
+\end{itemize}
 
 
 
