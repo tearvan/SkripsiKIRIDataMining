@@ -168,23 +168,14 @@ Perangkat lunak \textsl{data mining log} histori KIRI akan mendapat input data t
 Program akan melakukan tahap \textsl{data mining} dengan menggunakan teknik ID3 atau C4.5 sesuai dengan permintaan \textsl{user}. Setelah proses \textsl{data mining} selesai dilakukan, program akan melakukan \textsl{visualisasi decision tree} dan nilai klasifikasi yang diperoleh.  
 
 \subsubsection{Pemodelan Data pada Perangkat Lunak \textsl{Data Mining Log} Histori KIRI}
-Karena data yang diperoleh sudah dalam bentuk excel, maka pada penelitian ini, tidak akan menggunakan sistem database. Untuk mempermudah penelitian, data-data pada excel akan dipindahkan ke data text dengan format .txt. Isi dari file txt tersebut merupakan nilai dari atribut \textsl{timestamp}(UTC) dan \textsl{additionalData} yang dipisahkan dengan spasi. Hal ini dapat dilakukan dengan menggunakan fungsi \textsl{CONCATENATE} dari excel untuk membuat format sesuai yang diharapkan kemudian melakukan \textsl{copy} pada kolom \textsl{CONCATENATE} lalu \textsl{paste} pada file txt yang masih kosong. Contoh data input untuk perangkat lunak \textsl{data mining log} histori KIRI adalah
+Karena data yang diperoleh sudah dalam bentuk csv, maka pada penelitian ini, tidak akan menggunakan sistem database. 
 
-2/1/2014 0:11 -6.8972513,107.6385574/-6.91358,107.62718/1
-
-2/1/2014 0:13 -6.8972513,107.6385574/-6.91358,107.62718/1
-
-2/1/2014 0:16 -6.90598,107.59714/-6.90855,107.61082/1
-
-Setelah dipindahkan ke dalam format .txt, maka data sudah siap untuk menjadi input perangkat lunak \textsl{data mining log} histori KIRI.
-
-Ketika tombol proses ditekan, maka data tersebut akan diproses. Proses yang pertama yang akan dilakukan adalah melakukan \textsl{load} data dari file. Setelah data didapat, akan dilakukan proses \textsl{transform} untuk setiap baris yang ada. Proses \textsl{transform} tersebut memiliki tahap sebagai berikut:
+Ketika tombol proses ditekan, maka data tersebut akan diproses. Proses yang pertama yang akan dilakukan adalah melakukan \textsl{load} data dari file. data csv akan dibaca dengan menggunakan CSVReader sehingga semua hasil datanya sudah terpisah sesuai dengan atribut. Kemudian dilakukan filter data dan hanya action dengan nilai FINDROUTE yang akan diambil. Setelah data didapat, akan dilakukan proses \textsl{transform} untuk setiap baris yang ada. Proses \textsl{transform} tersebut memiliki tahap sebagai berikut:
 \begin{enumerate}
-	\item Mengambil nilai string pada baris tersebut
-	\item Memecah nilai string yang didapat dengan spasi sebagai tanda pemisah, maka akan terdapat tiga nilai, yaitu tanggal, jam, dan \textsl{additionalData}
+	\item Mengambil string data input array kedua (yaitu atribut tanggal) kemudian memecah nilai tersebut dengan spasi sebagai tanda pemisah, maka akan terdapat dua nilai, yaitu tanggal dan jam.
 	\item Pada nilai tanggal, dilakukan pemecahan nilai string dengan garis miring sebagai tanda pemisah, maka akan diperoleh tiga nilai yaitu bulan, tanggal, dan tahun
 	\item Pada nilai jam, dilakukan pemecahan nilai string dengan titik dua sebagai tanda pemisah, maka akan diperoleh dua nilai yaitu jam dan menit
-	\item Pada \textsl{additionalData}, dilakukan pemecahan nilai string dengan garis miring sebagai tanda pemisah, maka akan diperoleh tiga nilai yaitu lokasi awal, lokasi tujuan, dan banyak jalur
+	\item Mengambil string data input array keempat (yaitu atribut \textsl{additionalData}), dilakukan pemecahan nilai string dengan garis miring sebagai tanda pemisah, maka akan diperoleh tiga nilai yaitu lokasi awal, lokasi tujuan, dan banyak jalur
 	\item Pada nilai lokasi awal dan lokasi tujuan, akan dilakukan pemecahan nilai string dengan koma sebagai tanda pemisah, maka akan diperoleh dua nilai untuk setiap lokasi, yaitu \textsl{latitude} dan \textsl{longitude}.
 	\item Mengubah waktu dari UTC menjadi GMT+8
 	\item Mencari hari dengan memanfaatkan nilai tanggal, bulan, dan tahun serta kelas \textsl{calendar}

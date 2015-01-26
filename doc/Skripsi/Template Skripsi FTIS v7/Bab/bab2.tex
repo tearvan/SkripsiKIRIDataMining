@@ -487,7 +487,201 @@ Weka merupakan aplikasi berbasis java yang berisi alat-alat untuk melakukan visu
 	mengembalikan capabilities dari kelas tersebut.
 \end{itemize}
 
-\paragraph{\textsl{Instances}} adalah kelas untuk menangani set data.
+\paragraph{Instance} adalah interface yang mewakili set data.
+
+
+Method:
+\begin{itemize}
+	\item Attribute attribute(int index)
+	
+	Mengembalikan atribut dari indeks yang diberikan.
+	
+	\item Attribute classAttribute()
+	
+	Mengembalikan atribut kelas.
+	
+	\item int classIndex()
+	
+	Mengembalikan indeks atribut kelas itu.
+	
+	\item boolean classIsMissing()
+	
+	Mengecek apakah kelas turunan hilang.
+	
+	\item double classValue()
+	
+	Mengembalikan nilai kelas contoh sebagai angka floating-point.
+	
+	\item Instances dataset()
+	
+	Mengembalikan dataset.
+	
+	\item void deleteAttributeAt(int position)
+	
+	Menghapus atribut pada posisi tertentu.
+	
+	\item java.util.Enumeration<Attribute> enumerateAttributes()
+	
+	Mengembalikan penghitungan semua atribut.
+	
+	\item boolean equalHeaders(Instance inst)
+	
+	Pengujian jika header dari dua contoh yang setara.
+	
+	\item java.lang.String equalHeadersMsg(Instance inst)
+	
+	Memeriksa apakah header dari dua contoh yang setara.
+	
+	\item boolean hasMissingValue()
+	
+	Tes apakah sebuah contoh memiliki nilai yang hilang.
+	
+	\item index(int position)
+	
+	Mengembalikan index dari atribut yang tersimpan di posisi tertentu.
+	
+	\item void insertAttributeAt(int position)
+	
+	Menyisipkan atribut pada posisi tertentu.
+	
+	\item boolean isMissing(Attribute att)
+	
+	Pengujian jika nilai tertentu yang hilang.
+	
+	\item boolean isMissing(int attIndex)
+	
+	Pengujian jika nilai tertentu yang hilang.
+	
+	\item boolean isMissingSparse(int indexOfIndex)
+	
+	Pengujian jika nilai tertentu yang hilang.
+	
+	\item Instance mergeInstance(Instance inst)
+	
+	Menggabungkan contoh yang diberikan dan mengembalikan hasilnya.
+	
+	\item int numAttributes()
+	
+	Mengembalikan jumlah atribut.
+	
+	\item int numClasses()
+	
+	Mengembalikan jumlah label kelas.
+	
+	\item int numValues()
+	
+	Mengembalikan jumlah nilai.
+	
+	\item Instances relationalValue(Attribute att)
+	
+	Mengembalikan nilai relasional atribut relasional.
+	
+	\item Instances relationalValue(int attIndex)
+	
+	Mengembalikan nilai relasional atribut relasional.
+	
+	\item void replaceMissingValues(double[] array)
+	
+	Menggantikan semua nilai yang hilang dalam contoh dengan nilai-nilai yang terkandung dalam array yang diberikan.
+	
+	\item void setClassMissing()
+	
+	Menetapkan nilai kelas contoh untuk hilang.
+	
+	\item void setClassValue(double value)
+	
+	Menetapkan nilai kelas turunan dengan nilai yang diberikan (format floating-point).
+	
+	\item void setClassValue(java.lang.String value)
+	
+	Menetapkan nilai kelas turunan dengan nilai yang diberikan.
+	
+	\item void setDataset(Instances instances)
+	
+	Mengatur referensi dataset.
+	
+	\item void setMissing(Attribute att)
+	
+	Menetapkan nilai tertentu dijadikan hilang.
+	
+	\item void setMissing(int attIndex)
+	
+	Menetapkan nilai tertentu dijadikan hilang.
+	
+	\item void setValue(Attribute att, double value)
+	
+	Menetapkan nilai tertentu dalam hal untuk nilai yang diberikan (format floating-point).
+	
+	\item void setValue(Attribute att, java.lang.String value)
+	
+	Menetapkan nilai atribut nominal atau string ke nilai yang diberikan.
+	
+	\item void setValue(int attIndex, double value)
+	
+	Menetapkan nilai tertentu untuk nilai yang diberikan (format floating-point).
+	
+	\item void setValue(int attIndex, java.lang.String value)
+	
+	Menetapkan nilai atribut nominal atau string ke nilai yang diberikan.
+	
+	\item void setValueSparse(int indexOfIndex, double value)
+	
+	Menetapkan nilai tertentu dalam contoh dengan nilai yang diberikan (format floating-point).
+	
+	\item void setWeight(double weight)
+	
+	Mengatur berat contoh.
+	
+	\item java.lang.String stringValue(Attribute att)
+	
+	Mengembalikan nilai nominal, string, tanggal, atau atribut relasional untuk contoh sebagai string.
+	
+	\item java.lang.String stringValue(int attIndex)
+	
+	Mengembalikan nilai nominal, string, tanggal, atau atribut relasional untuk contoh sebagai string.
+	
+	\item double[] toDoubleArray()
+	
+	Mengembalikan nilai-nilai masing-masing atribut sebagai array ganda.
+	
+	\item java.lang.String toString(Attribute att)
+	
+	Mengembalikan deskripsi satu nilai dari contoh sebagai string.
+	
+	\item java.lang.String toString(Attribute att, int afterDecimalPoint)
+	
+	Mengembalikan deskripsi satu nilai dari contoh sebagai string.
+	
+	\item java.lang.String toString(int attIndex)
+	
+	Mengembalikan deskripsi satu nilai dari contoh sebagai string.
+	
+	\item java.lang.String toString(int attIndex, int afterDecimalPoint)
+	
+	Mengembalikan deskripsi satu nilai dari contoh sebagai string.
+	
+	\item java.lang.String toStringNoWeight()
+	
+	Mengembalikan deskripsi satu contoh (tanpa berat ditambahkan).
+	
+	\item double value(Attribute att)
+	
+	Mengembalikan nilai atribut contoh dalam format internal.
+	
+	\item double value(int attIndex)
+	
+	Mengembalikan nilai atribut contoh dalam format internal.
+	
+	\item double valueSparse(int indexOfIndex)
+	
+	Mengembalikan nilai atribut contoh dalam format internal.
+	
+	\item double weight()
+	
+	Mengembalikan berat contoh itu.
+\end{itemize}
+
+\paragraph{Instances} adalah kelas untuk menangani set data.
 
 Atribut:
 \begin{itemize}
@@ -852,7 +1046,299 @@ Atribut:
 	Menghitung varians untuk semua atribut numerik secara bersamaan.
 \end{itemize}
 
+\paragraph{Attribute} adalah kelas yang digunakan untuk menangani atribut.
 
+\textsl{Atribut}:
+\begin{itemize}
+	\item static java.lang.String ARFF\_ATTRIBUTE
+	
+	Kata kunci yang digunakan untuk menunjukkan awal atribut deklarasi ARFF.
+	
+	\item static java.lang.String ARFF\_ATTRIBUTE\_DATE
+	
+	Kata kunci yang digunakan untuk menunjukkan tanggal atribut.
+	
+	\item static java.lang.String ARFF\_ATTRIBUTE\_INTEGER
+	
+	Kata kunci yang digunakan untuk menunjukkan atribut numerik.
+	
+	\item static java.lang.String ARFF\_ATTRIBUTE\_NUMERIC
+	
+	Kata kunci yang digunakan untuk menunjukkan atribut numerik.
+	
+	\item static java.lang.String ARFF\_ATTRIBUTE\_REAL
+	
+	Kata kunci yang digunakan untuk menunjukkan atribut numerik.
+	
+	\item static java.lang.String ARFF\_ATTRIBUTE\_RELATIONAL
+	
+	Kata kunci yang digunakan untuk menunjukkan atribut relasi bernilai.
+	
+	\item static java.lang.String ARFF\_ATTRIBUTE\_STRING
+	
+	Kata kunci yang digunakan untuk menunjukkan atribut String.
+	
+	\item static java.lang.String ARFF\_END\_SUBRELATION
+	
+	Kata kunci yang digunakan untuk menunjukkan akhir dari deklarasi subrelation.
+	
+	\item static int DATE
+	
+	Set konstan untuk atribut dengan nilai tanggal.
+	
+	\item static java.lang.String DUMMY\_STRING\_VAL
+	
+	Dummy pertama nilai String atribut.
+	
+	\item static int NOMINAL
+	
+	Set konstan untuk atribut nominal.
+	
+	\item static int NUMERIC
+	
+	Set konstan untuk atribut numerik.
+	
+	\item static int ORDERING\_MODULO
+	
+	Set konstan untuk atribut ordering modulo.
+	
+	\item static int ORDERING\_ORDERED
+	
+	Set konstan untuk atribut memerintahkan.
+	
+	\item static int ORDERING\_SYMBOLIC
+	
+	Set konstan untuk atribut simbolik.
+	
+	\item static int RELATIONAL
+	
+	Set konstan untuk atribut nilai relasi.
+	
+	\item static int STRING
+	
+	Set konstan untuk atribut dengan nilai-nilai string.
+\end{itemize}
+\textsl{Constructor}:
+\begin{itemize}
+	\item Attribute(java.lang.String attributeName)
+	
+	Konstruktor untuk atribut numerik.
+	
+	\item Attribute(java.lang.String attributeName, Instances header)
+	
+	Konstruktor untuk atribut nilai relasi.
+	
+	\item Attribute(java.lang.String attributeName, Instances header, int index)
+	
+	Konstruktor untuk atribut nilai relasi dengan indeks tertentu.
+	
+	\item Attribute(java.lang.String attributeName, Instances header, ProtectedProperties metadata)
+	
+	Konstruktor untuk atribut nilai relasi.
+	
+	\item Attribute(java.lang.String attributeName, int index)
+	
+	Konstruktor untuk atribut numerik dengan indeks tertentu.
+	
+	\item Attribute(java.lang.String attributeName, java.util.List<java.lang.String> attributeValues)
+	
+	Konstruktor untuk atribut nominal dan atribut string.
+	
+	\item Attribute(java.lang.String attributeName, java.util.List<java.lang.String> attributeValues, int index)
+	
+	Konstruktor untuk atribut nominal dan atribut string dengan indeks tertentu.
+	
+	\item Attribute(java.lang.String attributeName, java.util.List<java.lang.String> attributeValues, ProtectedProperties metadata)
+	
+	Konstruktor untuk atribut nominal dan atribut string, di mana metadata diberikan.
+	
+	\item Attribute(java.lang.String attributeName, ProtectedProperties metadata)
+	
+	Konstruktor untuk atribut numerik, di mana metadata diberikan.
+	
+	\item Attribute(java.lang.String attributeName, java.lang.String dateFormat)
+	
+	Konstruktor untuk tanggal atribut.
+	
+	\item Attribute(java.lang.String attributeName, java.lang.String dateFormat, int index)
+	
+	Konstruktor untuk tanggal atribut dengan indeks tertentu.
+	
+	\item Attribute(java.lang.String attributeName, java.lang.String dateFormat, ProtectedProperties metadata)
+	
+	Konstruktor untuk atribut tanggal, di mana metadata diberikan.
+\end{itemize}
+\textsl{Method}:
+\begin{itemize}
+	\item int addRelation(Instances value)
+	
+	Menambahkan relasi pada atribut nilai relasi.
+	
+	\item int addStringValue(Attribute src, int index)
+	
+	Menambahkan nilai string ke daftar string yang valid untuk atribut jenis string dan mengembalikan indeks string.
+	
+	\item int addStringValue(java.lang.String value)
+	
+	Menambahkan nilai string ke daftar string yang valid untuk atribut jenis string dan mengembalikan indeks string
+	
+	\item java.lang.Object copy()
+	
+	Menghasilkan salinan atribut ini.
+	
+	\item Attribute copy(java.lang.String newName)
+	
+	Menghasilkan salinan atribut ini dengan nama baru.
+	
+	\item java.util.Enumeration<java.lang.Object> enumerateValues()
+	
+	Pengembalian penghitungan semua nilai atribut jika atribut nominal, string, atau hubungan-nilai, null sebaliknya.
+	
+	\item boolean equals(java.lang.Object other)
+	
+	Pengujian jika diberikan atribut sama dengan atribut ini.
+	
+	\item java.util.String equalsMsg(java.lang.Object other)
+	
+	Pengujian jika diberikan atribut sama dengan atribut ini.
+	
+	\item java.util.String formatDate(double date)
+	
+	Mengembalikan milidetik sesuai dengan tanggal saat ini.
+	
+	\item java.util.String getDateFormat()
+	
+	Mengembalikan pola format tanggal dalam hal atribut ini adalah tipe date, selain itu, maka string akan kosong.
+	
+	\item double getLowerNumericBound()
+	
+	Pengembalian batas bawah dari atribut numerik.
+	
+	\item ProtectedProperties getMetadata()
+	
+	Mengembalikan properties disediakan untuk atribut ini.
+	
+	\item java.lang.String getRevision()
+	
+	Mengembalikan string revisi.
+	
+	\item double getUpperNumericBound()
+	
+	Mengembalikan nilai dari atribut numerik.
+	
+	\item int hashCode()
+	
+	Mengembalikan kode hash untuk atribut ini berdasarkan namanya.
+	
+	\item boolean hasZeropoint()
+	
+	Pengembalian apakah atribut memiliki zeropoint.
+	
+	\item int index()
+	
+	Mengembalikan index dari atribut ini.
+	
+	\item int indexOfValue(java.lang.String value)
+	
+	Mengembalikan index dari nilai atribut tertentu.
+	
+	\item boolean isAveragable()
+	
+	Pengembalian apakah atribut dapat dirata-ratakan bermakna.
+	
+	\item boolean isDate()
+	
+	Pengujian jika atribut adalah jenis tanggal.
+	
+	\item boolean isInRange(double value)
+	
+	Menentukan apakah suatu nilai terletak dalam batas-batas atribut.
+	
+	\item boolean isNominal()
+	
+	Menguji apakah atribut nominal.
+	
+	\item boolean isNumeric()
+	
+	Pengujian jika atribut numerik.
+	
+	\item boolean isRelationValued()
+	
+	Pengujian jika atribut hubungan dihargai.
+	
+	\item boolean isString()
+	
+	Pengujian jika atribut string.
+	
+	\item static void main(java.lang.String[] ops)
+	
+	Metode utama yang sederhana untuk menguji kelas ini.
+	
+	\item java.lang.String name()
+	
+	Mengembalikan nama atribut itu.
+	
+	\item int numValues()
+	
+	Mengembalikan jumlah nilai atribut.
+	
+	\item int ordering()
+	
+	Mengembalikan pemesanan atribut.
+	
+	\item int parseDate(java.lang.String string)
+	
+	Mengurai string yang diberikan sebagai date, sesuai format saat ini dan mengembalikan sesuai dengan jumlah milidetik.
+	
+	\item Instances relation()
+	
+	Mengembalikan informasi header untuk atribut nilai relasi, null jika atribut tidak memiliki hubungan.
+	
+	\item Instances relation(int valIndex)
+	
+	Mengembalikan nilai atribut nilai relasi.
+	
+	\item void setStringValue(java.lang.String value)
+	
+	Mengosongkan nilai dan mengatur mereka mengandung hanya nilai yang diberikan.
+	
+	\item void setWeight(double value)
+	
+	Mengatur berat atribut baru.
+	
+	\item java.lang.String toString()
+	
+	Pengembalian deskripsi atribut ini dalam format ARFF.
+	
+	\item int type()
+	
+	Mengembalikan jenis atribut sebagai integer.
+	
+	\item static java.lang.String typeToString(Attribute att)
+	
+	Mengembalikan representasi string dari jenis atribut.
+	
+	\item static java.lang.String typeToString(int type)
+	
+	Mengembalikan representasi string dari jenis atribut.
+	
+	\item static java.lang.String typeToStringShort(Attribute att)
+	
+	Mengembalikan representasi string jenis atribut.
+	
+	\item static java.lang.String typeToStringShort(int type)
+	
+	Mengembalikan representasi string jenis atribut.
+	
+	\item java.lang.String value(int valIndex)
+	
+	Mengembalikan nilai atribut nominal atau tali.
+	
+	\item double weight()
+	
+	Mengembalikan berat badan atribut itu
+	
+\end{itemize}
 
 
 
