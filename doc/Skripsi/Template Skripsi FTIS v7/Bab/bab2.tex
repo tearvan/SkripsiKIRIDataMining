@@ -1339,8 +1339,258 @@ Atribut:
 	Mengembalikan berat badan atribut itu
 	
 \end{itemize}
+\paragraph{ID3} adalah kelas yang digunakan untuk membangun \textsl{decision tree} yang berbasis pada algoritma ID3, hanya dapat menerima input dengan atribut nominal.
+\textsl{Constructor}:
+\begin{itemize}
+	\item ID3()
+\end{itemize}
+\textsl{Method}:
+\begin{itemize}
+	\item void buildClassifier(Instances data)
+	
+	Membangun ID3 pohon keputusan classifier.
+	
+	\item double classifyInstance(Instance instance)
+	
+	Mengklasifikasikan tes data yang diberikan dengan menggunakan pohon keputusan.
+	
+	\item double[] distributionForInstance(Instance instance)
+	
+	Menghitung distribusi kelas instance menggunakan pohon keputusan.
+	
+	\item Capabilities getCapabilities()
+	
+	Mengembalikan default classifier.
+	
+	\item java.lang.String getRevision()
+	
+	Mengembalikan String revisi.
+	
+	\item TechnicalInformation getTechnicalInformation()
+	
+	Mengembalikan sebuah instance dari objek TechnicalInformation, yang berisi informasi rinci tentang latar belakang teknis kelas ini.
+	
+	\item java.lang.String globalInfo()
+	
+	Mengembalikan string yang menjelaskan classifier.
+	
+	\item static void main(java.lang.String[] args)
+	
+	Metode utama untuk kelas ini.
+	
+	\item java.lang.String toSource(java.lang.String className)
+	
+	Mengembalikan string yang menggambarkan classifier.
+	
+	\item java.lang.String toString()
+	
+	Mencetak pohon keputusan menggunakan metode toString.	
+\end{itemize}
 
+\paragraph{J48} adalah kelas yang digunakan untuk membuat \textsl{decision tree} c4.5.
 
+\textsl{Constructor}:
+\begin{itemize}
+	\item ID3()
+\end{itemize}
+\textsl{Method}:
+\begin{itemize}
+	\item java.lang.String binarySplitsTipText()
+	
+	Mengembalikan teks tip untuk properti ini.
+	
+	\item void buildClassifier(Instances instances)
+	
+	Menghasilkan classifier.
+	
+	\item double classifyInstance(Instance instance)
+	
+	Mengklasifikasikan set data.
+	
+	\item java.lang.String confidenceFactorTipText()
+	
+	Mengembalikan teks tip untuk properti ini.
+	
+	\item double[] distributionForInstance(Instance instance)
+	
+	Pengembalian probabilitas kelas untuk sebuah data.
+	
+	\item java.util.Enumeration enumerateMeasures()
+	
+	Pengembalian penghitungan ukuran.
+	
+	\item boolean getBinarySplits()
+	
+	Dapatkan nilai binarySplits.
+	
+	\item Capabilities getCapabilities()
+	
+	Mengembalikan capabilities dari kelas ini.
+	
+	\item float getConfidenceFactor()
+	
+	Mengembalikan nilai \textsl{confident}.
+	
+	\item double getMeasure(java.lang.String additionalMeasureName)
+	
+	Mengembalikan nilai bobot sesuai nama.
+	
+	\item int getMinNumObj()
+	
+	Dapatkan nilai minNumObj.
+	
+	\item int getNumFolds()
+	
+	Dapatkan nilai numFolds.
+	
+	\item java.lang.String getOptions()
+	
+	Mendapat pengaturan saat ini.
+	
+	\item boolean getReducedErrorPruning()
+	
+	Dapatkan nilai reducedErrorPruning.
+	
+	\item java.lang.String getRevision()
+	
+	Mengembalikan string revisi.
+	
+	\item boolean getSaveInstanceData()
+	
+	Periksa apakah contoh data disimpan.
+	
+	\item int getSeed()
+	
+	Dapatkan nilai seed
+	
+	\item boolean getSubtreeRaising()
+	
+	Dapatkan nilai subtreeRaising.
+	
+	\item TechnicalInformation getTechnicalInformation()
+	
+	Mengembalikan sebuah instance dari objek TechnicalInformation, yang berisi informasi rinci tentang latar belakang teknis kelas ini.
+
+	\item boolean getUnpruned()
+	
+	mengecek apakah dilakukan \textsl{tree pruning}.
+	
+	\item boolean getUseLaplace()
+	
+	Dapatkan nilai useLaplace.
+	
+	\item java.lang.String globalInfo()
+	
+	Mengembalikan string yang menjelaskan classifier.
+	
+	\item java.lang.String graph()
+	
+	Pengembalian Grafik menggambarkan pohon.
+	
+	\item int graphType()
+	
+	Mengembalikan jenis grafik classifier.
+	
+	\item static void main(java.lang.String[] argv)
+	
+	Metode utama untuk menguji kelas ini.
+	
+	\item double measureNumLeaves()
+	
+	Mengembalikan jumlah daun.
+	
+	\item double measureNumRules()
+	
+	Mengembalikan sejumlah aturan.
+	
+	\item double measureTreeSize()
+	
+	Mengembalikan ukuran pohon.
+	
+	\item java.lang.String minNumObjTipText()
+	
+	Mengembalikan teks tip untuk properti ini.
+	
+	\item java.lang.String numFoldsTipText()
+	
+	Mengembalikan teks tip untuk properti ini
+	
+	\item java.lang.String prefix()
+	
+	Pengembalian pohon dalam rangka awalan.
+	
+	\item java.lang.String reducedErrorPruningTipText()
+	
+	Mengembalikan teks tip untuk properti ini
+	
+	\item java.lang.String saveInstanceDataTipText()
+	
+	Mengembalikan teks tip untuk properti ini.
+	
+	\item java.lang.String seedTipText()
+	
+	Mengembalikan teks tip untuk properti ini
+	
+	\item void setBinarySplits(boolean v)
+	
+	Mengatur nilai binarySplits.
+	
+	\item void setConfidenceFactor(float v)
+	
+	Mengatur nilai \textsl{confident}.
+	
+	\item void setMinNumObj(int v)
+	
+	Mengatur nilai minNumObj.
+	
+	\item void setNumFolds(int v)
+	
+	Mengatur nilai numFolds.
+	
+	\item void setOptions(java.lang.String[] options)
+	
+	Mengurai daftar yang diberikan pilihan.
+	
+	\item void setReducedErrorPruning(boolean v)
+	
+	Mengatur nilai reducedErrorPruning.
+	
+	\item void setSaveInstanceData(boolean v)
+	
+	Mengatur apakah contoh data yang akan disimpan.
+	
+	\item void setSeed(int newSeed)
+	
+	Mengatur nilai seed.
+	
+	\item void setSubtreeRaising(boolean v)
+	
+	Mengatur nilai subtreeRaising.
+	
+	\item void setUnpruned(boolean v)
+	
+	Mengatur nilai \textsl{pruning}.
+	
+	\item void setUseLaplace(boolean newuseLaplace)
+	
+	Mengatur nilai useLaplace.
+	
+	\item java.lang.String subtreeRaisingTipText()
+	
+	Mengembalikan teks tip untuk properti ini.
+	
+	\item java.lang.String toString()
+	
+	Pengembalian deskripsi classifier.
+	
+	\item java.lang.String unprunedTipText()
+	
+	Mengembalikan teks tip untuk properti ini.
+	
+	\item java.lang.String useLaplaceTipText()
+	
+	Mengembalikan teks tip untuk properti ini.
+\end{itemize}
 
 
 
