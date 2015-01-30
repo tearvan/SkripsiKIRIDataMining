@@ -28,21 +28,21 @@ Tahap pertama hingga keempat merupakan bagian dari \textsl{data preprocessing}, 
 
 
 \subsection{\textsl{Data Cleaning}}
-\textsl{Data cleaning} merupakan tahap \textsl{data mining} untuk menghilangkan \textsl{missing value} dan \textsl{noisy data}. Pada umumnya, \textsl{data} yang diperoleh dari \textsl{database} terdapat nilai yang tidak sempurna seperti nilai yang hilang, nilai yang tidak valid atau salah ketik. Atribut dari suatu \textsl{database} yang tidak relevan atau redudansi bisa diatasi dengan menghapus atribut tersebut. Contoh studi data yang memiliki \textsl{missing value} dan \textsl{noisy data} dapat dilihat pada tabel \ref{table:contohMissingNNoisy}
+\textsl{Data cleaning} merupakan tahap \textsl{data mining} untuk menghilangkan \textsl{missing value} dan \textsl{noisy data}. Pada umumnya, \textsl{data} yang diperoleh dari \textsl{database} terdapat nilai yang tidak sempurna seperti nilai yang hilang, nilai yang tidak valid atau salah ketik. Atribut dari suatu \textsl{database} yang tidak relevan atau redudansi bisa diatasi dengan menghapus atribut tersebut. Contoh studi data yang memiliki \textsl{missing value} dan \textsl{noisy data} dapat dilihat pada table \ref{table:contohMissingNNoisy}
 
 \begin{table}[h]
-\caption{Tabel mengandung \textsl{missing value} dan \textsl{noisy}}
+\caption{table mengandung \textsl{missing value} dan \textsl{noisy}}
 \label{table:contohMissingNNoisy}
 \begin{tabular}{|l|l|l|l|l|}
 \hline
-IdPenjualan & NamaBarang & Costumer & Harga  & BanyakBarang \\ \hline
+IdPenjualan & NamaBarang & Customer & Harga  & BanyakBarang \\ \hline
 1           & Mouse      & Elvin    & 45000  & 2            \\ \hline
 2           & Keyboard   & Alleria  & -35000 & 1            \\ \hline
 3           & Monitor    &          & 225000 & 1            \\ \hline
 \end{tabular}
 \end{table}
 
-Dapat dilihat, pada idPenjualan 2, harga dari keyboard adalah -35000, itu merupakan \textsl{noisy} karena tidak mungkin nilai harga suatu barang dibawah 0. Pada idPenjualan 3, kolom \textsl{costumer} tidak memiliki nilai, dan itu merupakan \textsl{missing value}.
+Dapat dilihat, pada idPenjualan 2, harga dari keyboard adalah -35000, itu merupakan \textsl{noisy} karena tidak mungkin nilai harga suatu barang dibawah 0. Pada idPenjualan 3, kolom \textsl{customer} tidak memiliki nilai, dan itu merupakan \textsl{missing value}.
 
 \subsubsection{\textsl{Missing Values}}
 \textsl{Missing values} akan mengganggu proses \textsl{data mining} pada komputer dan dapat menghasilkan nilai akhir yang tidak sesuai. Terdapat beberapa teknik untuk mengatasi \textsl{missing values} yaitu
@@ -78,7 +78,7 @@ Dapat dilihat, pada idPenjualan 2, harga dari keyboard adalah -35000, itu merupa
 Tahap ini harus dilakukan secara teliti terutama ketika dalam memasangkan nilai-nilai yang berasal dari sumber yang berbeda. Pada tahap ini, perlu dilakukan identifikasi data apakah data tersebut dapat diturunkan atau tidak agar data yang diperoleh tidak terlalu besar. \textsl{Data integration} yang baik merupakan integrasi yang dapat memaksimalkan kecepatan dan meningkatkan akurasi dari proses \textsl{data mining}. Contoh studi kasus dari \textsl{data integration}, jika suatu perusahaan sepatu A memiliki dua pabrik dengan \textsl{database} lokal pada masing-masing pabrik, jika akan dilakukan \textsl{data mining} pada kedua \textsl{database }tersebut, maka kedua \textsl{database} akan digabung dan perlu diperhatikan serta diperbaiki nilai-nilai seperti \textsl{primary key}, atribut, dan lain-lain agar tidak terjadi \textsl{error} pada \textsl{database} yang sudah digabung. Proses dari penggabungan hingga perbaikan nilai-nilai pada kedua database tersebut adalah proses \textsl{data integration}.
 
 \subsection{\textsl{Data Selection}}
-Proses dimana data-data yang relevan dengan analisis akan diambil dari database dan data yang tidak relevan akan dibuang. Sebagai contoh kasus, jika akan dilakukan analisa mengenai nilai mahasiswa pada tabel nilai yang memiliki atribut sebagai berikut:
+Proses dimana data-data yang relevan dengan analisis akan diambil dari database dan data yang tidak relevan akan dibuang. Sebagai contoh kasus, jika akan dilakukan analisa mengenai nilai mahasiswa pada table nilai yang memiliki atribut sebagai berikut:
 	\begin{itemize}
 		\item NPMMahasiswa
 		\item NamaMahasiswa
@@ -268,7 +268,7 @@ ID3 merupakan teknik untuk membuat \textsl{decision tree} dengan menggunakan \te
 %\textsl{Information} menurut Claude Shannon dalam \textsl{information theory} adalah ukuran \textsl{pure} dari suatu data. Suatu data yang \textsl{pure} jika data tersebut memiliki tuple dengan \textsl{class} yang sama. ID3 menggunakan \textsl{information gain} sebagai \textsl{attribute selection measure} yang melakukan pemilihan atribut berdasarkan informasi yang terkandung dalam pesan. Cara ID3 mendapatkan \textsl{information gain} dengan menggunakan \textsl{entropy}. \textsl{Entropy} adalah ukuran \textsl{impurity} dari suatu data. Cara mendapatkan nilai \textsl{entropy} adalah
 
 \begin{displaymath}
-	Info(D) = -\sum_{i=1}^{m} pi \log_2(pi)
+	Info(D) = -\sum_{i=1}^{m} p_{i} \log_2(p_{i})
 \end{displaymath}
 
 Dimana pi merupakan probabilitas tuple pada D terhadap class C$_{i}$, dapat diperoleh dengan |C$_{i,d}$|/|D|. Info(D) merupakan nilai rata-rata \textsl{entropy} dari suatu label kelas pada tuple D. Untuk mengetahui atribut mana yang paling baik untuk dijadikan \textsl{splitting attribute}, adalah dengan cara menghitung nilai \textsl{entrophy} dari suatu atribut kemudian diselisihkan dengan nilai \textsl{entropy} dari D. Jika pada tuple D, memiliki atribut A dengan v nilai yang berbeda, maka menghitung \textsl{entropy} dari suatu atribut adalah
@@ -310,7 +310,7 @@ RID & umur          & pendapatan 	& siswa 		 & resiko\_kredit  & Class: membeli\
 \end{tabular}
 \end{table}
 
-Pada tabel \ref{table:contohTrainingSet}, terdapat \textsl{training set}, D. Atribut kelas label merupakan dua nilai yang berbeda yaitu ya dan tidak, maka dari itu, nilai m = 2. C$_{1}$ diisi dengan kelas label bernilai ya, sedangkan C$_{2}$ diisi dengan kelas label bernilai tidak. Terdapat sembilan tuple atribut kelas label dengan nilai ya dan lima tuple dengan nilai tidak. Untuk dapat menentukan \textsl{splitting criterion}, \textsl{information gain} harus dihitung untuk setiap atribut terlebih dahulu. Perhitungan \textsl{entropy} untuk D adalah
+Pada table \ref{table:contohTrainingSet}, terdapat \textsl{training set}, D. Atribut kelas label merupakan dua nilai yang berbeda yaitu ya dan tidak, maka dari itu, nilai m = 2. C$_{1}$ diisi dengan kelas label bernilai ya, sedangkan C$_{2}$ diisi dengan kelas label bernilai tidak. Terdapat sembilan tuple atribut kelas label dengan nilai ya dan lima tuple dengan nilai tidak. Untuk dapat menentukan \textsl{splitting criterion}, \textsl{information gain} harus dihitung untuk setiap atribut terlebih dahulu. Perhitungan \textsl{entropy} untuk D adalah
 
 \begin{displaymath}
 	Info(D) = - \frac{9}{14}\log2(\frac{9}{14}) - \frac{5}{14}\log_2(\frac{5}{14}) = 0.940 bits
@@ -362,7 +362,7 @@ Setelah mendapatkan nilai \textsl{split info} dari suatu atribut, dapat diperole
 
 Nilai dari \textsl{gain ratio} terbesar yang akan dipilih. Perlu diketahui \cite{DM} jika nilai hasil mendekati 0, maka ratio menjadi tidak stabil, oleh karena itu, \textsl{gain information} yang dipilih harus besar, minimal sama besarnya dengan nilai rata-rata dari semua test yang diperiksa.
 
-Contoh studi kasus, akan dilakukan perhitungan \textsl{gain ratio} dengan menggunakan training set pada tabel \ref{table:contohTrainingSet}. Dapat dilihat pada atribut pendapatan memiliki tiga partisi yaitu rendah, sedang, dan tinggi. Terdapat empat tuple dengan nilai rendah, enam tuple dengan nilai sedang, dan empat tuple dengan nilai tinggi. Untuk menghitung \textsl{gain ratio}, perlu dihitung nilai \textsl{split information} terlebih dahulu dengan cara:
+Contoh studi kasus, akan dilakukan perhitungan \textsl{gain ratio} dengan menggunakan training set pada table \ref{table:contohTrainingSet}. Dapat dilihat pada atribut pendapatan memiliki tiga partisi yaitu rendah, sedang, dan tinggi. Terdapat empat tuple dengan nilai rendah, enam tuple dengan nilai sedang, dan empat tuple dengan nilai tinggi. Untuk menghitung \textsl{gain ratio}, perlu dihitung nilai \textsl{split information} terlebih dahulu dengan cara:
 
 \begin{displaymath}
 	SplitInfo_A(D) = - \frac{4}{14} \times \log_2 (\frac{4}{14}) - \frac{6}{14} \times \log_2 (\frac{6}{14}) - \frac{4}{14} \times \log_2 (\frac{4}{14})
@@ -383,7 +383,7 @@ Jika nilai \textsl{gain information} dari \textsl{income} adalah 0.029, maka, da
 
 \begin{figure}
 \includegraphics[scale=1]{Gambar/treepruning.jpg}
-\caption[\texttt{Decision Tree Pruned}]{\texttt{Decision tree} yang belum dipotong dan yang sudah dipotong, \cite{DM}} 
+\caption[\textsl{Decision Tree Pruned}]{\textsl{Decision tree} yang belum dipotong dan yang sudah dipotong, \cite{DM}} 
 \label{fig:treePruning}
 \end{figure}
 
@@ -420,7 +420,7 @@ KIRI memiliki log histori yang melakukan pencatatan untuk setiap user ketika men
 	\item AdditionalData, mencatat data-data yang berhubungan sesuai dengan nilai atribut\textsl{action}
 \end{itemize}
 
-LogId merupakan \textsl{field} dengan tipe data int dengan batas 6 karakter yang digunakan sebagai \textsl{primary key} dari tabel tersebut. LogId diisi dengan menggunakan fungsi \textsl{increment integer}. \textsl{Increment integer} merupakan fungsi untuk pengisian data pada database dengan menambahkan nilai 1 dari nilai yang terakhir kali diisi.
+LogId merupakan \textsl{field} dengan tipe data int dengan batas 6 karakter yang digunakan sebagai \textsl{primary key} dari table tersebut. LogId diisi dengan menggunakan fungsi \textsl{increment integer}. \textsl{Increment integer} merupakan fungsi untuk pengisian data pada database dengan menambahkan nilai 1 dari nilai yang terakhir kali diisi.
 APIKey merupakan \textsl{field} dengan tipe data varchar yang digunakan untuk memeriksa pengguna KIRI ketika menggunakan KIRI.
 \textsl{Timestamp} (UTC) merupakan \textsl{field} dengan tipe data \textsl{timestamp} yang digunakan untuk mencatat waktu penggunaan KIRI oleh user, diisi dengan menggunakan fungsi \textsl{current time}. \textsl{Current time} merupakan fungsi untuk pengisian data pada database dengan mengambil waktu pada komputer ketika record dibuat.
 \textsl{Action} merupakan \textsl{field} dengan tipe data varchar yang digunakan untuk memeriksa fungsi apa yang dipanggil dari API KIRI. Terdapat beberapa tipe pada \textsl{field} ini, yaitu
@@ -452,7 +452,7 @@ AdditionalData, merupakan \textsl{field} dengan tipe data varchar yang digunakan
 \textsl{Haversine Formula} dapat menghasilkan nilai jarak antar dua titik pada bola dari garis bujur dan garis lintang titik tersebut. Berikut rumus Haversine:
 
 \begin{displaymath}
-	a = \sin^{2}(\Delta\varphi/2) + \cos\varphi_{1} . \cos\varphi_{2} . \sin^{2}(\Delta\lambda/2)
+	a = \sin^{2}((|\varphi_{1}-\varphi_{2}|)/2) + \cos\varphi_{1} . \cos\varphi_{2} . \sin^{2}((|\lambda_{1}-\lambda_{2}|)/2)
 \end{displaymath}
 \begin{displaymath}
 	c = 2 . a\tan^{2}(\sqrt{a}, \sqrt{1-a})
@@ -461,11 +461,43 @@ AdditionalData, merupakan \textsl{field} dengan tipe data varchar yang digunakan
 	d = R . c
 \end{displaymath}
 
-Dimana $\varphi$ adalah latitude, $\lambda$ adalah longitude, R adalah radius bumi (radius = 6,371km) dan nilai latitude serta longitude harus dalam radians.
+Dimana 
+\begin{itemize}
+	\item $\varphi$ adalah latitude dalam radian
+	\item $\lambda$ adalah longitude dalam radian
+	\item R adalah radius bumi (radius = 6,371km)
+\end{itemize}
 
+Studi kasus untuk perhitungan Haversine sebagai berikut:
+Jika kita ingin menghitung jarak dua titik dari daerah Jakarta ke Surabaya, dengan titik pada Jakarta adalah -6.211544, 106.845172 dan titik pada Surabaya adalah -7.289166, 112.734398, maka perhitungan rumusnya akan menjadi
 
+\begin{displaymath}
+	a = \sin^{2}((|-6.211544-(-7.289166)|)/2) + \cos-6.211544 . \cos-7.289166 . \sin^{2}((|106.845172-112.734398|)/2)
+\end{displaymath}
+\begin{displaymath}
+	a = 0.0026906745
+\end{displaymath}
+
+\begin{displaymath}
+	c = 2 . 0.0026906745\tan^{2}(\sqrt{0.0026906745}, \sqrt{1-0.0026906745})
+\end{displaymath}
+\begin{displaymath}
+	c =  0.1037900036
+\end{displaymath}
+
+\begin{displaymath}
+	d = 6.371 . 0.1037900036
+\end{displaymath}
+\begin{displaymath}
+	d = 0.6612461130 * 1000 km
+\end{displaymath}
+\begin{displaymath}
+	d = 661.2461130 km
+\end{displaymath}
+
+Dengan menggunakan rumus Haversine, maka jarak antar kedua titik tersebut adalah 661.246 km
 \section{Weka}
-Weka merupakan aplikasi berbasis java yang berisi alat-alat untuk melakukan visualisasi dan algoritma untuk data analisis serta pemodelan prediksi. Berikut beberapa kelas yang dimiliki oleh Weka:
+Weka merupakan aplikasi berbasis java yang berisi alat-alat untuk melakukan visualisasi dan algoritma untuk data analisis serta pemodelan prediksi. Weka juga menyediakan file weka-src.jar yang berisi kelas-kelas yang dipakai oleh aplikasi weka sehingga user dapat menggunakannya untuk membuat program java yang berfungsi untuk \textsl{data mining}. Berikut beberapa kelas yang dimiliki oleh Weka:
 
 \paragraph{\textsl{Classifier}} adalah sebuah \textsl{interface} yang digunakan sebagai skema untuk prediksi numerik ataupun nominal pada weka. Kelas tersebut memiliki \textsl{method} sebagai berikut:
 \begin{itemize}
