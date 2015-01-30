@@ -9,3 +9,4 @@ Weka API
 	http://weka.wikispaces.com/Use+WEKA+in+your+Java+code
 	http://weka.wikispaces.com/Programmatic+Use
 	http://stackoverflow.com/questions/9175116/visualizing-weka-classification-tree
+	http://weka.sourceforge.net/doc.stable/
