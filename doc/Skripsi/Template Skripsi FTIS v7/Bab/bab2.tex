@@ -263,7 +263,7 @@ Notasi yang digunakan adalah sebagai berikut. D merupakan data partisi, set pela
 
 \subsubsection{ID3}
 
-ID3 merupakan teknik untuk membuat \textsl{decision tree} dengan menggunakan \textsl{information gain} sebagai \textsl{attribute selection measure} untuk memilih atribut. Cara ID3 mendapatkan \textsl{information gain} dengan menggunakan \textsl{entropy}. \textsl{Entropy} adalah ukuran \textsl{impurity} dari suatu data. Cara mendapatkan nilai \textsl{entropy} adalah
+ID3 merupakan teknik untuk membuat \textsl{decision tree} dengan menggunakan \textsl{information gain} sebagai \textsl{attribute selection measure} untuk memilih atribut. Cara ID3 mendapatkan \textsl{information gain} dengan menggunakan \textsl{entropy}. \textsl{Entropy} adalah ukuran \textsl{impurity} (ketiadaan informasi) dari suatu data. Cara mendapatkan nilai \textsl{entropy} adalah
 
 %\textsl{Information} menurut Claude Shannon dalam \textsl{information theory} adalah ukuran \textsl{pure} dari suatu data. Suatu data yang \textsl{pure} jika data tersebut memiliki tuple dengan \textsl{class} yang sama. ID3 menggunakan \textsl{information gain} sebagai \textsl{attribute selection measure} yang melakukan pemilihan atribut berdasarkan informasi yang terkandung dalam pesan. Cara ID3 mendapatkan \textsl{information gain} dengan menggunakan \textsl{entropy}. \textsl{Entropy} adalah ukuran \textsl{impurity} dari suatu data. Cara mendapatkan nilai \textsl{entropy} adalah
 
@@ -271,7 +271,7 @@ ID3 merupakan teknik untuk membuat \textsl{decision tree} dengan menggunakan \te
 	Info(D) = -\sum_{i=1}^{m} p_{i} \log_2(p_{i})
 \end{displaymath}
 
-Dimana pi merupakan probabilitas tuple pada D terhadap class C$_{i}$, dapat diperoleh dengan |C$_{i,d}$|/|D|. Info(D) merupakan nilai rata-rata \textsl{entropy} dari suatu label kelas pada tuple D. Untuk mengetahui atribut mana yang paling baik untuk dijadikan \textsl{splitting attribute}, adalah dengan cara menghitung nilai \textsl{entrophy} dari suatu atribut kemudian diselisihkan dengan nilai \textsl{entropy} dari D. Jika pada tuple D, memiliki atribut A dengan v nilai yang berbeda, maka menghitung \textsl{entropy} dari suatu atribut adalah
+Dimana $p_{i}$ merupakan probabilitas tuple pada D terhadap class C$_{i}$, dapat diperoleh dengan |C$_{i,d}$|/|D|. Info(D) merupakan nilai rata-rata \textsl{entropy} dari suatu label kelas pada tuple D. Untuk mengetahui atribut mana yang paling baik untuk dijadikan \textsl{splitting attribute}, adalah dengan cara menghitung nilai \textsl{entrophy} dari suatu atribut kemudian diselisihkan dengan nilai \textsl{entropy} dari D. Jika pada tuple D, memiliki atribut A dengan v nilai yang berbeda, maka menghitung \textsl{entropy} dari suatu atribut adalah
 
 \begin{displaymath}
 	Info_A(D) = \sum_{j=1}^v \frac{|D_j|}{|D|} \times Info(D_j)
@@ -285,7 +285,9 @@ Setelah mendapatkan nilai Info(D) dan Info$_{A}$(D), \textsl{information gain} d
 	Gain(A) = Info(D) - Info_A(D)
 \end{displaymath}
 
-contoh kasus untuk ID3, dalam pencarian\textsl{information gain}
+Atribut yang memiliki nilai \textsl{gain information} yang terbesar akan dipilih sebagai output dari method ini.
+
+contoh kasus untuk ID3, dalam pencarian \textsl{information gain}:
 
 \begin{table}[h]
 \caption{Contoh training set}
@@ -377,6 +379,7 @@ Jika nilai \textsl{gain information} dari \textsl{income} adalah 0.029, maka, da
 	GainRatio(pendapatan) = \frac{0.029}{0.926} = 0.031 bits
 \end{displaymath}
 
+Maka nilai \textsl{gain ratio} dari atribut pendapatan adalah 0.031 bits. Perhitungan tersebut dilakukan pada semua atribut, dan atribut yang memiliki nilai \textsl{gain ratio} yang terbesar adalah atribut yang dipilih.
 \paragraph{Tree Pruning}
 	
 \textsl{Tree pruning} merupakan proses pemotongan \textsl{decision tree} agar lebih efisien dan tidak terlalu mempengaruhi nilai keputusan yang dihasilkan. \textsl{decision tree} yang sudah dipotong akan lebih kecil ukuran pohonnya, tidak serumit dengan pohon yang asli, namun lebih mudah untuk diproses. \textsl{Decision tree} yang sudah dipotong memiliki kecepatan serta ketepatan mengklasifikasikan yang lebih baik \cite{DM}. Perbedaan \textsl{decision tree} yang sudah dipotong dan belum dapat dilihat pada gambar \ref{fig:treePruning}.

@@ -34,13 +34,13 @@
 \contentsline {subsection}{\numberline {2.1.7}\textsl {Knowledge Presentation}}{18}{subsection.2.1.7}
 \contentsline {section}{\numberline {2.2}Log Histori KIRI}{18}{section.2.2}
 \contentsline {section}{\numberline {2.3}\textsl {Haversine Formula}}{20}{section.2.3}
-\contentsline {section}{\numberline {2.4}Weka}{20}{section.2.4}
-\contentsline {paragraph}{\textsl {Classifier}}{20}{paragraph*.18}
+\contentsline {section}{\numberline {2.4}Weka}{21}{section.2.4}
+\contentsline {paragraph}{\textsl {Classifier}}{21}{paragraph*.18}
 \contentsline {paragraph}{Instance}{21}{paragraph*.19}
-\contentsline {paragraph}{Instances}{24}{paragraph*.20}
-\contentsline {paragraph}{Attribute}{30}{paragraph*.21}
-\contentsline {paragraph}{ID3}{35}{paragraph*.22}
-\contentsline {paragraph}{J48}{36}{paragraph*.23}
+\contentsline {paragraph}{Instances}{25}{paragraph*.20}
+\contentsline {paragraph}{Attribute}{31}{paragraph*.21}
+\contentsline {paragraph}{ID3}{36}{paragraph*.22}
+\contentsline {paragraph}{J48}{37}{paragraph*.23}
 \contentsline {chapter}{\numberline {3}Analisa}{41}{chapter.3}
 \contentsline {section}{\numberline {3.1}Analisis Data}{41}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Data Cleaning}{41}{subsection.3.1.1}
@@ -51,7 +51,7 @@
 \contentsline {subsubsection}{Spesifikasi Kebutuhan Fungsional Perangkat Lunak \textsl {Data Mining log} Histori KIRI}{46}{subsubsection*.24}
 \contentsline {subsubsection}{Pemodelan Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{46}{subsubsection*.25}
 \contentsline {subsubsection}{Pemodelan Data pada Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{47}{subsubsection*.26}
-\contentsline {subsubsection}{Pemodelan Fungsi pada Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{48}{subsubsection*.27}
+\contentsline {subsubsection}{Pemodelan Fungsi pada Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{47}{subsubsection*.27}
 \contentsline {subsection}{\numberline {3.2.1}Diagram \textsl {Use Case} Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{48}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Diagram kelas Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{50}{subsection.3.2.2}
 \contentsline {chapter}{Daftar Referensi}{51}{chapter*.28}
