@@ -170,12 +170,12 @@ Karena data yang diperoleh sudah dalam bentuk csv, maka pada penelitian ini, tid
 
 Ketika tombol proses ditekan, maka data tersebut akan diproses. Proses yang pertama yang akan dilakukan adalah melakukan \textsl{load} data dari file. data csv akan dibaca dengan menggunakan CSVReader sehingga semua hasil datanya sudah terpisah sesuai dengan atribut. Kemudian dilakukan filter data dan hanya action dengan nilai FINDROUTE yang akan diambil. Setelah data didapat, akan dilakukan proses \textsl{transform} untuk setiap baris yang ada. Proses \textsl{transform} tersebut memiliki tahap sebagai berikut:
 \begin{enumerate}
+	\item Mengubah waktu dari UTC menjadi GMT+8
 	\item Mengambil string data input array kedua (yaitu atribut tanggal) kemudian memecah nilai tersebut dengan spasi sebagai tanda pemisah, maka akan terdapat dua nilai, yaitu tanggal dan jam.
 	\item Pada nilai tanggal, dilakukan pemecahan nilai string dengan garis miring sebagai tanda pemisah, maka akan diperoleh tiga nilai yaitu bulan, tanggal, dan tahun
 	\item Pada nilai jam, dilakukan pemecahan nilai string dengan titik dua sebagai tanda pemisah, maka akan diperoleh dua nilai yaitu jam dan menit
 	\item Mengambil string data input array keempat (yaitu atribut \textsl{additionalData}), dilakukan pemecahan nilai string dengan garis miring sebagai tanda pemisah, maka akan diperoleh tiga nilai yaitu lokasi awal, lokasi tujuan, dan banyak jalur
 	\item Pada nilai lokasi awal dan lokasi tujuan, akan dilakukan pemecahan nilai string dengan koma sebagai tanda pemisah, maka akan diperoleh dua nilai untuk setiap lokasi, yaitu \textsl{latitude} dan \textsl{longitude}.
-	\item Mengubah waktu dari UTC menjadi GMT+8
 	\item Mencari hari dengan memanfaatkan nilai tanggal, bulan, dan tahun serta kelas \textsl{calendar}
 	\item Menghitung jarak posisi lokasi awal dan lokasi tujuan terhadap titik pusat dan menentukan apakah lokasi tersebut berada pada klasifikasi nol atau pertama atau kedua dan diberi atribut tersebut diberi nama menujuBandung.
 	\item menggabungkan nilai-nilai tersebut ke dalam satu array, yaitu array dengan tipe int (dengan nilai tanggal, bulan, tahun, jam, menit dan menujuBandung)
@@ -187,18 +187,9 @@ setelah proses \textsl{transform} berhasil dilaksanakan, maka data sudah siap un
 Setelah \textsl{preprocessing} data selesai dilaksanakan, maka program akan menjalankan proses \textsl{data mining}. Proses tersebut memiliki tahap sebagai berikut
 \begin{enumerate}
 	\item Program akan memuat data dan melakukan \textsl{processing data}
-	\item Program akan menjalankan algoritma pembuat \textsl{decision tree} yang terdapat pada \ref{method_pohon_keputusan}
+	\item Program akan menjalankan algoritma pembuat \textsl{decision tree} 
 	\item Program akan menampilkan \textsl{decision tree}
 \end{enumerate}  
-
-Pada tahap pertama, isi method pada \textsl{attribute\_selection\_method} akan memiliki tahap proses sebagai berikut
-\begin{enumerate}
-	\item Program akan menghitung nilai entropy \textsl{class}
-	\item Program akan menghitung nilai entropy dan mendapatkan nilai \textsl{gain info} untuk setiap atribut pada \textsl{attribute\_list}
-	\item Jika \textsl{user} memilih untuk menggunakan algoritma C4.5, maka program akan menghitung \textsl{splitInfo} dan menghitung \textsl{gainRasio}
-	\item Program akan memilih atribut yang terbaik untuk dijadikan \textsl{node} (jika ID3 maka nilai \textsl{gainInfo} yang akan digunakan untuk memilih atribut, jika C4.5 maka nilai \textsl{gain Rasio} yang akan digunakan untuk memilih atribut)
-	\item Program akan mengembalikan \textsl{node} yang dipilih berserta nilai tuple yang terdapat pada cabang masing-masing
-\end{enumerate}
 
 \subsection{Diagram \textsl{Use Case} Perangkat Lunak \textsl{Data Mining Log} Histori KIRI}
 
