@@ -38,7 +38,7 @@ public class TestingCalendar
         
         Date currentTime = new Date(milliseconds);
 
-        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+        SimpleDateFormat sdf = new SimpleDateFormat("EEE MM/dd/yyyy HH:mm:ss");
         
         // harus set timezone komputer ke UTC
         sdf.setTimeZone(TimeZone.getTimeZone("GMT+7"));
