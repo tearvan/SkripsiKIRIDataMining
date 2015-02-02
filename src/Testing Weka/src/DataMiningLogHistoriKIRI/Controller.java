@@ -1,8 +1,15 @@
 package DataMiningLogHistoriKIRI;
 
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
+import weka.classifiers.trees.Id3;
+import weka.classifiers.trees.J48;
+import weka.core.Instances;
+import weka.gui.explorer.PreprocessPanel;
 
 /*
  * To change this template, choose Tools | Templates
@@ -15,7 +22,7 @@ import javax.swing.JFrame;
  */
 public class Controller
 {
-    public static void main (String [] args)
+    public static void main (String [] args) throws IOException
     {
         /**
         CSVReader reader = new CSVReader();
@@ -51,8 +58,8 @@ public class Controller
 
         System.out.println("Banyak data findRoute: " + findRoute.size());
         System.out.println("\nProcess count findRoute\n");
-        * **/
-        
+
+
         JFrame jf = new JFrame();
         View v = new View();
         
@@ -61,5 +68,34 @@ public class Controller
         jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         jf.add(v);
+        * */
+        
+        CSVReader csv = new CSVReader();
+        ArrayList<String[]> data = csv.readCSV("D:\\Tugas\\Skripsi-1\\Skripsi GIT\\SkripsiKIRIDataMining\\src\\Testing Weka\\KIRIStatistics-2014-02.csv");
+        
+        ArrayList<String[]> findRoute = new ArrayList<String[]>();
+        ProcessingData pd = new ProcessingData();
+        pd.processSorting(findRoute, data, "FINDROUTE");
+        
+        ArrayList<int[]> dataAfterPreprocessing = pd.preprocessingData(findRoute);
+        
+        ArffIO io = new ArffIO();
+        io.writeArrf("tempArff", dataAfterPreprocessing);
+        
+        Instances arff = io.readArff("D:\\Tugas\\Skripsi-1\\Skripsi GIT\\SkripsiKIRIDataMining\\src\\test data\\temp.arff");
+        //arff.setClassIndex(arff.numAttributes() - 1);
+        
+        String[] option = new String[]{"-U"};
+        J48 tree = new J48();
+        
+        try {
+            tree.setOptions(option);
+            
+            tree.buildClassifier(arff);
+        } catch (Exception ex) {
+            Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        System.out.println(tree.toString());
     }
 }

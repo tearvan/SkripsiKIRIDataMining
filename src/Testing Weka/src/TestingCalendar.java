@@ -22,13 +22,16 @@ public class TestingCalendar
     public static void main (String [] args)
     {        
         //String string_date = "12-12-2012 13:10:32";
-        String string_date = "1/1/2014  3:51:15 AM";
+        //String string_date = "1/1/2014  3:51:15 AM";
+        //String string_date = "Feb 02, 2015 10:39:42 AM";
+        String string_date = "Feb 02, 2015 10:42:35 AM";
 
         Date d;
         long milliseconds = 0;
         try {
             //SimpleDateFormat f = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-            SimpleDateFormat f = new SimpleDateFormat("MM/dd/yyyy hh:mm:ss a");
+            //SimpleDateFormat f = new SimpleDateFormat("MM/dd/yyyy hh:mm:ss a");
+            SimpleDateFormat f = new SimpleDateFormat("MMM dd, yyyy hh:mm:ss a");
             d = (Date)f.parse(string_date);
             milliseconds = d.getTime();
             System.out.println(milliseconds + " ");

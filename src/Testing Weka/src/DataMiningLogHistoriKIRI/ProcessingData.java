@@ -74,11 +74,12 @@ public class ProcessingData
     }
     public ArrayList preprocessingData(ArrayList<String[]> data)
     {
-        ArrayList result = new ArrayList<String[]>();
+        ArrayList<int[]> result = new ArrayList<int[]>();
         
         // tahap pertama: ubah waktu dari UTC ke GMT+7
         for(int i = 0; i < data.size(); i++)
         {
+            //System.out.println(data.get(i)[3]);
             data.get(i)[2] = TimezoneConverter.convertToGMT7(data.get(i)[2]);
         }
         
@@ -88,7 +89,7 @@ public class ProcessingData
         {
             // tahap kedua: pecah string atribut tanggal
             int[] temp = new int[7];
-            String[] splited = data.get(1)[2].split(" ");
+            String[] splited = data.get(i)[2].split(" ");
             temp[3] = Integer.parseInt(splited[0]);
             // tahap ketiga: pecah nilai string yang tanggal
             String[] splited2 = splited[1].split("/");
