@@ -74,7 +74,7 @@ public class ArffIO
         }
         
         try {
-            PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("D:\\Tugas\\Skripsi-1\\Skripsi GIT\\SkripsiKIRIDataMining\\src\\test data\\temp.arff")));
+            PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("temp.arff")));
             out.println(result);
             out.close();
         } catch (IOException ex) {
@@ -85,7 +85,7 @@ public class ArffIO
     public Instances readArff(String name) throws IOException
     {
         Instances data;
-        data = new Instances(new BufferedReader(new FileReader("D:\\Tugas\\Skripsi-1\\Skripsi GIT\\SkripsiKIRIDataMining\\src\\test data\\test data.arff")));
+        data = new Instances(new BufferedReader(new FileReader("temp.arff")));
         data.setClassIndex(data.numAttributes() - 1);
         return data;
     }

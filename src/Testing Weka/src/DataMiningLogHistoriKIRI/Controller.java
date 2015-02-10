@@ -24,8 +24,9 @@ public class Controller
 {
     public static void main (String [] args) throws IOException
     {
+        
         /**
-        CSVReader reader = new CSVReader();
+        //CSVReader reader = new CSVReader();
         String[] file = new String[]{
         "D:\\kiri.travel\\temp\\statistic\\statistics-2014-01.csv",
         "D:\\kiri.travel\\temp\\statistic\\statistics-2014-02.csv",
@@ -71,7 +72,8 @@ public class Controller
         * */
         
         CSVReader csv = new CSVReader();
-        ArrayList<String[]> data = csv.readCSV("D:\\Tugas\\Skripsi-1\\Skripsi GIT\\SkripsiKIRIDataMining\\src\\Testing Weka\\KIRIStatistics-2014-02.csv");
+        ArrayList<String[]> data = csv.readCSV("KIRIStatistics-2014-02.csv");
+        //ArrayList<String[]> data = csv.readCSV(file);
         
         ArrayList<String[]> findRoute = new ArrayList<String[]>();
         ProcessingData pd = new ProcessingData();
@@ -82,20 +84,47 @@ public class Controller
         ArffIO io = new ArffIO();
         io.writeArrf("tempArff", dataAfterPreprocessing);
         
-        Instances arff = io.readArff("D:\\Tugas\\Skripsi-1\\Skripsi GIT\\SkripsiKIRIDataMining\\src\\test data\\temp.arff");
+        Instances arff = io.readArff("temp.arff");
         //arff.setClassIndex(arff.numAttributes() - 1);
         
         String[] option = new String[]{"-U"};
         J48 tree = new J48();
         
         try {
-            tree.setOptions(option);
+            //tree.setOptions(option);
             
             tree.buildClassifier(arff);
         } catch (Exception ex) {
             Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
         System.out.println(tree.toString());
+        
+        int nilaiBenar = 0, resultInt;
+        float result = 0;
+        for (int i = 0; i < arff.numInstances(); i++)
+        {
+            try {
+                result = (float)tree.classifyInstance(arff.instance(i));
+                resultInt = Math.round(result);
+                //System.out.println(dataAfterPreprocessing.get(i)[6] + " " + arff.instance(i).stringValue(6));
+                if(resultInt == Integer.parseInt(arff.instance(i).stringValue(6)))
+                {
+                    nilaiBenar++;
+                }
+            } catch (Exception ex) {
+                Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        System.out.println("nilai: " + nilaiBenar + " " + arff.numInstances());
+        double confident = nilaiBenar * 1.0 / arff.numInstances() * 100;
+        System.out.println("Confident = " + confident + "%");
+        
+        String [] tempTreeDataResult = tree.toString().split("\n");
+        String [] treeDataResult = new String[tempTreeDataResult.length-7];
+        System.arraycopy(tempTreeDataResult, 3, treeDataResult, 0, treeDataResult.length);
+        
+        SDForConvertTree dataTree = new SDForConvertTree(treeDataResult);
+        
+        System.out.println(DotConverter.convert(dataTree, 0, ""));
     }
 }

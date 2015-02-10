@@ -34,6 +34,7 @@ public class TimezoneConverter
             milliseconds = d.getTime();
         } catch (ParseException ex) {
             Logger.getLogger(TimezoneConverter.class.getName()).log(Level.SEVERE, null, ex);
+            System.exit(1);
         }
         
         Date currentTime = new Date(milliseconds);
