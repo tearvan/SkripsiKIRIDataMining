@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.8.19)  31 JAN 2015 00:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.8.19)  11 FEB 2015 14:17
 entering extended mode
 **main.tex
 ("D:\Tugas\Skripsi-1\Skripsi GIT\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.tex"
@@ -790,48 +790,47 @@ Bab 3.
 
 
 ] [42]
-Underfull \hbox (badness 10000) in paragraph at lines 107--107
+Underfull \hbox (badness 10000) in paragraph at lines 103--103
 []|\T1/cmr/bx/n/10.95 Longitude
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--107
+Underfull \hbox (badness 10000) in paragraph at lines 103--103
 \T1/cmr/bx/n/10.95 Ke-be-rang-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--107
+Underfull \hbox (badness 10000) in paragraph at lines 103--103
 []|\T1/cmr/bx/n/10.95 Longitude
  []
 
 [43] [44] <Gambar/classificationmap.jpg, id=523, 263.48438pt x 148.30406pt>
 File: Gambar/classificationmap.jpg Graphic file (type jpg)
  <use Gambar/classificationmap.jpg>
-Package pdftex.def Info: Gambar/classificationmap.jpg used on input line 119.
+Package pdftex.def Info: Gambar/classificationmap.jpg used on input line 115.
 (pdftex.def)             Requested size: 263.48372pt x 148.30368pt.
  [45 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/classificationmap
 .jpg>]
-Underfull \vbox (badness 10000) detected at line 145
+Underfull \vbox (badness 10000) detected at line 141
  []
 
-[46] [47]
-
-LaTeX Warning: Reference `method_pohon_keputusan' on page 48 undefined on input line 190.
-
-<Gambar/usecase.jpg, id=557, 271.0125pt x 225.0006pt>
+[46] [47] <Gambar/usecase.jpg, id=556, 271.0125pt x 225.0006pt>
 File: Gambar/usecase.jpg Graphic file (type jpg)
  <use Gambar/usecase.jpg>
-Package pdftex.def Info: Gambar/usecase.jpg used on input line 215.
+Package pdftex.def Info: Gambar/usecase.jpg used on input line 201.
 (pdftex.def)             Requested size: 271.01183pt x 225.00003pt.
- [48]
-<Gambar/classdiagram.jpg, id=572, 489.32813pt x 367.3725pt>
+ [48 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/usecase.jpg>]
+<Gambar/classdiagram.jpg, id=566, 489.32813pt x 367.3725pt>
 File: Gambar/classdiagram.jpg Graphic file (type jpg)
  <use Gambar/classdiagram.jpg>
-Package pdftex.def Info: Gambar/classdiagram.jpg used on input line 268.
+Package pdftex.def Info: Gambar/classdiagram.jpg used on input line 254.
 (pdftex.def)             Requested size: 391.46303pt x 293.89838pt.
- [49 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/usecase.jpg>]) [5
-0 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/classdiagram.jpg>] [
-51
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [49] [50 <D:/Tugas/Skripsi-1/Skripsi GIT/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/classdiagra
+m.jpg>] [51
 
 
 ]
@@ -1389,14 +1388,14 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 8FF227CCE1840BDCF1E790F7F32C9D5F;4956.
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 14198 strings out of 493921
- 197581 string characters out of 3147258
- 426622 words of memory out of 3000000
- 17048 multiletter control sequences out of 15000+200000
+ 14191 strings out of 493921
+ 197515 string characters out of 3147258
+ 426590 words of memory out of 3000000
+ 17047 multiletter control sequences out of 15000+200000
  20090 words of font info for 43 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
  45i,12n,43p,1084b,681s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1415,9 +1414,9 @@ cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10
 type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (63 pages, 1087181 bytes).
+Output written on main.pdf (63 pages, 1085688 bytes).
 PDF statistics:
- 1175 PDF objects out of 1200 (max. 8388607)
- 200 named destinations out of 1000 (max. 500000)
+ 1167 PDF objects out of 1200 (max. 8388607)
+ 194 named destinations out of 1000 (max. 500000)
  315 words of extra memory for PDF output out of 10000 (max. 10000000)
 
