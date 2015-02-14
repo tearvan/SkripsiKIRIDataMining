@@ -1,10 +1,16 @@
 package DataMiningLogHistoriKIRIWithoutDateAndMinutes;
 
+import java.awt.Container;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import weka.classifiers.trees.Id3;
 import weka.classifiers.trees.J48;
@@ -26,7 +32,7 @@ public class Controller
     {
     }
     
-    public void startMining(String inputFilePath, String miningAlgo, JTextArea textArea) throws IOException
+    public void startMining(String inputFilePath, String miningAlgo, JLabel label, JTextArea textArea) throws IOException
     {
         CSVReader csv = new CSVReader();
         ArrayList<String[]> data = csv.readCSV(inputFilePath);
@@ -46,6 +52,7 @@ public class Controller
         
         DecisionTree dt = new DecisionTree();
         String [] tempTreeDataResult;
+        System.out.println(miningAlgo);
         if(miningAlgo.equals("id3"))
         {
              textArea.setText(dt.id3(arff));
@@ -60,7 +67,25 @@ public class Controller
         
         SDForConvertTree dataTree = new SDForConvertTree(treeDataResult);
         
-        System.out.println(DotConverter.convert(dataTree, 0, ""));
+        try {
+            PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("tree.txt")));
+            out.println("digraph{" + DotConverter.convert(dataTree, miningAlgo, 0, "") + "}");
+            out.close();
+        } catch (IOException ex) {
+            System.out.println("Error ketika menulis file txt");
+        }
+        
+        Cmd.makeJpgUsingDotCommand();
+        
+        JFrame jf2 = new JFrame();
+        Container c = jf2.getContentPane();
+        JScrollPane pane = new JScrollPane(new ImagePanel("D:\\Tugas\\Skripsi-1\\Skripsi GIT\\SkripsiKIRIDataMining\\src\\Testing Weka\\graphviz\\bin\\tree.jpg"));
+        c.add(pane);
+        jf2.setVisible(true);
+        jf2.setSize(620, 500);
+        
+                
+        jf2.setContentPane(pane);
     }
     
     
@@ -114,65 +139,5 @@ public class Controller
         jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         jf.add(v);
-        
-        /**
-        CSVReader csv = new CSVReader();
-        ArrayList<String[]> data = csv.readCSV("KIRIStatistics-2014-02.csv");
-        //ArrayList<String[]> data = csv.readCSV(file);
-        
-        ArrayList<String[]> findRoute = new ArrayList<String[]>();
-        ProcessingData pd = new ProcessingData();
-        pd.processSorting(findRoute, data, "FINDROUTE");
-        
-        ArrayList<int[]> dataAfterPreprocessing = pd.preprocessingData(findRoute);
-        
-        ArffIO io = new ArffIO();
-        io.writeArrf("tempArff", dataAfterPreprocessing);
-        
-        Instances arff = io.readArff("temp.arff");
-        //arff.setClassIndex(arff.numAttributes() - 1);
-        
-        String[] option = new String[]{"-U"};
-        J48 tree = new J48();
-        
-        try {
-            //tree.setOptions(option);
-            
-            tree.buildClassifier(arff);
-        } catch (Exception ex) {
-            Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        System.out.println(tree.toString());
-        
-        int nilaiBenar = 0, resultInt;
-        float result = 0;
-        for (int i = 0; i < arff.numInstances(); i++)
-        {
-            try {
-                result = (float)tree.classifyInstance(arff.instance(i));
-                resultInt = Math.round(result);
-                //System.out.println(dataAfterPreprocessing.get(i)[6] + " " + arff.instance(i).stringValue(6));
-                if(resultInt == Integer.parseInt(arff.instance(i).stringValue(4)))
-                {
-                    nilaiBenar++;
-                }
-            } catch (Exception ex) {
-                Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
-                System.exit(1);
-            }
-        }
-        System.out.println("nilai: " + nilaiBenar + " " + arff.numInstances());
-        double confident = nilaiBenar * 1.0 / arff.numInstances() * 100;
-        System.out.println("Confident = " + confident + "%");
-        
-        String [] tempTreeDataResult = tree.toString().split("\n");
-        String [] treeDataResult = new String[tempTreeDataResult.length-7];
-        System.arraycopy(tempTreeDataResult, 3, treeDataResult, 0, treeDataResult.length);
-        
-        SDForConvertTree dataTree = new SDForConvertTree(treeDataResult);
-        
-        System.out.println(DotConverter.convert(dataTree, 0, ""));
-        * 
-        * **/
     }
 }
