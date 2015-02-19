@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package DataMiningLogHistoriKIRIWithoutDateAndMinutes;
+package DataMiningLogHistoriKIRIPercobaan2;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;

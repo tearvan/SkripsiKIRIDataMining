@@ -4,9 +4,7 @@
  * and open the template in the editor.
  */
 
-package DataMiningLogHistoriKIRIWithoutDateAndMinutes;
-
-import DataMiningLogHistoriKIRI.*;
+package DataMiningLogHistoriKIRIPercobaan2;
 
 /**
  *

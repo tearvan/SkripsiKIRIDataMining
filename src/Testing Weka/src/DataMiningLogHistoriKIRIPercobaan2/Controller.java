@@ -1,4 +1,4 @@
-package DataMiningLogHistoriKIRIWithoutDateAndMinutes;
+package DataMiningLogHistoriKIRIPercobaan2;
 
 import java.awt.Container;
 import java.io.BufferedWriter;

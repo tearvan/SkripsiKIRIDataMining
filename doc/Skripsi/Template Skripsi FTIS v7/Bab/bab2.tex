@@ -1627,10 +1627,69 @@ Atribut:
 	Mengembalikan teks tip untuk properti ini.
 \end{itemize}
 
+\paragraph{NumericToNominal} adalah kelas yang digunakan untuk mengubah nilai numerik menjadi nominal.
+
+\textsl{Constructor}:
+\begin{itemize}
+	\item NumericToNominal()
+\end{itemize}
+\textsl{Method}:
+\begin{itemize}
+	
+	\item java.lang.String[] getOptions()
+	
+	Mengembalikan pengaturan dari filter.
+	
+	\item java.lang.String getRevision()
+	
+	mengembalikan revisi.
+	
+	\item java.lang.String globalInfo()
+	
+	Mengembalikan string yang berisi deskripsi dari kelas tersebut.
+	
+	\item static void main(java.lang.String[] args)	
+	
+	Menjalankan filter dengan input parameter.
+	
+	\item void setAttributeIndices(java.lang.String value)
+	
+	Melakukan penyetingan untuk memilih atribut yang akan difilter.
+	
+	\item void setAttributeIndicesArray(int[] value)
+	
+	Melakukan penyetingan untuk memilih atribut yang akan difilter.
+	
+	\item boolean setInputFormat(Instances instance)
+	
+	Melakukan penyetingan untuk input data.
+	
+	\item void setOption(String[] option)
+	
+	Melakukan penyetingan pengaturan.
+\end{itemize}
+
+\section{Graphviz}
+Graphviz merupakan perangkat lunak \textsl{open source} untuk visualisasi grafik. Dengan menggunakan graphviz, visualisasi grafik dapat dibuat dengan menulis kode. Berikut contoh kode yang dapat dijadikan input untuk aplikasi graphviz:
 
 
+	digraph\{
+	
+		A -> B
+	
+		B -> C
+		
+		D -> C
+	
+	\}
 
+Maka hasil yang diperoleh dari perangkat lunak graphviz adalah
 
+\begin{figure}[H]
+\includegraphics[scale=0.9]{Gambar/Graphviz.jpg}
+\caption[Hasil output Graphviz]{Hasil output Graphvi} 
+\label{fig:outGraphviz}
+\end{figure}
 
 
 
