@@ -159,7 +159,7 @@ Spesifikasi kebutuhan perangkat lunak yang akan dibangun untuk melakukan \textsl
 \subsubsection{Pemodelan Perangkat Lunak \textsl{Data Mining Log} Histori KIRI}
 Perangkat lunak \textsl{data mining log} histori KIRI akan mendapat input data text dengan format .txt. Setelah program mendapatkan input dan user menekan tombol proses, maka data tersebut akan diubah terlebih dahulu sesuai pada bab analisis data(bab \ref{analisisData}) dengan melakukan proses \textsl{data transform} dan menghasilkan data dengan format seperti pada tabel \ref{table:contohHasilDataTransformasiLatLong}.
 
-Program akan melakukan tahap \textsl{data mining} dengan menggunakan teknik ID3 atau C4.5 sesuai dengan permintaan \textsl{user}. Setelah proses \textsl{data mining} selesai dilakukan, program akan melakukan \textsl{visualisasi decision tree} dan nilai klasifikasi yang diperoleh.  
+Program akan melakukan tahap \textsl{data mining} dengan menggunakan teknik ID3 atau C4.5 sesuai dengan permintaan \textsl{user}. Setelah proses \textsl{data mining} selesai dilakukan, program akan melakukan visualisasi \textsl{decision tree} dengan menggunakan graphviz.  
 
 \subsubsection{Pemodelan Data pada Perangkat Lunak \textsl{Data Mining Log} Histori KIRI}
 Karena data yang diperoleh sudah dalam bentuk csv, maka pada penelitian ini, tidak akan menggunakan sistem database. 
@@ -173,7 +173,7 @@ Ketika tombol proses ditekan, maka data tersebut akan diproses. Proses yang pert
 	\item Mengambil string data input array kelima (yaitu atribut \textsl{additionalData}), dilakukan pemecahan nilai string dengan garis miring sebagai tanda pemisah, maka akan diperoleh tiga nilai yaitu lokasi awal, lokasi tujuan, dan banyak jalur.
 	\item Pada nilai lokasi awal dan lokasi tujuan, akan dilakukan pemecahan nilai string dengan koma sebagai tanda pemisah, maka akan diperoleh dua nilai untuk setiap lokasi, yaitu \textsl{latitude} dan \textsl{longitude}.
 	\item Menghitung jarak posisi lokasi awal dan lokasi tujuan terhadap titik pusat dan menentukan apakah lokasi tersebut berada pada klasifikasi nol atau pertama atau kedua.
-	\item menggabungkan nilai-nilai tersebut ke dalam satu array, yaitu array dengan tipe int (dengan nilai tanggal, bulan, tahun, hari, jam, menit dan menujuBandung).
+	\item menggabungkan nilai-nilai tersebut ke dalam satu array, yaitu array dengan tipe int (dengan nilai bulan, tahun, hari, jam dan menujuBandung).
 \end{enumerate}
 
 setelah proses \textsl{transform} berhasil dilaksanakan, maka data sudah siap untuk dijadikan nilai input untuk proses data mining pada perangkat lunak \textsl{data mining log} histori KIRI.
@@ -183,7 +183,8 @@ Setelah \textsl{preprocessing} data selesai dilaksanakan, maka program akan menj
 \begin{enumerate}
 	\item Program akan memuat data dan melakukan \textsl{processing data}
 	\item Program akan menjalankan algoritma pembuat \textsl{decision tree} 
-	\item Program akan menampilkan \textsl{decision tree}
+	\item Program akan membuat grafik dari hasil algroitma \textsl{decision tree}
+	\item Program akan menampilkan grafik \textsl{decision tree}
 \end{enumerate}  
 
 \subsection{Diagram \textsl{Use Case} Perangkat Lunak \textsl{Data Mining Log} Histori KIRI}
