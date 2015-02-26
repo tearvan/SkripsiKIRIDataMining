@@ -17,10 +17,12 @@ import java.util.Set;
  */
 public class CSVReader
 {
-    private ArrayList data = new ArrayList<String[]>();
-    private int banyakAtribut = 0;
+    private ArrayList<String[]> data;
+    private int banyakAtribut;
     public CSVReader() 
     {
+        data = new ArrayList<String[]>();
+        banyakAtribut = 0;
     }
 
     public void setEmpty()

@@ -69,7 +69,7 @@ public class Controller
         
         try {
             PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("tree.txt")));
-            SDForExtractData extract = new SDForExtractData(new String[]{"bulan", "tahun", "hari", "jam"},new int[]{12,2020,7,24}, new int[]{0,2014,0,0});
+            SDForExtractData extract = new SDForExtractData(new String[]{"bulan", "tahun", "hari", "jam"},new int[]{12,2020,7,24}, new int[]{1,2014,1,0});
             out.println("digraph{" + DotConverter.convert(dataTree, extract, miningAlgo, 0, "") + "}");
             out.close();
             
@@ -89,7 +89,7 @@ public class Controller
         
         JFrame jf2 = new JFrame();
         Container c = jf2.getContentPane();
-        JScrollPane pane = new JScrollPane(new ImagePanel("D:\\Tugas\\Skripsi-1\\Skripsi GIT\\SkripsiKIRIDataMining\\src\\Testing Weka\\graphviz\\bin\\tree.jpg"));
+        JScrollPane pane = new JScrollPane(new ImagePanel("tree.jpg"));
         c.add(pane);
         jf2.setVisible(true);
         jf2.setSize(620, 500);

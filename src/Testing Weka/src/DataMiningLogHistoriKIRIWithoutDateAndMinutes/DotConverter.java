@@ -56,10 +56,18 @@ public class DotConverter
                     result += nodeName + " -> ";
                 }
 
+                SDForExtractData tempExtract = new SDForExtractData(extract);
+                
                 if(temp[2].charAt(temp[2].length()-1) == ':')
                 {
+                    // masukin data bwt extract
+                    tempExtract.setRules(temp[0], temp[1], Integer.parseInt(temp[2].substring(0, temp[2].length()-1)));
+                    tempExtract.setKelas(Integer.parseInt(temp[3]));
+                    tempExtract.extract();
+                    extract.addStringResult(tempExtract.getList());
                     // menghasilkan daun
                     // String temp3 = temp[2].substring(0, temp[2].length()-1);
+                    
                     nodeName2 = data.getDataNumber(temp[3]);
                     result += nodeName2 + " [label=\"" + temp[1] + " " + temp[2].substring(0, temp[2].length()-1) +  "\"]\n";
                     if(iniName1 && loop == 0)
@@ -71,6 +79,9 @@ public class DotConverter
                 }
                 else
                 {
+                    // masukin data bwt extract
+                    tempExtract.setRules(temp[0], temp[1], Integer.parseInt(temp[2]));
+                    
                     // menghasilkan node
                     String [] temp2;
                     temp2 = data.getData(1).split("  ");
@@ -78,13 +89,16 @@ public class DotConverter
                     nodeName2 = data.getDataNumber(temp2[0]);
                     result += nodeName2 + " [label=\"" + temp[1] + " " + temp[2] +  "\",shape=box,style=filled,color=\"1.0 " + color + " 1.0\"]\n";
                     data.buangArrayPertama();
-                    //result += DotConverter.convert(data, miningAlgo, deep+1, nodeName2);
+                    
+                    SDForExtractData newExtract = new SDForExtractData(tempExtract);
+                    result += DotConverter.convert(data, newExtract, miningAlgo, deep+1, nodeName2);
 
                     if(iniName1 && loop == 0)
                     {
                         result += nodeName1 + " [label=\"" + temp[0] + "\",shape=box,style=filled,color=\"1.0 " + color + " 1.0\"]\n";
                     }
                     result += nodeName2 + " [label=\"" + temp2[0] + "\",shape=box,style=filled,color=\"1.0 " + color + " 1.0\"]\n";
+                    extract.addStringResult(newExtract.getList());
                 }
                 if(data.hasNext())
                 {
@@ -126,14 +140,15 @@ public class DotConverter
                     result += nodeName + " -> ";
                 }
                 
+                SDForExtractData tempExtract = new SDForExtractData(extract);
+                
                 if(temp[2].charAt(temp[2].length()-1) == ':')
                 {   
                     // masukin data bwt extract
-                    System.out.println("Check " + temp[2].substring(0, temp[2].length()-1));
-                    extract.setRules(temp[0], temp[1], Integer.parseInt(temp[2].substring(0, temp[2].length()-1)));
-                    extract.setKelas(Integer.parseInt(temp[3]));
-                    extract.extract();
-                    
+                    tempExtract.setRules(temp[0], temp[1], Integer.parseInt(temp[2].substring(0, temp[2].length()-1)));
+                    tempExtract.setKelas(Integer.parseInt(temp[3]));
+                    tempExtract.extract();
+                    extract.addStringResult(tempExtract.getList());
                     // menghasilkan daun
                     // String temp3 = temp[2].substring(0, temp[2].length()-1);
                     nodeName2 = data.getDataNumber(temp[3]);
@@ -145,10 +160,10 @@ public class DotConverter
                     result += nodeName2 + " [label=\"" + temp[3] + "\"]\n";
                     data.buangArrayPertama();
                 }
-                else
+                else 
                 {
                     // masukin data bwt extract
-                    extract.setRules(temp[0], temp[1], Integer.parseInt(temp[2]));
+                    tempExtract.setRules(temp[0], temp[1], Integer.parseInt(temp[2]));
                     // menghasilkan node
                     String [] temp2;
                     temp2 = data.getData(1).split("   ");
@@ -156,7 +171,8 @@ public class DotConverter
                     nodeName2 = data.getDataNumber(temp2[0]);
                     result += nodeName2 + " [label=\"" + temp[1] + " " + temp[2] +  "\",shape=box,style=filled,color=\"1.0 " + color + " 1.0\"]\n";
                     data.buangArrayPertama();
-                    SDForExtractData newExtract = new SDForExtractData(extract);
+                    
+                    SDForExtractData newExtract = new SDForExtractData(tempExtract);
                     result += DotConverter.convert(data, newExtract, miningAlgo, deep+1, nodeName2);
 
                     if(iniName1 && i == 0)
@@ -169,26 +185,5 @@ public class DotConverter
             }
         }
         return result;
-    }
-    
-    public static void main(String [] args)
-    {
-//        String test = "|    |    a <= 2: 1";
-//        String [] temp = test.split("    ");
-//        for(int i = 0; i < temp.length; i++)
-//        {
-//            System.out.println(temp[i]);
-//        }
-//        
-//        String test = "tanggal <= 2\n" +
-//                      "|   jam <= 2\n" +
-//                      "|   |   menit <= 40\n" +
-//                      "|   |   |   tanggal <= 1\n" +
-//                      "|   |   |   |   jam <= 0\n" +
-//                      "|   |   |   |   |   menit <= 14: 2 (2.0)";
-//        
-//        SDForConvertTree data = new SDForConvertTree(test.split("\n"));
-//        
-//        System.out.println(DotConverter.convert(data, 0));
     }
 }

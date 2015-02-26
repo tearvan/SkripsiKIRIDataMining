@@ -11,9 +11,10 @@ package DataMiningLogHistoriKIRIWithoutDateAndMinutes;
  */
 public class DistanceHaversine
 {
-    private double r = 6.371;
+    private double r;
     public DistanceHaversine()
     {
+         r = 6.371;
     }
 
     public double calculateDistance(double latitude1, double longitude1, double latitude2, double longitude2)
@@ -44,13 +45,5 @@ public class DistanceHaversine
         double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
         //System.out.println("a: " + a + ";c: " + c + ";result: " + (r*c));
         return r * c;
-    }
-
-    public static void main (String [] args)
-    {
-        DistanceHaversine dh = new DistanceHaversine();
-        //System.out.println(dh.calculateDistance(-6.92036, 107.60500, -6.92036, 107.67023)*1000 + " km");
-        //ini bandung - surabaya
-        System.out.println(dh.calculateDistance(-6.211544, 106.845172,  -7.289166, 112.734398)*1000 + " km");
     }
 }

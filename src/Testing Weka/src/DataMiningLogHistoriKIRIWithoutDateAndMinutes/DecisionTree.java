@@ -23,7 +23,7 @@ public class DecisionTree
 {
     private Classifier tree;
     
-    public double calculateConfiden(Instances arff)
+    public double calculateConfident(Instances arff)
     {
         // mengecek confiden
         int nilaiBenar = 0, resultInt;
