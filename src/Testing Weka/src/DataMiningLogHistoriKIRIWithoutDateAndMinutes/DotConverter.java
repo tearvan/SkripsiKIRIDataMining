@@ -62,7 +62,16 @@ public class DotConverter
                 {
                     // masukin data bwt extract
                     tempExtract.setRules(temp[0], temp[1], Integer.parseInt(temp[2].substring(0, temp[2].length()-1)));
-                    tempExtract.setKelas(Integer.parseInt(temp[3]));
+                    try
+                    {
+                        tempExtract.setKelas(Integer.parseInt(temp[3]));
+                    }catch(Exception a)
+                    {
+                        if(temp[3] == null)
+                        {
+                            tempExtract.setKelas(-2);
+                        }
+                    }
                     tempExtract.extract();
                     extract.addStringResult(tempExtract.getList());
                     // menghasilkan daun

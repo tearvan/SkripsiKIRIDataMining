@@ -1,13 +1,17 @@
 package DataMiningLogHistoriKIRIWithoutDateAndMinutes;
 
 import java.awt.Container;
+import java.awt.image.BufferedImage;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JScrollPane;
@@ -88,13 +92,14 @@ public class Controller
         Cmd.makeJpgUsingDotCommand();
         
         JFrame jf2 = new JFrame();
-        Container c = jf2.getContentPane();
-        JScrollPane pane = new JScrollPane(new ImagePanel("tree.jpg"));
-        c.add(pane);
+        
         jf2.setVisible(true);
         jf2.setSize(620, 500);
-        
-                
+        BufferedImage image = null;
+        image = ImageIO.read(new File("tree.jpg"));
+        ImageIcon image2 = new ImageIcon(image);
+        JLabel labels = new JLabel(image2);
+        JScrollPane pane = new JScrollPane(labels);
         jf2.setContentPane(pane);
     }
     

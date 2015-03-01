@@ -25,17 +25,22 @@ public class TimezoneConverter
     // output akan mengubah waktu menjadi GMT+8 dalam String dengan format EEE MM/dd/yyyy HH:mm:ss --> contoh Wed 01/01/2014 03:51:15
     public static String convertToGMT7(String date)
     {
-        Date d;
+        Date d = null;
         long milliseconds = 0;
         
         try {
             SimpleDateFormat f = new SimpleDateFormat("MM/dd/yyyy HH:mm");
             d = (Date)f.parse(date);
-            milliseconds = d.getTime();
         } catch (ParseException ex) {
-            Logger.getLogger(TimezoneConverter.class.getName()).log(Level.SEVERE, null, ex);
-            System.exit(1);
+            SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            try {
+                d = (Date)f.parse(date);
+            } catch (ParseException ex1) {
+                Logger.getLogger(TimezoneConverter.class.getName()).log(Level.SEVERE, null, ex);
+                System.exit(1);
+            }
         }
+        milliseconds = d.getTime();
         
         Date currentTime = new Date(milliseconds);
         // untuk hari --> 1 = senin,..., 7 = minggu

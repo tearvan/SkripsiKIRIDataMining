@@ -111,6 +111,46 @@ public class ProcessingData
         return result;
     }
     
+    public ArrayList preprocessingDataUntukPercobaanKedua(ArrayList<String[]> data)
+    {
+        ArrayList<int[]> result = new ArrayList<int[]>();
+        
+        // tahap pertama: ubah waktu dari UTC ke GMT+7
+        for(int i = 0; i < data.size(); i++)
+        {
+            //System.out.println(data.get(i)[3]);
+            data.get(i)[2] = TimezoneConverter.convertToGMT7(data.get(i)[2]);
+        }
+        
+        // tahap kedua sampai kesembilan
+        DistanceHaversine haversine = new DistanceHaversine();
+        for(int i = 0; i < data.size(); i++)
+        {
+            // tahap kedua: pecah string atribut tanggal
+            int[] temp = new int[5];
+            String[] splited = data.get(i)[2].split(" ");
+            temp[2] = Integer.parseInt(splited[0]);
+            // tahap ketiga: pecah nilai string yang tanggal
+            String[] splited2 = splited[1].split("/");
+            temp[0] = Integer.parseInt(splited2[0]);
+            temp[1] = Integer.parseInt(splited2[2]);
+            // tahap keempat: pecah nilai string yang jam
+            splited2 = splited[2].split(":");
+            temp[3] = Integer.parseInt(splited2[0]);
+            // tahap kelima: pecah string atribut additional data
+            splited = data.get(i)[4].split("/");
+            // tahap keenam: pecah lokasi keberangkatan dan lokasi tujuan untuk mendapatkan lat n lon dan (ini tahap ketujuh) menghitung jarak terhadap titik pusat
+            splited2 = splited[0].split(",");
+            double jarakKeberangkatan = haversine.calculateDistance(Double.parseDouble(splited2[0]), Double.parseDouble(splited2[1]), -6.92036, 107.67023) * 1000;
+            splited2 = splited[1].split(",");
+            double jarakTujuan = haversine.calculateDistance(Double.parseDouble(splited2[0]), Double.parseDouble(splited2[1]), -6.92036, 107.67023) * 1000;
+            // tahap kedelapan, set semua data ke array
+            temp[4] = klasifikasiKelas(jarakKeberangkatan, jarakTujuan);
+            result.add(temp);
+        }
+        return result;
+    }
+    
     public int klasifikasiKelas(double jarakKeberangkatan, double jarakTujuan)
     {
         int regionKeberangkatan, regionTujuan;
