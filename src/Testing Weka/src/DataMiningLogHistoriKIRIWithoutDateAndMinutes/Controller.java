@@ -1,6 +1,5 @@
 package DataMiningLogHistoriKIRIWithoutDateAndMinutes;
 
-import java.awt.Container;
 import java.awt.image.BufferedImage;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -8,18 +7,13 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
-import weka.classifiers.trees.Id3;
-import weka.classifiers.trees.J48;
 import weka.core.Instances;
-import weka.gui.explorer.PreprocessPanel;
 
 /*
  * To change this template, choose Tools | Templates

@@ -1,7 +1,7 @@
 \select@language {bahasa}
 \contentsline {chapter}{Daftar Isi}{iii}{section*.1}
-\contentsline {chapter}{Daftar Gambar}{iv}{section*.2}
-\contentsline {chapter}{Daftar Tabel}{v}{section*.3}
+\contentsline {chapter}{Daftar Gambar}{v}{section*.2}
+\contentsline {chapter}{Daftar Tabel}{vi}{section*.3}
 \contentsline {chapter}{\numberline {1}Pendahuluan}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Latar Belakang}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Perumusan Masalah}{2}{section.1.2}
@@ -56,6 +56,9 @@
 \contentsline {subsubsection}{Pemodelan Fungsi pada Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{50}{subsubsection*.28}
 \contentsline {subsection}{\numberline {3.2.1}Diagram \textsl {Use Case} Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{50}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Diagram kelas Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{51}{subsection.3.2.2}
-\contentsline {chapter}{Daftar Referensi}{53}{chapter*.29}
+\contentsline {chapter}{\numberline {4}Perancangan Perangkat Lunak}{53}{chapter.4}
+\contentsline {section}{\numberline {4.1}Perancangan Perangkat Lunak}{53}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Perancangan Fungsi}{53}{subsection.4.1.1}
+\contentsline {chapter}{Daftar Referensi}{59}{chapter*.29}
 \renewcommand {\cftchappresnum }{\bf \scshape }
-\contentsline {chapter}{\numberline {A}100 data pertama dari \textsl {log} histori KIRI}{55}{appendix.A}
+\contentsline {chapter}{\numberline {A}100 data pertama dari \textsl {log} histori KIRI}{61}{appendix.A}

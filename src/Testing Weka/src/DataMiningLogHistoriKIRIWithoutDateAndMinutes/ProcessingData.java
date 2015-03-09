@@ -106,7 +106,14 @@ public class ProcessingData
             double jarakTujuan = haversine.calculateDistance(Double.parseDouble(splited2[0]), Double.parseDouble(splited2[1]), -6.92036, 107.67023) * 1000;
             // tahap kedelapan, set semua data ke array
             temp[4] = klasifikasiKelas(jarakKeberangkatan, jarakTujuan);
-            result.add(temp);
+            if(data.get(i)[4].split(",").length == 3)
+            {
+                result.add(temp);
+            }
+            else
+            {
+                System.out.println("ERROR: additional data tidak sesuai; " + data.get(i)[4]);
+            }
         }
         return result;
     }

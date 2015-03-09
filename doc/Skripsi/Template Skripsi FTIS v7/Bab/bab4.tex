@@ -3,3 +3,289 @@
 Bab ini berisi tentang penjelasan perancangan perangkat lunak untuk melakukan proses \textsl{data mining} sesuai analisa yang sudah dibahas pada bab 3.
 
 \section{Perancangan Perangkat Lunak}
+
+\subsection{Perancangan Fungsi}
+Agar perangkat lunak dapat menjalankan fungsi yang sudah dibahas pada pemodelan fungsi di bab 3, maka pada subbab ini akan dibahas rancangan fungsi yang akan dibuat.
+
+\begin{enumerate}
+	\item Fungsi Membaca CSV
+	
+	Nomor Fungsi: 1
+	
+	Nama Fungsi: readCSV
+	
+	Deskripsi: Digunakan untuk membaca file csv dengan masukan string berupa path file tersebut. Fungsi tersebut akan menghasilkan keluaran berupa ArrayList yang berisi string array dimana nilai array tersebut merupakan isi dari satu record dari file csv tersebut.
+	
+	Spesifikasi proses/algoritma:
+	\begin{table}[h]
+	\caption{Spesifikasi Proses Fungsi Membaca CSV}
+	\label{table:spesifikasiMembacaCSV}
+	\centering
+	\begin{tabular}{|l|}
+	\hline
+	\textbf{Initial State (IS): }ArrayList kosong.													 \\ \hline
+	\textbf{Final State (FS): }ArrayList terisi data dari file CSV. 				 \\ \hline
+	\textbf{Spesifikasi proses/algoritma:}																 \\
+	Membaca file csv perbaris, kemudian memecah string baris tersebut dengan \\
+	menggunakan fungsi split dari kelas string sehingga dapat diperoleh nilai \\
+	string per atribut. \\ \hline	
+	\end{tabular}
+	\end{table}
+	
+	
+	\item Fungsi Memilah Action Pada ArrayList
+	
+	Nomor Fungsi: 2
+	
+	Nama Fungsi: processSorting
+	
+	Deskripsi: Digunakan untuk memilah arraylist sehingga arraylist tersebut hanya berisi \textsl{action} yang diinginkan saja (pada penelitian ini, \textsl{action} yang diharapkan adalah FINDROUTE)
+	
+	Spesifikasi proses/algoritma:
+	\begin{table}[h]
+	\caption{Spesifikasi Proses Fungsi Memilih Action pada ArrayList}
+	\label{table:spesifikasiMemilihAction}
+	\centering
+	\begin{tabular}{|l|}
+	\hline
+	\textbf{Initial State (IS): }ArrayList berisi berbagai macam \textsl{action}.		 					\\ \hline
+	\textbf{Final State (FS): }ArrayList hanya berisi satu macam \textsl{action} sesuai input.	\\ \hline
+	\textbf{Spesifikasi proses/algoritma:}																 \\
+	Membaca dan melakukan pengecekan pada atribut \textsl{action} kemudian  									 \\
+	memasukan \textsl{record} tersebut jika \textsl{action} pada \textsl{record} tersebut sesuai\\
+	yang diminta. \\ \hline	
+	\end{tabular}
+	\end{table}
+	
+	
+	\item Fungsi \textsl{Preprocessing Data}
+	
+	Nomor Fungsi: 3
+	
+	Nama Fungsi: preprocessingData
+	
+	Deskripsi: Digunakan untuk melakukan tahap \textsl{preprocessing data} seperti yang sudah dijelaskan pada pemodelan data di bab 3. Tujuan dari fungsi ini adalah mendapatkan nilai waktu yang sudah diubah menjadi GMT+7 dan sudah dikelompokkan menjadi jam, hari, bulan, dan tahun serta mengetahui klasifikasi kelas dari record tersebut dengan menghitung jarak dari titik keberangkatan terhadap titik pusat Bandung dan titik tujuan terhadap titik pusat Bandung.
+	
+	Spesifikasi proses/algoritma:
+	\begin{table}[h]
+	\caption{Spesifikasi Proses Preprocessing Data}
+	\label{table:spesifikasiPreprocessingData}
+	\centering
+	\begin{tabular}{|l|}
+	\hline
+	\textbf{Initial State (IS): }ArrayList yang masih kosong.		 																			\\ \hline
+	\textbf{Final State (FS): }ArrayList terisi dengan tanggal dan klasifikasi kelas. 								\\ \hline
+	\textbf{Spesifikasi proses/algoritma:}																 \\
+	Membaca data arraylist yang sudah didapat dari fungsi kedua, kemudian untuk		\\
+	setiap \textsl{record} akan dilakukan penggubahan waktu dari UTC menjadi 			\\
+	GMT+7, mendapatkan nilai jam, hari, bulan dan tahun serta mendapatkan 				\\
+	klasifikasi kelas dari record tersebut.\\ \hline	
+	\end{tabular}
+	\end{table}
+	
+	
+	\item Fungsi Mengubah Waktu menjadi GMT+7
+	
+	Nomor Fungsi: 4
+	
+	Nama Fungsi: convertGMT7
+	
+	Deskripsi: Digunakan untuk mengubah waktu dari UTC menjadi GMT+7.
+	
+	Spesifikasi proses/algoritma:
+	\begin{table}[h]
+	\caption{Spesifikasi Proses Mengubah Waktu menjadi GMT+7}
+	\label{table:spesifikasiMengubahWaktuGMT7}
+	\centering
+	\begin{tabular}{|l|}
+	\hline
+	\textbf{Initial State (IS): }String untuk tanggal masih kosong.		 																			\\ \hline
+	\textbf{Final State (FS): }String untuk tanggal sudah terisi dalam GMT+7.								 								\\ \hline
+	\textbf{Spesifikasi proses/algoritma:}																 \\
+	Membaca String input kemudian nilai tersebut dijadikan masukkan untuk     \\
+	kelas SimpleDateFormat kemudian memanggil fungsi getTime() untuk 			    \\
+	mendapatkan waktu unix. Nilai unix tersebut digunakan untuk masukan kelas \\
+	date dan diubah nilai \textsl{timezone} menjadi GMT+7. Fungsi ini dapat   \\
+	berjalan jika waktu pada komputer diset UTC. \\ \hline
+	\end{tabular}
+	\end{table}
+	
+	
+	\item Fungsi Menghitung Jarak
+	
+	Nomor Fungsi: 5
+	
+	Nama Fungsi: calculateDistance
+	
+	Deskripsi: Digunakan untuk menghitung jarak dari dua titik.
+	
+	Spesifikasi proses/algoritma:
+	\begin{table}[h]
+	\caption{Spesifikasi Proses Menghitung Jarak}
+	\label{table:spesifikasiMenghitungJarak}
+	\centering
+	\begin{tabular}{|l|}
+	\hline
+	\textbf{Initial State (IS): }Nilai double yang masih kosong.		 																			\\ \hline
+	\textbf{Final State (FS): }Nilai double yang sudah terisi dengan jarak dari kedua titik.							\\ \hline
+	\textbf{Spesifikasi proses/algoritma:}																 \\
+	Menghitung kedua nilai titik dengan menggunakan rumus Haversine.\\ \hline
+	\end{tabular}
+	\end{table}
+	
+	
+	\item Fungsi Klasifikasi Kelas
+	
+	Nomor Fungsi: 6
+	
+	Nama Fungsi: klasifikasiKelas
+	
+	Deskripsi: Digunakan untuk menentukan kelas dari hasil jarak titik keberangkatan dengan titik pusat Bandung dan titik tujuan dengan titik pusat Bandung.
+	
+	Spesifikasi proses/algoritma:
+	\begin{table}[h]
+	\caption{Spesifikasi Proses Klasifikasi Kelas}
+	\label{table:spesifikasiKlasifikasiKelas}
+	\centering
+	\begin{tabular}{|l|}
+	\hline
+	\textbf{Initial State (IS): }Nilai int yang masih kosong.		 																			\\ \hline
+	\textbf{Final State (FS): }Nilai int yang sudah berisi hasil klasifikasi kelas.							\\ \hline
+	\textbf{Spesifikasi proses/algoritma:}																 \\
+	Membandingkan jarak dari titik keberangkatan dengan titik pusat Bandung dan \\
+	titik tujuan dengan titik pusat Bandung sehingga dapat diketahui apakah \textsl{record} \\
+	tersebut menuju Bandung, atau menjauhi Bandung, atau menuju daerah yang sama.\\ \hline
+	\end{tabular}
+	\end{table}
+	
+	
+	\item Fungsi Pembuataan \textsl{Decision Tree} menggunakan Id3
+	
+	Nomor Fungsi: 7
+	
+	Nama Fungsi: id3
+	
+	Deskripsi: Digunakan untuk membuat \textsl{Decision Tree} dengan method ID3.
+	
+	Spesifikasi proses/algoritma:
+	\begin{table}[h]
+	\caption{Spesifikasi Proses \textsl{Decision Tree} ID3}
+	\label{table:spesifikasiID3}
+	\centering
+	\begin{tabular}{|l|}
+	\hline
+	\textbf{Initial State (IS): }Tidak ada.		 																			\\ \hline
+	\textbf{Final State (FS): }String berupa hasil tree yang diperoleh.							\\ \hline
+	\textbf{Spesifikasi proses/algoritma:}																 \\
+	Memanggil method dari kelas weka untuk mengubah nilai atribut dari real menjadi \\
+	nominal dan membuat \textsl{Decision Tree} ID3. \\ \hline
+	\end{tabular}
+	\end{table}
+	
+	
+	\item Fungsi Pembuataan \textsl{Decision Tree} J48
+	
+	Nomor Fungsi: 8
+	
+	Nama Fungsi: j48
+	
+	Deskripsi: Digunakan untuk membuat \textsl{Decision Tree} dengan menggunakan method J48.
+	
+	Spesifikasi proses/algoritma:
+	\begin{table}[h]
+	\caption{Spesifikasi Proses \textsl{Decision Tree} ID3}
+	\label{table:spesifikasiJ48}
+	\centering
+	\begin{tabular}{|l|}
+	\hline
+	\textbf{Initial State (IS): }Tidak ada.		 																			\\ \hline
+	\textbf{Final State (FS): }String berupa hasil tree yang diperoleh.							\\ \hline
+	\textbf{Spesifikasi proses/algoritma:}																 \\
+	Memanggil method dari kelas weka untuk membuat \textsl{Decision Tree} J48. \\ \hline
+	\end{tabular}
+	\end{table}
+	
+	
+	\item Fungsi Menghitung \textsl{Confident}
+	
+	Nomor Fungsi: 9
+	
+	Nama Fungsi: calculateConfident
+	
+	Deskripsi: Digunakan untuk menghitung \textsl{confident} dari \textsl{decision tree} yang sudah dibuat.
+	
+	Spesifikasi proses/algoritma:
+	\begin{table}[h]
+	\caption{Spesifikasi Proses Menghitung \textsl{Confident}}
+	\label{table:spesifikasiConfident}
+	\centering
+	\begin{tabular}{|l|}
+	\hline
+	\textbf{Initial State (IS): }Nilai int yang diinsialisasi dengan nilai 0. 			\\ \hline
+	\textbf{Final State (FS): }Nilai int yang menunjukkan banyak nilai kelas yang sesuai. \\ \hline
+	\textbf{Spesifikasi proses/algoritma:}																 \\
+	Membandingkan hasil dari decision tree dengan masukan nilai waktu pada \textsl{record} \\
+	dengan nilai klasifikasi yang terdapat pada \textsl{record}. Jika benar, maka \\
+	nilai int akan ditambah 1.\\ \hline
+	\end{tabular}
+	\end{table}
+	
+	
+	\item Fungsi Mengubah String \textsl{Decision Tree} menjadi DOT
+	
+	Nomor Fungsi: 10
+	
+	Nama Fungsi: convert
+	
+	Deskripsi: Digunakan untuk mengubah nilai string yang sudah diperoleh dari kelas DecisionTree menjadi bahasa DOT untuk membuat visualisasi dengan menggunakan graphviz.
+	
+	Spesifikasi proses/algoritma:
+	\begin{table}[h]
+	\caption{Spesifikasi Proses Mengubah String \textsl{Decision Tree} menjadi DOT}
+	\label{table:spesifikasiDOT}
+	\centering
+	\begin{tabular}{|l|}
+	\hline
+	\textbf{Initial State (IS): }Nilai String yang kosong. 			\\ \hline
+	\textbf{Final State (FS): }Nilai String yang sudah berisi bahasa DOT. \\ \hline
+	\textbf{Spesifikasi proses/algoritma:}																 \\
+	Memanfaatkan fungsi split dari kelas String dan fungsi if untuk mengubah \\
+	nilai string dari kelas DecisionTree menjadi bahasa DOT.\\ \hline
+	\end{tabular}
+	\end{table}
+	
+	
+	
+	\item Fungsi Memanggil Fungsi DOT dari Graphviz
+	
+	Nomor Fungsi: 11
+	
+	Nama Fungsi: makeJpgUsingDotCommand
+	
+	Deskripsi: Digunakan untuk memanggil fungsi yang disediakan oleh graphviz untuk mengubah DOT menjadi gambar dengan format JPG.
+	
+	Spesifikasi proses/algoritma:
+	\begin{table}[h]
+	\caption{Spesifikasi Proses Memanggil Fungsi DOT dari Graphviz}
+	\label{table:spesifikasiFungsiDOT}
+	\centering
+	\begin{tabular}{|l|}
+	\hline
+	\textbf{Initial State (IS): }Tidak ada. 			\\ \hline
+	\textbf{Final State (FS): }Gambar berupa visualisasi grafik \textsl{decision tree}. \\ \hline
+	\textbf{Spesifikasi proses/algoritma:}																 \\
+	Memanggil command prompt dan menjalankan fungsi graphviz untuk \\
+	mengubah data DOT menjadi gambar grafik dengan format JPG.\\ \hline
+	\end{tabular}
+	\end{table}
+\end{enumerate}
+
+%Menjelaskan bahwa setelah dicoba, dibutuhkan kelas ArffIO untuk menulis file Arff dan membaca file tersebut sehingga lebih mudah dalam menggunakan weka api dan dapat melakukan testing pada aplikasi weka langsung dengan menggunakan file tersebut.
+
+%Menjelaskan bahwa setelah dicoba, dibutuhkan kelas struktur data untuk convert data dan extract data.
+
+%Munculin gambar full untuk kelas diagram
+
+%Munculin sequence diagram
+
+%Munculin GUI / desain antar muka
