@@ -259,9 +259,12 @@ Pembuatan diagram \textsl{class} untuk memenuhi semua tujuan dari diagram \texts
 
 Berikut deskripsi kelas diagram \textsl{class}:
 \begin{itemize}
-	\item \textsl{DecisionTree}, merupakan kelas utama yang akan menjalankan algoritma pembuatan pohon
-	\item \textsl{MethodDecisionTree}, merupakan kelas yang menjalankan algoritma pemilihan atribut untuk pembuatan pohon (pada penelitian ini, algoritma yang dapat dipilih adalah ID3 dan C4.5)
-	\item \textsl{Node}, merupakan kelas yang digunakan sebagai struktur data untuk \textsl{decision tree}
+	\item View, merupakan kelas untuk mengatur desain antar muka.
+	\item Controller, merupakan kelas untuk mengatur view dan modul ketika program dijalankan.
+	\item CSVReader, merupakan kelas yang memiliki method untuk membaca file .CSV.
+	\item ProcessingData, merupakan kelas yang memiliki method untuk melakukan \textsl{preprocessing data}.
+	\item DecissionTree, merupakan kelas yang memiliki method untuk membuat \textsl{decision tree} dan menghitung \textsl{confident} dari pohon yang sudah dihasilkan.
+	\item DotConverter, merupakan kelas yang memiliki method untuk mengubah \textsl{string} yang merupakan hasil dari kelas DecissionTree (yaitu, \textsl{decision tree} dalam bentuk string) menjadi bahasa dot yang siap dijadikan masukan untuk graphviz.
 \end{itemize}
 	
 

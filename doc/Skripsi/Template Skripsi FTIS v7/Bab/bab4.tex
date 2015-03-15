@@ -4,288 +4,247 @@ Bab ini berisi tentang penjelasan perancangan perangkat lunak untuk melakukan pr
 
 \section{Perancangan Perangkat Lunak}
 
-\subsection{Perancangan Fungsi}
-Agar perangkat lunak dapat menjalankan fungsi yang sudah dibahas pada pemodelan fungsi di bab 3, maka pada subbab ini akan dibahas rancangan fungsi yang akan dibuat.
+\subsection{Perancangan Kelas dan \textsl{Method}}
+Agar perangkat lunak dapat menjalankan fungsi yang sudah dibahas pada pemodelan fungsi di bab 3, maka pada subbab ini akan dibahas rancangan kelas dan \textsl{method} yang akan dibuat.
 
 \begin{enumerate}
-	\item Fungsi Membaca CSV
-	
-	Nomor Fungsi: 1
-	
-	Nama Fungsi: readCSV
-	
-	Deskripsi: Digunakan untuk membaca file csv dengan masukan string berupa path file tersebut. Fungsi tersebut akan menghasilkan keluaran berupa ArrayList yang berisi string array dimana nilai array tersebut merupakan isi dari satu record dari file csv tersebut.
-	
-	Spesifikasi proses/algoritma:
-	\begin{table}[h]
-	\caption{Spesifikasi Proses Fungsi Membaca CSV}
-	\label{table:spesifikasiMembacaCSV}
-	\centering
-	\begin{tabular}{|l|}
-	\hline
-	\textbf{Initial State (IS): }ArrayList kosong.													 \\ \hline
-	\textbf{Final State (FS): }ArrayList terisi data dari file CSV. 				 \\ \hline
-	\textbf{Spesifikasi proses/algoritma:}																 \\
-	Membaca file csv perbaris, kemudian memecah string baris tersebut dengan \\
-	menggunakan fungsi split dari kelas string sehingga dapat diperoleh nilai \\
-	string per atribut. \\ \hline	
-	\end{tabular}
-	\end{table}
-	
-	
-	\item Fungsi Memilah Action Pada ArrayList
-	
-	Nomor Fungsi: 2
-	
-	Nama Fungsi: processSorting
-	
-	Deskripsi: Digunakan untuk memilah arraylist sehingga arraylist tersebut hanya berisi \textsl{action} yang diinginkan saja (pada penelitian ini, \textsl{action} yang diharapkan adalah FINDROUTE)
-	
-	Spesifikasi proses/algoritma:
-	\begin{table}[h]
-	\caption{Spesifikasi Proses Fungsi Memilih Action pada ArrayList}
-	\label{table:spesifikasiMemilihAction}
-	\centering
-	\begin{tabular}{|l|}
-	\hline
-	\textbf{Initial State (IS): }ArrayList berisi berbagai macam \textsl{action}.		 					\\ \hline
-	\textbf{Final State (FS): }ArrayList hanya berisi satu macam \textsl{action} sesuai input.	\\ \hline
-	\textbf{Spesifikasi proses/algoritma:}																 \\
-	Membaca dan melakukan pengecekan pada atribut \textsl{action} kemudian  									 \\
-	memasukan \textsl{record} tersebut jika \textsl{action} pada \textsl{record} tersebut sesuai\\
-	yang diminta. \\ \hline	
-	\end{tabular}
-	\end{table}
-	
-	
-	\item Fungsi \textsl{Preprocessing Data}
-	
-	Nomor Fungsi: 3
-	
-	Nama Fungsi: preprocessingData
-	
-	Deskripsi: Digunakan untuk melakukan tahap \textsl{preprocessing data} seperti yang sudah dijelaskan pada pemodelan data di bab 3. Tujuan dari fungsi ini adalah mendapatkan nilai waktu yang sudah diubah menjadi GMT+7 dan sudah dikelompokkan menjadi jam, hari, bulan, dan tahun serta mengetahui klasifikasi kelas dari record tersebut dengan menghitung jarak dari titik keberangkatan terhadap titik pusat Bandung dan titik tujuan terhadap titik pusat Bandung.
-	
-	Spesifikasi proses/algoritma:
-	\begin{table}[h]
-	\caption{Spesifikasi Proses Preprocessing Data}
-	\label{table:spesifikasiPreprocessingData}
-	\centering
-	\begin{tabular}{|l|}
-	\hline
-	\textbf{Initial State (IS): }ArrayList yang masih kosong.		 																			\\ \hline
-	\textbf{Final State (FS): }ArrayList terisi dengan tanggal dan klasifikasi kelas. 								\\ \hline
-	\textbf{Spesifikasi proses/algoritma:}																 \\
-	Membaca data arraylist yang sudah didapat dari fungsi kedua, kemudian untuk		\\
-	setiap \textsl{record} akan dilakukan penggubahan waktu dari UTC menjadi 			\\
-	GMT+7, mendapatkan nilai jam, hari, bulan dan tahun serta mendapatkan 				\\
-	klasifikasi kelas dari record tersebut.\\ \hline	
-	\end{tabular}
-	\end{table}
-	
-	
-	\item Fungsi Mengubah Waktu menjadi GMT+7
-	
-	Nomor Fungsi: 4
-	
-	Nama Fungsi: convertGMT7
-	
-	Deskripsi: Digunakan untuk mengubah waktu dari UTC menjadi GMT+7.
-	
-	Spesifikasi proses/algoritma:
-	\begin{table}[h]
-	\caption{Spesifikasi Proses Mengubah Waktu menjadi GMT+7}
-	\label{table:spesifikasiMengubahWaktuGMT7}
-	\centering
-	\begin{tabular}{|l|}
-	\hline
-	\textbf{Initial State (IS): }String untuk tanggal masih kosong.		 																			\\ \hline
-	\textbf{Final State (FS): }String untuk tanggal sudah terisi dalam GMT+7.								 								\\ \hline
-	\textbf{Spesifikasi proses/algoritma:}																 \\
-	Membaca String input kemudian nilai tersebut dijadikan masukkan untuk     \\
-	kelas SimpleDateFormat kemudian memanggil fungsi getTime() untuk 			    \\
-	mendapatkan waktu unix. Nilai unix tersebut digunakan untuk masukan kelas \\
-	date dan diubah nilai \textsl{timezone} menjadi GMT+7. Fungsi ini dapat   \\
-	berjalan jika waktu pada komputer diset UTC. \\ \hline
-	\end{tabular}
-	\end{table}
-	
-	
-	\item Fungsi Menghitung Jarak
-	
-	Nomor Fungsi: 5
-	
-	Nama Fungsi: calculateDistance
-	
-	Deskripsi: Digunakan untuk menghitung jarak dari dua titik.
-	
-	Spesifikasi proses/algoritma:
-	\begin{table}[h]
-	\caption{Spesifikasi Proses Menghitung Jarak}
-	\label{table:spesifikasiMenghitungJarak}
-	\centering
-	\begin{tabular}{|l|}
-	\hline
-	\textbf{Initial State (IS): }Nilai double yang masih kosong.		 																			\\ \hline
-	\textbf{Final State (FS): }Nilai double yang sudah terisi dengan jarak dari kedua titik.							\\ \hline
-	\textbf{Spesifikasi proses/algoritma:}																 \\
-	Menghitung kedua nilai titik dengan menggunakan rumus Haversine.\\ \hline
-	\end{tabular}
-	\end{table}
-	
-	
-	\item Fungsi Klasifikasi Kelas
-	
-	Nomor Fungsi: 6
-	
-	Nama Fungsi: klasifikasiKelas
-	
-	Deskripsi: Digunakan untuk menentukan kelas dari hasil jarak titik keberangkatan dengan titik pusat Bandung dan titik tujuan dengan titik pusat Bandung.
-	
-	Spesifikasi proses/algoritma:
-	\begin{table}[h]
-	\caption{Spesifikasi Proses Klasifikasi Kelas}
-	\label{table:spesifikasiKlasifikasiKelas}
-	\centering
-	\begin{tabular}{|l|}
-	\hline
-	\textbf{Initial State (IS): }Nilai int yang masih kosong.		 																			\\ \hline
-	\textbf{Final State (FS): }Nilai int yang sudah berisi hasil klasifikasi kelas.							\\ \hline
-	\textbf{Spesifikasi proses/algoritma:}																 \\
-	Membandingkan jarak dari titik keberangkatan dengan titik pusat Bandung dan \\
-	titik tujuan dengan titik pusat Bandung sehingga dapat diketahui apakah \textsl{record} \\
-	tersebut menuju Bandung, atau menjauhi Bandung, atau menuju daerah yang sama.\\ \hline
-	\end{tabular}
-	\end{table}
-	
-	
-	\item Fungsi Pembuataan \textsl{Decision Tree} menggunakan Id3
-	
-	Nomor Fungsi: 7
-	
-	Nama Fungsi: id3
-	
-	Deskripsi: Digunakan untuk membuat \textsl{Decision Tree} dengan method ID3.
-	
-	Spesifikasi proses/algoritma:
-	\begin{table}[h]
-	\caption{Spesifikasi Proses \textsl{Decision Tree} ID3}
-	\label{table:spesifikasiID3}
-	\centering
-	\begin{tabular}{|l|}
-	\hline
-	\textbf{Initial State (IS): }Tidak ada.		 																			\\ \hline
-	\textbf{Final State (FS): }String berupa hasil tree yang diperoleh.							\\ \hline
-	\textbf{Spesifikasi proses/algoritma:}																 \\
-	Memanggil method dari kelas weka untuk mengubah nilai atribut dari real menjadi \\
-	nominal dan membuat \textsl{Decision Tree} ID3. \\ \hline
-	\end{tabular}
-	\end{table}
-	
-	
-	\item Fungsi Pembuataan \textsl{Decision Tree} J48
-	
-	Nomor Fungsi: 8
-	
-	Nama Fungsi: j48
-	
-	Deskripsi: Digunakan untuk membuat \textsl{Decision Tree} dengan menggunakan method J48.
-	
-	Spesifikasi proses/algoritma:
-	\begin{table}[h]
-	\caption{Spesifikasi Proses \textsl{Decision Tree} ID3}
-	\label{table:spesifikasiJ48}
-	\centering
-	\begin{tabular}{|l|}
-	\hline
-	\textbf{Initial State (IS): }Tidak ada.		 																			\\ \hline
-	\textbf{Final State (FS): }String berupa hasil tree yang diperoleh.							\\ \hline
-	\textbf{Spesifikasi proses/algoritma:}																 \\
-	Memanggil method dari kelas weka untuk membuat \textsl{Decision Tree} J48. \\ \hline
-	\end{tabular}
-	\end{table}
-	
-	
-	\item Fungsi Menghitung \textsl{Confident}
-	
-	Nomor Fungsi: 9
-	
-	Nama Fungsi: calculateConfident
-	
-	Deskripsi: Digunakan untuk menghitung \textsl{confident} dari \textsl{decision tree} yang sudah dibuat.
-	
-	Spesifikasi proses/algoritma:
-	\begin{table}[h]
-	\caption{Spesifikasi Proses Menghitung \textsl{Confident}}
-	\label{table:spesifikasiConfident}
-	\centering
-	\begin{tabular}{|l|}
-	\hline
-	\textbf{Initial State (IS): }Nilai int yang diinsialisasi dengan nilai 0. 			\\ \hline
-	\textbf{Final State (FS): }Nilai int yang menunjukkan banyak nilai kelas yang sesuai. \\ \hline
-	\textbf{Spesifikasi proses/algoritma:}																 \\
-	Membandingkan hasil dari decision tree dengan masukan nilai waktu pada \textsl{record} \\
-	dengan nilai klasifikasi yang terdapat pada \textsl{record}. Jika benar, maka \\
-	nilai int akan ditambah 1.\\ \hline
-	\end{tabular}
-	\end{table}
-	
-	
-	\item Fungsi Mengubah String \textsl{Decision Tree} menjadi DOT
-	
-	Nomor Fungsi: 10
-	
-	Nama Fungsi: convert
-	
-	Deskripsi: Digunakan untuk mengubah nilai string yang sudah diperoleh dari kelas DecisionTree menjadi bahasa DOT untuk membuat visualisasi dengan menggunakan graphviz.
-	
-	Spesifikasi proses/algoritma:
-	\begin{table}[h]
-	\caption{Spesifikasi Proses Mengubah String \textsl{Decision Tree} menjadi DOT}
-	\label{table:spesifikasiDOT}
-	\centering
-	\begin{tabular}{|l|}
-	\hline
-	\textbf{Initial State (IS): }Nilai String yang kosong. 			\\ \hline
-	\textbf{Final State (FS): }Nilai String yang sudah berisi bahasa DOT. \\ \hline
-	\textbf{Spesifikasi proses/algoritma:}																 \\
-	Memanfaatkan fungsi split dari kelas String dan fungsi if untuk mengubah \\
-	nilai string dari kelas DecisionTree menjadi bahasa DOT.\\ \hline
-	\end{tabular}
-	\end{table}
-	
-	
-	
-	\item Fungsi Memanggil Fungsi DOT dari Graphviz
-	
-	Nomor Fungsi: 11
-	
-	Nama Fungsi: makeJpgUsingDotCommand
-	
-	Deskripsi: Digunakan untuk memanggil fungsi yang disediakan oleh graphviz untuk mengubah DOT menjadi gambar dengan format JPG.
-	
-	Spesifikasi proses/algoritma:
-	\begin{table}[h]
-	\caption{Spesifikasi Proses Memanggil Fungsi DOT dari Graphviz}
-	\label{table:spesifikasiFungsiDOT}
-	\centering
-	\begin{tabular}{|l|}
-	\hline
-	\textbf{Initial State (IS): }Tidak ada. 			\\ \hline
-	\textbf{Final State (FS): }Gambar berupa visualisasi grafik \textsl{decision tree}. \\ \hline
-	\textbf{Spesifikasi proses/algoritma:}																 \\
-	Memanggil command prompt dan menjalankan fungsi graphviz untuk \\
-	mengubah data DOT menjadi gambar grafik dengan format JPG.\\ \hline
-	\end{tabular}
-	\end{table}
+	\item Kelas Controller
+	\begin{itemize}
+		\item Method
+		\begin{enumerate}
+			\item public controller(), merupakan \textsl{constructor} dari kelas controller.
+			\item public void startMining(String inputFilePath, String miningAlgo, JLabel label, JTextArea textArea), merupakan method untuk menjalankan modul-modul yang melakukan \textsl{data mining} dan membuat \textsl{decision tree} dari data yang menjadi masukan program.
+			\item public static void main(String[] args), merupakan method main untuk menjalankan program.		
+		\end{enumerate}	
+	\end{itemize}
+	
+	
+	\item Kelas View
+	\begin{itemize}
+		\item Atribut
+		\begin{enumerate}
+			\item ButtonGroup buttonGroup, digunakan untuk mengelompokkan jRadioButton.
+			\item JButton buttonStart, merupakan sebuah tombol yang dapat memanggil method buttonStartActionPerformed() bila diklik.
+			\item JButton buttonBrowse, merupakan sebuah tombol yang dapat memanggil method buttonBrowseActionPerformed() bila diklik.
+			\item JLabel judul, merupakan sebuah label yang berisi judul dari aplikasi ini.
+			\item JLabel labelFileData, merupakan label untuk menunjukkan bagian pemilihan file data \textsl{path}.
+			\item JLabel labelPemilihanMethod, merupakan label untuk menunjukkan bagian pemilihan method.
+			\item JLabel labelHasil, merupakan label untuk menunjukkan bagian hasil program.
+			\item JLabel labelKeterangan, merupakan label untuk menunjukkan keterangan dari program.
+			\item JRadioButton radioButtonId3, merupakan \textsl{radio button} yang menunjukkan bahwa user memilih method ID3 atau tidak.
+			\item JRadiioButton radioButtonJ48, merupakan \textsl{radio button} yang menunjukkan bahwa user memilih method J48 atau tidak.
+			\item JScrollPanel scrollPanel, merupakan variabel yang digunakan untuk mengaktifkan fungsi scroll pada JTextArea hasil.
+			\item JTextArea hasil, merupakan sebuah JTextArea yang digunakan untuk menunjukkan hasil \textsl{data mining} dari program.
+			\item JTextField textFieldFilePath, digunakan untuk melakukan \textsl{input path file }baik dilakukan secara manual atau melalui tombol \textsl{browse}.
+			\item Controller cont, digunakan untuk memanggil \textsl{method} startMining ketika tombol buttonStart diklik.
+		\end{enumerate}
+		\item Method
+		\begin{enumerate}
+			\item public void buttonBrowseActionPerformed(java.awt.event.ActionEvent evt), digunakan untuk membuat jFileChooser yang berfungsi untuk memilih file dan mendapatkan \textsl{file path} dari file yang dipilih dan memasukkan \textsl{string }tersebut ke textFieldFilePath.
+			\item public void buttonStartActionPerformed(java.awt.event.ActionEvent evt), digunakan untuk mengambil String dari textFieldFilePath serta method yang dipilih pada jRadioButton (Id3 atau J48) kemudian memanggil method startMining dengan masukan kedua file tersebut, label dan textArea.
+		\end{enumerate}
+	\end{itemize}
+
+	\item Kelas CSVReader
+	\begin{itemize}
+		\item Atribut
+		\begin{enumerate}
+			\item ArrayList<String[]> data, digunakan untuk menyimpan isi dari file CSV yang sudah dibaca.
+			\item int banyakAtribut, digunakan untuk menyimpan banyak atribut yang akan dibaca oleh CSV.
+		\end{enumerate}
+		\item Method
+		\begin{enumerate}
+			\item public CSVReader(), merupakan \textsl{constructor} dari kelas CSVReader.
+			\item public void setEmpty, merupakan method untuk menghapus isi variabel data.
+			\item public ArrayList readCSV(String file), digunakan untuk membaca file CSV.
+			\item public ArrayList getData(), digunakan untuk mendapatkan variabel data.
+			\item public void setData(ArrayList data), digunakan untuk mengganti nilai variabel data sesuai dengan parameter.
+			\item public int getBanyakAtribut(), digunakan untuk mendapatkan nilai variabel banyakAtribut.
+			\item public void setBanyakAtribut(int banyakAtribut), digunakan untuk menggati nilai variabel banyakAtribut sesuai dengan parameter.
+		\end{enumerate}
+	\end{itemize}
+
+	\item Kelas ProcessingData
+	\begin{itemize}
+		\item Method
+		\begin{enumerate}
+			\item public ProcessingData(), merupakan \textsl{constructor} dari kelas ProcessingData.
+			\item public void processSorting(ArrayList array, ArrayList data, String action), digunakan untuk memilah arraylist sehingga arraylist tersebut hanya berisi \textsl{action} yang diinginkan saja (pada penelitian ini, \textsl{action} yang diharapkan adalah FINDROUTE). Hasil pilah akan disimpan pada varibel array dari parameter method sehingga tidak diperlukan return value.
+			\item public ArrayList preprocessingData(ArrayList<String[]> data), Digunakan untuk melakukan tahap \textsl{preprocessing data} seperti yang sudah dijelaskan pada pemodelan data di bab 3. Tujuan dari fungsi ini adalah mendapatkan nilai waktu yang sudah diubah menjadi GMT+7 dan sudah dikelompokkan menjadi jam, hari, bulan, dan tahun serta mengetahui klasifikasi kelas dari untuk setiap \textsl{record} dengan menghitung jarak dari titik keberangkatan terhadap titik pusat Bandung dan titik tujuan terhadap titik pusat Bandung.
+			\item public int KlasifikasiKelas(double jarakKeberangkatan, double jarakTujuan), Digunakan untuk menentukan kelas dari hasil jarak titik keberangkatan dengan titik pusat Bandung dan titik tujuan dengan titik pusat Bandung. 
+		\end{enumerate}
+	\end{itemize}
+
+	\item Kelas DecisionTree
+	\begin{itemize}
+		\item Atribut
+		\begin{enumerate}
+			\item Classifier tree, digunakan untuk menyimpan \textsl{decision tree} yang sudah dihasilkan.
+		\end{enumerate}
+		\item Method
+		\begin{enumerate}
+			\item public DecisionTree(), merupakan \textsl{constructor} untuk kelas DecisionTree.
+			\item public double calculateConfident(Instances data), digunakan untuk mendapatkan nilai confident dari \textsl{decision tree} yang dihasilkan.
+			\item public String id3(Instances data), digunakan untuk membuat \textsl{decision tree} dengan menggunakan metode ID3 dari API Weka.
+			\item public String j48(Instances data), digunakan untuk membuat \textsl{decision tree} dengan menggunakan metode J48 dari API Weka.
+		\end{enumerate}
+	\end{itemize}
+
+	\item Kelas Dot Converter
+	\begin{itemize}
+		\item Method
+		\begin{enumerate}
+			\item public String convert(String data, String miningAlgo, String nodeName), Digunakan untuk mengubah nilai string yang sudah diperoleh dari kelas DecisionTree menjadi bahasa DOT untuk membuat visualisasi dengan menggunakan graphviz.
+		\end{enumerate}
+	\end{itemize}
+\end{enumerate}
+	
+	Pada kelas ProcessingData, nilai data waktu perlu diganti menjadi GMT+7 dan perlu menghitung jarak antar dua titik. Maka dari itu, akan dibuat dua kelas tambahan untuk melakukan kedua hal tersebut, yaitu TimezoneConverter dan DistanceHaversine.
+	
+\begin{enumerate}
+	\item Kelas TimezoneConverter
+	\begin{itemize}
+		\item Method
+		\begin{enumerate}
+			\item public static String convertToGMT7(String date), digunakan untuk mengubah waktu dari UTC menjadi GMT+7.
+		\end{enumerate}
+	\end{itemize}
+
+	\item Kelas DistanceHaversine
+	\begin{itemize}
+		\item Atribut
+		\begin{enumerate}
+			\item double r, digunakan untuk menyimpan nilai radius dari bumi.
+		\end{enumerate}
+		\item Method
+		\begin{enumerate}
+			\item public double calculateDistance(double latitude1, double longitude1, double latitude2, double longitude2), Digunakan untuk menghitung jarak dari dua titik (latitude dan longitude).
+		\end{enumerate}
+	\end{itemize}
 \end{enumerate}
 
-%Menjelaskan bahwa setelah dicoba, dibutuhkan kelas ArffIO untuk menulis file Arff dan membaca file tersebut sehingga lebih mudah dalam menggunakan weka api dan dapat melakukan testing pada aplikasi weka langsung dengan menggunakan file tersebut.
+	Setelah melakukan penelitian tentang API Weka, diperoleh bahwa input untuk membuat \textsl{decision tree} merupakan kelas Instances dari API Weka. Selain itu, diperlukan juga pengecekkan untuk hasil dari kelas tersebut, apakah sudah sesuai dengan aplikasi Weka atau belum (karena menggunakan API Weka, seharusnya \textsl{decision tree} yang dihasilkan sama). Oleh karena itu, akan ditambahkan kelas ArffIO yang berfungsi untuk menulis dan membaca data dengan format arff, sehingga ketika program melakukan \textsl{data mining}, program akan menghasilkan file dengan format .arff yang dapat dibaca oleh aplikasi Weka untuk melakukan pengetesan. Karena kita sudah memiliki file .arff tersebut, ada baiknya jika menggunakan fungsi membaca arff dari API Weka yang menghasilkan \textsl{return value} berupa kelas Instances yang dapat digunakan untuk membuat \textsl{decision tree}.
 
-%Menjelaskan bahwa setelah dicoba, dibutuhkan kelas struktur data untuk convert data dan extract data.
+\begin{enumerate}
+	\item Kelas ArffIO
+	\begin{itemize}
+		\item Method
+		\begin{enumerate}
+			\item public ArffIO, merupakan \textsl{constructor} dari kelas ArffIO.
+			\item public void writeArffIO(String name, ArrayList<int[]> data), digunakan untuk menulis file .arff sesuai data pada parameter.
+			\item public Instances arffRead(String name), digunakan untuk membaca file .arff dengan menggunakan \textsl{method} dari API Weka.
+		\end{enumerate}
+	\end{itemize}
+\end{enumerate}
 
-%Munculin gambar full untuk kelas diagram
+Ketika mulai merancang \textsl{method} convert yang berada di kelas DotConverter, akan lebih mudah jika dirancang menjadi rekursif. Karena data yang diolah pada \textsl{method}
+tersebut cukup banyak dan diperlukan nama yang berbeda pada setiap node yang akan ditulis pada DOT, maka perlu ditambah kelas yang berfungsi untuk struktur data pada kelas tersebut, yaitu SDForConvertTree.
 
-%Munculin sequence diagram
+\begin{enumerate}
+	\item kelas SDForConvertTree
+	\begin{itemize}
+		\item Atribut
+		\begin{enumerate}
+			\item String[] data, digunakan untuk menyimpan nama-nama atribut yang akan diubah ke dalam bahasa DOT.
+			\item int[] count, digunakan untuk menghitung penggunaan nama setiap atribut sehingga dapat menghasilkan nama node yang berbeda untuk setiap atribut.
+		\end{enumerate}
+		\item Method
+		\begin{enumerate}
+			\item public SDForConvertTree(String[] data), merupakan \textsl{constructor} untuk kelas ini dan akan melakukan inisialisasi data pada atribut dengan nilai data pada parameter serta melakukan inisialisasi nilai variabel count dengan 0.
+			\item public void setData(String data, index int), digunakan untuk mengubah nilai data pada index tertentu.
+			\item public String[] getData(), digunakan untuk mendapatkan nilai atribut data.
+			\item public String getData(int index), digunakan untuk mendapatkan nilai data pada index tertentu.
+			\item public void setCount(int count, int index), digunakan untuk mengubah nilai count pada index tertentu.
+			\item public int getCount(int index), digunakan untuk mendapatkan nilai count pada index tertentu.
+			\item public boolean hasNext(), digunakan untuk mengecek apakah varibel data masih ada atau tidak.
+			\item public void buangArrayPertama(), digunakan untuk membuang nilai array yang pertama (index ke-0).
+			\item public String getDataNumber(String atribut), digunakan untuk mendapatkan angka pada nama atribut tertentu untuk membuat nama node pada kelas DotConverter agar semua nama node berbeda.
+		\end{enumerate}
+	\end{itemize}
+\end{enumerate}
 
-%Munculin GUI / desain antar muka
+Setelah melakukan \textsl{convert} dari \textsl{string} hasil dari \textsl{method} pembuatan \textsl{decision tree} dari API Weka ke bahasa Dot, maka diperlukan pemanggilan fungsi dot yang terdapat pada graphviz. Cara memanggilan fungsi tersebut yaitu dengan menggunakan \textsl{command prompt}. Maka dari itu, akan diperlukan kelas yang memiliki \textsl{method} untuk memanggil \textsl{command prompt} dan menjalankan fungsi dot tersebut, yaitu kelas CMD.
+
+
+\begin{enumerate}
+	\item kelas CMD
+	\begin{itemize}
+		\item Method
+		\begin{enumerate}
+			\item public static void makeJpgUsingDotCommand(), digunakan untuk memanggil \textsl{command prompt} dan menjalankan fungsi dot dan menghasil gambar visualisasi grafik sesuai dengan file yang menjadi masukan fungsi tersebut.
+		\end{enumerate}
+	\end{itemize}
+\end{enumerate}
+
+Karena cara yang untuk memanggil fungsi dot adalah \textsl{command prompt}, maka hasil dari \textsl{method} convert harus disimpan dalam bentuk file text agar dapat dibaca oleh \textsl{command prompt}.
+
+Dari perancangan kelas dan \textsl{method} yang sudah dilakukan, maka akan diperoleh diagram kelas seperti pada \ref{fig:classDiagram2}
+
+\begin{figure}[H]
+\includegraphics[scale=0.5, angle =90]{Gambar/classdiagram2.jpg}
+\caption[Diagram \textsl{Class} Perangkat Lunak \textsl{Data Mining Log} Histori KIRI]{Diagram \textsl{Class} Perangkat Lunak \textsl{Data Mining Log} Histori KIRI} 
+\label{fig:classDiagram2}
+\end{figure}
+
+\subsection{Sequence diagram}
+
+Pada subbab ini, akan dijelaskan alur program dengan menggunakan \textsl{sequence diagram} pada \ref{fig:sequenceDiagram}.
+
+Pertama, program akan menampilkan desain antar muka yang dihasilkan oleh kelas View. Kemudian user akan menulis \textsl{file path} atau memilih (dengan menggunakan tombol \textsl{browse}) \textsl{input} file pada JTextField serta memilih metode pembuatan \textsl{decision tree} (tahap  pertama). Setelah memilih file dan metode, user akan menekan tombol start, dan kelas View akan memanggil \textsl{method} startMining dari kelas controller (tahap 3-4).
+
+Kelas Controller akan mengakses file sesuai dengan masukan \textsl{file path} dengan memanggil \textsl{method} readCSV dari kelas CSVReader dan mendapat nilai kembalian berupa arraylist (tahap 5-6). Setelah mendapatkan data dari file CSV yang dipilih, data tersebut akan dipilah dan menggambil \textsl{record} dengan \textsl{action} FINDROUTE dengan cara memanggil \textsl{method} processSorting pada kelas ProcessingData dan mengembalikan ArrayList dengan data yang sudah dipilah (tahap 7-8). Kemudian data tersebut akan dilakukan \textsl{preprocessing data} dengan cara memanggil \textsl{method} preprocessingData dari kelas ProcessingData(tahap 9).
+
+Ketika \textsl{method} preprocessingData dijalankan, perlu mengubah nilai waktu dari UTC menjadi GMT+7 dengan cara memanggil \textsl{method} convertGMT7 dari kelas TimezoneConverter dan mengembalikan nilai bertipe Date (tahap 10-11). Setelah nilai waktu diubah, diperlukan perhitungan jarak antara dua titik dengan cara memanggil \textsl{method} calculateDistance  dari kelas DistanceHaversine dan mengebalikan nilai double yang berisi jarak dari kedua titik(tahap 12-13). Kemudian diperlukan klasifikasi kelas dari jarak yang sudah dihasilkan dengan cara memanggil \textsl{method} klasifikasiKelas dari kelas ProcessingData (tahap 14-15). Kemudian semua data yang sudah diproses akan dikembalikan dalam bentuk ArrayList(tahap 16).
+
+Setelah didapat data yang sudah dilakukan \textsl{preprocessing data}, data tersebut akan disimpan dengan format arff dengan cara memanggi \textsl{method} writeArff pada kelas ArffIO(tahap 17). Setelah disimpan, diperlukan mengambil data dari file arff yang sudah disimpan untuk mendapatkan data dengan tipe Instance dengan cara memanggil \textsl{method}readArff(tahap 18-19).
+
+Kemudian program akan membuat \textsl{decision tree} dengan cara memanggil \textsl{method} id3 atau j48 pada kelas DecisionTree dan mengembalikan \textsl{decision tree} dalam bentuk \textsl{String}(tahap 20-21). Setelah \textsl{decision tree} dibuat, perlu dicari nilai \textsl{confident} yang diperoleh dari \textsl{decision tree} tersebut dengan cara memanggil \textsl{method} calculateConfident dan nilai \textsl{confident} yang dihasilkan dikembalikan dalam bentuk double(tahap 22-23).
+
+Tahap selanjutnya adalah mengubah nilai String yang diperoleh dari \textsl{method} id3 atau j48 menjadi bahasa DOT dengan cara memanggil \textsl{method} convert pada kelas DotConverter dan akan mengembalikan nilai String(tahap 24-25). Setelah diperoleh hasil dari \textsl{method} convert, maka diperlukan \textsl{command prompt} untuk menghasilkan gambar grafik untuk melakukan visualisasi \textsl{decision tree} yang sudah dihasilkan(tahap 26-27).
+
+Setelah gambar \textsl{decision tree} dihasilkan, maka \textsl{method} startMining akan membuat JFrame yang baru untuk memperlihatkan hasil gambar \textsl{decision tree} yang sudah diperoleh serta mengembalikan nilai String \textsl{decision tree} kepada kelas View yang akan ditampilkan di JTextArea(tahap 28-29).
+
+
+\begin{figure}[H]
+\includegraphics[scale=0.35, angle =90]{Gambar/sequenceDiagram.jpg}
+\caption[Diagram \textsl{Class} Perangkat Lunak \textsl{Data Mining Log} Histori KIRI]{Diagram \textsl{Class} Perangkat Lunak \textsl{Data Mining Log} Histori KIRI} 
+\label{fig:sequenceDiagram}
+\end{figure}
+
+\subsection{Perancangan Desain Antar Muka}
+
+Pada subbab ini, akan diperlihatkan rancangan desain antar muka yang akan digunakan untuk program ini.
+
+Ketika program mulai dijalankan, maka akan seperti \ref{fig:GUI1}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Gambar/GUI1.jpg}
+\caption[Tampilan Program Mulai Dijalankan]{Tampilan Program Mulai Dijalankan} 
+\label{fig:GUI1}
+\end{figure}
+
+Ketika user memilih file, maka akan seperti \ref{fig:GUI2}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Gambar/GUI2.jpg}
+\caption[Tampilan User Memilih File]{Tampilan User Memilih File} 
+\label{fig:GUI2}
+\end{figure}
+
+\newpage
+
+Ketika user memilih metode pembuatan \textsl{decision tree}, maka akan seperti \ref{fig:GUI3and4}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Gambar/GUI3and4.jpg}
+\caption[Tampilan User Memilih Metode Pembuatan \textsl{Decision Tree}]{Tampilan User Memilih Metode Pembuatan \textsl{Decision Tree}, gambar kiri memilih metode id3 sedangkan gambar kanan memilih metode j48} 
+\label{fig:GUI3and4}
+\end{figure}
+
+Ketika \textsl{decision tree} selesai dibuat, maka akan seperti \ref{fig:GUI5}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{Gambar/GUI5.jpg}
+\caption[Tampilan \textsl{Decision Tree}Selesai Dibuat]{\textsl{Decision Tree} selesai dibuat} 
+\label{fig:GUI5}
+\end{figure}
