@@ -4,25 +4,25 @@ Bab ini berisi tentang penjelasan perancangan perangkat lunak untuk melakukan pr
 
 \section{Perancangan Perangkat Lunak}
 
-\subsection{Perancangan Kelas dan \textsl{Method}}
+\subsection{Perancangan Kelas}
 Agar perangkat lunak dapat menjalankan fungsi yang sudah dibahas pada pemodelan fungsi di bab 3, maka pada subbab ini akan dibahas rancangan kelas dan \textsl{method} yang akan dibuat.
 
-\begin{enumerate}
-	\item Kelas Controller
+\begin{itemize}
+	\item Kelas Controller, merupakan kelas untuk mengatur view dan modul ketika program dijalankan.
 	\begin{itemize}
 		\item Method
-		\begin{enumerate}
-			\item public controller(), merupakan \textsl{constructor} dari kelas controller.
+		\begin{itemize}
+			\item public controller(), merupakan konstruktor dari kelas controller.
 			\item public void startMining(String inputFilePath, String miningAlgo, JLabel label, JTextArea textArea), merupakan method untuk menjalankan modul-modul yang melakukan \textsl{data mining} dan membuat \textsl{decision tree} dari data yang menjadi masukan program.
 			\item public static void main(String[] args), merupakan method main untuk menjalankan program.		
-		\end{enumerate}	
+		\end{itemize}	
 	\end{itemize}
 	
 	
-	\item Kelas View
+	\item Kelas View, merupakan kelas untuk mengatur desain antar muka.
 	\begin{itemize}
 		\item Atribut
-		\begin{enumerate}
+		\begin{itemize}
 			\item ButtonGroup buttonGroup, digunakan untuk mengelompokkan jRadioButton.
 			\item JButton buttonStart, merupakan sebuah tombol yang dapat memanggil method buttonStartActionPerformed() bila diklik.
 			\item JButton buttonBrowse, merupakan sebuah tombol yang dapat memanggil method buttonBrowseActionPerformed() bila diklik.
@@ -37,120 +37,120 @@ Agar perangkat lunak dapat menjalankan fungsi yang sudah dibahas pada pemodelan 
 			\item JTextArea hasil, merupakan sebuah JTextArea yang digunakan untuk menunjukkan hasil \textsl{data mining} dari program.
 			\item JTextField textFieldFilePath, digunakan untuk melakukan \textsl{input path file }baik dilakukan secara manual atau melalui tombol \textsl{browse}.
 			\item Controller cont, digunakan untuk memanggil \textsl{method} startMining ketika tombol buttonStart diklik.
-		\end{enumerate}
+		\end{itemize}
 		\item Method
-		\begin{enumerate}
+		\begin{itemize}
 			\item public void buttonBrowseActionPerformed(java.awt.event.ActionEvent evt), digunakan untuk membuat jFileChooser yang berfungsi untuk memilih file dan mendapatkan \textsl{file path} dari file yang dipilih dan memasukkan \textsl{string }tersebut ke textFieldFilePath.
 			\item public void buttonStartActionPerformed(java.awt.event.ActionEvent evt), digunakan untuk mengambil String dari textFieldFilePath serta method yang dipilih pada jRadioButton (Id3 atau J48) kemudian memanggil method startMining dengan masukan kedua file tersebut, label dan textArea.
-		\end{enumerate}
+		\end{itemize}
 	\end{itemize}
 
-	\item Kelas CSVReader
+	\item Kelas CSVReader, merupakan kelas yang memiliki method untuk membaca file dengan format CSV.
 	\begin{itemize}
 		\item Atribut
-		\begin{enumerate}
+		\begin{itemize}
 			\item ArrayList<String[]> data, digunakan untuk menyimpan isi dari file CSV yang sudah dibaca.
 			\item int banyakAtribut, digunakan untuk menyimpan banyak atribut yang akan dibaca oleh CSV.
-		\end{enumerate}
+		\end{itemize}
 		\item Method
-		\begin{enumerate}
-			\item public CSVReader(), merupakan \textsl{constructor} dari kelas CSVReader.
+		\begin{itemize}
+			\item public CSVReader(), merupakan konstruktor dari kelas CSVReader.
 			\item public void setEmpty, merupakan method untuk menghapus isi variabel data.
 			\item public ArrayList readCSV(String file), digunakan untuk membaca file CSV.
 			\item public ArrayList getData(), digunakan untuk mendapatkan variabel data.
 			\item public void setData(ArrayList data), digunakan untuk mengganti nilai variabel data sesuai dengan parameter.
 			\item public int getBanyakAtribut(), digunakan untuk mendapatkan nilai variabel banyakAtribut.
 			\item public void setBanyakAtribut(int banyakAtribut), digunakan untuk menggati nilai variabel banyakAtribut sesuai dengan parameter.
-		\end{enumerate}
+		\end{itemize}
 	\end{itemize}
 
-	\item Kelas ProcessingData
+	\item Kelas ProcessingData, merupakan kelas yang memiliki method untuk melakukan \textsl{preprocessing data}.
 	\begin{itemize}
 		\item Method
-		\begin{enumerate}
-			\item public ProcessingData(), merupakan \textsl{constructor} dari kelas ProcessingData.
+		\begin{itemize}
+			\item public ProcessingData(), merupakan konstruktor dari kelas ProcessingData.
 			\item public void processSorting(ArrayList array, ArrayList data, String action), digunakan untuk memilah arraylist sehingga arraylist tersebut hanya berisi \textsl{action} yang diinginkan saja (pada penelitian ini, \textsl{action} yang diharapkan adalah FINDROUTE). Hasil pilah akan disimpan pada varibel array dari parameter method sehingga tidak diperlukan return value.
 			\item public ArrayList preprocessingData(ArrayList<String[]> data), Digunakan untuk melakukan tahap \textsl{preprocessing data} seperti yang sudah dijelaskan pada pemodelan data di bab 3. Tujuan dari fungsi ini adalah mendapatkan nilai waktu yang sudah diubah menjadi GMT+7 dan sudah dikelompokkan menjadi jam, hari, bulan, dan tahun serta mengetahui klasifikasi kelas dari untuk setiap \textsl{record} dengan menghitung jarak dari titik keberangkatan terhadap titik pusat Bandung dan titik tujuan terhadap titik pusat Bandung.
 			\item public int KlasifikasiKelas(double jarakKeberangkatan, double jarakTujuan), Digunakan untuk menentukan kelas dari hasil jarak titik keberangkatan dengan titik pusat Bandung dan titik tujuan dengan titik pusat Bandung. 
-		\end{enumerate}
+		\end{itemize}
 	\end{itemize}
 
-	\item Kelas DecisionTree
+	\item Kelas DecisionTree, merupakan kelas yang memiliki method untuk membuat \textsl{decision tree} dan menghitung \textsl{confident} dari pohon yang sudah dihasilkan.
 	\begin{itemize}
 		\item Atribut
-		\begin{enumerate}
+		\begin{itemize}
 			\item Classifier tree, digunakan untuk menyimpan \textsl{decision tree} yang sudah dihasilkan.
-		\end{enumerate}
+		\end{itemize}
 		\item Method
-		\begin{enumerate}
-			\item public DecisionTree(), merupakan \textsl{constructor} untuk kelas DecisionTree.
+		\begin{itemize}
+			\item public DecisionTree(), merupakan konstruktor untuk kelas DecisionTree.
 			\item public double calculateConfident(Instances data), digunakan untuk mendapatkan nilai confident dari \textsl{decision tree} yang dihasilkan.
 			\item public String id3(Instances data), digunakan untuk membuat \textsl{decision tree} dengan menggunakan metode ID3 dari API Weka.
 			\item public String j48(Instances data), digunakan untuk membuat \textsl{decision tree} dengan menggunakan metode J48 dari API Weka.
-		\end{enumerate}
+		\end{itemize}
 	\end{itemize}
 
-	\item Kelas Dot Converter
+	\item Kelas Dot Converter, merupakan kelas yang memiliki method untuk mengubah \textsl{string} yang merupakan hasil dari kelas DecissionTree (yaitu, \textsl{decision tree} dalam bentuk string) menjadi bahasa dot yang siap dijadikan masukan untuk graphviz.
 	\begin{itemize}
 		\item Method
-		\begin{enumerate}
+		\begin{itemize}
 			\item public String convert(String data, String miningAlgo, String nodeName), Digunakan untuk mengubah nilai string yang sudah diperoleh dari kelas DecisionTree menjadi bahasa DOT untuk membuat visualisasi dengan menggunakan graphviz.
-		\end{enumerate}
+		\end{itemize}
 	\end{itemize}
-\end{enumerate}
+\end{itemize}
 	
 	Pada kelas ProcessingData, nilai data waktu perlu diganti menjadi GMT+7 dan perlu menghitung jarak antar dua titik. Maka dari itu, akan dibuat dua kelas tambahan untuk melakukan kedua hal tersebut, yaitu TimezoneConverter dan DistanceHaversine.
 	
-\begin{enumerate}
-	\item Kelas TimezoneConverter
+\begin{itemize}
+	\item Kelas TimezoneConverter, merupakan kelas yang memiliki \textsl{method} untuk mengubah waktu dari UTC menjadi GMT+7
 	\begin{itemize}
 		\item Method
-		\begin{enumerate}
+		\begin{itemize}
 			\item public static String convertToGMT7(String date), digunakan untuk mengubah waktu dari UTC menjadi GMT+7.
-		\end{enumerate}
+		\end{itemize}
 	\end{itemize}
 
-	\item Kelas DistanceHaversine
+	\item Kelas DistanceHaversine, kelas yang memiliki \textsl{method} untuk menghitung jarak dua titik di bumi.
 	\begin{itemize}
 		\item Atribut
-		\begin{enumerate}
+		\begin{itemize}
 			\item double r, digunakan untuk menyimpan nilai radius dari bumi.
-		\end{enumerate}
+		\end{itemize}
 		\item Method
-		\begin{enumerate}
+		\begin{itemize}
 			\item public double calculateDistance(double latitude1, double longitude1, double latitude2, double longitude2), Digunakan untuk menghitung jarak dari dua titik (latitude dan longitude).
-		\end{enumerate}
+		\end{itemize}
 	\end{itemize}
-\end{enumerate}
+\end{itemize}
 
 	Setelah melakukan penelitian tentang API Weka, diperoleh bahwa input untuk membuat \textsl{decision tree} merupakan kelas Instances dari API Weka. Selain itu, diperlukan juga pengecekkan untuk hasil dari kelas tersebut, apakah sudah sesuai dengan aplikasi Weka atau belum (karena menggunakan API Weka, seharusnya \textsl{decision tree} yang dihasilkan sama). Oleh karena itu, akan ditambahkan kelas ArffIO yang berfungsi untuk menulis dan membaca data dengan format arff, sehingga ketika program melakukan \textsl{data mining}, program akan menghasilkan file dengan format .arff yang dapat dibaca oleh aplikasi Weka untuk melakukan pengetesan. Karena kita sudah memiliki file .arff tersebut, ada baiknya jika menggunakan fungsi membaca arff dari API Weka yang menghasilkan \textsl{return value} berupa kelas Instances yang dapat digunakan untuk membuat \textsl{decision tree}.
 
-\begin{enumerate}
-	\item Kelas ArffIO
+\begin{itemize}
+	\item Kelas ArffIO, merupakan kelas yang berfungsi untuk melakukan penyimpanan dan membaca data dengan format arff.
 	\begin{itemize}
 		\item Method
-		\begin{enumerate}
-			\item public ArffIO, merupakan \textsl{constructor} dari kelas ArffIO.
+		\begin{itemize}
+			\item public ArffIO, merupakan konstruktor dari kelas ArffIO.
 			\item public void writeArffIO(String name, ArrayList<int[]> data), digunakan untuk menulis file .arff sesuai data pada parameter.
 			\item public Instances arffRead(String name), digunakan untuk membaca file .arff dengan menggunakan \textsl{method} dari API Weka.
-		\end{enumerate}
+		\end{itemize}
 	\end{itemize}
-\end{enumerate}
+\end{itemize}
 
 Ketika mulai merancang \textsl{method} convert yang berada di kelas DotConverter, akan lebih mudah jika dirancang menjadi rekursif. Karena data yang diolah pada \textsl{method}
 tersebut cukup banyak dan diperlukan nama yang berbeda pada setiap node yang akan ditulis pada DOT, maka perlu ditambah kelas yang berfungsi untuk struktur data pada kelas tersebut, yaitu SDForConvertTree.
 
-\begin{enumerate}
-	\item kelas SDForConvertTree
+\begin{itemize}
+	\item kelas SDForConvertTree, kelas yang berfungsi untuk menyimpan data yang dibutuhkan untuk mengubah String hasil dari kelas DecisionTree menjadi bahasa DOT.
 	\begin{itemize}
 		\item Atribut
-		\begin{enumerate}
+		\begin{itemize}
 			\item String[] data, digunakan untuk menyimpan nama-nama atribut yang akan diubah ke dalam bahasa DOT.
 			\item int[] count, digunakan untuk menghitung penggunaan nama setiap atribut sehingga dapat menghasilkan nama node yang berbeda untuk setiap atribut.
-		\end{enumerate}
+		\end{itemize}
 		\item Method
-		\begin{enumerate}
-			\item public SDForConvertTree(String[] data), merupakan \textsl{constructor} untuk kelas ini dan akan melakukan inisialisasi data pada atribut dengan nilai data pada parameter serta melakukan inisialisasi nilai variabel count dengan 0.
+		\begin{itemize}
+			\item public SDForConvertTree(String[] data), merupakan konstruktor untuk kelas ini dan akan melakukan inisialisasi data pada atribut dengan nilai data pada parameter serta melakukan inisialisasi nilai variabel count dengan 0.
 			\item public void setData(String data, index int), digunakan untuk mengubah nilai data pada index tertentu.
 			\item public String[] getData(), digunakan untuk mendapatkan nilai atribut data.
 			\item public String getData(int index), digunakan untuk mendapatkan nilai data pada index tertentu.
@@ -159,22 +159,22 @@ tersebut cukup banyak dan diperlukan nama yang berbeda pada setiap node yang aka
 			\item public boolean hasNext(), digunakan untuk mengecek apakah varibel data masih ada atau tidak.
 			\item public void buangArrayPertama(), digunakan untuk membuang nilai array yang pertama (index ke-0).
 			\item public String getDataNumber(String atribut), digunakan untuk mendapatkan angka pada nama atribut tertentu untuk membuat nama node pada kelas DotConverter agar semua nama node berbeda.
-		\end{enumerate}
+		\end{itemize}
 	\end{itemize}
-\end{enumerate}
+\end{itemize}
 
 Setelah melakukan \textsl{convert} dari \textsl{string} hasil dari \textsl{method} pembuatan \textsl{decision tree} dari API Weka ke bahasa Dot, maka diperlukan pemanggilan fungsi dot yang terdapat pada graphviz. Cara memanggilan fungsi tersebut yaitu dengan menggunakan \textsl{command prompt}. Maka dari itu, akan diperlukan kelas yang memiliki \textsl{method} untuk memanggil \textsl{command prompt} dan menjalankan fungsi dot tersebut, yaitu kelas CMD.
 
 
-\begin{enumerate}
-	\item kelas CMD
+\begin{itemize}
+	\item kelas CMD, merupakan kelas yang digunakan untuk memanggil \textsl{command prompt}.
 	\begin{itemize}
 		\item Method
-		\begin{enumerate}
+		\begin{itemize}
 			\item public static void makeJpgUsingDotCommand(), digunakan untuk memanggil \textsl{command prompt} dan menjalankan fungsi dot dan menghasil gambar visualisasi grafik sesuai dengan file yang menjadi masukan fungsi tersebut.
-		\end{enumerate}
+		\end{itemize}
 	\end{itemize}
-\end{enumerate}
+\end{itemize}
 
 Karena cara yang untuk memanggil fungsi dot adalah \textsl{command prompt}, maka hasil dari \textsl{method} convert harus disimpan dalam bentuk file text agar dapat dibaca oleh \textsl{command prompt}.
 
@@ -186,7 +186,7 @@ Dari perancangan kelas dan \textsl{method} yang sudah dilakukan, maka akan diper
 \label{fig:classDiagram2}
 \end{figure}
 
-\subsection{Sequence diagram}
+\subsection{Sequence Diagram}
 
 Pada subbab ini, akan dijelaskan alur program dengan menggunakan \textsl{sequence diagram} pada \ref{fig:sequenceDiagram}.
 

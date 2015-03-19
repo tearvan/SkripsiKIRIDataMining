@@ -108,7 +108,7 @@ Contoh hasil data transformasi jika input merupakan data dari tabel \ref{table:c
 
 Agar dapat diperoleh \textsl{decision tree} mengenai lokasi keberangkatan dan tujuan dari user KIRI, maka atribut kelas yang akan digunakan adalah nilai latitude dan longitude dari lokasi keberangkatan dan tujuan. Karena atribut kelas ada empat, maka akan dilakukan penyederhanaan dari keempat atribut untuk meningkatkan akurasi serta tingkat efisien proses \textsl{data mining}. 
 
-Nilai \textsl{latitude} serta \textsl{longitude} dari data lokasi keberangkatan dan tujuan akan diubah menjadi nilai yang menunjukkan apakah daerah lokasi keberangkatan dan tujuan tersebut menunjukkan perjalanan keluar dari Bandung atau tidak. Hal ini dilakukan agar diperoleh data perbandingan pergerakan penduduk, apakah mereka lebih banyak yang keluar dari Bandung atau sebaliknya berdasarkan waktu tertentu. Untuk menentukan hal tersebut, maka akan dibutuhkan klasifikasi daerah agar mudah dilakukan penentuan apakan \textsl{user} akan berangkat ke Bandung atau tidak. \textsl{Classification} daerah yang ditentukan setelah melihat peta Bandung dapat dilihat pada gambar \ref{fig:classificationMap}.
+Nilai \textsl{latitude} serta \textsl{longitude} dari data lokasi keberangkatan dan tujuan akan diubah menjadi nilai yang menunjukkan apakah daerah lokasi keberangkatan dan tujuan tersebut menunjukkan perjalanan keluar dari Bandung, menuju Bandung, atau menuju daerah yang sama. Hal ini dilakukan agar diperoleh data perbandingan pergerakan penduduk, apakah mereka lebih banyak yang keluar dari Bandung atau sebaliknya atau bahkan menuju daerah yang sama berdasarkan waktu tertentu. Untuk menentukan hal tersebut, maka akan dibutuhkan klasifikasi daerah agar mudah dilakukan penentuan apakan \textsl{user} akan berangkat ke Bandung atau tidak. \textsl{Classification} daerah yang ditentukan setelah melihat peta Bandung dapat dilihat pada gambar \ref{fig:classificationMap}.
 
 \begin{figure}
 \centering
@@ -131,12 +131,12 @@ Dengan adanya perhitungan jarak dan penentuan daerah Bandung, nilai latitude dan
 \begin{longtable}{|l|l|l|l|l|}
 \hline
 \textbf{Bulan}	& \textbf{Tahun} 	& \textbf{Hari} & \textbf{Jam}	& \textbf{MenujuBandung} \\ \hline
-02								& 2014						& Sabtu         & 00         	& 2                    \\ \hline
+02								& 2014						& Sabtu         & 00         	& -1                    \\ \hline
 02								& 2014						& Sabtu         & 00         	& 1        					  \\ \hline
 02								& 2014						& Sabtu         & 00         	& 1       							\\ \hline
 02								& 2014						& Sabtu         & 00         	& 0         						\\ \hline
 02								& 2014						& Sabtu         & 00         	& 1          					\\ \hline
-02								& 2014						& Sabtu         & 00         	& 2      							\\ \hline
+02								& 2014						& Sabtu         & 00         	& -1      							\\ \hline
 02								& 2014						& Sabtu         & 00         	& 0       							\\ \hline
 \end{longtable}
 \end{table} 
@@ -261,7 +261,7 @@ Berikut deskripsi kelas diagram \textsl{class}:
 \begin{itemize}
 	\item View, merupakan kelas untuk mengatur desain antar muka.
 	\item Controller, merupakan kelas untuk mengatur view dan modul ketika program dijalankan.
-	\item CSVReader, merupakan kelas yang memiliki method untuk membaca file .CSV.
+	\item CSVReader, merupakan kelas yang memiliki method untuk membaca file dengan format CSV.
 	\item ProcessingData, merupakan kelas yang memiliki method untuk melakukan \textsl{preprocessing data}.
 	\item DecissionTree, merupakan kelas yang memiliki method untuk membuat \textsl{decision tree} dan menghitung \textsl{confident} dari pohon yang sudah dihasilkan.
 	\item DotConverter, merupakan kelas yang memiliki method untuk mengubah \textsl{string} yang merupakan hasil dari kelas DecissionTree (yaitu, \textsl{decision tree} dalam bentuk string) menjadi bahasa dot yang siap dijadikan masukan untuk graphviz.
