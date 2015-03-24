@@ -3,21 +3,21 @@
 Pada bab ini, akan dijelaskan tentang lingkupan pembangunan, implementasi rancangan antarmuka, serta pengujian secara fungsional dan experimental pada aplikasi \textsl{data mining}.
 
 \section{Lingkungan Pembangunan}
-Lingkungan perangkat lunak dan perangkat keras yang digunakan untuk membangun aplikasi \textsl{data mining} ini:
+Lingkungan perangkat lunak dan perangkat keras yang digunakan untuk membangun dan menguji aplikasi \textsl{data mining} ini adalah:
 
 \begin{enumerate}
 	\item CPU
 	\begin{itemize}
 		\item Prosesor: Intel(R) Core(TM) i7, 1.60 GHz
-		\item Memori ram: 6 GB
+		\item RAM: 6 GB
 		\item VGA: NVDIA GeForce GT 330M
 		\item Hardisk: 300 GB
 	\end{itemize}
 	\item Sistem operasi: Windows 7 Professional
-	\item Platform: NetBeans IDE 8.0
+	\item Platform: NetBeans: IDE 8.0
 \end{enumerate}
 
-\section{Implementasi Rancangan Antarmuka}
+\section{Hasil Tampilan Antarmuka}
 Pada aplikasi \textsl{data mining} ini, terdapat dua form. Form pertama berfungsi untuk memilih file CSV yang akan dilakukan \textsl{data mining}, memilih metode pembuatan \textsl{decision tree}, serta menunjukkan hasil \textsl{decision tree} yang dihasilkan dalam bentuk String. Sedangkan untuk form kedua, berfungsi untuk memvisualisasikan \textsl{decision tree} yang sudah diperoleh dalam bentuk gambar.
 
 TextField yang pertama berfungsi untuk mengisi alamat file CSV yang akan dilakukan \textsl{data mining}. RadioButton berfungsi untuk memilih metode manakah yang akan digunakan untuk membuat \textsl{decision tree}, sedangkan TextArea digunakan untuk memperlihatkan hasil \textsl{decision tree} dalam bentuk String.
@@ -50,7 +50,7 @@ Setelah alamat file CSV diisi, hal selanjutnya yang dilakukan adalah memilih met
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.7]{Gambar/GUI3and4.jpg}
-\caption[Tampilan Form Pemilihan Metode Pembuatan \textsl{Decision Tree}]{Tampilan Form Pemilihan Metode Pembuatan \textsl{Decision Tree}} 
+\caption[Tampilan Form Pemilihan Metode Pembuatan \textsl{Decision Tree}]{Tampilan Form Pemilihan Metode Pembuatan \textsl{Decision Tree}. Gambar a merupakan kondisi tampilan ketika metode ID3 dipilih sedangkan gambar b merupakan kondisi tampilan ketika metode J48 dipilih.} 
 \label{fig:GUI3and4}
 \end{figure}
 
@@ -81,8 +81,44 @@ Dalam pengujian aplikasi \textsl{data mining} ini, akan digunakan teknik penguji
 \end{enumerate}
 
 
+\subsection{Hasil Pengujian}
 
+Dibuat sebuah \textsl{test case} yang berisi 20 data \textsl{log} histori KIRI dengan data sebagai berikut:
 
+\begin{table}[h]
+\rotatebox{90}{
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\textbf{logId} & \textbf{APIKey}  & \textbf{Timestamp (UTC)} & \textbf{Action} & \textbf{AdditionalData}                                        \\ \hline
+114055         & E5D9904F0A8B4F99 & 2/1/2014 2:34            & FINDROUTE       & -6.88968,107.59632/-6.88461,107.61361/3                        \\ \hline
+114056         & E5D9904F0A8B4F99 & 2/1/2014 2:34            & FINDROUTE       & -6.88968,107.59632/-6.88461,107.61361/3                        \\ \hline
+114057         & E5D9904F0A8B4F99 & 2/1/2014 2:34            & FINDROUTE       & -6.88968,107.59632/-6.88461,107.61361/3                        \\ \hline
+114058         & A44EB361A179A49E & 2/1/2014 2:35            & FINDROUTE       & -6.9112484,107.6275648/-6.875449306549391,107.60455314069986/1 \\ \hline
+114059         & E5D9904F0A8B4F99 & 2/1/2014 2:37            & PAGELOAD        & /5.10.83.99/                                                   \\ \hline
+114060         & A44EB361A179A49E & 2/1/2014 2:38            & SEARCHPLACE     & cimol\%2C+/10                                                  \\ \hline
+114061         & A44EB361A179A49E & 2/1/2014 2:38            & FINDROUTE       & -6.8779112,107.612129/-6.92663,107.63644/1                     \\ \hline
+114062         & A44EB361A179A49E & 2/1/2014 2:38            & SEARCHPLACE     & gedebage\%2C+/10                                               \\ \hline
+114063         & A44EB361A179A49E & 2/1/2014 2:38            & SEARCHPLACE     & gedebage\%2C+cimol/10                                          \\ \hline
+114064         & A44EB361A179A49E & 2/1/2014 2:39            & FINDROUTE       & -7.3275023,108.3614085/-6.93269,107.69734/1                    \\ \hline
+114065         & A44EB361A179A49E & 2/1/2014 2:39            & WIDGETLOAD      & /66.249.77.219/                                                \\ \hline
+114066         & A44EB361A179A49E & 2/1/2014 2:39            & FINDROUTE       & -6.863680050774415,107.5951399281621/-6.93269,107.69734/1      \\ \hline
+114067         & A44EB361A179A49E & 2/1/2014 2:43            & FINDROUTE       & -6.9423325,107.7486968/-6.90112,107.60787/1                    \\ \hline
+114068         & A44EB361A179A49E & 2/1/2014 2:43            & FINDROUTE       & -6.9423325,107.7486968/-6.88623,107.60821/1                    \\ \hline
+114069         & A44EB361A179A49E & 2/1/2014 2:44            & FINDROUTE       & -6.9423062,107.7490084/-6.88623,107.60821/1                    \\ \hline
+114070         & A44EB361A179A49E & 2/1/2014 2:45            & FINDROUTE       & -6.9072888,107.6143937/-6.90855,107.61082/1                    \\ \hline
+114071         & A44EB361A179A49E & 2/1/2014 2:46            & FINDROUTE       & -6.9286306,107.6227444/-6.91708,107.60880/1                    \\ \hline
+114072         & A44EB361A179A49E & 2/1/2014 2:46            & FINDROUTE       & -6.908639785445589,107.61091567575932/-6.90855,107.61082/1     \\ \hline
+114073         & A44EB361A179A49E & 2/1/2014 2:47            & SEARCHPLACE     & hotel+harapan+i/10                                             \\ \hline
+114074         & A44EB361A179A49E & 2/1/2014 2:47            & SEARCHPLACE     & hotel+harapan+ind/10                                           \\ \hline
+\end{tabular}}
+\caption{Data untuk \textsl{Test Case} Aplikasi \textsl{Data Mining}}
+\label{table:dataTestCase}
+\end{table}
+
+Berikut hasil pengujian yang dilakukan dengan menggunakan data tersebut:
+\begin{enumerate}
+	\item Pengujian pertama: Membaca file CSV, data akan diambil oleh program dan dipilah, hanya record dengan \textsl{action} FINDROUTE yang akan diambil sedangkan yang lain akan dibuang.
+\end{enumerate}
 
 
 

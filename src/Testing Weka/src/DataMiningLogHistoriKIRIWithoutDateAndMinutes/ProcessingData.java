@@ -68,6 +68,7 @@ public class ProcessingData
             if(tempData[3].equals(action))
             {
                 array.add(tempData);
+                System.out.println(tempData[0] + " " + tempData[1] + " " + tempData[2] + " " + tempData[3] + " " + tempData[4]);
             }
         }
     }
