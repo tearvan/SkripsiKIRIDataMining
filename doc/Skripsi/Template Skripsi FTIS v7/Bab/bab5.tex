@@ -20,7 +20,7 @@ Lingkungan perangkat lunak dan perangkat keras yang digunakan untuk membangun da
 \section{Hasil Tampilan Antarmuka}
 Pada aplikasi \textsl{data mining} ini, terdapat dua form. Form pertama berfungsi untuk memilih file CSV yang akan dilakukan \textsl{data mining}, memilih metode pembuatan \textsl{decision tree}, serta menunjukkan hasil \textsl{decision tree} yang dihasilkan dalam bentuk String. Sedangkan untuk form kedua, berfungsi untuk memvisualisasikan \textsl{decision tree} yang sudah diperoleh dalam bentuk gambar.
 
-TextField yang pertama berfungsi untuk mengisi alamat file CSV yang akan dilakukan \textsl{data mining}. RadioButton berfungsi untuk memilih metode manakah yang akan digunakan untuk membuat \textsl{decision tree}, sedangkan TextArea digunakan untuk memperlihatkan hasil \textsl{decision tree} dalam bentuk String.
+TextField yang pertama berfungsi untuk mengisi alamat file CSV yang akan dilakukan \textsl{data mining}. RadioButton berfungsi untuk memilih metode manakah yang akan digunakan untuk membuat \textsl{decision tree}, sedangkan TextArea digunakan untuk memperlihatkan hasil \textsl{decision tree} dalam bentuk String. Tampilan awal aplikasi dapat dilihat di \ref{fig:GUI1}.
 
 \begin{figure}[H]
 \centering
@@ -29,7 +29,7 @@ TextField yang pertama berfungsi untuk mengisi alamat file CSV yang akan dilakuk
 \label{fig:GUI1}
 \end{figure}
 
-Terdapat dua cara untuk mengisi TextField, yaitu ditulis secara manual alamat file CSV atau dengan cara mengklik tombol button browse dan memilih file CSV pada FileSelector.
+Terdapat dua cara untuk mengisi TextField, yaitu ditulis secara manual alamat file CSV atau dengan cara mengklik tombol button browse dan memilih file CSV pada FileSelector. Tampilan memilih file CSV dapat dilihat pada gambar \ref{fig:GUI2} dan tampilan setelah memilih file CSV dapat dilihat pada gambar \ref{fig:GUI3}.
 
 \begin{figure}[H]
 \centering
@@ -45,7 +45,7 @@ Terdapat dua cara untuk mengisi TextField, yaitu ditulis secara manual alamat fi
 \label{fig:GUI3}
 \end{figure}
 
-Setelah alamat file CSV diisi, hal selanjutnya yang dilakukan adalah memilih metode pembuatan \textsl{decision tree} pada RadioButton. RadioButton akan memilih metode ID3 jika \textsl{setting} ini tidak diubah.
+Setelah alamat file CSV diisi, hal selanjutnya yang dilakukan adalah memilih metode pembuatan \textsl{decision tree} pada RadioButton. RadioButton akan memilih metode ID3 jika \textsl{setting} ini tidak diubah. Tampilan tersebut dapat dilihat di gambar \ref{fig:GUI3and4}.
 
 \begin{figure}[H]
 \centering
@@ -54,7 +54,7 @@ Setelah alamat file CSV diisi, hal selanjutnya yang dilakukan adalah memilih met
 \label{fig:GUI3and4}
 \end{figure}
 
-Kemudian, tombol start diklik lalu program akan melakukan proses \textsl{data mining}. Setelah selesai, maka program akan menunjukkan hasil \textsl{data mining} dalam bentuk String pada TextArea dan dalam bentuk gambar pada form kedua.
+Kemudian, tombol start diklik lalu program akan melakukan proses \textsl{data mining}. Setelah selesai, maka program akan menunjukkan hasil \textsl{data mining} dalam bentuk String pada TextArea dan dalam bentuk gambar pada form kedua. Tampilan akhir dari aplikasi serta form kedua dapat dilihat di gambar \ref{fig:GUI5}.
 
 \begin{figure}[H]
 \centering
@@ -83,9 +83,9 @@ Dalam pengujian aplikasi \textsl{data mining} ini, akan digunakan teknik penguji
 
 \subsection{Hasil Pengujian}
 
-Dibuat sebuah \textsl{test case} yang berisi 20 data \textsl{log} histori KIRI dengan data sebagai berikut:
+Dibuat sebuah \textsl{test case} yang berisi 20 data \textsl{log} histori KIRI dengan data pada tabel \ref{table:dataTestCase}
 
-\begin{table}[h]
+\begin{table}[H]
 \rotatebox{90}{
 \begin{tabular}{|l|l|l|l|l|}
 \hline
@@ -117,15 +117,140 @@ Dibuat sebuah \textsl{test case} yang berisi 20 data \textsl{log} histori KIRI d
 
 Berikut hasil pengujian yang dilakukan dengan menggunakan data tersebut:
 \begin{enumerate}
-	\item Pengujian pertama: Membaca file CSV, data akan diambil oleh program dan dipilah, hanya record dengan \textsl{action} FINDROUTE yang akan diambil sedangkan yang lain akan dibuang.
+	\item Pengujian pertama: Membaca file CSV, data akan diambil oleh program dan dipilah, hanya record dengan \textsl{action} FINDROUTE yang akan diambil sedangkan yang lain akan dibuang. Berikut hasil dengan contoh data diatas dengan menggunakan sistem \textsl{debug} untuk melihat data yang diambil dari csv pada \ref{fig:Pengujian1} dan \ref{fig:Pengujian12}
+	
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{Gambar/pengujian1.jpg}
+	\caption[Pengujian Mengambil Data CSV]{Pengujian Mengambil Data CSV} 
+	\label{fig:Pengujian1}
+	\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{Gambar/pengujian12.jpg}
+	\caption[Pengujian Pemilahan Data CSV]{Pengujian Pemilahan Data CSV} 
+	\label{fig:Pengujian12}
+	\end{figure}
+
+	Gambar pertama memperlihatkan bahwa data pertama yang diperoleh 21 array String dengan array pertama adalah atributnya sedangkan array selanjutnya adalah isi data yang diperoleh. Pada gambar kedua, terdapat 13 array String dimana semua array tersebut merupakan record dengan nilai \textsl{action} FINDROUTE. Dengan demikian, pengujian membaca CSV berhasil dilakukan.
+
+	\item Pengujian kedua: Melakukan \textsl{preprocessing data}, data yang digunakan adalah 13 array String yang sudah diperoleh dari pengujian pertama. Pengujian dilakukan dengan melakukan pengecekan data dengan menggunakan weka untuk melihat data yang sudah dihasilkan, dapat dilihat pada \ref{fig:Pengujian214} dan \ref{fig:Pengujian25} 
+	
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{Gambar/pengujian214.jpg}
+	\caption[Pengujian \textsl{Preprocessing Data}]{Pengujian \textsl{Preprocessing Data}. Gambar a menunjukkan nilai pada atribut bulan. Gambar b menunjukkan nilai pada atribut tahun. Gambar c menunjukkan nilai pada atribut hari. Gambar d menunjukkan nilai pada atribut jam.} 
+	\label{fig:Pengujian214}
+	\end{figure}
+	
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{Gambar/pengujian25.jpg}
+	\caption[Pengujian \textsl{Preprocessing Data} untuk Klasifikasi Data]{Pengujian \textsl{Preprocessing Data} untuk Klasifikasi Data} 
+	\label{fig:Pengujian25}
+	\end{figure}
+
+	Terdapat dua tahap penting pada \textsl{prerpocessing data}, yaitu pengubahan waktu dari UTC menjadi GMT+7 dan klasifikasi area. Pada tahap pengubahan waktu dari UTC menjadi GMT+7, pada gambar \ref{fig:Pengujian214} d, atribut jam yang dimiliki menjadi bernilai sembilan karena pada testcase, nilai atribut jam adalah dua. Pada tahap klasifikasi area, dapat dilihat pada tabel \ref{table:PenentuanAreaDanKlasifikasi}
+	
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|l|}
+	\hline
+	\multicolumn{1}{|c|}{\textbf{Region Keberangkatan}} & \multicolumn{1}{c|}{\textbf{Region Tujuan}} & \multicolumn{1}{c|}{\textbf{Hasil Klasifikasi}} \\ \hline
+	3                                                   & 3                                           & 0                                               \\ \hline
+	3                                                   & 3                                           & 0                                               \\ \hline
+	3                                                   & 3                                           & 0                                               \\ \hline
+	3                                                   & 4                                           & 1                                               \\ \hline
+	4                                                   & 4                                           & 0                                               \\ \hline
+	11                                                  & 10                                          & -1                                              \\ \hline
+	5                                                   & 10                                          & 1                                               \\ \hline
+	11                                                  & 1                                           & -1                                              \\ \hline
+	11                                                  & 3                                           & -1                                              \\ \hline
+	11                                                  & 3                                           & -1                                              \\ \hline
+	1                                                   & 1                                           & 0                                               \\ \hline
+	2                                                   & 0                                           & -1                                              \\ \hline
+	1                                                   & 1                                           & 0                                               \\ \hline
+	\end{tabular}
+	\caption{Hasil Penentuan area dan Klasifikasi}
+	\label{table:PenentuanAreaDanKlasifikasi}
+	\end{table}
+	
+	Terdapat lima data dengan klasifikasi -1, enam data dengan klasifikasi 0, dan 2 data dengan klasifikasi 1. Dari kedua hasil tersebut, dapat disimpulkan bahwa tahap \textsl{preprocessing data} sudah berjalan dengan baik.
+	
+	\item Pengujian ketiga: Membuat \textsl{decision tree}, akan dilakukan perbandingan antara hasil dari program dengan hasil dari weka, dapat dilihat pada gambar \ref{fig:Pengujian31} dan 
+	\ref{fig:Pengujian32}.
+	
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{Gambar/pengujian31.jpg}
+	\caption[Pengujian Pembuatan \textsl{Decision Tree} ID3]{Pengujian Pembuatan \textsl{Decision Tree} ID3. Gambar a merupakan hasil dari aplikasi \textsl{data mining} sedangkan gambar b merupakan hasil dari weka.} 
+	\label{fig:Pengujian31}
+	\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{Gambar/pengujian32.jpg}
+	\caption[Pengujian Pembuatan \textsl{Decision Tree} J48]{Pengujian Pembuatan \textsl{Decision Tree} J48. Gambar a merupakan hasil dari aplikasi \textsl{data mining} sedangkan gambar b merupakan hasil dari weka.} 
+	\label{fig:Pengujian32}
+	\end{figure}
+
+	Dari kedua gambar tersebut, dapat disimpulkan bahwa hasil \textsl{decision tree} yang dihasilkan sama dan benar.
+	
+	\item Pengujian keempat: Mengubah \textsl{decision tree} dalam bentuk String menjadi bahasa DOT, akan dilakukan visualisasi \textsl{decision tree} dengan membuat graph dalam bahasa DOT, dapat dilihat pada gambar \ref{fig:Pengujian4}.
+	
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{Gambar/pengujian4.jpg}
+	\caption[Pengujian Hasil Visualisasi dengan Menggunakan Bahasa DOT]{Pengujian Hasil Visualisasi dengan Menggunakan Bahasa DOT.} 
+	\label{fig:Pengujian4}
+	\end{figure}
+	
+	Dari gambar tersebut, dapat disimpulkan bahwa pengubahan \textsl{decision tree} menjadi bahasa DOT telah berhasil.
+
 \end{enumerate}
 
+\subsection{Pengujian Experimental}
 
+Pengujian akan dilakukan pada data 1 bulan dari \textsl{log} histori KIRI pada bulan Febuari dan diperoleh hasil sebagai berikut
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{Gambar/percobaan1.jpg}
+\caption[Percobaan \textsl{Data Mining} dengan Menggunakan Metode ID3 pada \textsl{Log} Histori KIRI pada Bulan 2 Tahun 2014]{Percobaan \textsl{Data Mining} dengan Menggunakan Metode ID3 pada \textsl{Log} Histori KIRI pada Bulan 2 Tahun 2014.} 
+\label{fig:percobaan1}
+\end{figure}
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{Gambar/percobaan2.jpg}
+\caption[Percobaan \textsl{Data Mining} dengan Menggunakan Metode J48 pada \textsl{Log} Histori KIRI pada Bulan 2 Tahun 2014]{Percobaan \textsl{Data Mining} dengan Menggunakan Metode J48 pada \textsl{Log} Histori KIRI pada Bulan 2 Tahun 2014.} 
+\label{fig:percobaan2}
+\end{figure}
 
+Pada kedua percobaan, terdapat perbedaan bulan, hal ini dikarenakan perubahan waktu dari UTC menuju GMT+7 sehingga terdapat perubahan bulan atau tahun. Karena data pada bulan selanjutnya hanya tujuh jam, maka hasil pada bulan selanjutnya lebih baik tidak dianggap karena data tersebut tidak cukup untuk merepresentasikan waktu satu bulan.
 
+Hasil percobaan pembuatan \textsl{decision tree} pada metode ID3 mengalami overfitting karena menghasilkan klasifikasi pada hampir setiap kemungkinan, dapat disimpulkan hasil \textsl{decision tree} pada percobaan di bulan ini cukup jelek. Namun pada percobaan metode J48, menghasilkan \textsl{decision tree} yang sangat menarik dimana dinyatakan bahwa jam 0-3 dan jam 5-24 user menjauhi Bandung.
 
+Selain itu, dari kedua percobaan ini, diperoleh bahwa cukup sulit untuk membaca hasil \textsl{decision tree} terutama pada \textsl{node} dengan kedalaman lebih dari 4 tingkat. Oleh karena itu, akan ditambahkan fungsi agar \textsl{decision tree} lebih mudah dibaca. Program akan ditambah satu kelas baru yaitu SDForExtractData yang berfungsi untuk menyimpan data dan membuat kesimpulan dari setiap \textsl{leaf} yang dihasilkan. Diagram Kelas untuk kelas SDForExtractData dapat dilihat pada gambar \ref{fig:classDiagramSDForExtractData}. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Gambar/SDForExtractData.jpg}
+\caption[Diagram Kelas untuk SDForExtractData]{Diagram Kelas untuk SDForExtractData} 
+\label{fig:classDiagramSDForExtractData}
+\end{figure}
+
+Berikut hasil dari fungsi yang dibuat agar \textsl{decision tree} lebih mudah dibaca, dapat dilihat pada gambar \ref{fig:percobaan3}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Gambar/percobaan3.jpg}
+\caption[Hasil dari SDForExtractData]{Hasil dari SDForExtractData} 
+\label{fig:percobaan3}
+\end{figure}
+
+Dengan fungsi tersebut, diharapkan user dapat lebih mudah membaca \textsl{decision tree} yang dihasilkan.
 
 
 

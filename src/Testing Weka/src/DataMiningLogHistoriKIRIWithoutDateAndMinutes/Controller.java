@@ -40,7 +40,9 @@ public class Controller
         ProcessingData pd = new ProcessingData();
         pd.processSorting(findRoute, data, "FINDROUTE");
         
-        ArrayList<int[]> dataAfterPreprocessing = pd.preprocessingData(findRoute);
+        //int maxMin digunakan untuk menyimpan nilai max dan min dari variable bulan dan tahun. Untuk ketentuan posisi array dapat dilihat di method preprocessing data
+        int[] maxMin = new int[4];
+        ArrayList<int[]> dataAfterPreprocessing = pd.preprocessingData(findRoute, maxMin);
         
         ArffIO io = new ArffIO();
         io.writeArrf("tempArff", dataAfterPreprocessing);
@@ -60,20 +62,49 @@ public class Controller
              textArea.setText(dt.j48(arff));
         }
         tempTreeDataResult = textArea.getText().split("\n");
-        String [] treeDataResult = new String[tempTreeDataResult.length-7];
-        System.arraycopy(tempTreeDataResult, 3, treeDataResult, 0, treeDataResult.length);
-        
+        String[] treeDataResult;
+        System.out.println(tempTreeDataResult.length);
+        if(tempTreeDataResult.length < 8)
+        {
+            if(miningAlgo.equals("id3"))
+            {
+                treeDataResult = new String[tempTreeDataResult.length-2];
+            }
+            else
+            {
+                treeDataResult = new String[tempTreeDataResult.length-6];
+            }
+            System.arraycopy(tempTreeDataResult, 2, treeDataResult, 0, treeDataResult.length);
+        }
+        else
+        {
+            if(miningAlgo.equals("id3"))
+            {
+                treeDataResult = new String[tempTreeDataResult.length-3];
+            }
+            else
+            {
+                treeDataResult = new String[tempTreeDataResult.length-7];
+            }
+            System.arraycopy(tempTreeDataResult, 3, treeDataResult, 0, treeDataResult.length);
+        }
+        System.out.println(treeDataResult[0]);
         SDForConvertTree dataTree = new SDForConvertTree(treeDataResult);
+        //System.out.println("TEST: " + dataTree.getData(0).length());
         
         try {
             PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("tree.txt")));
-            SDForExtractData extract = new SDForExtractData(new String[]{"bulan", "tahun", "hari", "jam"},new int[]{12,2020,7,24}, new int[]{1,2014,1,0});
+            SDForExtractData extract = new SDForExtractData(new String[]{"bulan", "tahun", "hari", "jam"},new int[]{maxMin[0],maxMin[1],7,24}, new int[]{maxMin[2],maxMin[3],1,0});
             out.println("digraph{" + DotConverter.convert(dataTree, extract, miningAlgo, 0, "") + "}");
             out.close();
             
-            textArea.setText(textArea.getText() + "\n\nExtract Data\n");
+            textArea.setText(textArea.getText());
             ArrayList<String> extractData = extract.getList();
             
+            if(extractData.size() > 0)
+            {
+                textArea.setText(textArea.getText() + "\nExtract Data\n");
+            }
             for(int i = 0; i < extractData.size(); i++)
             {
                 textArea.setText(textArea.getText() + "\n" + extractData.get(i));

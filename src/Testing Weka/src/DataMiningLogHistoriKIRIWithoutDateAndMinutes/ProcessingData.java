@@ -68,12 +68,20 @@ public class ProcessingData
             if(tempData[3].equals(action))
             {
                 array.add(tempData);
-                System.out.println(tempData[0] + " " + tempData[1] + " " + tempData[2] + " " + tempData[3] + " " + tempData[4]);
             }
         }
     }
-    public ArrayList preprocessingData(ArrayList<String[]> data)
+    public ArrayList preprocessingData(ArrayList<String[]> data, int[] maxMin)
     {
+        // 2 int[] untuk mendapatkan nilai max dan min dari varible bulan dan tahun yang digunakan untuk inisialisasi max min pada kelas SDForExtractData.
+        // array pertama untuk bulan, dan array kedua untuk tahun
+        int []max = new int[2];
+        int []min = new int[2];
+        max[0] = 0;
+        max[1] = 0;
+        min[0] = Integer.MAX_VALUE;
+        min[1] = Integer.MAX_VALUE;
+        
         ArrayList<int[]> result = new ArrayList<int[]>();
         
         // tahap pertama: ubah waktu dari UTC ke GMT+7
@@ -102,9 +110,9 @@ public class ProcessingData
             splited = data.get(i)[4].split("/");
             // tahap keenam: pecah lokasi keberangkatan dan lokasi tujuan untuk mendapatkan lat n lon dan (ini tahap ketujuh) menghitung jarak terhadap titik pusat
             splited2 = splited[0].split(",");
-            double jarakKeberangkatan = haversine.calculateDistance(Double.parseDouble(splited2[0]), Double.parseDouble(splited2[1]), -6.92036, 107.67023) * 1000;
+            double jarakKeberangkatan = haversine.calculateDistance(Double.parseDouble(splited2[0]), Double.parseDouble(splited2[1]), -6.916667,107.6) * 1000;
             splited2 = splited[1].split(",");
-            double jarakTujuan = haversine.calculateDistance(Double.parseDouble(splited2[0]), Double.parseDouble(splited2[1]), -6.92036, 107.67023) * 1000;
+            double jarakTujuan = haversine.calculateDistance(Double.parseDouble(splited2[0]), Double.parseDouble(splited2[1]), -6.916667,107.6) * 1000;
             // tahap kedelapan, set semua data ke array
             temp[4] = klasifikasiKelas(jarakKeberangkatan, jarakTujuan);
             if(data.get(i)[4].split(",").length == 3)
@@ -115,7 +123,29 @@ public class ProcessingData
             {
                 System.out.println("ERROR: additional data tidak sesuai; " + data.get(i)[4]);
             }
+            
+            //proses untuk mencatat nilai max dan min
+            if(max[0] < temp[0])
+            {
+                max[0] = temp[0];
+            }
+            if(min[0] > temp[0])
+            {
+                min[0] = temp[0];
+            }
+            if(max[1] < temp[1])
+            {
+                max[1] = temp[1];
+            }
+            if(min[1] > temp[1])
+            {
+                min[1] = temp[1];
+            }
         }
+        maxMin[0] = max[0];
+        maxMin[1] = max[1];
+        maxMin[2] = min[0];
+        maxMin[3] = min[1];
         return result;
     }
     
