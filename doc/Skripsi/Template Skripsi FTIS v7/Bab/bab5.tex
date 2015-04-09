@@ -65,7 +65,9 @@ Kemudian, tombol start diklik lalu program akan melakukan proses \textsl{data mi
 
 \section{Pengujian Aplikasi \textsl{Data Mining}}
 
-\subsection{Rancangan Pengujian}
+\subsection{Pengujian Fungsional}
+
+\subsubsection{Rancangan Pengujian}
 
 Dalam pengujian aplikasi \textsl{data mining} ini, akan digunakan teknik pengujian \textsl{black box}. Pengujian yang akan dilakukan:
 \begin{enumerate}
@@ -81,7 +83,7 @@ Dalam pengujian aplikasi \textsl{data mining} ini, akan digunakan teknik penguji
 \end{enumerate}
 
 
-\subsection{Hasil Pengujian}
+\subsubsection{Hasil Pengujian}
 
 Dibuat sebuah \textsl{test case} yang berisi 20 data \textsl{log} histori KIRI dengan data pada tabel \ref{table:dataTestCase}
 
@@ -117,7 +119,7 @@ Dibuat sebuah \textsl{test case} yang berisi 20 data \textsl{log} histori KIRI d
 
 Berikut hasil pengujian yang dilakukan dengan menggunakan data tersebut:
 \begin{enumerate}
-	\item Pengujian pertama: Membaca file CSV, data akan diambil oleh program dan dipilah, hanya record dengan \textsl{action} FINDROUTE yang akan diambil sedangkan yang lain akan dibuang. Berikut hasil dengan contoh data diatas dengan menggunakan sistem \textsl{debug} untuk melihat data yang diambil dari csv pada \ref{fig:Pengujian1} dan \ref{fig:Pengujian12}
+	\item Pengujian pertama: Membaca file CSV, data akan diambil oleh program dan dipilah, hanya record dengan \textsl{action} FINDROUTE yang akan diambil sedangkan yang lain akan dibuang. Berikut hasil dengan contoh data diatas dengan menggunakan sistem \textsl{debug} untuk melihat data yang diambil dari CSV pada gambar \ref{fig:Pengujian1} dan \ref{fig:Pengujian12}
 	
 	\begin{figure}[H]
 	\centering
@@ -129,11 +131,11 @@ Berikut hasil pengujian yang dilakukan dengan menggunakan data tersebut:
 	\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.4]{Gambar/pengujian12.jpg}
-	\caption[Pengujian Pemilahan Data CSV]{Pengujian Pemilahan Data CSV} 
+	\caption[Pengujian \textsl{Data Selection} untuk Mengambil Data dengan \textsl{Action} FINDROUTE]{Pengujian \textsl{Data Selection} untuk Mengambil Data dengan \textsl{Action} FINDROUTE} 
 	\label{fig:Pengujian12}
 	\end{figure}
 
-	Gambar pertama memperlihatkan bahwa data pertama yang diperoleh 21 array String dengan array pertama adalah atributnya sedangkan array selanjutnya adalah isi data yang diperoleh. Pada gambar kedua, terdapat 13 array String dimana semua array tersebut merupakan record dengan nilai \textsl{action} FINDROUTE. Dengan demikian, pengujian membaca CSV berhasil dilakukan.
+	Gambar pertama memperlihatkan bahwa data pertama yang diperoleh 21 array String dengan array pertama adalah atributnya sedangkan array selanjutnya adalah isi data yang diperoleh. Pada gambar kedua, terdapat 13 array String dimana semua array tersebut merupakan record dengan nilai \textsl{action} FINDROUTE saja. Dengan demikian, pengujian membaca CSV berhasil dilakukan.
 
 	\item Pengujian kedua: Melakukan \textsl{preprocessing data}, data yang digunakan adalah 13 array String yang sudah diperoleh dari pengujian pertama. Pengujian dilakukan dengan melakukan pengecekan data dengan menggunakan weka untuk melihat data yang sudah dihasilkan, dapat dilihat pada \ref{fig:Pengujian214} dan \ref{fig:Pengujian25} 
 	
@@ -191,7 +193,7 @@ Berikut hasil pengujian yang dilakukan dengan menggunakan data tersebut:
 	\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.4]{Gambar/pengujian32.jpg}
-	\caption[Pengujian Pembuatan \textsl{Decision Tree} J48]{Pengujian Pembuatan \textsl{Decision Tree} J48. Gambar a merupakan hasil dari aplikasi \textsl{data mining} sedangkan gambar b merupakan hasil dari weka.} 
+	\caption[Pengujian Pembuatan \textsl{Decision Tree} J48]{Pengujian  Pembuatan \textsl{Decision Tree} J48. Gambar a merupakan hasil dari aplikasi \textsl{data mining} sedangkan gambar b merupakan hasil dari weka.} 
 	\label{fig:Pengujian32}
 	\end{figure}
 
@@ -210,9 +212,20 @@ Berikut hasil pengujian yang dilakukan dengan menggunakan data tersebut:
 
 \end{enumerate}
 
-\subsection{Pengujian Experimental}
+\subsection{Pengujian Eksperimental}
 
-Pengujian akan dilakukan pada data 1 bulan dari \textsl{log} histori KIRI pada bulan Febuari dan diperoleh hasil sebagai berikut
+Pada subbab ini, akan dilakukan pengujian pada data 1 bulan dari \textsl{log} histori KIRI pada bulan Febuari.
+
+Ketika Pengujian dilakukan, ditemukan \textsl{bug} data yaitu terdapat nilai dari data \textsl{log} histori KIRI pada \textsl{action} FINDROUTE kolom additionalData dengan format String yang berbeda. Kesalahan format tersebut adalah nilai pembatas angka dibelakang koma yang seharusnya menggunakan titik menjadi koma, sehingga pemotongan nilai String menghasilkan data yang salah dan \textsl{error}. Dari pengujian ini, maka diperlukan \textsl{data cleaning} pada tahap \textsl{preprocessing data} agar data dengan format yang salah dapat dibuang dan tidak menyebabkan \textsl{error}. Hasil error yang ditemukan dari \textsl{data cleaning} dapat dilihat pada gambar \ref{fig:percobaanError}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{Gambar/percobaanError.jpg}
+\caption[Percobaan \textsl{Data Mining} untuk Melakukan Data Cleaning]{Percobaan \textsl{Data Mining} untuk Melakukan Data Cleaning.} 
+\label{fig:percobaanError}
+\end{figure}
+
+Setelah melakukan \textsl{data cleaning}, program dapat berjalan dengan baik. Berikut hasil dari percobaan metode ID3 pada gambar \ref{fig:percobaan1} dan metode J48 pada gambar \ref{fig:percobaan2}.
 
 \begin{figure}[H]
 \centering
@@ -230,16 +243,12 @@ Pengujian akan dilakukan pada data 1 bulan dari \textsl{log} histori KIRI pada b
 
 Pada kedua percobaan, terdapat perbedaan bulan, hal ini dikarenakan perubahan waktu dari UTC menuju GMT+7 sehingga terdapat perubahan bulan atau tahun. Karena data pada bulan selanjutnya hanya tujuh jam, maka hasil pada bulan selanjutnya lebih baik tidak dianggap karena data tersebut tidak cukup untuk merepresentasikan waktu satu bulan.
 
-Hasil percobaan pembuatan \textsl{decision tree} pada metode ID3 mengalami overfitting karena menghasilkan klasifikasi pada hampir setiap kemungkinan, dapat disimpulkan hasil \textsl{decision tree} pada percobaan di bulan ini cukup jelek. Namun pada percobaan metode J48, menghasilkan \textsl{decision tree} yang sangat menarik dimana dinyatakan bahwa jam 0-3 dan jam 5-24 user menjauhi Bandung.
+Hasil percobaan pembuatan \textsl{decision tree} pada metode ID3 mengalami overfitting karena menghasilkan klasifikasi pada hampir setiap kemungkinan, dapat disimpulkan hasil \textsl{decision tree} pada percobaan di bulan ini cukup jelek. Namun pada percobaan metode J48, menghasilkan \textsl{decision tree} yang tidak overfitting dan menarik dimana dinyatakan bahwa jam 0-3 dan jam 5-24 user menjauhi Bandung.
 
-Selain itu, dari kedua percobaan ini, diperoleh bahwa cukup sulit untuk membaca hasil \textsl{decision tree} terutama pada \textsl{node} dengan kedalaman lebih dari 4 tingkat. Oleh karena itu, akan ditambahkan fungsi agar \textsl{decision tree} lebih mudah dibaca. Program akan ditambah satu kelas baru yaitu SDForExtractData yang berfungsi untuk menyimpan data dan membuat kesimpulan dari setiap \textsl{leaf} yang dihasilkan. Diagram Kelas untuk kelas SDForExtractData dapat dilihat pada gambar \ref{fig:classDiagramSDForExtractData}. 
+Nilai \textsl{confident} dari percobaan dengan metode ID3 adalah 35.65\% sedangkan untuk percobaan dengan metode j48 adalah 47.33\%, dari sini dapat dinyatakan bahwa hasil \textsl{decision tree} dari j48 lebih tepat daripada ID3 namun kedua metode tersebut menghasilkan nilai \textsl{confident} yang kurang memuaskan (dibawah 50\%).
 
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.7]{Gambar/SDForExtractData.jpg}
-\caption[Diagram Kelas untuk SDForExtractData]{Diagram Kelas untuk SDForExtractData} 
-\label{fig:classDiagramSDForExtractData}
-\end{figure}
+
+Selain itu, dari kedua percobaan ini, diperoleh bahwa cukup sulit untuk membaca hasil \textsl{decision tree} terutama pada \textsl{node} dengan kedalaman lebih dari 4 tingkat. Oleh karena itu, akan ditambahkan fungsi agar \textsl{decision tree} lebih mudah dibaca. Program akan ditambah satu kelas baru yaitu SDForExtractData yang berfungsi untuk menyimpan data dan membuat kesimpulan dari setiap \textsl{leaf} yang dihasilkan.
 
 Berikut hasil dari fungsi yang dibuat agar \textsl{decision tree} lebih mudah dibaca, dapat dilihat pada gambar \ref{fig:percobaan3}.
 
@@ -252,7 +261,16 @@ Berikut hasil dari fungsi yang dibuat agar \textsl{decision tree} lebih mudah di
 
 Dengan fungsi tersebut, diharapkan user dapat lebih mudah membaca \textsl{decision tree} yang dihasilkan.
 
+\subsection{Analisis Hasil Uji}
 
+Berdasarkan pengujian di atas, dapat disimpulkan bahwa 
+
+\begin{enumerate}
+	\item Metode ID3 menghasilkan \textsl{decision tree} yang bersifat overfitting.
+	\item Metode J48 menghasilkan \textsl{decision tree} yang lebih baik dan tepat daripada ID3, khususnya pada data \textsl{log} histori KIRI dengan \textsl{preprocessing data} dan klasifikasi yang sudah dijelaskan pada bab 3.
+	\item Kedua metode (J48 dan ID3) menghasilkan nilai \textsl{confident} yang kurang memuaskan (dibawah 50\%).
+	\item Dari data \textsl{log} histori KIRI pada bulan Febuari 2014, \textsl{decision tree} dengan metode J48 menyatakan bahwa penduduk Bandung lebih sering menjauhi Bandung jika dilihat dari banyak jam dimana user menjauhi Bandung.
+\end{enumerate}
 
 
 

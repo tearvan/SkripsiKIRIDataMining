@@ -49,7 +49,6 @@ public class Controller
         
         Instances arff = io.readArff("temp.arff");
         //arff.setClassIndex(arff.numAttributes() - 1);
-        
         DecisionTree dt = new DecisionTree();
         String [] tempTreeDataResult;
         System.out.println(miningAlgo);
@@ -62,6 +61,7 @@ public class Controller
              textArea.setText(dt.j48(arff));
         }
         tempTreeDataResult = textArea.getText().split("\n");
+        textArea.setText(textArea.getText() + "\nNilai Confident: " + dt.calculateConfident(arff) + "\n");
         String[] treeDataResult;
         System.out.println(tempTreeDataResult.length);
         if(tempTreeDataResult.length < 8)

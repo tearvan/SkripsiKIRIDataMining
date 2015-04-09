@@ -29,19 +29,20 @@ public class DecisionTree
         int nilaiBenar = 0, resultInt;
         float result = 0;
         for (int i = 0; i < arff.numInstances(); i++)
-        {
+        {    
             try {
                 result = (float)tree.classifyInstance(arff.instance(i));
-                resultInt = Math.round(result);
-                if(resultInt == Integer.parseInt(arff.instance(i).stringValue(6)))
+                resultInt = Math.round(result)-1;
+                if(resultInt == Integer.parseInt(arff.instance(i).stringValue(4)))
                 {
                     nilaiBenar++;
                 }
             } catch (Exception ex) {
-                Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
+                System.out.println("CHECK: " + ex.getMessage());
+                //System.exit(1);
             }
         }
-        double confident = nilaiBenar * 1.0 / arff.numInstances() * 100;
+        double confident = Math.round(nilaiBenar * 1.0 / arff.numInstances() * 10000)/100.0;
         return confident;
     }
     

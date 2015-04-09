@@ -7,6 +7,7 @@
 
 
 \begin{figure}[H]
+\centering
 \includegraphics[scale=0.9]{Gambar/tahapdatamining.jpg}
 \caption[Tahap \textsl{Data Mining}]{Tahap \textsl{Data Mining}, \cite{DM}} 
 \label{fig:tahapDataMining}
@@ -175,6 +176,7 @@ Pada tahap ini, akan dilakukan proses \textsl{data mining} dengan menggunakan in
 Pada tahap kedua, dilakukan proses klasifikasi nilai berdasarkan \textsl{classification rules} yang sudah dibangun dari tahap pertama.
 
 \begin{figure}
+\centering
 \includegraphics[scale=1]{Gambar/tahapdataclassification.jpg}
 \caption[Tahap \textsl{data classification}]{Tahap \textsl{data classification}, \cite{DM}} 
 \label{fig:tahapDataClassification}
@@ -184,6 +186,7 @@ Pada tahap kedua, dilakukan proses klasifikasi nilai berdasarkan \textsl{classif
 Salah satu cara pembuatan \textsl{classification rules} pada \textsl{Data Classification} adalah dengan membuat \textsl{decision tree} (pohon keputusan). \textsl{Decision tree} merupakan \textsl{flowchart} yang berbentuk pohon, dimana setiap node internal (\textsl{nonleaf} node) merupakan hasil test dari atribut, setiap cabang merepresentasikan output dari test, dan setiap node daun memiliki \textsl{class label}. Bagian paling atas dari pohon disebut \textsl{root node}. Contoh studi kasus, pohon keputusan untuk menentukan apakah seorang konsumen akan membeli komputer atau tidak (ilustrasi pohon keputusan pada gambar \ref{fig:decisionTree}) 
 
 \begin{figure}
+\centering
 \includegraphics[scale=1]{Gambar/decisiontree.jpg}
 \caption[Contoh \textsl{decision tree}]{Contoh \textsl{decision tree}, \cite{DM}} 
 \label{fig:decisionTree}
@@ -238,6 +241,7 @@ Node N akan diisi dengan hasil dari \textsl{splitting criterion} (baris 9). Kemu
 
 
 \begin{figure}
+\centering
 \includegraphics[scale=1]{Gambar/jenishasilsplitpoint.jpg}
 \caption[Jenis-jenis \textsl{split point}]{Jenis-jenis \textsl{split point}, \cite{DM}} 
 \label{fig:splitPoint}
@@ -298,17 +302,17 @@ RID & umur          & pendapatan 	& siswa 		 & resiko\_kredit  & Class: membeli\
 1   & muda        	& tinggi   		& tidak      & cukup           & tidak                    \\ \hline
 2   & muda        	& tinggi   		& tidak      & baik			       & tidak                    \\ \hline
 3   & remaja 				& tinggi  	 	& tidak      & cukup           & ya                   \\ \hline
-4   & dewasa      	& sedang 			& tidak      & cukup           & ya                   \\ \hline
+4   & dewasa      	& cukup 			& tidak      & cukup           & ya                   \\ \hline
 5   & dewasa       	& rendah    	& ya    		 & cukup           & ya                   \\ \hline
 6   & dewasa       	& rendah    	& ya    		 & baik			       & tidak                    \\ \hline
 7   & remaja 				& rendah    	& ya    		 & baik			       & ya                   \\ \hline
-8   & muda        	& sedang 			& tidak      & cukup           & tidak                    \\ \hline
+8   & muda        	& cukup 			& tidak      & cukup           & tidak                    \\ \hline
 9   & muda        	& rendah    	& ya    		 & cukup           & ya                   \\ \hline
-10  & dewasa       	& sedang 			& ya   		   & cukup           & ya                   \\ \hline
-11  & muda        	& sedang 			& ya   		   & baik 		       & ya                   \\ \hline
-12  & remaja 				& sedang 			& tidak      & baik 		       & ya                   \\ \hline
+10  & dewasa       	& cukup 			& ya   		   & cukup           & ya                   \\ \hline
+11  & muda        	& cukup 			& ya   		   & baik 		       & ya                   \\ \hline
+12  & remaja 				& cukup 			& tidak      & baik 		       & ya                   \\ \hline
 13  & remaja 				& tinggi   		& ya    		 & cukup           & ya                   \\ \hline
-14  & dewasa       	& sedang 			& tidak      & baik  			     & tidak                    \\ \hline
+14  & dewasa       	& cukup 			& tidak      & baik  			     & tidak                    \\ \hline
 \end{tabular}
 \end{table}
 
@@ -334,6 +338,7 @@ Setelah mendapatkan \textsl{entropy} dari atribut umur, maka nilai \textsl{gain 
 Dengan melakukan hal yang sama, dapat diperoleh nilai \textsl{gain} untuk atribut pendapatan adalah 0.029 \textsl{bits}, untuk nilai \textsl{gain}(siswa) adalah 0.151 \textsl{bits}, dan \textsl{gain}(resiko\_kredit) = 0.048 \textsl{bits}. Karena nilai \textsl{gain} dari atribut umur merupakan nilai terbesar diantara semua atribut, maka atribut umur dipilih menjadi \textsl{splitting attribute}. Setelah ditentukan, node N akan membentuk cabang berdasarkan nilai dari atribut umur seperti pada gambar \ref{fig:hasilCabang}.
 
 \begin{figure}
+\centering
 \includegraphics[scale=1]{Gambar/hasilcabangid3.jpg}
 \caption[Hasil pohon faktor pada atribut \textsl{age} dari table 2.1]{Hasil cabang dari atribut \textsl{age}, \cite{DM}} 
 \label{fig:hasilCabang}
@@ -385,6 +390,7 @@ Maka nilai \textsl{gain ratio} dari atribut pendapatan adalah 0.031 bits. Perhit
 \textsl{Tree pruning} merupakan proses pemotongan \textsl{decision tree} agar lebih efisien dan tidak terlalu mempengaruhi nilai keputusan yang dihasilkan. \textsl{decision tree} yang sudah dipotong akan lebih kecil ukuran pohonnya, tidak serumit dengan pohon yang asli, namun lebih mudah untuk diproses. \textsl{Decision tree} yang sudah dipotong memiliki kecepatan serta ketepatan mengklasifikasikan yang lebih baik \cite{DM}. Perbedaan \textsl{decision tree} yang sudah dipotong dan belum dapat dilihat pada gambar \ref{fig:treePruning}.
 
 \begin{figure}
+\centering
 \includegraphics[scale=1]{Gambar/treepruning.jpg}
 \caption[\textsl{Decision Tree Pruned}]{\textsl{Decision tree} yang belum dipotong dan yang sudah dipotong, \cite{DM}} 
 \label{fig:treePruning}
