@@ -6,10 +6,10 @@ Pada bab ini, akan dilakukan analisa terhadap data yang akan diproses menggunaka
 \label{analisisData}
 Pada bab ini, akan dilakukan analisa \textsl{preprocessing data} yang meliputi \textsl{data cleaning}, \textsl{data integration}, \textsl{data selection} dan \textsl{data transformation}. Setelah membaca dan menganalisis data \textsl{log} histori KIRI, maka penelitian ini akan lebih fokus untuk meneliti mengenai lokasi keberangkatan dan tujuan dari user yang menggunakan aplikasi KIRI.
 
-\subsection{Data Cleaning}
+\subsection{\textsl{Data Cleaning}}
 Pada tahap ini, data yang akan menjadi input akan diperiksa apakah mengandung \textsl{missing value} atau \textsl{noisy}. Setelah dilakukan pemeriksaan, tidak ditemukan \textsl{missing value} ataupun \textsl{noisy}, sehingga tahap ini dapat dilewat.
 
-\subsection{Data Integration}
+\subsection{\textsl{Data Integration}}
 Pada tahap ini, data-data dari beberapa database akan digabung dan diintegrasikan menjadi satu database. Karena data yang digunakan hanya berasal dari satu tabel, maka tahap ini dapat dilewat.
 
 \subsection{\textsl{Data Selection}}
@@ -51,7 +51,7 @@ Nilai dari banyak jalur akan dibuang ketika memasuki tahap \textsl{data transfor
 \subsection{\textsl{Data Transformation}}
 Pada tahap ini, akan dilakukan perubahan data. Pada atribut yang dipilih, nilai dari atribut \textsl{timestamp} dan \textsl{additionaldata} perlu dilakukan transformasi agar program dapat membaca dan memproses data lebih cepat. 
 
-Pada atribut \textsl{timestamp}, nilai waktu dari atribut tersebut akan diubah menjadi waktu GMT+8. Kemudian, data akan diubah menjadi empat atribut, yaitu:
+Pada atribut \textsl{timestamp}, nilai waktu dari atribut tersebut akan diubah menjadi waktu GMT+7. Kemudian, data akan diubah menjadi empat atribut, yaitu:
 \begin{itemize}
 	\item Bulan, atribut ini akan menunjukkan bulan ketika user KIRI memanggil \textsl{action FINDROUTE}, dengan nilai antara 01 sampai 12. Nilai tersebut dapat diperoleh dengan cara mengambil nilai string dari timpestamp yang berada di antara garis miring pertama dan kedua.
 	\item Tahun, atribut ini akan menunjukkan tahun ketika user KIRI memanggil \textsl{action FINDROUTE}, dengan format empat angka (contoh: 2014). Nilai tersebut dapat diperoleh dengan cara mengambil nilai string dari timpestamp yang berada di antara garis miring kedua dan spasi.
@@ -92,13 +92,13 @@ Contoh hasil data transformasi jika input merupakan data dari tabel \ref{table:c
 \begin{tabular}{|l|l|l|l|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
 \hline
 \textbf{Bulan}	& \textbf{Tahun} 	& \textbf{Hari} & \textbf{Jam} & \textbf{Latitude Keberangkatan} & \textbf{Longitude Keberangkatan} & \textbf{Latitude Tujuan} & \textbf{Longitude Tujuan}      \\ \hline
-02								& 2014						& Sabtu         & 00						 & -6.8972513										 & 107.6185574 							  & -6.91358                & 107.62718 \\ \hline
-02								& 2014						& Sabtu         & 00						 & -6.8972513										 & 107.6385574                & -6.91358							  & 107.62718 \\ \hline
-02								& 2014						& Sabtu         & 00 						 & -6.90598											 & 107.59714     		  				& -6.90855						&107.61082 \\ \hline
-02								& 2014						& Sabtu         & 00  					 & -6.9015366										 & 107.5414474 								& -6.88574					    & 107.53816 \\ \hline
-02								& 2014						& Sabtu         & 00 						 & -6.90608										   & 107.61530     						  & -6.89140					 &107.61060 \\ \hline
-02								& 2014						& Sabtu         & 00 						 & -6.89459											 & 107.58818     							& -6.89876						&107.60886 \\ \hline
-02								& 2014						& Sabtu         & 00 						 & -6.89459											 &107.58818  								   & -6.86031					 &107.61287 \\ \hline
+02								& 2014						& Sabtu         & 07						 & -6.8972513										 & 107.6185574 							  & -6.91358                & 107.62718 \\ \hline
+02								& 2014						& Sabtu         & 07						 & -6.8972513										 & 107.6385574                & -6.91358							  & 107.62718 \\ \hline
+02								& 2014						& Sabtu         & 07 						 & -6.90598											 & 107.59714     		  				& -6.90855						&107.61082 \\ \hline
+02								& 2014						& Sabtu         & 07  					 & -6.9015366										 & 107.5414474 								& -6.88574					    & 107.53816 \\ \hline
+02								& 2014						& Sabtu         & 07 						 & -6.90608										   & 107.61530     						  & -6.89140					 &107.61060 \\ \hline
+02								& 2014						& Sabtu         & 07 						 & -6.89459											 & 107.58818     							& -6.89876						&107.60886 \\ \hline
+02								& 2014						& Sabtu         & 07 						 & -6.89459											 &107.58818  								   & -6.86031					 &107.61287 \\ \hline
 \end{tabular}%
 }
 \caption{Contoh hasil data transformasi}
@@ -112,7 +112,7 @@ Nilai \textsl{latitude} serta \textsl{longitude} dari data lokasi keberangkatan 
 
 \begin{figure}
 \centering
-\includegraphics[scale=1]{Gambar/classificationmap.jpg}
+\includegraphics[scale=1.5]{Gambar/classificationmap.jpg}
 \caption[\textsl{Classification} pada daerah Bandung]{\textsl{Classification} pada daerah Bandung}
 \label{fig:classificationMap} 
 \end{figure}

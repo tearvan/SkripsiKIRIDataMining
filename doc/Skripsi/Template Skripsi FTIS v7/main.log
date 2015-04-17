@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.8.19)  17 APR 2015 05:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.8.19)  17 APR 2015 05:14
 entering extended mode
 **main.tex
 ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.tex"
@@ -817,7 +817,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--103
 File: Gambar/classificationmap.jpg Graphic file (type jpg)
  <use Gambar/classificationmap.jpg>
 Package pdftex.def Info: Gambar/classificationmap.jpg used on input line 115.
-(pdftex.def)             Requested size: 170.1352pt x 147.55087pt.
+(pdftex.def)             Requested size: 255.20279pt x 221.32631pt.
 
 Overfull \hbox (1.44418pt too wide) in paragraph at lines 120--120
 [][][]\T1/cmr/m/n/9 http://tools.wmflabs.org/geohack/geohack.php?pagename=Bandung&params=6_55_S_107_36_E_region:ID-
@@ -827,22 +827,26 @@ Overfull \hbox (1.44418pt too wide) in paragraph at lines 120--120
 Underfull \vbox (badness 10000) detected at line 141
  []
 
-[48] [49] <Gambar/usecase.jpg, id=709, 271.0125pt x 225.0006pt>
+[48] [49] <Gambar/usecase.jpg, id=708, 469.755pt x 329.23pt>
 File: Gambar/usecase.jpg Graphic file (type jpg)
  <use Gambar/usecase.jpg>
 Package pdftex.def Info: Gambar/usecase.jpg used on input line 203.
-(pdftex.def)             Requested size: 271.01183pt x 225.00003pt.
- [50 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/usecase.jpg>]
-<Gambar/classdiagram.jpg, id=720, 666.49pt x 345.29pt>
-File: Gambar/classdiagram.jpg Graphic file (type jpg)
- <use Gambar/classdiagram.jpg>
-Package pdftex.def Info: Gambar/classdiagram.jpg used on input line 256.
-(pdftex.def)             Requested size: 466.53983pt x 241.70134pt.
+(pdftex.def)             Requested size: 469.75386pt x 329.22919pt.
 
+Underfull \vbox (badness 7777) has occurred while \output is active []
+
+ [50]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [51]) [52 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/classdiagram.jpg>]
-("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab4.tex"
+ [51 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/usecase.jpg>] <Gambar/classdiag
+ram.jpg, id=724, 666.49pt x 345.29pt>
+File: Gambar/classdiagram.jpg Graphic file (type jpg)
+
+<use Gambar/classdiagram.jpg>
+Package pdftex.def Info: Gambar/classdiagram.jpg used on input line 256.
+(pdftex.def)             Requested size: 466.53983pt x 241.70134pt.
+) [52 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/classdiagram.jpg>] ("D:\Tugas\
+Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab4.tex"
 Bab 4.
 [53
 
@@ -1612,9 +1616,9 @@ ts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
  Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 mr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (91 pages, 5140285 bytes).
+Output written on main.pdf (91 pages, 5063691 bytes).
 PDF statistics:
- 1589 PDF objects out of 1728 (max. 8388607)
+ 1588 PDF objects out of 1728 (max. 8388607)
  293 named destinations out of 1000 (max. 500000)
  548 words of extra memory for PDF output out of 10000 (max. 10000000)
 
