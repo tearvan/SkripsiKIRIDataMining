@@ -245,7 +245,7 @@ Pada kedua percobaan, terdapat perbedaan bulan, hal ini dikarenakan perubahan wa
 
 Hasil percobaan pembuatan \textsl{decision tree} pada metode ID3 mengalami overfitting karena menghasilkan klasifikasi pada hampir setiap kemungkinan, dapat disimpulkan hasil \textsl{decision tree} pada percobaan di bulan ini cukup jelek. Namun pada percobaan metode J48, menghasilkan \textsl{decision tree} yang tidak overfitting dan menarik dimana dinyatakan bahwa jam 0-3 dan jam 5-24 user menjauhi Bandung.
 
-Nilai \textsl{confident} dari percobaan dengan metode ID3 adalah 35.65\% sedangkan untuk percobaan dengan metode j48 adalah 47.33\%, dari sini dapat dinyatakan bahwa hasil \textsl{decision tree} dari j48 lebih tepat daripada ID3 namun kedua metode tersebut menghasilkan nilai \textsl{confident} yang kurang memuaskan (dibawah 50\%).
+Nilai akurasi dari percobaan dengan metode ID3 adalah 35.65\% sedangkan untuk percobaan dengan metode j48 adalah 47.33\%, dari sini dapat dinyatakan bahwa hasil \textsl{decision tree} dari j48 lebih tepat daripada ID3 namun kedua metode tersebut menghasilkan nilai akurasi yang belum memuaskan, karena masih dibawah 50\%
 
 
 Selain itu, dari kedua percobaan ini, diperoleh bahwa cukup sulit untuk membaca hasil \textsl{decision tree} terutama pada \textsl{node} dengan kedalaman lebih dari 4 tingkat. Oleh karena itu, akan ditambahkan fungsi agar \textsl{decision tree} lebih mudah dibaca. Program akan ditambah satu kelas baru yaitu SDForExtractData yang berfungsi untuk menyimpan data dan membuat kesimpulan dari setiap \textsl{leaf} yang dihasilkan.
@@ -267,8 +267,8 @@ Berdasarkan pengujian di atas, dapat disimpulkan bahwa
 
 \begin{enumerate}
 	\item Metode ID3 menghasilkan \textsl{decision tree} yang bersifat overfitting.
-	\item Metode J48 menghasilkan \textsl{decision tree} yang lebih baik dan tepat daripada ID3, khususnya pada data \textsl{log} histori KIRI dengan \textsl{preprocessing data} dan klasifikasi yang sudah dijelaskan pada bab 3.
-	\item Kedua metode (J48 dan ID3) menghasilkan nilai \textsl{confident} yang kurang memuaskan (dibawah 50\%).
+	\item Metode J48 menghasilkan \textsl{decision tree} yang lebih baik dan tepat daripada ID3, khususnya pada data \textsl{log} histori KIRI dengan \textsl{preprocessing data} dan klasifikasi yang sudah dijelaskan pada bab 3 (J48 menghasilkan 43\% sedangkan ID3 menghasilkan 36.55\%).
+	\item Kedua metode belum menghasilkan nilai akurasi yang memuaskan, karena masih dibawah 50\%.
 	\item Dari data \textsl{log} histori KIRI pada bulan Febuari 2014, \textsl{decision tree} dengan metode J48 menyatakan bahwa penduduk Bandung lebih sering menjauhi Bandung jika dilihat dari banyak jam dimana user menjauhi Bandung.
 \end{enumerate}
 
