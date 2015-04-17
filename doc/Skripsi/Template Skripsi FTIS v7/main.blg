@@ -5,7 +5,11 @@ A level-1 auxiliary file: Bab/bab3.aux
 A level-1 auxiliary file: Bab/bab4.aux
 A level-1 auxiliary file: Bab/bab5.aux
 A level-1 auxiliary file: Bab/bab6.aux
+A level-1 auxiliary file: Bab/bab7.aux
+A level-1 auxiliary file: Bab/bab8.aux
+A level-1 auxiliary file: Bab/bab9.aux
+The style file: ieeetr.bst
 A level-1 auxiliary file: Lampiran/lampA.aux
-I found no \bibdata command---while reading file main.aux
-I found no \bibstyle command---while reading file main.aux
-(There were 2 error messages)
+Database file #1: pustaka.bib
+Warning--I didn't find a database entry for "DM"
+(There was 1 warning)
