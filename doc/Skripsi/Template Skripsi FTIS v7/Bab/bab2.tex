@@ -9,7 +9,7 @@
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.9]{Gambar/tahapdatamining.jpg}
-\caption[Tahap \textsl{Data Mining}]{Tahap \textsl{Data Mining}, \cite{DM}} 
+\caption[Tahap \textsl{Data Mining}]{Tahap \textsl{Data Mining}, Diterjemahkan dari \cite{DM}} 
 \label{fig:tahapDataMining}
 \end{figure}
 
@@ -29,10 +29,10 @@ Tahap pertama hingga keempat merupakan bagian dari \textsl{data preprocessing}, 
 
 
 \subsection{\textsl{Data Cleaning}}
-\textsl{Data cleaning} merupakan tahap \textsl{data mining} untuk menghilangkan \textsl{missing value} dan \textsl{noisy data}. Pada umumnya, \textsl{data} yang diperoleh dari \textsl{database} terdapat nilai yang tidak sempurna seperti nilai yang hilang, nilai yang tidak valid atau salah ketik. Atribut dari suatu \textsl{database} yang tidak relevan atau redudansi bisa diatasi dengan menghapus atribut tersebut. Contoh studi data yang memiliki \textsl{missing value} dan \textsl{noisy data} dapat dilihat pada table \ref{table:contohMissingNNoisy}
+\textsl{Data cleaning} merupakan tahap \textsl{data mining} untuk menghilangkan \textsl{missing value} dan \textsl{noisy data}. Pada umumnya, \textsl{data} yang diperoleh dari \textsl{database} terdapat nilai yang tidak sempurna seperti nilai yang hilang, nilai yang tidak valid atau salah ketik. Atribut dari suatu \textsl{database} yang tidak relevan atau redudansi bisa diatasi dengan menghapus atribut atau record tersebut. Contoh studi data yang memiliki \textsl{missing value} dan \textsl{noisy data} dapat dilihat pada table \ref{table:contohMissingNNoisy}
 
 \begin{table}[h]
-\caption{table mengandung \textsl{missing value} dan \textsl{noisy}}
+\caption{table mengandung \textsl{missing value} dan \textsl{noisy data}}
 \label{table:contohMissingNNoisy}
 \begin{tabular}{|l|l|l|l|l|}
 \hline
@@ -43,7 +43,7 @@ IdPenjualan & NamaBarang & Customer & Harga  & BanyakBarang \\ \hline
 \end{tabular}
 \end{table}
 
-Dapat dilihat, pada idPenjualan 2, harga dari keyboard adalah -35000, itu merupakan \textsl{noisy} karena tidak mungkin nilai harga suatu barang dibawah 0. Pada idPenjualan 3, kolom \textsl{customer} tidak memiliki nilai, dan itu merupakan \textsl{missing value}.
+Dapat dilihat, pada idPenjualan 2, harga dari keyboard adalah -35000, itu merupakan \textsl{noisy data} karena tidak mungkin nilai harga suatu barang dibawah 0. Pada idPenjualan 3, kolom \textsl{customer} tidak memiliki nilai, dan itu merupakan \textsl{missing value}.
 
 \subsubsection{\textsl{Missing Values}}
 \textsl{Missing values} akan mengganggu proses \textsl{data mining} pada komputer dan dapat menghasilkan nilai akhir yang tidak sesuai. Terdapat beberapa teknik untuk mengatasi \textsl{missing values} yaitu
@@ -59,7 +59,7 @@ Dapat dilihat, pada idPenjualan 2, harga dari keyboard adalah -35000, itu merupa
 	\begin{itemize}
 		\item \textsl{Binning}, merupakan metode pengisian data sesuai dengan proses yang dilakukan pada data tersebut
 		\item \textsl{Regression}, merupakan metode yang mencari detail persamaan atribut untuk memprediksikan suatu nilai
-		\item	\textsl{Clustering}, merupakan metode pengelompokan dimana ditemukan \textsl{outliers} yang dapat dibuang
+		\item	\textsl{Clustering}, merupakan metode pengelompokan dimana ditemukan \textsl{outliers} yang dapat dibuang. Outliers merupakan data yang berada diluar kelompok yang sesuai dengan observasi atau penelitian.
 	\end{itemize}
 
 %\subsubsection{\textsl{Data Cleaning as a Process}}
@@ -76,7 +76,7 @@ Dapat dilihat, pada idPenjualan 2, harga dari keyboard adalah -35000, itu merupa
 \subsection{\textsl{Data Integration}}
 \textsl{Data integration} merupakan tahap menggabungkan data dari berbagai sumber. Sumber tersebut bisa termasuk beberapa \textsl{database}, \textsl{data cubes}, atau bahkan \textsl{flat data}. \textsl{Data cube} merupakan teknik pengambilan data-data dari \textsl{data warehouse} dan dilakukan operasi agregasi sesuai dengan kondisi tertentu (contoh, penjumlahan total penjualan per tahun dari 2005-2010). Sedangkan \textsl{flat data} merupakan data yang disimpan dengan cara apapun untuk merepresentasikan database model pada sebuah data baik berbentuk \textsl{plain text file} maupun \textsl{binary file}. 
 
-Tahap ini harus dilakukan secara teliti terutama ketika dalam memasangkan nilai-nilai yang berasal dari sumber yang berbeda. Pada tahap ini, perlu dilakukan identifikasi data apakah data tersebut dapat diturunkan atau tidak agar data yang diperoleh tidak terlalu besar. \textsl{Data integration} yang baik merupakan integrasi yang dapat memaksimalkan kecepatan dan meningkatkan akurasi dari proses \textsl{data mining}. Contoh studi kasus dari \textsl{data integration}, jika suatu perusahaan sepatu A memiliki dua pabrik dengan \textsl{database} lokal pada masing-masing pabrik, jika akan dilakukan \textsl{data mining} pada kedua \textsl{database }tersebut, maka kedua \textsl{database} akan digabung dan perlu diperhatikan serta diperbaiki nilai-nilai seperti \textsl{primary key}, atribut, dan lain-lain agar tidak terjadi \textsl{error} pada \textsl{database} yang sudah digabung. Proses dari penggabungan hingga perbaikan nilai-nilai pada kedua database tersebut adalah proses \textsl{data integration}.
+Tahap ini harus dilakukan secara teliti terutama ketika dalam memasangkan nilai-nilai yang berasal dari sumber yang berbeda. Pada tahap ini, perlu dilakukan identifikasi data apakah data tertentu harus dimasukkan atau tidak agar data yang diperoleh tidak terlalu besar. \textsl{Data integration} yang baik merupakan integrasi yang dapat memaksimalkan kecepatan dan meningkatkan akurasi dari proses \textsl{data mining}. Contoh studi kasus dari \textsl{data integration}, jika suatu perusahaan sepatu A memiliki dua pabrik dengan \textsl{database} lokal pada masing-masing pabrik, jika akan dilakukan \textsl{data mining} pada kedua \textsl{database }tersebut, maka kedua \textsl{database} akan digabung dan perlu diperhatikan serta diperbaiki nilai-nilai seperti \textsl{primary key}, atribut, dan lain-lain agar tidak terjadi \textsl{error} pada \textsl{database} yang sudah digabung. Proses dari penggabungan hingga perbaikan nilai-nilai pada kedua database tersebut adalah proses \textsl{data integration}.
 
 \subsection{\textsl{Data Selection}}
 Proses dimana data-data yang relevan dengan analisis akan diambil dari database dan data yang tidak relevan akan dibuang. Sebagai contoh kasus, jika akan dilakukan analisa mengenai nilai mahasiswa pada table nilai yang memiliki atribut sebagai berikut:
@@ -113,7 +113,7 @@ Maka, atribut yang berpotensi diambil adalah MataKuliah, NilaiART, NilaiUTS, Nil
 	
 \subsubsection{\textsl{Normalization}}
 Atribut dapat dinormalisasi dengan memberi skala pada nilainya sehingga nilai tersebut menjadi suatu range yang lebih spesifik dan kecil seperti 0,0 sampai 1,0.
-Dua teknik nnormalisasi yaitu, \textsl{min-max normalization} dan \textsl{z-score normalization}. \textsl{Min-max normalization} akan mengubah semua nilai menjadi nilai dengan skala tertentu. Dengan menggunakan rumus 
+Terdapat beberapa teknik normalisasi, dua diantaranya yaitu, \textsl{min-max normalization} dan \textsl{z-score normalization}. \textsl{Min-max normalization} akan mengubah semua nilai menjadi nilai dengan skala tertentu. Dengan menggunakan rumus 
 
 \begin{displaymath}
 	\nu' = \frac{\nu-min_{A}}{max_{A}-min_{A}}(newMax_{A}-newMin_{A})+newMin_{A}	
@@ -168,7 +168,7 @@ Contoh kasus, misal nilai rata-rata dan standar deviasi dari nilai-nilai atribut
 Pada tahap ini, akan dilakukan proses \textsl{data mining} dengan menggunakan input data yang sudah diproses pada tahap sebelumnya (\textsl{data cleaning, data selection, data integration,} dan /\textsl{data transformation}).
 
 \subsubsection{\textsl{Classification and Prediction}}
-\textsl{Classification} merupakan pemodelan yang dibangun untuk memprediksikan label kategori, seperti "`baik"', "`cukup"', dan "`buruk"' dalam sistem penilaian sikap seorang siswa atau "`mini bus"', "`bus"', atau "`sedan"' dalam kategori tipe mobil. Kategori tersebut dapat direpresentasikan dengan menggunakan nilai diskret. Nilai diskret merupakan nilai yang terpisah dan berbeda, seperti 1 atau 5. Kategori yang direpresentasikan oleh nilai diskret maka akan menjadi nilai yang terurut dan tidak memiliki arti, seperti 1,2,3 untuk merepresentasikan kategori tipe mobil "`mini bus"', "`bus"', dan "`sedan"'.
+\textsl{Classification} merupakan pemodelan yang dibangun untuk memprediksikan label kategori, seperti "baik", "cukup", dan "buruk" dalam sistem penilaian sikap seorang siswa atau "mini bus", "bus", atau "sedan" dalam kategori tipe mobil. Kategori tersebut dapat direpresentasikan dengan menggunakan nilai diskret. Nilai diskret merupakan nilai yang terpisah dan berbeda, seperti 1 atau 5. Kategori yang direpresentasikan oleh nilai diskret maka akan menjadi nilai yang terurut dan tidak memiliki arti, seperti 1,2,3 untuk merepresentasikan kategori tipe mobil "mini bus", "bus", dan "sedan".
 
 \textsl{Prediction} merupakan model yang dibangun untuk meramalkan fungsi nilai kontinu atau \textsl{ordered value}. \textsl{Ordered value} merupakan nilai yang terurut dan berlanjut. Contoh studi kasus untuk pemodelan prediction adalah seorang marketing ingin meramalkan seberapa banyak konsumen yang akan belanja di sebuah toko dalam waktu satu bulan. Pemodelan tersebut disebut \textsl{predictor}. \textsl{Regression Analysis}, merupakan metodologi statistik yang digunakan untuk \textsl{numeric prediction}. \textsl{Classification} dan \textsl{numeric prediction} merupakan dua jenis utama dalam masalah prediksi.
 
@@ -178,7 +178,7 @@ Pada tahap kedua, dilakukan proses klasifikasi nilai berdasarkan \textsl{classif
 \begin{figure}
 \centering
 \includegraphics[scale=1]{Gambar/tahapdataclassification.jpg}
-\caption[Tahap \textsl{data classification}]{Tahap \textsl{data classification}, \cite{DM}} 
+\caption[Tahap \textsl{data classification}]{Tahap \textsl{data classification}, Diterjemahkan dari \cite{DM}} 
 \label{fig:tahapDataClassification}
 \end{figure}
 
@@ -188,13 +188,13 @@ Salah satu cara pembuatan \textsl{classification rules} pada \textsl{Data Classi
 \begin{figure}
 \centering
 \includegraphics[scale=1]{Gambar/decisiontree.jpg}
-\caption[Contoh \textsl{decision tree}]{Contoh \textsl{decision tree}, \cite{DM}} 
+\caption[Contoh \textsl{decision tree}]{Contoh \textsl{decision tree}, Diterjemahkan dari \cite{DM}} 
 \label{fig:decisionTree}
 \end{figure}
 
 \paragraph{\textsl{Decision Tree Induction}}
 
-\textsl{Decision tree induction} merupakan pelatihan pohon keputusan dari tupel pelatihan kelas berlabel. Terdapat beberapa teknik untuk membuat \textsl{decission tree} dua diantaranya adalah ID3 dan C4.5. ID3 merupakan teknik pembuatan \textsl{decision tree} dengan memanfaatkan \textsl{entropy} dan \textsl{gain info} untuk menentukan atribut yang terbaik untuk node pada \textsl{decision tree}. Sedangkan C4.5 merupakan teknik lanjutan dari ID3 yang menggunakan \textsl{gain ratio} untuk melakukan pengecekan pada nilai \textsl{gain info}.Kedua teknik tersebut menggunakan pendekatan \textsl{greedy} yang merupakan \textsl{decission tree} yang dibangun secara \textsl{top-down recursive divide and conquer}. Algoritma yang diperlukan secara umum sama, hanya berbeda pada \textsl{attribute\_selection\_method}. Berikut algoritma untuk membuat pohon keputusan dari suatu tupel pelatihan.
+\textsl{Decision tree induction} merupakan pelatihan pohon keputusan dari tupel pelatihan kelas berlabel. Terdapat beberapa teknik untuk membuat \textsl{decission tree} dua diantaranya adalah ID3 dan C4.5. ID3 merupakan teknik pembuatan \textsl{decision tree} dengan memanfaatkan \textsl{entropy} dan \textsl{gain info} untuk menentukan atribut yang terbaik untuk node pada \textsl{decision tree}. Sedangkan C4.5 merupakan teknik lanjutan dari ID3 yang menggunakan \textsl{gain ratio} untuk melakukan pengecekan pada nilai \textsl{gain info}. Kedua teknik tersebut menggunakan pendekatan \textsl{greedy} yang merupakan \textsl{decission tree} yang dibangun secara \textsl{top-down recursive divide and conquer}. Algoritma yang diperlukan secara umum sama, hanya berbeda pada \textsl{attribute\_selection\_method}. Berikut algoritma untuk membuat pohon keputusan dari suatu tupel pelatihan.
 
 
 \begin{algorithmic}[1]
@@ -243,7 +243,7 @@ Node N akan diisi dengan hasil dari \textsl{splitting criterion} (baris 9). Kemu
 \begin{figure}
 \centering
 \includegraphics[scale=1]{Gambar/jenishasilsplitpoint.jpg}
-\caption[Jenis-jenis \textsl{split point}]{Jenis-jenis \textsl{split point}, \cite{DM}} 
+\caption[Jenis-jenis \textsl{split point}]{Jenis-jenis \textsl{split point}, Diterjemahkan dari \cite{DM}} 
 \label{fig:splitPoint}
 \end{figure}
 
@@ -258,8 +258,6 @@ Rekursif tersebut akan berhenti ketika salah satu dari kondisi terpenuhi, yaitu
 \end{enumerate}
 
 Pada baris 21, akan dikembalikan nilai \textsl{decision tree} yang telah dibuat.
-
-subsubsection{\textsl{Attribute Selection Measure}}
 
 \paragraph{\textsl{Attribute Selection Measure}} merupakan suatu hirarki untuk pemilihan \textsl{splitting criterion} yang terbaik yang memisah partisi data (D), tuple pelatihan kelas label ke dalam kelas masing-masing. \textsl{Attribute Selection Measure} menyediakan peringkat untuk setiap atribut pada training tuple. Jika \textsl{splitting criterion} merupakan nilai \textsl{continous} atau \textsl{binary trees}, maka nilai \textsl{split point} dan \textsl{splitting subset} harus ditentukan sebagai bagian dari \textsl{splitting criterion}. Contoh dari \textsl{attribute selection measure} adalah \textsl{information gain}, \textsl{gain ratio}, dan \textsl{gini index}.
 
@@ -281,7 +279,7 @@ Dimana $p_{i}$ merupakan probabilitas tuple pada D terhadap class C$_{i}$, dapat
 	Info_A(D) = \sum_{j=1}^v \frac{|D_j|}{|D|} \times Info(D_j)
 \end{displaymath}
 
-|D$_{j}$|/D merupakan angka yang menghitung bobot dari suatu partisi. Semakin kecil nilai dari Info$_{A}(D)$, maka atribut tersebut masih memerlukan informasi, semakin besar nilai Info$_{A}$(D), semakin tinggi pula tingkat \textsl{pure} dari suatu partisi.
+|D$_{j}$|/D merupakan angka yang menghitung bobot dari suatu partisi.
 
 Setelah mendapatkan nilai Info(D) dan Info$_{A}$(D), \textsl{information gain} dapat diperoleh dari selisih nilai Info(D) dan Info$_{A}$(D)
 
@@ -340,7 +338,7 @@ Dengan melakukan hal yang sama, dapat diperoleh nilai \textsl{gain} untuk atribu
 \begin{figure}
 \centering
 \includegraphics[scale=1]{Gambar/hasilcabangid3.jpg}
-\caption[Hasil pohon faktor pada atribut \textsl{age} dari table 2.1]{Hasil cabang dari atribut \textsl{age}, \cite{DM}} 
+\caption[Hasil pohon faktor pada atribut \textsl{age} dari table 2.1]{Hasil cabang dari atribut \textsl{age}, Diterjemahkan dari \cite{DM}} 
 \label{fig:hasilCabang}
 \end{figure}
 
@@ -392,7 +390,7 @@ Maka nilai \textsl{gain ratio} dari atribut pendapatan adalah 0.031 bits. Perhit
 \begin{figure}
 \centering
 \includegraphics[scale=1]{Gambar/treepruning.jpg}
-\caption[\textsl{Decision Tree Pruned}]{\textsl{Decision tree} yang belum dipotong dan yang sudah dipotong, \cite{DM}} 
+\caption[\textsl{Decision Tree Pruned}]{\textsl{Decision tree} yang belum dipotong dan yang sudah dipotong, Diterjemahkan dari \cite{DM}} 
 \label{fig:treePruning}
 \end{figure}
 
@@ -418,7 +416,7 @@ Suatu \textsl{pattern} atau pola dapat dinyatakan menarik apabila
 
 \section{Log Histori KIRI}
 
-KIRI memiliki log histori yang melakukan pencatatan untuk setiap user ketika menggunakan KIRI. Data log tersebut diperoleh dengan cara melakukan wawancara dengan CEO KIRI, yaitu Pascal Alfadian. Data log yang diberikan sudah dalam format excel.
+KIRI memiliki log histori yang melakukan pencatatan untuk setiap user ketika menggunakan KIRI. Data log tersebut diperoleh dengan cara melakukan wawancara dengan developer KIRI, yaitu Pascal Alfadian. Data log yang diberikan sudah dalam format excel.
 
 \textsl{Log} tersebut memiliki 5 \textsl{field} untuk setiap tuple sebagai berikut:
 \begin{itemize}
@@ -477,7 +475,7 @@ Dimana
 	\item R adalah radius bumi (radius = 6,371km)
 \end{itemize}
 
-Studi kasus untuk perhitungan Haversine sebagai berikut:
+Contoh untuk perhitungan Haversine sebagai berikut:
 Jika kita ingin menghitung jarak dua titik dari daerah Jakarta ke Surabaya, dengan titik pada Jakarta adalah -6.211544, 106.845172 dan titik pada Surabaya adalah -7.289166, 112.734398, maka perhitungan rumusnya akan menjadi
 
 \begin{displaymath}
@@ -1676,25 +1674,38 @@ Atribut:
 \end{itemize}
 
 \section{Graphviz}
-Graphviz merupakan perangkat lunak \textsl{open source} untuk visualisasi grafik. Dengan menggunakan graphviz, visualisasi grafik dapat dibuat dengan menulis kode. Berikut contoh kode yang dapat dijadikan input untuk aplikasi graphviz:
+Graphviz merupakan perangkat lunak \textsl{open source} untuk visualisasi grafik. Dengan menggunakan graphviz, visualisasi grafik dapat dibuat dengan menulis kode. Atribut gambar yang disediakan oleh graphviz adalah \textsl{node shapes} dan \textsl{labels}. Dengan memanfaatkan kedua atribut gambar tersebut, gambar yang dihasilkan dapat diubah menjadi:
+\begin{itemize}
+	\item Berbeda bentuk untuk setiap \textsl{node}
+	\item Berbeda warna untuk setiap \textsl{node} dan \textsl{edge}
+	\item Pemberian label pada setiap \textsl{node} dan \textsl{edge}
+\end{itemize}
 
+Bentuk umum untuk setiap node adalah elips dengan lebar 0.75 dan tinggi 0.5 serta diberi label node name. Untuk bentuk umum yang lain tiga diantaranya adalah kotak, bulat, dan \textsl{plaintext}. Sedangkan untuk ukuran node, dapat dilakukan perubahan dengan cara mengubah nilai atribut dari lebar dan tinggi.
 
-	digraph\{
-	
-		A -> B
-	
-		B -> C
-		
-		D -> C
-	
-	\}
+Warna untuk node dan edge secara umum adalah hitam. Node dan edge dapat diubah warnanya dengan cara mengubah nilai atribut dari warna. Sedangkan untuk mewarnai bagian dalam dari node, dapat diberi \textsl{style filled}.
+
+Pemberian label dapat dilakukan dengan cara mengisi nilai atribut label pada objek yang akan diberi label.
+
+Berikut contoh kode yang dapat dijadikan input untuk aplikasi graphviz:
+
+\begin{algorithmic}[1]
+	\STATE digraph G\{
+	\STATE 		Main
+	\STATE		Execute [shape=box, color=red, style=filled]
+	\STATE		Main -> Execute
+	\STATE		Output [label="return result", width=2, height=1]
+	\STATE    edge [color=blue]
+	\STATE		Execute -> Output
+	\STATE \}
+\end{algorithmic}
 
 Maka hasil yang diperoleh dari perangkat lunak graphviz \ref{fig:outGraphviz}
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.9]{Gambar/Graphviz.jpg}
-\caption[Hasil output Graphviz]{Hasil output Graphvi} 
+\caption[Hasil output Graphviz]{Hasil output Graphviz} 
 \label{fig:outGraphviz}
 \end{figure}
 
