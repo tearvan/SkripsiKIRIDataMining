@@ -1,3 +1,19 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{DM}
+J.~Han, M.~Kamber, and J.~Pei, {\em Data Mining : concepts and techniques,
+  Third Edition}, p.~744.
+\newblock Elsevier, 2011.
+
+\bibitem{Haversine}
+C.~Veness, ``Calculate distance, bearing and more between latitude/longitude
+  points,'' 2002.
+
+\bibitem{Weka}
+T.~U. of~Waikato, ``Weka api,'' 2009.
+
+\bibitem{Graph}
+E.~R. Gansner, E.~Koutsofios, and S.~North, ``Drawing graphs with dot,''
+  January 2015.
 
 \end{thebibliography}
