@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package DataMiningLogHistoriKIRIWithoutDateAndMinutes;
 
 import java.io.BufferedReader;
@@ -40,36 +34,6 @@ public class ArffIO
         for(int i = 0; i < data.size(); i++)
         {
             int[] temp = data.get(i);
-            /**
-            String hari;
-            if(temp[3] == 1)
-            {
-                hari = "Senin";
-            }
-            else if(temp[3] == 2)
-            {
-                hari = "Selasa";
-            }
-            else if(temp[3] == 3)
-            {
-                hari = "Rabu";
-            }
-            else if(temp[3] == 4)
-            {
-                hari = "Kamis";
-            }
-            else if(temp[3] == 5)
-            {
-                hari = "Jumat";
-            }
-            else if(temp[3] == 6)
-            {
-                hari = "Sabtu";
-            }
-            else
-            {
-                hari = "Minggu";
-            }**/
             result += "\n" + temp[0] + "," + temp[1] + "," + temp[2] + "," + temp[3] + "," + temp[4]; 
         }
         

@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package DataMiningLogHistoriKIRIWithoutDateAndMinutes;
 
 import DataMiningLogHistoriKIRI.*;
@@ -66,7 +60,7 @@ public class DotConverter
 
                     if(temp[2].charAt(temp[2].length()-1) == ':')
                     {
-                        // masukin data bwt extract
+                        // masukin data buat extract
                         tempExtract.setRules(temp[0], temp[1], Integer.parseInt(temp[2].substring(0, temp[2].length()-1)));
                         try
                         {
@@ -81,7 +75,6 @@ public class DotConverter
                         tempExtract.extract();
                         extract.addStringResult(tempExtract.getList());
                         // menghasilkan daun
-                        // String temp3 = temp[2].substring(0, temp[2].length()-1);
 
                         nodeName2 = data.getDataNumber(temp[3]);
                         result += nodeName2 + " [label=\"" + temp[1] + " " + temp[2].substring(0, temp[2].length()-1) +  "\"]\n";
@@ -165,7 +158,6 @@ public class DotConverter
                         tempExtract.extract();
                         extract.addStringResult(tempExtract.getList());
                         // menghasilkan daun
-                        // String temp3 = temp[2].substring(0, temp[2].length()-1);
                         nodeName2 = data.getDataNumber(temp[3]);
                         result += nodeName2 + " [label=\"" + temp[1] + " " + temp[2].substring(0, temp[2].length()-1) +  "\"]\n";
                         if(iniName1 && i == 0)

@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package DataMiningLogHistoriKIRIWithoutDateAndMinutes;
 
 import java.io.BufferedReader;
@@ -19,8 +13,6 @@ public class Cmd
     public static void makeJpgUsingDotCommand()
     {
         try {
-            //rt.exec(new String[]{"cmd.exe","/c","start"});
-            //ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", "cd \"C:\\Program Files\\Microsoft SQL Server\" && dir");
             final String dir = System.getProperty("user.dir");
             
             ProcessBuilder builder = new ProcessBuilder(
@@ -38,8 +30,8 @@ public class Cmd
                 System.out.println(line);
             }
         } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            System.out.println("Error ketika proses CMD");
+            System.exit(1);
         }
     }
 }

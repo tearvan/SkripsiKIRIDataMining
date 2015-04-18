@@ -6,11 +6,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Set;
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  *
  * @author Jovan Gunawan
@@ -50,7 +45,7 @@ public class CSVReader
                 splited = temp.split("\"");
                 if(i==0)
                 {
-                    //baca atributnya terlebih dauhulu
+                    //baca atributnya terlebih dahulu
                     ArrayList al = new ArrayList<String>();
                     String tempAtribut ="";
                     for(int j = 0; j < splited.length; j++)
@@ -68,7 +63,6 @@ public class CSVReader
                         }
                         else
                         {
-                            // harusnya ada cek ada kutip lagi? ("" merupakan " biasa)
                             al.add(splited[j]);
                         }
                     }
@@ -91,11 +85,6 @@ public class CSVReader
                         if(j%2 == 0)
                         {
                             String [] splitedKoma = splited[j].split(",");
-
-                        //System.out.println("CEK1: " + splitedKoma[0]);
-                        //System.out.println("CEK2: " + splitedKoma[1]);
-                        //System.out.println("CEK3: " + splitedKoma[2]);
-                        
                             for(int k = 0; k < splitedKoma.length; k++)
                             {
                                 if(!(k == 0 && splitedKoma[k].length() ==0)||(k==splitedKoma.length-1 && splitedKoma[k].length() == 0))
@@ -119,13 +108,6 @@ public class CSVReader
             for(int j = 0; j < i; j++)
             {
                 String [] temp2 = (String[])getData().get(j);
-                
-//                for(int k = 0; k < banyakAtribut; k++)
-//                {
-//                    System.out.println(temp2[k]);
-//                }
-//                System.out.println("\nEND\n");
-                 
             }
             br.close();
         }catch(IOException e)

@@ -2,10 +2,6 @@ package DataMiningLogHistoriKIRIWithoutDateAndMinutes;
 
 import java.util.ArrayList;
 
-/*
- * Class for processing data ONLY FOR DATA LOG HISTORY KIRI
- */
-
 /**
  *
  * @author Jovan Gunawan

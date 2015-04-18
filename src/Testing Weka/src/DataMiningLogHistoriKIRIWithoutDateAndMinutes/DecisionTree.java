@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package DataMiningLogHistoriKIRIWithoutDateAndMinutes;
 
 import java.util.logging.Level;
@@ -25,7 +19,6 @@ public class DecisionTree
     
     public double calculatePrecision(Instances arff)
     {
-        // mengecek confiden
         int nilaiBenar = 0, resultInt;
         float result = 0;
         for (int i = 0; i < arff.numInstances(); i++)
@@ -39,7 +32,6 @@ public class DecisionTree
                 }
             } catch (Exception ex) {
                 System.out.println("CHECK: " + ex.getMessage());
-                //System.exit(1);
             }
         }
         double confident = Math.round(nilaiBenar * 1.0 / arff.numInstances() * 10000)/100.0;
