@@ -3,10 +3,10 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Tahap \textsl {Data Mining}}}{5}{figure.2.1}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Tahap \textsl {data classification}}}{11}{figure.2.2}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Contoh \textsl {decision tree}}}{12}{figure.2.3}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Contoh \textsl {decision tree}}}{11}{figure.2.3}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Jenis-jenis \textsl {split point}}}{13}{figure.2.4}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Hasil pohon faktor pada atribut \textsl {age} dari table 2.1}}{16}{figure.2.5}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces \textsl {Decision Tree Pruned}}}{18}{figure.2.6}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces \textsl {Decision Tree Pruned}}}{17}{figure.2.6}
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Hasil output Graphviz}}{42}{figure.2.7}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces \textsl {Classification} pada daerah Bandung}}{47}{figure.3.1}
@@ -32,7 +32,7 @@
 \contentsline {figure}{\numberline {5.12}{\ignorespaces Pengujian Hasil Visualisasi dengan Menggunakan Bahasa DOT}}{71}{figure.5.12}
 \contentsline {figure}{\numberline {5.13}{\ignorespaces Percobaan \textsl {Data Mining} untuk Melakukan Data Cleaning}}{72}{figure.5.13}
 \contentsline {figure}{\numberline {5.14}{\ignorespaces Percobaan \textsl {Data Mining} dengan Menggunakan Metode ID3 pada \textsl {Log} Histori KIRI pada Bulan 2 Tahun 2014}}{73}{figure.5.14}
-\contentsline {figure}{\numberline {5.15}{\ignorespaces Percobaan \textsl {Data Mining} dengan Menggunakan Metode J48 pada \textsl {Log} Histori KIRI pada Bulan 2 Tahun 2014}}{73}{figure.5.15}
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Hasil dari SDForExtractData}}{74}{figure.5.16}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Percobaan \textsl {Data Mining} dengan Menggunakan Metode J48 pada \textsl {Log} Histori KIRI pada Bulan 2 Tahun 2014}}{74}{figure.5.15}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Hasil dari SDForExtractData}}{75}{figure.5.16}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

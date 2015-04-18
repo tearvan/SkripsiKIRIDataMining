@@ -23,6 +23,7 @@ Dari analisis diatas, maka atribut yang dipilih untuk diproses ke dalam \textsl{
 
 Berikut contoh data dari atribut tersebut dapat dilihat pada tabel \ref{table:contohDataLog}
 \begin{table}[h]
+\centering
 \caption{Contoh data \textsl{log} KIRI setelah \textsl{data selection}}
 \label{table:contohDataLog}
 \begin{tabular}{|l|l|}
@@ -59,7 +60,7 @@ Pada atribut \textsl{timestamp}, nilai waktu dari atribut tersebut akan diubah m
 	\item Jam, atribut ini akan menunjukkan jam ketika user KIRI memanggil \textsl{action FINDROUTE}, dengan range nilai antara 00 sampai 23. Nilai tersebut dapat diperoleh dengan cara mengambil nilai string dari timpestamp yang berada di antara spasi dan titik dua.
 \end{itemize}
 
-Data \textsl{timestamp} diubah menjadi enam bagian, agar dapat dilakukan pengelompokan yang dilihat dari tanggal, bulan, tahun, hari, jam dan menit.
+Data \textsl{timestamp} diubah menjadi empat bagian, agar dapat dilakukan pengelompokan yang dilihat dari tanggal, bulan, tahun, hari dan jam.
 
 Pada atribut \textsl{additionalData}, data akan diubah menjadi empat atribut, yaitu:
 \begin{itemize}
@@ -105,7 +106,6 @@ Contoh hasil data transformasi jika input merupakan data dari tabel \ref{table:c
 \label{table:contohHasilDataTransformasi}
 \end{table}
 \end{center}
-
 Agar dapat diperoleh \textsl{decision tree} mengenai lokasi keberangkatan dan tujuan dari user KIRI, maka atribut kelas yang akan digunakan adalah nilai latitude dan longitude dari lokasi keberangkatan dan tujuan. Karena atribut kelas ada empat, maka akan dilakukan penyederhanaan dari keempat atribut untuk meningkatkan akurasi serta tingkat efisien proses \textsl{data mining}. 
 
 Nilai \textsl{latitude} serta \textsl{longitude} dari data lokasi keberangkatan dan tujuan akan diubah menjadi nilai yang menunjukkan apakah daerah lokasi keberangkatan dan tujuan tersebut menunjukkan perjalanan keluar dari Bandung, menuju Bandung, atau menuju daerah yang sama. Hal ini dilakukan agar diperoleh data perbandingan pergerakan penduduk, apakah mereka lebih banyak yang keluar dari Bandung atau sebaliknya atau bahkan menuju daerah yang sama berdasarkan waktu tertentu. Untuk menentukan hal tersebut, maka akan dibutuhkan klasifikasi daerah agar mudah dilakukan penentuan apakan \textsl{user} akan berangkat ke Bandung atau tidak. \textsl{Classification} daerah yang ditentukan setelah melihat peta Bandung dapat dilihat pada gambar \ref{fig:classificationMap}.
@@ -123,9 +123,10 @@ Suatu lokasi atau titik latitude longitude dapat diketahui berada pada daerah ya
 
 Setelah lokasi keberangkatan dan lokasi tujuan ditentukan daerahnya, dapat ditentukan apakah user tersebut menuju pusat Bandung atau tidak. Jika daerah dari lokasi keberangkatan lebih besar daripada daerah lokasi tujuan, maka user tersebut menuju pusat Bandung. Kemudian, jika daerah dari lokasi keberangkatan lebih kecil daripada daerah lokasi tujuan, maka user tersebut tidak menuju pusat Bandung. Sedangkan, jika lokasi keberangkatan dan lokasi tujuan berada di daerah yang sama, maka user tersebut maka user tersebut bergerak di daerah yang sama.
 
-Dengan adanya perhitungan jarak dan penentuan daerah Bandung, nilai latitude dan longitude dari lokasi keberangkatan dan tujuan dapat dibuang dan diganti oleh atribut menujuBandung dengan tipe data \textsl{integer}. Jika isi dari atribut tersebut bernilai 1, maka \textsl{user} tersebut menuju Bandung sedangkan nilai 0 bearti \textsl{user} tidak menuju Bandung, dan jika nilai atribut tersebut adalah 2, maka \textsl{user} tersebut memiliki lokasi keberangkatan dan tujuan pada daerah yang sama. Contoh hasil data setelah dilakukan \textsl{transformation} terhadap latitude dan longitude terdapat pada tabel \ref{table:contohHasilDataTransformasiLatLong}.
+Dengan adanya perhitungan jarak dan penentuan daerah Bandung, nilai latitude dan longitude dari lokasi keberangkatan dan tujuan dapat dibuang dan diganti oleh atribut menujuBandung dengan tipe data \textsl{integer}. Jika isi dari atribut tersebut bernilai 1, maka \textsl{user} tersebut menuju Bandung sedangkan nilai -1 bearti \textsl{user} tidak menuju Bandung, dan jika nilai atribut tersebut adalah 0, maka \textsl{user} tersebut memiliki lokasi keberangkatan dan tujuan pada daerah yang sama. Contoh hasil data setelah dilakukan \textsl{transformation} terhadap latitude dan longitude terdapat pada tabel \ref{table:contohHasilDataTransformasiLatLong}.
 
 \begin{table}[H]
+\centering
 \caption{Contoh hasil data transformasi latitude longitude}
 \label{table:contohHasilDataTransformasiLatLong}
 \begin{longtable}{|l|l|l|l|l|}
@@ -157,7 +158,7 @@ Spesifikasi kebutuhan perangkat lunak yang akan dibangun untuk melakukan \textsl
 \end{enumerate}
 
 \subsubsection{Pemodelan Perangkat Lunak \textsl{Data Mining Log} Histori KIRI}
-Perangkat lunak \textsl{data mining log} histori KIRI akan mendapat input data text dengan format .txt. Setelah program mendapatkan input dan user menekan tombol proses, maka data tersebut akan diubah terlebih dahulu sesuai pada bab analisis data(bab \ref{analisisData}) dengan melakukan proses \textsl{data transform} dan menghasilkan data dengan format seperti pada tabel \ref{table:contohHasilDataTransformasiLatLong}.
+Perangkat lunak \textsl{data mining log} histori KIRI akan mendapat input data dengan format .csv. Setelah program mendapatkan input dan user menekan tombol proses, maka data tersebut akan diubah terlebih dahulu sesuai pada bab analisis data(bab \ref{analisisData}) dengan melakukan proses \textsl{data transform} dan menghasilkan data dengan format seperti pada tabel \ref{table:contohHasilDataTransformasiLatLong}.
 
 Program akan melakukan tahap \textsl{data mining} dengan menggunakan teknik ID3 atau C4.5 sesuai dengan permintaan \textsl{user}. Setelah proses \textsl{data mining} selesai dilakukan, program akan melakukan visualisasi \textsl{decision tree} dengan menggunakan graphviz.  
 
@@ -166,13 +167,13 @@ Karena data yang diperoleh sudah dalam bentuk csv, maka pada penelitian ini, tid
 
 Ketika tombol proses ditekan, maka data tersebut akan diproses. Proses yang pertama yang akan dilakukan adalah melakukan \textsl{load} data dari file. data csv akan dibaca dengan menggunakan CSVReader sehingga semua hasil datanya sudah terpisah sesuai dengan atribut. Kemudian dilakukan filter data dan hanya action dengan nilai FINDROUTE yang akan diambil. Setelah data didapat, akan dilakukan proses \textsl{transform} untuk setiap baris yang ada. Proses \textsl{transform} tersebut memiliki tahap sebagai berikut:
 \begin{enumerate}
-	\item Mengubah waktu dari UTC menjadi GMT+8 pada string data input array ketiga (yaitu atribut tanggal).
+	\item Mengubah waktu dari UTC menjadi GMT+7 pada string data input array ketiga (yaitu atribut tanggal).
 	\item Mengambil atribut tanggal kemudian memecah nilai tersebut dengan spasi sebagai tanda pemisah, maka akan terdapat tiga nilai, yaitu hari (dalam bentuk angka dimana nilai 1 bearti senin dan nilai 7 bearti minggu), tanggal dan jam.
 	\item Pada nilai tanggal, dilakukan pemecahan nilai string dengan garis miring sebagai tanda pemisah, maka akan diperoleh tiga nilai yaitu bulan, tanggal, dan tahun, namun nilai yang akan diambil hanya dua, yaitu bulan dan tahun.
 	\item Pada nilai jam, dilakukan pemecahan nilai string dengan titik dua sebagai tanda pemisah, maka akan diperoleh dua nilai yaitu jam dan menit, namun nilai yang akan diambil hanya jam.
 	\item Mengambil string data input array kelima (yaitu atribut \textsl{additionalData}), dilakukan pemecahan nilai string dengan garis miring sebagai tanda pemisah, maka akan diperoleh tiga nilai yaitu lokasi awal, lokasi tujuan, dan banyak jalur.
 	\item Pada nilai lokasi awal dan lokasi tujuan, akan dilakukan pemecahan nilai string dengan koma sebagai tanda pemisah, maka akan diperoleh dua nilai untuk setiap lokasi, yaitu \textsl{latitude} dan \textsl{longitude}.
-	\item Menghitung jarak posisi lokasi awal dan lokasi tujuan terhadap titik pusat dan menentukan apakah lokasi tersebut berada pada klasifikasi nol atau pertama atau kedua.
+	\item Menghitung jarak posisi lokasi awal dan lokasi tujuan terhadap titik pusat dan menentukan apakah lokasi tersebut berada pada klasifikasi -1 atau 0 atau 1.
 	\item menggabungkan nilai-nilai tersebut ke dalam satu array, yaitu array dengan tipe int (dengan nilai bulan, tahun, hari, jam dan menujuBandung).
 \end{enumerate}
 
@@ -206,6 +207,7 @@ Diagram \textsl{use case} saat \textsl{user} menjalankan perangkat lunak \textsl
 \end{figure}
 
 \begin{table}[H]
+\centering
 \caption{Skenario Melakukan \textsl{load} Data}
 \begin{tabular}{|l|l|}
 \hline
@@ -220,6 +222,7 @@ Eksespi        & Data tidak ditemukan                                           
 \end{table}
 
 \begin{table}[H]
+\centering
 \caption{Skenario Melakukan \textsl{Data Mining}}
 \begin{tabular}{|l|l|}
 \hline
@@ -234,6 +237,7 @@ Eksespi        & Data tidak ditemukan atau data tidak dapat diproses    		  	  \
 \end{table}
 
 \begin{table}[H]
+\centering
 \caption{Skenario Memilih Algoritma yang Akan Digunakan}
 \begin{tabular}{|l|l|}
 \hline

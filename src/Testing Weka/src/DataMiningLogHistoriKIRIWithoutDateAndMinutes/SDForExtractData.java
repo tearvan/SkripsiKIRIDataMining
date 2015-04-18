@@ -74,7 +74,7 @@ public class SDForExtractData
         }
     }
     
-    public void setKelas(int Kelas)
+    public void setKelas(int kelas)
     {
         this.kelas = kelas;
     }
@@ -117,12 +117,14 @@ public class SDForExtractData
     
     public void extract()
     {
+        String[] hari = new String[]{"Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"};
+        boolean in = false;
         String result = "";
         for(int i = 0; i < atribut.length; i++)
         {
             if(check[i])
             {
-                if(i != 0)
+                if(in)
                 {
                     result += " && ";
                 }
@@ -134,6 +136,7 @@ public class SDForExtractData
                 {
                     result += atribut[i] + ": " + batasBawah[i] + " - " + batasAtas[i]; 
                 }
+                in = true;
             }
         }
         

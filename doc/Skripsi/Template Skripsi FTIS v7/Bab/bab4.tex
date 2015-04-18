@@ -41,7 +41,7 @@ Agar perangkat lunak dapat menjalankan fungsi yang sudah dibahas pada pemodelan 
 		\item Method
 		\begin{itemize}
 			\item public void buttonBrowseActionPerformed(java.awt.event.ActionEvent evt), digunakan untuk membuat jFileChooser yang berfungsi untuk memilih file dan mendapatkan \textsl{file path} dari file yang dipilih dan memasukkan \textsl{string }tersebut ke textFieldFilePath.
-			\item public void buttonStartActionPerformed(java.awt.event.ActionEvent evt), digunakan untuk mengambil String dari textFieldFilePath serta method yang dipilih pada jRadioButton (Id3 atau J48) kemudian memanggil method startMining dengan masukan kedua file tersebut, label dan textArea.
+			\item public void buttonStartActionPerformed(java.awt.event.ActionEvent evt), digunakan untuk mengambil String dari textFieldFilePath serta method yang dipilih pada jRadioButton (Id3 atau J48) kemudian memanggil method startMining dengan masukan kedua string tersebut, label dan textArea.
 		\end{itemize}
 	\end{itemize}
 
@@ -75,7 +75,7 @@ Agar perangkat lunak dapat menjalankan fungsi yang sudah dibahas pada pemodelan 
 		\end{itemize}
 	\end{itemize}
 
-	\item Kelas DecisionTree, merupakan kelas yang memiliki method untuk membuat \textsl{decision tree} dan menghitung \textsl{confident} dari pohon yang sudah dihasilkan.
+	\item Kelas DecisionTree, merupakan kelas yang memiliki method untuk membuat \textsl{decision tree} dan menghitung akurasi dari pohon yang sudah dihasilkan.
 	\begin{itemize}
 		\item Atribut
 		\begin{itemize}
@@ -84,7 +84,7 @@ Agar perangkat lunak dapat menjalankan fungsi yang sudah dibahas pada pemodelan 
 		\item Method
 		\begin{itemize}
 			\item public DecisionTree(), merupakan konstruktor untuk kelas DecisionTree.
-			\item public double calculateConfident(Instances data), digunakan untuk mendapatkan nilai confident dari \textsl{decision tree} yang dihasilkan.
+			\item public double calculatePrecision(Instances data), digunakan untuk mendapatkan nilai akurasi dari \textsl{decision tree} yang dihasilkan.
 			\item public String id3(Instances data), digunakan untuk membuat \textsl{decision tree} dengan menggunakan metode ID3 dari API Weka.
 			\item public String j48(Instances data), digunakan untuk membuat \textsl{decision tree} dengan menggunakan metode J48 dari API Weka.
 		\end{itemize}
@@ -156,7 +156,7 @@ tersebut cukup banyak dan diperlukan nama yang berbeda pada setiap node yang aka
 			\item public String getData(int index), digunakan untuk mendapatkan nilai data pada index tertentu.
 			\item public void setCount(int count, int index), digunakan untuk mengubah nilai count pada index tertentu.
 			\item public int getCount(int index), digunakan untuk mendapatkan nilai count pada index tertentu.
-			\item public boolean hasNext(), digunakan untuk mengecek apakah varibel data masih ada atau tidak.
+			\item public boolean hasNext(), digunakan untuk mengecek apakah isi dari varibel data masih ada atau tidak.
 			\item public void buangArrayPertama(), digunakan untuk membuang nilai array yang pertama (index ke-0).
 			\item public String getDataNumber(String atribut), digunakan untuk mendapatkan angka pada nama atribut tertentu untuk membuat nama node pada kelas DotConverter agar semua nama node berbeda.
 		\end{itemize}
@@ -194,11 +194,11 @@ Pertama, program akan menampilkan desain antar muka yang dihasilkan oleh kelas V
 
 Kelas Controller akan mengakses file sesuai dengan masukan \textsl{file path} dengan memanggil \textsl{method} readCSV dari kelas CSVReader dan mendapat nilai kembalian berupa arraylist (tahap 5-6). Setelah mendapatkan data dari file CSV yang dipilih, data tersebut akan dipilah dan menggambil \textsl{record} dengan \textsl{action} FINDROUTE dengan cara memanggil \textsl{method} processSorting pada kelas ProcessingData dan mengembalikan ArrayList dengan data yang sudah dipilah (tahap 7-8). Kemudian data tersebut akan dilakukan \textsl{preprocessing data} dengan cara memanggil \textsl{method} preprocessingData dari kelas ProcessingData(tahap 9).
 
-Ketika \textsl{method} preprocessingData dijalankan, perlu mengubah nilai waktu dari UTC menjadi GMT+7 dengan cara memanggil \textsl{method} convertGMT7 dari kelas TimezoneConverter dan mengembalikan nilai bertipe Date (tahap 10-11). Setelah nilai waktu diubah, diperlukan perhitungan jarak antara dua titik dengan cara memanggil \textsl{method} calculateDistance  dari kelas DistanceHaversine dan mengebalikan nilai double yang berisi jarak dari kedua titik(tahap 12-13). Kemudian diperlukan klasifikasi kelas dari jarak yang sudah dihasilkan dengan cara memanggil \textsl{method} klasifikasiKelas dari kelas ProcessingData (tahap 14-15). Kemudian semua data yang sudah diproses akan dikembalikan dalam bentuk ArrayList(tahap 16).
+Ketika \textsl{method} preprocessingData dijalankan, perlu mengubah nilai waktu dari UTC menjadi GMT+7 dengan cara memanggil \textsl{method} convertGMT7 dari kelas TimezoneConverter dan mengembalikan nilai bertipe Date (tahap 10-11). Setelah nilai waktu diubah, diperlukan perhitungan jarak antara dua titik dengan cara memanggil \textsl{method} calculateDistance  dari kelas DistanceHaversine dan mengembalikan nilai double yang berisi jarak dari kedua titik(tahap 12-13). Kemudian diperlukan klasifikasi kelas dari jarak yang sudah dihasilkan dengan cara memanggil \textsl{method} klasifikasiKelas dari kelas ProcessingData (tahap 14-15). Kemudian semua data yang sudah diproses akan dikembalikan dalam bentuk ArrayList(tahap 16).
 
 Setelah didapat data yang sudah dilakukan \textsl{preprocessing data}, data tersebut akan disimpan dengan format arff dengan cara memanggi \textsl{method} writeArff pada kelas ArffIO(tahap 17). Setelah disimpan, diperlukan mengambil data dari file arff yang sudah disimpan untuk mendapatkan data dengan tipe Instance dengan cara memanggil \textsl{method}readArff(tahap 18-19).
 
-Kemudian program akan membuat \textsl{decision tree} dengan cara memanggil \textsl{method} id3 atau j48 pada kelas DecisionTree dan mengembalikan \textsl{decision tree} dalam bentuk \textsl{String}(tahap 20-21). Setelah \textsl{decision tree} dibuat, perlu dicari nilai \textsl{confident} yang diperoleh dari \textsl{decision tree} tersebut dengan cara memanggil \textsl{method} calculateConfident dan nilai \textsl{confident} yang dihasilkan dikembalikan dalam bentuk double(tahap 22-23).
+Kemudian program akan membuat \textsl{decision tree} dengan cara memanggil \textsl{method} id3 atau j48 pada kelas DecisionTree dan mengembalikan \textsl{decision tree} dalam bentuk \textsl{String}(tahap 20-21). Setelah \textsl{decision tree} dibuat, perlu dicari nilai akurasi yang diperoleh dari \textsl{decision tree} tersebut dengan cara memanggil \textsl{method} calculatePrecision dan nilai akurasi yang dihasilkan dikembalikan dalam bentuk double(tahap 22-23).
 
 Tahap selanjutnya adalah mengubah nilai String yang diperoleh dari \textsl{method} id3 atau j48 menjadi bahasa DOT dengan cara memanggil \textsl{method} convert pada kelas DotConverter dan akan mengembalikan nilai String(tahap 24-25). Setelah diperoleh hasil dari \textsl{method} convert, maka diperlukan \textsl{command prompt} untuk menghasilkan gambar grafik untuk melakukan visualisasi \textsl{decision tree} yang sudah dihasilkan(tahap 26-27).
 

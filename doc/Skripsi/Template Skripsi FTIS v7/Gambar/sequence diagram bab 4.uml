@@ -1083,7 +1083,7 @@
 <XPD:OBJ name="NameLabel" type="EdgeLabelView" guid="OEVIWVjBCUmZje3LOhQ5lwAA">
 <XPD:ATTR name="Alpha" type="real">1.5707963267949</XPD:ATTR>
 <XPD:ATTR name="Distance" type="real">10</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">22 : CalculateConfident(arff)</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">22 : CalculatePrecision(arff)</XPD:ATTR>
 <XPD:REF name="Model">7BuzugztSkC9kDpk14gZRQAA</XPD:REF>
 <XPD:REF name="HostEdge">xJ7Be9td3U+cCRwTI8pv9AAA</XPD:REF>
 </XPD:OBJ>
@@ -1673,7 +1673,7 @@
 <XPD:REF name="Views[3]">An+qeOAvgUGFI7LjXrUmIwAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="ParticipatingStimuli[21]" type="UMLStimulus" guid="7BuzugztSkC9kDpk14gZRQAA">
-<XPD:ATTR name="Name" type="string">CalculateConfident</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">CalculatePrecision</XPD:ATTR>
 <XPD:ATTR name="Arguments" type="string">arff</XPD:ATTR>
 <XPD:REF name="Sender">F4KpOBU61UaKSgZXQvHsEwAA</XPD:REF>
 <XPD:REF name="Receiver">v3uvGDQY60SU4orGQ1vxowAA</XPD:REF>

@@ -2824,18 +2824,18 @@
 <XPD:REF name="Owner">iypkJJIChkqCGBmh2eNWMgAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Operations[1]" type="UMLOperation" guid="D+PxOscPeEOwTCUtiVUxNwAA">
-<XPD:ATTR name="Name" type="string">calculateConfident</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">calculatePrecision</XPD:ATTR>
 <XPD:REF name="Owner">iypkJJIChkqCGBmh2eNWMgAA</XPD:REF>
 <XPD:ATTR name="#Parameters" type="integer">2</XPD:ATTR>
-<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="/r6hMN+KfkWiMe2snoSO1gAA">
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="czCSB+mRa0u1lcyVyV1vcQAA">
 <XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">double</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">D+PxOscPeEOwTCUtiVUxNwAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="GT48vpLDKk+H2nGul9YsggAA">
+<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="n0geAFcuAkyYqi9/GImFoQAA">
 <XPD:ATTR name="Name" type="string">arff</XPD:ATTR>
-<XPD:ATTR name="TypeExpression" type="string">Instances</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">D+PxOscPeEOwTCUtiVUxNwAA</XPD:REF>
+<XPD:REF name="Type_">jZiRrync00y8h8gFWX2IOQAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:OBJ name="Operations[2]" type="UMLOperation" guid="war74FmRX0K230Nvy6FxpQAA">
@@ -3732,6 +3732,8 @@
 <XPD:REF name="Views[1]">maRVczXirEW5sB3w4jKVwwAA</XPD:REF>
 <XPD:REF name="Views[2]">m2lFqSjwDUmz2w76rxM1XQAA</XPD:REF>
 <XPD:REF name="Views[3]">jj8qvvO+DEWeNRIMqRCSZwAA</XPD:REF>
+<XPD:ATTR name="#TypedParameters" type="integer">1</XPD:ATTR>
+<XPD:REF name="TypedParameters[0]">n0geAFcuAkyYqi9/GImFoQAA</XPD:REF>
 <XPD:ATTR name="#Associations" type="integer">2</XPD:ATTR>
 <XPD:REF name="Associations[0]">o5/QXKlyAU+85QMV5rGQyAAA</XPD:REF>
 <XPD:REF name="Associations[1]">sdJsYTMdcUy7ybh6EXBdEAAA</XPD:REF>

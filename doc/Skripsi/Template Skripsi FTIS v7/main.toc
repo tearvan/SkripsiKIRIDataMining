@@ -27,21 +27,21 @@
 \contentsline {subsubsection}{\textsl {Classification and Prediction}}{9}{subsubsection*.12}
 \contentsline {subsubsection}{\textsl {Decision Tree}}{10}{subsubsection*.13}
 \contentsline {paragraph}{\textsl {Decision Tree Induction}}{10}{paragraph*.14}
-\contentsline {paragraph}{\textsl {Attribute Selection Measure}}{14}{paragraph*.15}
+\contentsline {paragraph}{\textsl {Attribute Selection Measure}}{13}{paragraph*.15}
 \contentsline {subsubsection}{ID3}{14}{subsubsection*.16}
-\contentsline {subsubsection}{C4.5}{16}{subsubsection*.17}
+\contentsline {subsubsection}{C4.5}{15}{subsubsection*.17}
 \contentsline {paragraph}{Tree Pruning}{17}{paragraph*.18}
 \contentsline {subsection}{\numberline {2.1.6}\textsl {Pattern Evaluation}}{18}{subsection.2.1.6}
 \contentsline {subsection}{\numberline {2.1.7}\textsl {Knowledge Presentation}}{18}{subsection.2.1.7}
 \contentsline {section}{\numberline {2.2}Log Histori KIRI}{18}{section.2.2}
 \contentsline {section}{\numberline {2.3}\textsl {Haversine Formula}}{20}{section.2.3}
-\contentsline {section}{\numberline {2.4}Weka}{21}{section.2.4}
+\contentsline {section}{\numberline {2.4}Weka}{20}{section.2.4}
 \contentsline {paragraph}{\textsl {Classifier}}{21}{paragraph*.19}
 \contentsline {paragraph}{Instance}{21}{paragraph*.20}
-\contentsline {paragraph}{Instances}{25}{paragraph*.21}
+\contentsline {paragraph}{Instances}{24}{paragraph*.21}
 \contentsline {paragraph}{Attribute}{31}{paragraph*.22}
 \contentsline {paragraph}{ID3}{36}{paragraph*.23}
-\contentsline {paragraph}{J48}{37}{paragraph*.24}
+\contentsline {paragraph}{J48}{36}{paragraph*.24}
 \contentsline {paragraph}{NumericToNominal}{40}{paragraph*.25}
 \contentsline {section}{\numberline {2.5}Graphviz}{41}{section.2.5}
 \contentsline {chapter}{\numberline {3}Analisa}{43}{chapter.3}

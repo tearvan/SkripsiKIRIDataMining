@@ -95,51 +95,55 @@ public class ProcessingData
         DistanceHaversine haversine = new DistanceHaversine();
         for(int i = 0; i < data.size(); i++)
         {
-            // tahap kedua: pecah string atribut tanggal
-            int[] temp = new int[5];
-            String[] splited = data.get(i)[2].split(" ");
-            temp[2] = Integer.parseInt(splited[0]);
-            // tahap ketiga: pecah nilai string yang tanggal
-            String[] splited2 = splited[1].split("/");
-            temp[0] = Integer.parseInt(splited2[0]);
-            temp[1] = Integer.parseInt(splited2[2]);
-            // tahap keempat: pecah nilai string yang jam
-            splited2 = splited[2].split(":");
-            temp[3] = Integer.parseInt(splited2[0]);
-            // tahap kelima: pecah string atribut additional data
-            splited = data.get(i)[4].split("/");
-            // tahap keenam: pecah lokasi keberangkatan dan lokasi tujuan untuk mendapatkan lat n lon dan (ini tahap ketujuh) menghitung jarak terhadap titik pusat
-            splited2 = splited[0].split(",");
-            double jarakKeberangkatan = haversine.calculateDistance(Double.parseDouble(splited2[0]), Double.parseDouble(splited2[1]), -6.916667,107.6) * 1000;
-            splited2 = splited[1].split(",");
-            double jarakTujuan = haversine.calculateDistance(Double.parseDouble(splited2[0]), Double.parseDouble(splited2[1]), -6.916667,107.6) * 1000;
-            // tahap kedelapan, set semua data ke array
-            temp[4] = klasifikasiKelas(jarakKeberangkatan, jarakTujuan);
+            //cek apakah format sudah benar atau belum
             if(data.get(i)[4].split(",").length == 3)
             {
-                result.add(temp);
+                // tahap kedua: pecah string atribut tanggal
+                int[] temp = new int[5];
+                String[] splited = data.get(i)[2].split(" ");
+                temp[2] = Integer.parseInt(splited[0]);
+                // tahap ketiga: pecah nilai string yang tanggal
+                String[] splited2 = splited[1].split("/");
+                temp[0] = Integer.parseInt(splited2[0]);
+                temp[1] = Integer.parseInt(splited2[2]);
+                // tahap keempat: pecah nilai string yang jam
+                splited2 = splited[2].split(":");
+                temp[3] = Integer.parseInt(splited2[0]);
+                // tahap kelima: pecah string atribut additional data
+                splited = data.get(i)[4].split("/");
+                // tahap keenam: pecah lokasi keberangkatan dan lokasi tujuan untuk mendapatkan lat n lon dan (ini tahap ketujuh) menghitung jarak terhadap titik pusat
+                splited2 = splited[0].split(",");
+                double jarakKeberangkatan = haversine.calculateDistance(Double.parseDouble(splited2[0]), Double.parseDouble(splited2[1]), -6.916667,107.6) * 1000;
+                splited2 = splited[1].split(",");
+                double jarakTujuan = haversine.calculateDistance(Double.parseDouble(splited2[0]), Double.parseDouble(splited2[1]), -6.916667,107.6) * 1000;
+                // tahap kedelapan, set semua data ke array
+                temp[4] = klasifikasiKelas(jarakKeberangkatan, jarakTujuan);
+
+                if(temp[4] != -2)
+                {
+                    result.add(temp);
+                    //proses untuk mencatat nilai max dan min
+                    if(max[0] < temp[0])
+                    {
+                        max[0] = temp[0];
+                    }
+                    if(min[0] > temp[0])
+                    {
+                        min[0] = temp[0];
+                    }
+                    if(max[1] < temp[1])
+                    {
+                        max[1] = temp[1];
+                    }
+                    if(min[1] > temp[1])
+                    {
+                        min[1] = temp[1];
+                    }
+                }
             }
             else
             {
                 System.out.println("ERROR: additional data tidak sesuai; " + data.get(i)[4]);
-            }
-            
-            //proses untuk mencatat nilai max dan min
-            if(max[0] < temp[0])
-            {
-                max[0] = temp[0];
-            }
-            if(min[0] > temp[0])
-            {
-                min[0] = temp[0];
-            }
-            if(max[1] < temp[1])
-            {
-                max[1] = temp[1];
-            }
-            if(min[1] > temp[1])
-            {
-                min[1] = temp[1];
             }
         }
         maxMin[0] = max[0];
@@ -157,27 +161,25 @@ public class ProcessingData
         regionKeberangkatan = (int)jarakKeberangkatan;
         regionTujuan = (int)jarakTujuan;
         
-        if(regionKeberangkatan > 11)
+        if(regionKeberangkatan >= 11 || regionTujuan >= 11)
         {
-            regionKeberangkatan = 11;
-        }
-        if(regionTujuan > 11)
-        {
-            regionTujuan = 11;
-        }
-        
-        if (regionKeberangkatan > regionTujuan)
-        {
-            klasifikasi = -1;
-        }
-        else if (regionKeberangkatan < regionTujuan)
-        {
-            klasifikasi = 1;
+            return -2;
         }
         else
         {
-            klasifikasi = 0;
+            if (regionKeberangkatan > regionTujuan)
+            {
+                klasifikasi = -1;
+            }
+            else if (regionKeberangkatan < regionTujuan)
+            {
+                klasifikasi = 1;
+            }
+            else
+            {
+                klasifikasi = 0;
+            }
+            return klasifikasi;
         }
-        return klasifikasi;
     }
 }

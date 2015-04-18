@@ -61,7 +61,7 @@ public class Controller
              textArea.setText(dt.j48(arff));
         }
         tempTreeDataResult = textArea.getText().split("\n");
-        textArea.setText(textArea.getText() + "\nNilai Confident: " + dt.calculateConfident(arff) + "\n");
+        textArea.setText(textArea.getText() + "\nNilai Confident: " + dt.calculatePrecision(arff) + "\n");
         String[] treeDataResult;
         System.out.println(tempTreeDataResult.length);
         if(tempTreeDataResult.length < 8)

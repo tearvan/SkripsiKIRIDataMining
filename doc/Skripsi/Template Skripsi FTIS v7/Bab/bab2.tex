@@ -32,6 +32,7 @@ Tahap pertama hingga keempat merupakan bagian dari \textsl{data preprocessing}, 
 \textsl{Data cleaning} merupakan tahap \textsl{data mining} untuk menghilangkan \textsl{missing value} dan \textsl{noisy data}. Pada umumnya, \textsl{data} yang diperoleh dari \textsl{database} terdapat nilai yang tidak sempurna seperti nilai yang hilang, nilai yang tidak valid atau salah ketik. Atribut dari suatu \textsl{database} yang tidak relevan atau redudansi bisa diatasi dengan menghapus atribut atau record tersebut. Contoh studi data yang memiliki \textsl{missing value} dan \textsl{noisy data} dapat dilihat pada table \ref{table:contohMissingNNoisy}
 
 \begin{table}[h]
+\centering
 \caption{table mengandung \textsl{missing value} dan \textsl{noisy data}}
 \label{table:contohMissingNNoisy}
 \begin{tabular}{|l|l|l|l|l|}
@@ -177,7 +178,7 @@ Pada tahap kedua, dilakukan proses klasifikasi nilai berdasarkan \textsl{classif
 
 \begin{figure}
 \centering
-\includegraphics[scale=1]{Gambar/tahapdataclassification.jpg}
+\includegraphics[scale=0.8]{Gambar/tahapdataclassification.jpg}
 \caption[Tahap \textsl{data classification}]{Tahap \textsl{data classification}, Diterjemahkan dari \cite{DM}} 
 \label{fig:tahapDataClassification}
 \end{figure}
@@ -292,6 +293,7 @@ Atribut yang memiliki nilai \textsl{gain information} yang terbesar akan dipilih
 contoh kasus untuk ID3, dalam pencarian \textsl{information gain}:
 
 \begin{table}[h]
+\centering
 \caption{Contoh training set}
 \label{table:contohTrainingSet}
 \begin{tabular}{|l|l|l|l|l|l|}
@@ -317,7 +319,7 @@ RID & umur          & pendapatan 	& siswa 		 & resiko\_kredit  & Class: membeli\
 Pada table \ref{table:contohTrainingSet}, terdapat \textsl{training set}, D. Atribut kelas label merupakan dua nilai yang berbeda yaitu ya dan tidak, maka dari itu, nilai m = 2. C$_{1}$ diisi dengan kelas label bernilai ya, sedangkan C$_{2}$ diisi dengan kelas label bernilai tidak. Terdapat sembilan tuple atribut kelas label dengan nilai ya dan lima tuple dengan nilai tidak. Untuk dapat menentukan \textsl{splitting criterion}, \textsl{information gain} harus dihitung untuk setiap atribut terlebih dahulu. Perhitungan \textsl{entropy} untuk D adalah
 
 \begin{displaymath}
-	Info(D) = - \frac{9}{14}\log2(\frac{9}{14}) - \frac{5}{14}\log_2(\frac{5}{14}) = 0.940 bits
+	Info(D) = - \frac{9}{14}\log_2(\frac{9}{14}) - \frac{5}{14}\log_2(\frac{5}{14}) = 0.940 bits
 \end{displaymath}
 
 Setelah diperoleh nilai \textsl{entropy} dari D, kemudian akan dihitung nilai \textsl{entropy} atribut dimulai dari atribut umur. Pada kategori muda, terdapat dua tuple dengan kelas ya dan tiga tuple dengan kelas tidak. Untuk kategori remaja, terdapat empat tuple dengan kelas ya dan nol tuple dengan kelas tidak. Pada kategori dewasa, terdapat tiga dengan kelas ya dan dua dengan kelas tidak. Perhitungan nilai \textsl{entropy} atribut umur terhadap D sebagai berikut
@@ -352,7 +354,7 @@ C4.5 merupakan teknik lanjutan dari ID3, yang menggunakan \textsl{gain ratio} se
 
 %\textsl{Information gain} akan memiliki nilai yang baik jika suatu atribut memiliki banyak nilai yang berbeda, namun hal itu tidak selalu bagus. Sebagai contoh kasus, jika nilai id suatu table yang memiliki nilai unik, maka akan terdapat banyak sekali cabang. Namun setiap cabang hanya akan berisi satu tuple dan bersifat \textsl{pure}, maka nilai \textsl{entropy} yang dihasilkan adalah 0. Oleh karena itu, informasi yang diperoleh pada atribut ini akan bernilai maksimum namun tidak akan berguna untuk \textsl{classification} \cite{DM}.
 
-C4.5, menggunakan nilai tambahan dari \textsl{information gain} yaitu \textsl{gain ratio}, yang dapat mengatasi permasalahan \textsl{information gain} tentang nilai yang banyak namun tidak baik untuk \textsl{classification}. C4.5 melakukan teknik normalisasi terhadap \textsl{gain information} dengan menggunakan \textsl{split information} yang memiliki rumus sebagai berikut:
+C4.5, menggunakan nilai tambahan dari \textsl{information gain} yaitu \textsl{gain ratio}, yang dapat mengatasi permasalahan \textsl{information gain} tentang nilai yang banyak. C4.5 melakukan teknik normalisasi terhadap \textsl{gain information} dengan menggunakan \textsl{split information} yang memiliki rumus sebagai berikut:
 
 \begin{displaymath}
 	SplitInfo_A(D) = - \sum_{j=1}^v \frac{|D_j|}{|D|} \times \log_2 (\frac{|D_j|}{|D|})
@@ -428,9 +430,9 @@ KIRI memiliki log histori yang melakukan pencatatan untuk setiap user ketika men
 \end{itemize}
 
 LogId merupakan \textsl{field} dengan tipe data int dengan batas 6 karakter yang digunakan sebagai \textsl{primary key} dari table tersebut. LogId diisi dengan menggunakan fungsi \textsl{increment integer}. \textsl{Increment integer} merupakan fungsi untuk pengisian data pada database dengan menambahkan nilai 1 dari nilai yang terakhir kali diisi.
-APIKey merupakan \textsl{field} dengan tipe data varchar yang digunakan untuk memeriksa pengguna KIRI ketika menggunakan KIRI.
-\textsl{Timestamp} (UTC) merupakan \textsl{field} dengan tipe data \textsl{timestamp} yang digunakan untuk mencatat waktu penggunaan KIRI oleh user, diisi dengan menggunakan fungsi \textsl{current time}. \textsl{Current time} merupakan fungsi untuk pengisian data pada database dengan mengambil waktu pada komputer ketika record dibuat.
-\textsl{Action} merupakan \textsl{field} dengan tipe data varchar yang digunakan untuk memeriksa fungsi apa yang dipanggil dari API KIRI. Terdapat beberapa tipe pada \textsl{field} ini, yaitu
+APIKey merupakan \textsl{field} dengan tipe data varchar yang digunakan untuk mengindentifikasi pengguna KIRI ketika menggunakan KIRI.
+\textsl{Timestamp} (UTC) merupakan \textsl{field} dengan tipe data \textsl{timestamp} yang digunakan untuk mencatat waktu penggunaan KIRI oleh user, diisi dengan menggunakan fungsi \textsl{current time}. \textsl{Current time} merupakan fungsi untuk pengisian data pada database dengan mengambil waktu pada komputer ketika \textsl{record} dibuat.
+\textsl{Action} merupakan \textsl{field} dengan tipe data varchar yang digunakan untuk memeriksa fungsi apa yang dipanggil dari API KIRI. Terdapat beberapa tipe pada \textsl{field action}, yaitu
 \begin{itemize}
 	\item \textsl{ADDAPIKEY}, \textsl{action} yang dicatat ke dalam log ketika fungsi pembuatan \textsl{API key} yang baru dipanggil.
 	\item \textsl{FINDROUTE}, \textsl{action} yang dicatat ketika user melakukan pencarian rute
@@ -440,7 +442,7 @@ APIKey merupakan \textsl{field} dengan tipe data varchar yang digunakan untuk me
  	\item \textsl{REGISTER},\textsl{action} yang dicatat ketika developers melakukan pendaftaran pada KIRI \textsl{API key}
 	\item \textsl{SEARCHPLACE}, \textsl{action} yang dicatat ketika user memanggil fungsi pencarian lokasi dengan menggunakan nama tempat
 	\item \textsl{WIDGETERROR}, mencatat log tersebut ketika user menerima error dari \textit{widget}
-	\item \textsl{WIDGETLOAD}, mencatat log tersebut ketika user mengdownload widget
+	\item \textsl{WIDGETLOAD}, mencatat log tersebut ketika user melakukan download widget
 \end{itemize}
 AdditionalData, merupakan \textsl{field} dengan tipe data varchar yang digunakan untuk mencatat informasi yang dibutuhkan sesuai dengan \textsl{field action}. Isi dari additionalData tersebut untuk setiap \textsl{action} adalah
 \begin{itemize}
@@ -493,7 +495,7 @@ Jika kita ingin menghitung jarak dua titik dari daerah Jakarta ke Surabaya, deng
 \end{displaymath}
 
 \begin{displaymath}
-	d = 6.371 . 0.1037900036
+	d = 6.371 X 0.1037900036
 \end{displaymath}
 \begin{displaymath}
 	d = 0.6612461130 * 1000 km
