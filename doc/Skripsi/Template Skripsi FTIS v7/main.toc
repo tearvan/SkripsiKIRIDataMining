@@ -1,8 +1,8 @@
 \select@language {bahasa}
-\contentsline {chapter}{Kata Pengantar}{xi}{chapter*.1}
-\contentsline {chapter}{Daftar Isi}{xiii}{section*.2}
-\contentsline {chapter}{Daftar Gambar}{xv}{section*.3}
-\contentsline {chapter}{Daftar Tabel}{xvi}{section*.4}
+\contentsline {chapter}{Kata Pengantar}{xv}{chapter*.1}
+\contentsline {chapter}{Daftar Isi}{xvii}{section*.2}
+\contentsline {chapter}{Daftar Gambar}{xix}{section*.3}
+\contentsline {chapter}{Daftar Tabel}{xx}{section*.4}
 \contentsline {chapter}{\numberline {1}Pendahuluan}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Latar Belakang}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Perumusan Masalah}{2}{section.1.2}
