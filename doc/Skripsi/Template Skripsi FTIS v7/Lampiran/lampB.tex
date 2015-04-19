@@ -663,7 +663,7 @@ public class ProcessingData
         regionKeberangkatan = (int)jarakKeberangkatan;
         regionTujuan = (int)jarakTujuan;
         
-        if(regionKeberangkatan >= 11 || regionTujuan >= 11)
+        if(regionKeberangkatan >= 11 && regionTujuan >= 11)
         {
             return -2;
         }
@@ -862,7 +862,6 @@ public class DecisionTree
                     nilaiBenar++;
                 }
             } catch (Exception ex) {
-                System.out.println("CHECK: " + ex.getMessage());
             }
         }
         double confident = Math.round(nilaiBenar * 1.0 / arff.numInstances() * 10000)/100.0;

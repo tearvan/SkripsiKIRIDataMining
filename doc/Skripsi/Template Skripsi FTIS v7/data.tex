@@ -177,23 +177,30 @@
 %			 bawahnya
 %=============================================================================
 
-\abstrakINA{}
-%\textsl{Data mining} merupakan teknik untuk mengolah \textsl{data}, mencari suatu pola, kemudian dievaluasi untuk mendapatkan \textsl{knowledge}. Pola yang dihasilkan oleh \textsl{data mining} dapat digunakan untuk mencari suatu hal yang menarik dan unik. Dari pola tersebutlah, akan didapatkan suatu informasi yang sangat bermakna yang biasa disebut sebagai \textsl{knowledge}.
+\abstrakINA{Dengan kemajuan teknologi informasi saat ini, kebutuhan akan informasi yang akurat dibutuhkan dalam kehidupan sehari-hari, namun informasi tersebut perlu diolah agar dapat disajikan dengan baik. 
+Jika dilihat lebih rinci, data tersebut dapat diolah lebih lanjut dan menghasilkan sesuatu yang lebih. \textsl{Data mining} merupakan salah satu proses untuk mengolah data untuk mempermudah menganalisis dan mengambil keputusan dari data yang dimiliki. 
+Salah satu teknik dari \textsl{data mining} adalah dengan membuat \textsl{decision tree} untuk melakukan klasifikasi suatu objek. 
+Terdapat beberapa metode untuk memilih atribut pada pembuatan \textsl{decision tree}, dua diantaranya adalah ID3 dan C4.5. Metode ID3 merupakan metode yang menggunakan nilai \textsl{entropy} untuk memilih atribut sedangkan C4.5 menggunakan nilai \textsl{entropy} dan \textsl{gain ratio} untuk memilih atribut. 
 
-%Pada penelitian ini, akan dilakukan analisis data penggunaan KIRI dengan menggunakan teori-teori \textsl{data mining}. Pada penelitian ini, diharapkan dapat ditemukan suatu pola yang menarik dan menghasilkan suatu ide atau gagasan yang baru. Maka dari itu, penelitian ini akan membutuhkan banyak \textsl{data} penggunaan KIRI, yang dapat diperoleh dari \textsl{log} histori KIRI.
+Pada penelitian ini, percobaan \textsl{data mining} dilakukan pada data \textsl{log} histori KIRI bulan Febuari 2014, khususnya untuk \textsl{action} dengan nilai FINDROUTE. 
+Atribut yang akan diuji adalah \textsl{timestamp} dan additionalData yang berisi lokasi keberangkatan dan tujuan dari \textsl{user} yang menggunakan aplikasi KIRI. Pada percobaan ini, akan dibuat klasifikasi sepuluh daerah di Bandung berdasarkan titik pusat Bandung dengan radius satu kilometer untuk setiap daerah.
+Dengan klasifikasi tersebut, dapat ditentukan apakah \textsl{user} menjauhi Bandung atau mendekati Bandung atau menuju daerah yang sama. Pembuatan \textsl{decision tree} digunakan untuk melakukan klasifikasi apakah pada hari tertentu dan jam tertentu, \textsl{user} akan lebih sering menjauhi Bandung atau menuju Bandung atau menuju daerah yang sama. 
+Dari hasil pengujian experimental, diperoleh bahwa \textsl{decision tree} yang dibuat dengan ID3 mengalami overfitting dengan akurasi 38.22\%, sedangkan dengan J48 (metode C4.5 dari weka) tidak mengalami overfitting dengan akurasi 50.37\% dan diperoleh kesimpulan bahwa \textsl{user} sering menjauhi Bandung daripada menuju Bandung atau menuju daerah yang sama pada bulan Febuari 2014.
+}
+%Dari hasil pengujian experimental, diperoleh bahwa \textsl{decision tree} yang dibuat dengan ID3 mengalami overfitting dengan akurasi 37.49\%, sedangkan dengan J48 (metode C4.5 dari weka) tidak mengalami overfitting dengan akurasi 49.79\% dan diperoleh kesimpulan bahwa \textsl{user} sering menjauhi Bandung dan menuju Bandung, namun jarang atau tidak pernah menuju daerah yang sama.
 
-%\textsl{Log} tersebut memiliki 5 \textsl{field} untuk setiap \textsl{entry} sebagai berikut:
-%\begin{itemize}
-%	\item statisticId, primary key dari entry
-%	\item verifier, mengidentifikasikan sumber dari pencarian ini
-%	\item \textsl{timestamp}, waktu ketika pengguna KIRI mencari rute angkot
-%	\item \textsl{type}, tipe log, untuk penelitian ini selalu berisi FINDROUTE
-%	\item additionalInfo, mencatat koordinat awal, koordinat akhir, dan banyak rute yang ditemukan pada pencarian ini
-%\end{itemize}
+\abstrakENG{With the advancement of technology these day, accurate information is needed everyday, but the information need to be treated in order to be presented better.
+If viewed in more detail, the data can be treated furthermore and produce something better. \textsl{Data mining} is one of process to process data to ease analyze and draw conclusions.
+One of the techniques of \textsl{data mining} is to make \textsl{decision tree} to classify object.
+There are several methods to choose attribute at \textsl{decision tree}, two of which are ID3 and C4.5. ID3 method is a method that uses \textsl{entropy} to choose attribute, while C4.5 uses \textsl{entropy} and \textsl{gain ratio} to do that.
 
-%Dengan menggunakan \textsl{data log} histori pencarian rute angkot dari KIRI, diharapkan bisa diperoleh pola yang menarik. Pola tersebut memiliki kemungkinan untuk digunakan kembali sebagai informasi tambahan pada perangkat lunak navigasi lain seperti KIRI.
+In this study, \textsl{data mining} experiments performed on the log KIRI history in February 2014, in particular to the action with the value FINDROUTE.
+Attributes to be tested is timestamp and additionalData which contains departure location and destination location from user who uses KIRI application. In this experiment, will be made ten regional classification in Bandung based on center point of Bandung with radius one kilometer for each region.
+With the regional classification, can be determined whether the user away from Bandung or heading to Bandung or heading to same region. Making the \textsl{decision tree} is used to classify whether on certain days and certain hours, users will be more frequent to away Bandung or heading to Bandung or heading to same region.
+From the results of experimental testing, obtained that the \textsl{decision tree} created with ID3 is overfitting with 38.22\% accuracy, while J48 (method C4.5 from weka) is not overfitting with 50.37\% accuracy, and it is concluded that user more often away from Bandung than heading Bandung or heading to same region at February 2014.
+} 
 
-\abstrakENG{} 
+%From the results of experimental testing, obtained that the \textsl{decision tree} created with ID3 is overfitting with 39.49\% accuracy, while J48 (method C4.5 from weka) is not overfitting with 49.79\% accuracy, and it is concluded that user often away from Bandung and heading Bandung, but rarely or never heading to same region.} 
 
 %=============================================================================
 
@@ -226,7 +233,23 @@
 % Kata Pengantar: tempat anda menuliskan kata pengantar dan ucapan terima 
 % kasih kepada yang telah membantu anda bla bla bla ....  
 %=============================================================================
-\prakata{\lipsum}
+\prakata{Puji syukur kepada Tuhan yang Maha Esa atas petunjuk dan rahmat-Nya, penulis dapat menyelesaikan laporan skripsi tanpa ada halangan apapun dan dapat selesai tepat pada waktunya.
+
+Laporan skripsi yang telah saya susun ini dibuat dalam rangka memenuhi salah satu syarat untuk mendapatkan gelar sarjana (S1) Program Studi Ilmu Komputer, Fakultas Teknologi Informasi dan Sains, Universitas Katolik Parahyangan.
+
+Saya menyadari bahwa skripsi ini dapat diselesaikan karena peranan banyak pihak. Oleh karena itu, saya ingin mengucapkan terima kasih sebesar-besarnya kepada:
+
+\begin{enumerate}
+	\item Papa, Mama, Koko, dan Cici yang telah memberikan dukungan dalam mengerjakan skripsi ini pada saya.
+	\item Pak Pascal selaku dosen wali atas bimbingannya selama saya mengerjakan skripsi ini dan selaku developer KIRI yang telah mengizinkan saya untuk melakukan \textsl{data mining} serta analisis pada data \textsl{log} histori KIRI.
+	\item Dosen-dosen penguji yang telah meluangkan waktu untuk mempelajari skripsi ini dan memberikan kritik dan saran.
+	\item Pak Lionov yang telah memberikan informasi, tips, serta dorongan dalam melaksanakan skripsi.
+	\item Clara, Antonio, Steven, Samuel, Kevin, dan seluruh angkatan 2011 IT Universitas Parahyangan atas segala dukungan, bantuan, saran, persahabatan, serta kerja samanya selama ini.
+\end{enumerate}
+Serta seluruh pihak yang tidak dapat disebutkan satu-persatu atas dukungan kalian yang sangat bearti bagi saya, Tuhan memberkati.
+
+Saya menyadari bahwa skripsi ini masih jauh dari sempurna, oleh karena itu, saya menerima saran dan kritik agar bisa menghasilkan yang lebih baik. Akhir kata, saya berharap skripsi ini dapat bermanfaat bagi perkembangan ilmu teknologi khususnya di bidang \textsl{data mining}, dan bagi KIRI serta para pembaca.}
+
 %=============================================================================
 
 %_____________________________________________________________________________

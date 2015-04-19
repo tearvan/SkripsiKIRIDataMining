@@ -31,7 +31,6 @@ public class DecisionTree
                     nilaiBenar++;
                 }
             } catch (Exception ex) {
-                System.out.println("CHECK: " + ex.getMessage());
             }
         }
         double confident = Math.round(nilaiBenar * 1.0 / arff.numInstances() * 10000)/100.0;

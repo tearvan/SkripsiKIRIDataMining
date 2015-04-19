@@ -1696,14 +1696,14 @@ Berikut contoh kode yang dapat dijadikan input untuk aplikasi graphviz:
 	\STATE digraph G\{
 	\STATE 		Main
 	\STATE		Execute [shape=box, color=red, style=filled]
-	\STATE		Main -> Execute
+	\STATE		Main -> Execute [label="proses dimulai"]
 	\STATE		Output [label="return result", width=2, height=1]
 	\STATE    edge [color=blue]
 	\STATE		Execute -> Output
 	\STATE \}
 \end{algorithmic}
 
-Maka hasil yang diperoleh dari perangkat lunak graphviz \ref{fig:outGraphviz}
+Maka hasil yang diperoleh dari perangkat lunak graphviz dapat dilihat pada gambar \ref{fig:outGraphviz}
 
 \begin{figure}[H]
 \centering

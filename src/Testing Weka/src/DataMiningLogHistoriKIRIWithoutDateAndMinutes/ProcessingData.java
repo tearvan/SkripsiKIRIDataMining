@@ -157,12 +157,20 @@ public class ProcessingData
         regionKeberangkatan = (int)jarakKeberangkatan;
         regionTujuan = (int)jarakTujuan;
         
-        if(regionKeberangkatan >= 11 || regionTujuan >= 11)
+        if(regionKeberangkatan >= 11 && regionTujuan >= 11)
         {
             return -2;
         }
         else
         {
+            if(regionKeberangkatan >= 11)
+            {
+                regionKeberangkatan = 11;
+            }
+            else if(regionTujuan >= 11)
+            {
+                regionTujuan = 11;
+            }
             if (regionKeberangkatan > regionTujuan)
             {
                 klasifikasi = -1;

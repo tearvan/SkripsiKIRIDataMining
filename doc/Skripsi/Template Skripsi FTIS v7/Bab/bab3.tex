@@ -7,7 +7,7 @@ Pada bab ini, akan dilakukan analisa terhadap data yang akan diproses menggunaka
 Pada bab ini, akan dilakukan analisa \textsl{preprocessing data} yang meliputi \textsl{data cleaning}, \textsl{data integration}, \textsl{data selection} dan \textsl{data transformation}. Setelah membaca dan menganalisis data \textsl{log} histori KIRI, maka penelitian ini akan lebih fokus untuk meneliti mengenai lokasi keberangkatan dan tujuan dari user yang menggunakan aplikasi KIRI.
 
 \subsection{\textsl{Data Cleaning}}
-Pada tahap ini, data yang akan menjadi input akan diperiksa apakah mengandung \textsl{missing value} atau \textsl{noisy}. Setelah dilakukan pemeriksaan, tidak ditemukan \textsl{missing value} ataupun \textsl{noisy}, sehingga tahap ini dapat dilewat.
+Pada tahap ini, data yang akan menjadi input akan diperiksa apakah mengandung \textsl{missing value} atau \textsl{noisy}. Setelah dilakukan pemeriksaan, tidak ditemukan \textsl{missing value} ataupun \textsl{noisy}, namun terdapat data-data yang berada diluar Bandung seperti Jakarta akan dibuang.
 
 \subsection{\textsl{Data Integration}}
 Pada tahap ini, data-data dari beberapa database akan digabung dan diintegrasikan menjadi satu database. Karena data yang digunakan hanya berasal dari satu tabel, maka tahap ini dapat dilewat.
@@ -113,7 +113,7 @@ Nilai \textsl{latitude} serta \textsl{longitude} dari data lokasi keberangkatan 
 \begin{figure}
 \centering
 \includegraphics[scale=1.5]{Gambar/classificationmap.jpg}
-\caption[\textsl{Classification} pada daerah Bandung]{\textsl{Classification} pada daerah Bandung. Angka pada gambar merupakan jari-jari untuk setiap lingkaran dalam satuan kilometer}
+\caption[\textsl{Classification} pada daerah Bandung]{\textsl{Classification} pada daerah Bandung. Angka pada gambar merupakan nomor klasifikasi setiap daerah}
 \label{fig:classificationMap} 
 \end{figure}
 
