@@ -1,19 +1,19 @@
 \chapter{Landasan Teori}
 \label{chap:definition}
 
-\section{\textsl{Data Mining}}
+\section{\textsl{Knowledge Discovery}}
 
-\textsl{Data mining} merupakan merupakan proses yang melakukan pengambilan inti sari atau penggalian \textsl{knowledge} dari data yang besar dan merupakan salah satu langkah dari \textsl{knowledge discovery}.
+\textsl{Knowledge Discovery} atau yang sering disebut juga \textsl{Data mining}, merupakan merupakan proses pengambilan inti sari atau penggalian \textsl{knowledge} dari data yang besar. 
 
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.9]{Gambar/tahapdatamining.jpg}
-\caption[Tahap \textsl{Data Mining}]{Tahap \textsl{Data Mining}, Diterjemahkan dari \cite{DM}} 
+\caption[Tahap \textsl{Data Mining}]{Tahap \textsl{Data Mining}\cite{DM}} 
 \label{fig:tahapDataMining}
 \end{figure}
 
-Menurut \cite{DM}, \textsl{knowledge discovery} dapat dibagi menjadi 7 tahap (gambar \ref{fig:tahapDataMining}):
+Menurut \cite{DM}, \textsl{Knowledge Discovery} dapat dibagi menjadi 7 tahap (gambar \ref{fig:tahapDataMining}):
 \begin{enumerate}
 	\item \textsl{Data cleaning}
 	\item \textsl{Data integration}
@@ -24,12 +24,12 @@ Menurut \cite{DM}, \textsl{knowledge discovery} dapat dibagi menjadi 7 tahap (ga
 	\item \textsl{Knowledge presentation}
 \end{enumerate}
 
-
-Tahap pertama hingga keempat merupakan bagian dari \textsl{data preprocessing}, dimana data-data disiapkan untuk dilakukan penggalian data. Tahap \textsl{data mining} merupakan tahap dimana melakukan penggalian data. Tahap keenam merupakan tahap pencarian pola yang merepresentasikan \textsl{knowledge}. Sedangkan tahap terakhir merupakan visualisasi dan representasi dari \textsl{knowledge} yang sudah diperoleh dari tahap sebelumnya.
-
+Tahap pertama hingga keempat merupakan bagian dari \textsl{data preprocessing}, dimana data-data disiapkan untuk dilakukan penggalian data. Tahap \textsl{data mining} merupakan tahap dimana penggalian data dilakukan. Tahap keenam merupakan tahap pencarian pola yang merepresentasikan \textsl{knowledge}. Sedangkan tahap terakhir merupakan visualisasi dan representasi dari \textsl{knowledge} yang sudah diperoleh dari tahap sebelumnya.
 
 \subsection{\textsl{Data Cleaning}}
-\textsl{Data cleaning} merupakan tahap \textsl{data mining} untuk menghilangkan \textsl{missing value} dan \textsl{noisy data}. Pada umumnya, \textsl{data} yang diperoleh dari \textsl{database} terdapat nilai yang tidak sempurna seperti nilai yang hilang, nilai yang tidak valid atau salah ketik. Atribut dari suatu \textsl{database} yang tidak relevan atau redudansi bisa diatasi dengan menghapus atribut atau record tersebut. Contoh studi data yang memiliki \textsl{missing value} dan \textsl{noisy data} dapat dilihat pada table \ref{table:contohMissingNNoisy}
+\textsl{Data cleaning} merupakan tahap \textsl{Knowledge Discovery} untuk menghilangkan \textsl{missing value} dan \textsl{noisy data}. \textsl{Missing value} merupakan nilai yang hilang dari suatu data. \textsl{Noisy data} merupakan nilai yang tidak sesuai atau tidak valid.
+
+Pada umumnya, \textsl{data} yang diperoleh dari \textsl{database} terdapat nilai yang tidak sempurna seperti nilai yang hilang, nilai yang tidak valid atau salah ketik. Atribut dari suatu \textsl{database} yang tidak relevan atau redudansi bisa diatasi dengan menghapus atribut atau tuple tersebut. Contoh data yang memiliki \textsl{missing value} dan \textsl{noisy data} dapat dilihat pada table \ref{table:contohMissingNNoisy}
 
 \begin{table}[h]
 \centering
@@ -47,7 +47,7 @@ IdPenjualan & NamaBarang & Customer & Harga  & BanyakBarang \\ \hline
 Dapat dilihat, pada idPenjualan 2, harga dari keyboard adalah -35000, itu merupakan \textsl{noisy data} karena tidak mungkin nilai harga suatu barang dibawah 0. Pada idPenjualan 3, kolom \textsl{customer} tidak memiliki nilai, dan itu merupakan \textsl{missing value}.
 
 \subsubsection{\textsl{Missing Values}}
-\textsl{Missing values} akan mengganggu proses \textsl{data mining} pada komputer dan dapat menghasilkan nilai akhir yang tidak sesuai. Terdapat beberapa teknik untuk mengatasi \textsl{missing values} yaitu
+\textsl{Missing values} akan mengganggu proses \textsl{data mining} pada komputer dan dapat menghasilkan nilai akhir yang tidak sesuai dengan fakta. Terdapat beberapa teknik untuk mengatasi \textsl{missing values} yaitu:
 	\begin{itemize}
 		\item Membuang tuple yang mengandung nilai yang hilang\textit{\textit{}}
 		\item Mengisi nilai yang hilang secara manual
@@ -55,12 +55,12 @@ Dapat dilihat, pada idPenjualan 2, harga dari keyboard adalah -35000, itu merupa
 		\item Menggunakan nilai rata-rata dari suatu atribut untuk mengisi nilai yang hilang
 	\end{itemize}
 \subsubsection{\textsl{Noisy Data}}
-\textsl{Noisy data} merupakan nilai yang berasal dari error atau tidak valid. \textsl{Noisy data} dapat dihilangkan dengan menggunakan teknik \textsl{smoothing}. Terdapat 3 metode untuk menghilangkan \textsl{noisy data} yaitu
+\textsl{Noisy data} merupakan nilai yang berasal dari error atau tidak valid. \textsl{Noisy data} dapat dihilangkan dengan menggunakan teknik \textsl{smoothing}. Teknik \textsl{smoothing} merupakan teknik untuk menghilangkan \textsl{noisy data}. Terdapat 3 metode untuk menghilangkan \textsl{noisy data} yaitu:
 	\label{teknikBinning}
 	\begin{itemize}
-		\item \textsl{Binning}, merupakan metode pengisian data sesuai dengan proses yang dilakukan pada data tersebut
-		\item \textsl{Regression}, merupakan metode yang mencari detail persamaan atribut untuk memprediksikan suatu nilai
-		\item	\textsl{Clustering}, merupakan metode pengelompokan dimana ditemukan \textsl{outliers} yang dapat dibuang. Outliers merupakan data yang berada diluar kelompok yang sesuai dengan observasi atau penelitian.
+		\item \textsl{Binning}, merupakan metode pengisian data dengan proses yang dilakukan pada data tersebut
+		\item \textsl{Regression}, merupakan metode yang mencari detil persamaan atribut untuk memprediksikan suatu nilai
+		\item	\textsl{Clustering}, merupakan metode pengelompokan dimana ditemukan pencilan yang dapat dibuang. Pencilan merupakan data yang berada diluar kelompok yang sesuai dengan observasi atau penelitian.
 	\end{itemize}
 
 %\subsubsection{\textsl{Data Cleaning as a Process}}
@@ -75,9 +75,9 @@ Dapat dilihat, pada idPenjualan 2, harga dari keyboard adalah -35000, itu merupa
 %Beberapa data dapat diperbaiki dengan cara manual, namun sebagian besar data akan membutuhkan \textsl{data transformation} untuk membetulkan data tersebut.
 
 \subsection{\textsl{Data Integration}}
-\textsl{Data integration} merupakan tahap menggabungkan data dari berbagai sumber. Sumber tersebut bisa termasuk beberapa \textsl{database}, \textsl{data cubes}, atau bahkan \textsl{flat data}. \textsl{Data cube} merupakan teknik pengambilan data-data dari \textsl{data warehouse} dan dilakukan operasi agregasi sesuai dengan kondisi tertentu (contoh, penjumlahan total penjualan per tahun dari 2005-2010). Sedangkan \textsl{flat data} merupakan data yang disimpan dengan cara apapun untuk merepresentasikan database model pada sebuah data baik berbentuk \textsl{plain text file} maupun \textsl{binary file}. 
+\textsl{Data integration} merupakan tahap penggabungan data dari berbagai sumber. Sumber tersebut bisa termasuk beberapa \textsl{database}, \textsl{data cubes}, atau \textsl{flat data}. \textsl{Data cube} merupakan teknik pengambilan data-data dari \textsl{data warehouse} dan dilakukan operasi agregasi sesuai dengan kondisi tertentu (contoh, penjumlahan total dari penjualan per tahun dari 2005-2010). Sedangkan \textsl{flat data} merupakan data yang disimpan dengan cara apapun untuk merepresentasikan model database pada sebuah data baik berbentuk \textsl{plain text file} maupun \textsl{binary file}. 
 
-Tahap ini harus dilakukan secara teliti terutama ketika dalam memasangkan nilai-nilai yang berasal dari sumber yang berbeda. Pada tahap ini, perlu dilakukan identifikasi data apakah data tertentu harus dimasukkan atau tidak agar data yang diperoleh tidak terlalu besar. \textsl{Data integration} yang baik merupakan integrasi yang dapat memaksimalkan kecepatan dan meningkatkan akurasi dari proses \textsl{data mining}. Contoh studi kasus dari \textsl{data integration}, jika suatu perusahaan sepatu A memiliki dua pabrik dengan \textsl{database} lokal pada masing-masing pabrik, jika akan dilakukan \textsl{data mining} pada kedua \textsl{database }tersebut, maka kedua \textsl{database} akan digabung dan perlu diperhatikan serta diperbaiki nilai-nilai seperti \textsl{primary key}, atribut, dan lain-lain agar tidak terjadi \textsl{error} pada \textsl{database} yang sudah digabung. Proses dari penggabungan hingga perbaikan nilai-nilai pada kedua database tersebut adalah proses \textsl{data integration}.
+Tahap ini harus dilakukan secara teliti terutama dalam memasangkan nilai-nilai yang berasal dari sumber yang berbeda. Pada tahap ini, perlu dilakukan identifikasi apakah data tertentu harus dimasukkan atau tidak agar data yang diperoleh tidak terlalu besar. \textsl{Data integration} yang baik merupakan integrasi yang dapat memaksimalkan kecepatan dan meningkatkan akurasi dari proses \textsl{data mining}. Contoh studi kasus dari \textsl{data integration}, misalnya suatu perusahaan sepatu A memiliki dua pabrik dengan \textsl{database} lokal pada masing-masing pabrik. Jika akan dilakukan \textsl{data mining} pada kedua \textsl{database }tersebut, maka kedua \textsl{database} harus digabung. Ketika digabung, harus memperhatikan dan memperbaiki nilai-nilai seperti \textsl{primary key}, atribut. Hal ini dilakukan untuk menghindari kesalahan seperti nilai id yang berbeda padahal merupakan objek yang sama. Proses penggabungan hingga perbaikan nilai-nilai pada kedua database tersebut disebut proses \textsl{data integration}.
 
 \subsection{\textsl{Data Selection}}
 Proses dimana data-data yang relevan dengan analisis akan diambil dari database dan data yang tidak relevan akan dibuang. Sebagai contoh kasus, jika akan dilakukan analisa mengenai nilai mahasiswa pada table nilai yang memiliki atribut sebagai berikut:
@@ -91,42 +91,42 @@ Proses dimana data-data yang relevan dengan analisis akan diambil dari database 
 		\item NilaiUTS
 		\item NilaiUAS
 	\end{itemize}
-Maka, atribut yang berpotensi diambil adalah MataKuliah, NilaiART, NilaiUTS, NilaiUAS, sedangkan atribut yang akan dibuang adalah NPMMahasiswa, NamaMahasiswa JenisKelamin, dan Alamat karena tidak terlalu berhubungan dengan analisa.
+Maka, atribut yang berpotensi diambil adalah MataKuliah, NilaiART, NilaiUTS dan NilaiUAS, sedangkan atribut yang dibuang adalah NPMMahasiswa, NamaMahasiswa JenisKelamin, dan Alamat karena tidak  berhubungan dengan analisa.
 
 \subsection{\textsl{Data Transformation}}
 \textsl{Data transformation} merupakan tahap pengubahan data agar siap dilakukan proses \textsl{data mining}. \textsl{Data transformation} bisa melibatkan:
 	\begin{itemize}
 		\item \textsl{Smoothing}, proses untuk membuang \textsl{noise} seperti yang dilakukan pada tahap \textsl{data cleaning}
-		\item \textsl{Aggregation}, proses mengganti nilai-nilai menjadi suatu nilai yang dapat mewakili nilai sebelumnya
-		\item \textsl{Generalization}, proses dimana membuat suatu nilai yang bersifat khusus menjadi nilai yang bersifat umum
+		\item \textsl{Aggregation}, proses merangkum nilai-nilai menjadi suatu nilai yang dapat mewakili nilai sebelumnya
+		\item \textsl{Generalization}, proses membuat suatu nilai yang bersifat khusus menjadi nilai yang bersifat umum
 		\item \textsl{Normalization}, proses dimana suatu nilai dapat diubah skalanya menjadi nilai yang lebih kecil dan spesifik
 		\item \textsl{Attribute construction}, proses membuat atribut baru yang berasal dari beberapa atribut untuk membantu proses data mining
 	\end{itemize}
 	
 \subsubsection{\textsl{Smoothing}}
-\textsl{Smoothing} merupakan bagian dari \textsl{data cleaning} untuk menghilangkan \textsl{noise} pada database. Teknik dari \textsl{smoothing} adalah \textsl{binning}, \textsl{regression}, dan \textsl{clustering}. Penjelasan teknik \textsl{smoothing} dapat dilihat pada \ref{teknikBinning}, bagian \textsl{noisy data}.
+\textsl{Smoothing} merupakan teknik untuk menghilangkan \textsl{noise} pada database. Teknik dari \textsl{smoothing} adalah \textsl{binning}, \textsl{regression}, dan \textsl{clustering}. Penjelasan teknik \textsl{smoothing} dapat dilihat pada \ref{teknikBinning}, bagian \textsl{noisy data}.
 
 \subsubsection{\textsl{Aggregation}}
-\textsl{Aggregation}, dimana suatu kesimpulan atau hasil dari \textsl{aggregation operation} yang disimpan dalam database. Contoh studi kasus, jika terdapat suatu database dari toko A, kita dapat menggunakan operasi \textsl{aggregation} untuk mencari total pendapatan dengan rentang hari tertentu.
+\textsl{Aggregation} merupakan teknik melakukan operasi agregat untuk mendapatkan nilai yang digunakan di tahap \textsl{data mining}. Contoh kasus, jika terdapat suatu database dari toko A, dapat menggunakan operasi agregat untuk mencari total pendapatan dengan rentang hari tertentu.
 
 \subsubsection{\textsl{Generalization}}	
-\textsl{generalization}, dimana suatu data yang memiliki nilai \textsl{primitive} atau \textsl{low level} diubah menjadi \textsl{high level} dengan menggunakan konsep hirarki. Contoh studi kasus, nilai pada atribut umur dapat dikelompokkan menjadi muda, dewasa, tua.	
+\textsl{generalization} merupakan teknik mengubah data yang bersifat \textsl{primitive} atau \textsl{low level} menjadi \textsl{high level} dengan menggunakan konsep hirarki. Contoh kasus, nilai pada atribut umur dapat dikelompokkan menjadi muda, dewasa, tua.	
 	
 \subsubsection{\textsl{Normalization}}
-Atribut dapat dinormalisasi dengan memberi skala pada nilainya sehingga nilai tersebut menjadi suatu range yang lebih spesifik dan kecil seperti 0,0 sampai 1,0.
-Terdapat beberapa teknik normalisasi, dua diantaranya yaitu, \textsl{min-max normalization} dan \textsl{z-score normalization}. \textsl{Min-max normalization} akan mengubah semua nilai menjadi nilai dengan skala tertentu. Dengan menggunakan rumus 
+\textsl{Normalisasi} merupakan teknik mengubah nilai atribut menjadi nilai baru yang memiliki range yang lebih spesifik dan kecil seperti 0,0 sampai 1,0.
+Terdapat beberapa teknik normalisasi, dua diantaranya yaitu, \textsl{min-max normalization} dan \textsl{z-score normalization}. \textsl{Min-max normalization} akan mengubah semua nilai menjadi nilai dengan skala tertentu. Rumus dari teknik \textsl{min-max normalization} sebagai berikut
 
 \begin{displaymath}
 	\nu' = \frac{\nu-min_{A}}{max_{A}-min_{A}}(newMax_{A}-newMin_{A})+newMin_{A}	
 \end{displaymath}
 
-Contoh kasus, misalkan nilai minimun dan maximum dari suatu pendapatan adalah 12.000 dan 98.000, akan diubah menjadi berskala antara 0,0 sampai 1,0. Jika ada nilai pendapat yang baru, yaitu 73.600, maka akan menjadi
+Contoh kasus, misalkan nilai minimum dan maximum dari suatu pendapatan adalah 12.000 dan 98.000, akan diubah menjadi berskala antara 0,0 sampai 1,0. Jika ada nilai pendapat yang baru, yaitu 73.600, maka akan menjadi
 
 \begin{displaymath}
 \frac{73.600-12.000}{98.000-12.000} (1,0-0)+0 = 0,716
 \end{displaymath}
 
-\textsl{z-score normalization} merupakan normalisasi berdasarkan nilai rata-rata dan standar deviasi dari nilai-nilai atribut dengan cara
+\textsl{z-score normalization} merupakan mengubah nilai berdasarkan rata-rata dan standar deviasi dari atribut. Rumus dari \textsl{z-score normalization} sebagai berikut
 
 \begin{displaymath}
 \nu' = \frac{\nu-\overline{A}}{\sigma_{A}}
@@ -139,7 +139,7 @@ Contoh kasus, misal nilai rata-rata dan standar deviasi dari nilai-nilai atribut
 \end{displaymath}
 
 \subsubsection{\textsl{Attribute Construction}}
-\textsl{Attribute Construction} merupakan teknik menambahkan atribut baru yang berdasarkan dari atribut yang sudah ada guna menambah akurasi. Contoh kasus, dibuat atribut baru bernama area berdasarkan atribut panjang dan lebar. 
+\textsl{Attribute Construction} merupakan teknik menambahkan atribut baru yang berdasarkan atribut yang sudah ada. Contoh kasus, dibuat atribut baru bernama area berdasarkan atribut panjang dan lebar. 
 
 %\subsubsection{\textsl{Data Reduction}}
 %Proses \textsl{aggregation} dan \textsl{generalization} akan dilakukan dalam bentuk proses \textsl{data reduction} dan \textsl{Data Cube Aggregation}.
@@ -166,15 +166,21 @@ Contoh kasus, misal nilai rata-rata dan standar deviasi dari nilai-nilai atribut
 
 \subsection{\textsl{Data Mining}}
 
-Pada tahap ini, akan dilakukan proses \textsl{data mining} dengan menggunakan input data yang sudah diproses pada tahap sebelumnya (\textsl{data cleaning, data selection, data integration,} dan /\textsl{data transformation}).
+Pada tahap ini, akan dilakukan proses \textsl{data mining} dengan menggunakan input data yang sudah diproses pada tahap sebelumnya (\textsl{data cleaning, data selection, data integration,} dan \textsl{data transformation}).
 
 \subsubsection{\textsl{Classification and Prediction}}
-\textsl{Classification} merupakan pemodelan yang dibangun untuk memprediksikan label kategori, seperti "baik", "cukup", dan "buruk" dalam sistem penilaian sikap seorang siswa atau "mini bus", "bus", atau "sedan" dalam kategori tipe mobil. Kategori tersebut dapat direpresentasikan dengan menggunakan nilai diskret. Nilai diskret merupakan nilai yang terpisah dan berbeda, seperti 1 atau 5. Kategori yang direpresentasikan oleh nilai diskret maka akan menjadi nilai yang terurut dan tidak memiliki arti, seperti 1,2,3 untuk merepresentasikan kategori tipe mobil "mini bus", "bus", dan "sedan".
+\textsl{Classification} merupakan pemodelan yang dibangun untuk memprediksikan label kategori. Contoh label kategori adalah "baik", "cukup", dan "buruk" dalam sistem penilaian sikap seorang siswa atau "mini bus", "bus", atau "sedan" dalam kategori tipe mobil. Kategori dapat direpresentasikan dengan menggunakan nilai diskret. Nilai diskret merupakan nilai yang terpisah dan berbeda. Contoh dari nilai diskret adalah 1 atau 5. Kategori yang direpresentasikan oleh nilai diskret maka akan menjadi nilai yang terurut dan tidak memiliki arti. Contoh kategori yang direpresentasikan oleh nilai diskret adalah 1,2,3. Angka tersebut dapat digunakan untuk merepresentasikan suatu kategori, misalnya untuk tipe mobil: 
+\begin{itemize}
+	\item Angka 1 adalah "mini bus"
+	\item Angka 2 adalah "bus"
+	\item Angka 3 adalah "sedan"
+\end{itemize}.
 
-\textsl{Prediction} merupakan model yang dibangun untuk meramalkan fungsi nilai kontinu atau \textsl{ordered value}. \textsl{Ordered value} merupakan nilai yang terurut dan berlanjut. Contoh studi kasus untuk pemodelan prediction adalah seorang marketing ingin meramalkan seberapa banyak konsumen yang akan belanja di sebuah toko dalam waktu satu bulan. Pemodelan tersebut disebut \textsl{predictor}. \textsl{Regression Analysis}, merupakan metodologi statistik yang digunakan untuk \textsl{numeric prediction}. \textsl{Classification} dan \textsl{numeric prediction} merupakan dua jenis utama dalam masalah prediksi.
+\textsl{Prediction} merupakan model yang dibangun untuk meramalkan fungsi nilai kontinu. Nilai kontinu merupakan nilai yang terurut dan berlanjut. Contoh kasus untuk pemodelan prediction, misalkan seorang marketing ingin meramalkan seberapa banyak konsumen yang akan belanja di sebuah toko dalam waktu satu bulan. Pemodelan tersebut disebut \textsl{predictor}. \textsl{Regression Analysis} merupakan metodologi statistik yang digunakan untuk \textsl{numeric prediction}. \textsl{Classification} dan \textsl{numeric prediction} merupakan dua fungsi utama pada \textsl{prediction}.
 
-\textsl{Data Classification} merupakan proses untuk melakukan klasifikasi. \textsl{Data classification} memiliki dua tahap proses, yaitu \textsl{learning step} dan tahap klasifikasi seperti pada ilustrasi di gambar \ref{fig:tahapDataClassification}. \textsl{Learning step} merupakan langkah pembelajaran, di mana algoritma klasifikasi membangun \textsl{classification rules} (yang berisi syarat atau aturan sebuah nilai masuk ke dalam kategori tertentu) dengan cara menganalisis \textsl{training set} yang merupakan \textsl{database tuple}. Karena pembuatan \textsl{classification rules} menggunakan \textsl{training set}, yang dikenal juga sebagai \textsl{supervised learning}. 
-Pada tahap kedua, dilakukan proses klasifikasi nilai berdasarkan \textsl{classification rules} yang sudah dibangun dari tahap pertama.
+\textsl{Data Classification} merupakan proses untuk melakukan klasifikasi label kategori. \textsl{Data classification} memiliki dua tahap proses, yaitu \textsl{learning step} dan tahap klasifikasi. \textsl{Learning step} merupakan langkah pembelajaran, di mana algoritma klasifikasi membangun \textsl{classification rules} (yang berisi syarat atau aturan sebuah nilai masuk ke dalam kategori tertentu) dengan cara menganalisis \textsl{training set} yang merupakan \textsl{database tuple}. Karena pembuatan \textsl{classification rules} menggunakan \textsl{training set}, yang dikenal juga sebagai \textsl{supervised learning}. Pada tahap kedua, dilakukan proses klasifikasi nilai berdasarkan \textsl{classification rules} yang sudah dibangun dari tahap pertama.
+
+Contoh kasus \textsl{data classification} dapat dilihat pada ilustrasi di gambar \ref{fig:tahapDataClassification}. Pada gambar a, data pelatihan akan diproses oleh algoritma klasifikasi dan menghasilkan aturan klasifikasi. Aturan tersebut akan digunakan untuk menentukan label kategori. Pada gambar b, data uji akan diproses oleh aturan klasifikasi yang sudah diperoleh dari gambar a dan akan menghasilkan hasil prediksi bahwa suatu tuple beresiko akan peminjaman kredit atau tidak.
 
 \begin{figure}
 \centering
@@ -184,7 +190,9 @@ Pada tahap kedua, dilakukan proses klasifikasi nilai berdasarkan \textsl{classif
 \end{figure}
 
 \subsubsection{\textsl{Decision Tree}}
-Salah satu cara pembuatan \textsl{classification rules} pada \textsl{Data Classification} adalah dengan membuat \textsl{decision tree} (pohon keputusan). \textsl{Decision tree} merupakan \textsl{flowchart} yang berbentuk pohon, dimana setiap node internal (\textsl{nonleaf} node) merupakan hasil test dari atribut, setiap cabang merepresentasikan output dari test, dan setiap node daun memiliki \textsl{class label}. Bagian paling atas dari pohon disebut \textsl{root node}. Contoh studi kasus, pohon keputusan untuk menentukan apakah seorang konsumen akan membeli komputer atau tidak (ilustrasi pohon keputusan pada gambar \ref{fig:decisionTree}) 
+Salah satu cara pembuatan \textsl{classification rules} pada \textsl{Data Classification} adalah membangun \textsl{decision tree} (pohon keputusan). \textsl{Decision tree} merupakan \textsl{flowchart} yang berbentuk pohon, dimana setiap node internal (\textsl{nonleaf} node) merupakan hasil test dari atribut, setiap cabang merepresentasikan output dari test, dan setiap node daun memiliki \textsl{class label}. Bagian paling atas dari pohon disebut \textsl{root node}. 
+
+Contoh kasus, pohon keputusan untuk menentukan apakah seorang konsumen akan membeli komputer atau tidak (ilustrasi pohon keputusan pada gambar \ref{fig:decisionTree}). Root node dari pohon keputusan adalah umur. Atribut pertama yang akan diperiksa adalah atribut umur. Jika nilai atribut umur dari suatu tuple adalah muda, maka akan diperiksa atribut murid apakah bernilai bukan atau ya. Jika nilai atribut murid adalah bukan, maka tuple tersebut memiliki label tidak membeli komputer sedangkan jika bernilai ya, maka tuple tersebut akan membeli komputer. Jika nilai atribut umur adalah remaja, maka tuple tersebut berlabel membeli komputer. Jika atribut umur bernilai dewasa maka akan diperiksa atribut peringkat kredit, apakah cukup baik atau baik. Jika atribut peringkat kredit bernilai cukup baik maka tuple tersebut memiliki label tidak membeli komputer sedangkan jika bernilai baik, maka tuple tersebut akan membeli komputer.
 
 \begin{figure}
 \centering
@@ -193,9 +201,7 @@ Salah satu cara pembuatan \textsl{classification rules} pada \textsl{Data Classi
 \label{fig:decisionTree}
 \end{figure}
 
-\paragraph{\textsl{Decision Tree Induction}}
-
-\textsl{Decision tree induction} merupakan pelatihan pohon keputusan dari tupel pelatihan kelas berlabel. Terdapat beberapa teknik untuk membuat \textsl{decission tree} dua diantaranya adalah ID3 dan C4.5. ID3 merupakan teknik pembuatan \textsl{decision tree} dengan memanfaatkan \textsl{entropy} dan \textsl{gain info} untuk menentukan atribut yang terbaik untuk node pada \textsl{decision tree}. Sedangkan C4.5 merupakan teknik lanjutan dari ID3 yang menggunakan \textsl{gain ratio} untuk melakukan pengecekan pada nilai \textsl{gain info}. Kedua teknik tersebut menggunakan pendekatan \textsl{greedy} yang merupakan \textsl{decission tree} yang dibangun secara \textsl{top-down recursive divide and conquer}. Algoritma yang diperlukan secara umum sama, hanya berbeda pada \textsl{attribute\_selection\_method}. Berikut algoritma untuk membuat pohon keputusan dari suatu tupel pelatihan.
+\paragraph{\textsl{Decision Tree Induction}} merupakan pelatihan pohon keputusan dari tupel pelatihan yang memiliki label kategori. Algoritma yang diperlukan secara umum sama, hanya berbeda pada \textsl{attribute\_selection\_method}. Berikut algoritma untuk membuat pohon keputusan dari suatu tupel pelatihan:
 
 
 \begin{algorithmic}[1]
@@ -228,16 +234,16 @@ Salah satu cara pembuatan \textsl{classification rules} pada \textsl{Data Classi
 
 Pohon keputusan akan dimulai dengan satu node, yaitu N, merepresentasikan tuple pelatihan pada D (baris 1)
 
-Jika tuple di D memiliki kelas yang sama semua, maka node N akan menjadi daun dan diberi label dari kelas tersebut (baris 2 sampai 4). Perlu diketahui bahwa baris 5 sampai 7 akan mengakhiri kondisi.
+Jika tuple di D memiliki kelas yang sama semua, maka node N akan menjadi daun dan diberi label dari kelas tersebut (baris 2 sampai 4). 
 
-Jika tuple di D ada kelas yang berbeda, maka algoritma akan memanggil \textsl{attribute\_selection\_method} untuk menentukan \textsl{splitting criterion}. \textsl{Splitting criterion} akan menentukan atribut pada node N yang merupakan nilai terbaik untuk memecah nilai atribut pada tuple ke dalam kelas masing-masing. (baris 8)
+Jika tuple di D memiliki kelas yang berbeda, maka algoritma akan memanggil \textsl{attribute\_selection\_method} untuk menentukan \textsl{splitting criterion}. \textsl{Splitting criterion} akan menentukan atribut pada node N. (baris 8)
 
-Node N akan diisi dengan hasil dari \textsl{splitting criterion} (baris 9). Kemudian kriteria tersebut agak dibentuk cabangnya masing-masing sesuai pada baris 13 dan 14. Terdapat tiga kemungkinan bentuk kriteria jika A merupakan \textsl{splitting\_attribute} yang memiliki nilai unik seperti \{a$_{1}$, a$_{2}$, ..., a$_{v}$\} seperti pada gambar \ref{fig:splitPoint}, yaitu,
+Node N akan diisi dengan hasil dari \textsl{splitting criterion} (baris 9). Kemudian kriteria tersebut membentuk cabangnya masing-masing sesuai pada baris 13 dan 14. Terdapat tiga kemungkinan bentuk kriteria jika A merupakan \textsl{splitting\_attribute} yang memiliki nilai unik seperti \{a$_{1}$, a$_{2}$, ..., a$_{v}$\}. Tiga kemungkinan tersebut dapat dilihat pada gambar \ref{fig:splitPoint}, berikut penjelasannya:
 
 \begin{enumerate}
-	\item \textsl{Discrete valued}: cabang yang dihasilkan memiliki kelas dengan nilai diskret. Karena kelas yang dihasilkan diskret dan hanya memiliki nilai yang sama pada cabang tersebut, maka \textsl{attribut\_list} akan dihapus (baris 10 sampai 12)
+	\item \textbf{\textsl{Discrete valued}}: cabang yang dihasilkan memiliki kelas dengan nilai diskret. Karena kelas yang dihasilkan diskret dan hanya memiliki nilai yang sama pada cabang tersebut, maka \textbf{\textsl{attribut\_list}} akan dihapus (baris 10 sampai 12)
 	\item \textsl{Continuous values}: cabang yang dihasilkan memiliki jarak nilai untuk memenuhi suatu kondisi (contoh: A <= split\_point), dimana nilai \textsl{split\_point} adalah nilai pembagi yang dikembalikan oleh \textsl{attribute\_selection\_method}
-	\item \textsl{Dicrete valued and a binary tree}: cabang yang dihasilkan adalah dua berupa nilai iya atau tidak dari "`apakah A anggota S$_{a}$"', dimana S$_{a}$ merupakan subset dari A, yang dikembalikan oleh \textsl{Attribute\_selection\_method}
+	\item \textbf{\textsl{Dicrete valued and a binary tree}}: cabang yang dihasilkan berupa nilai iya dan tidak dari "apakah A anggota S$_{a}$", dimana S$_{a}$ merupakan subset dari A, yang dikembalikan oleh \textsl{Attribute\_selection\_method}
 \end{enumerate}
 
 
@@ -248,19 +254,21 @@ Node N akan diisi dengan hasil dari \textsl{splitting criterion} (baris 9). Kemu
 \label{fig:splitPoint}
 \end{figure}
 
-Kemudian, akan dipanggil kembali algoritma \textsl{decision tree} untuk setiap nilai hasil pembagian pada tuple, D$_{j}$  (baris 18).
+Kemudian, algoritma \textsl{decision tree} akan dipanggil untuk setiap nilai hasil pembagian pada tuple, D$_{j}$  (baris 18).
 
 Rekursif tersebut akan berhenti ketika salah satu dari kondisi terpenuhi, yaitu
 
 \begin{enumerate}
 	\item Semua tuple pada partisi D merupakan bagian dari kelas yang sama.
-	\item Sudah tidak ada atribut yang dapat dilakukan pembagian lagi (dilakukan pengecekan pada baris 4). Disini, akan dilakukan \textsl{majority voting} (baris 6) yang akan mengkonversi node N menjadi \textsl{leaf} dan diberi label dengan kelas yang terbanyak pada D.
-	\item Sudah tidak ada tuple yang dapat diberi cabang, D$_{j}$ sudah kosong (baris 15) dan \textsl{leaf} akan dibuat dengan \textsl{majority class} pada D (baris 16).
+	\item Tidak ada atribut yang bisa dibagi (dilakukan pengecekan pada baris 4). Disini, akan dilakukan \textsl{majority voting} (baris 6) yang akan mengkonversi node N menjadi \textsl{leaf} dan diberi label dengan kelas yang terbanyak pada D.
+	\item Sudah tidak ada tuple yang dapat diberi cabang, D$_{j}$ sudah kosong (baris 15) dan \textsl{leaf} akan dibuat dengan label bernilai \textsl{majority class} pada D (baris 16).
 \end{enumerate}
 
 Pada baris 21, akan dikembalikan nilai \textsl{decision tree} yang telah dibuat.
 
-\paragraph{\textsl{Attribute Selection Measure}} merupakan suatu hirarki untuk pemilihan \textsl{splitting criterion} yang terbaik yang memisah partisi data (D), tuple pelatihan kelas label ke dalam kelas masing-masing. \textsl{Attribute Selection Measure} menyediakan peringkat untuk setiap atribut pada training tuple. Jika \textsl{splitting criterion} merupakan nilai \textsl{continous} atau \textsl{binary trees}, maka nilai \textsl{split point} dan \textsl{splitting subset} harus ditentukan sebagai bagian dari \textsl{splitting criterion}. Contoh dari \textsl{attribute selection measure} adalah \textsl{information gain}, \textsl{gain ratio}, dan \textsl{gini index}.
+Terdapat beberapa teknik untuk memilih atribut pada \textsl{decission tree}, dua diantaranya adalah ID3 dan C4.5. ID3 merupakan teknik pemilihan atribut pada \textsl{decision tree} dengan memanfaatkan \textsl{entropy} dan \textsl{gain info} untuk menentukan atribut yang terbaik. Sedangkan C4.5 merupakan teknik lanjutan dari ID3 yang menggunakan \textsl{gain ratio} untuk melakukan pengecekan pada nilai \textsl{gain info}. Kedua teknik tersebut menggunakan pendekatan \textsl{greedy} yang merupakan \textsl{decission tree} yang dibangun secara \textsl{top-down recursive divide and conquer}. 
+
+\paragraph{\textsl{Attribute Selection Measure}} merupakan suatu hirarki untuk pemilihan \textsl{splitting criterion} yang terbaik yang memisah partisi data (D) sesuai dengan tuple pelatihan kelas label ke dalam kelas masing-masing. \textsl{Attribute Selection Measure} menyediakan peringkat untuk setiap atribut pada training tuple. Jika \textsl{splitting criterion} merupakan nilai \textsl{continous} atau \textsl{binary trees}, maka nilai \textsl{split point} dan \textsl{splitting subset} harus ditentukan sebagai bagian dari \textsl{splitting criterion}. Contoh dari \textsl{attribute selection measure} adalah \textsl{information gain}, \textsl{gain ratio}, dan \textsl{gini index}.
 
 Notasi yang digunakan adalah sebagai berikut. D merupakan data partisi, set pelatihan dari \textsl{class-labeled} tuple. Jika label kelas atribut memiliki m nilai yang berbeda yang mendifinisikan m kelas yang berbeda, $C_{i}$ (for i=1,...,m). C$_{i,d}$ menjadi kelas tuple dari C$_{i}$ di D. |D| dan |C$_{i,d}$| merupakan banyak tuple pada D dan C$_{i,d}$.
 
@@ -274,7 +282,7 @@ ID3 merupakan teknik untuk membuat \textsl{decision tree} dengan menggunakan \te
 	Info(D) = -\sum_{i=1}^{m} p_{i} \log_2(p_{i})
 \end{displaymath}
 
-Dimana $p_{i}$ merupakan probabilitas tuple pada D terhadap class C$_{i}$, dapat diperoleh dengan |C$_{i,d}$|/|D|. Info(D) merupakan nilai rata-rata \textsl{entropy} dari suatu label kelas pada tuple D. Untuk mengetahui atribut mana yang paling baik untuk dijadikan \textsl{splitting attribute}, adalah dengan cara menghitung nilai \textsl{entrophy} dari suatu atribut kemudian diselisihkan dengan nilai \textsl{entropy} dari D. Jika pada tuple D, memiliki atribut A dengan v nilai yang berbeda, maka menghitung \textsl{entropy} dari suatu atribut adalah
+Dimana $p_{i}$ merupakan probabilitas tuple pada D terhadap class C$_{i}$, dapat diperoleh dengan |C$_{i,d}$|/|D|. Info(D) merupakan nilai rata-rata \textsl{entropy} dari suatu label kelas pada tuple D. Cara mengetahui atribut yang paling baik untuk dijadikan \textsl{splitting attribute} adalah dengan cara menghitung nilai \textsl{entrophy} dari suatu atribut kemudian diselisihkan dengan nilai \textsl{entropy} dari D. Jika pada tuple D, memiliki atribut A dengan v nilai yang berbeda, maka menghitung \textsl{entropy} dari suatu atribut adalah
 
 \begin{displaymath}
 	Info_A(D) = \sum_{j=1}^v \frac{|D_j|}{|D|} \times Info(D_j)
@@ -335,7 +343,7 @@ Setelah mendapatkan \textsl{entropy} dari atribut umur, maka nilai \textsl{gain 
 	Gain_{(umur)} = Info(D) - Info_{age}(D) = 0.940 - 0.694 = 0.246 bits
 \end{displaymath}
 
-Dengan melakukan hal yang sama, dapat diperoleh nilai \textsl{gain} untuk atribut pendapatan adalah 0.029 \textsl{bits}, untuk nilai \textsl{gain}(siswa) adalah 0.151 \textsl{bits}, dan \textsl{gain}(resiko\_kredit) = 0.048 \textsl{bits}. Karena nilai \textsl{gain} dari atribut umur merupakan nilai terbesar diantara semua atribut, maka atribut umur dipilih menjadi \textsl{splitting attribute}. Setelah ditentukan, node N akan membentuk cabang berdasarkan nilai dari atribut umur seperti pada gambar \ref{fig:hasilCabang}.
+Dengan melakukan hal yang sama, dapat diperoleh nilai \textsl{gain} untuk atribut pendapatan adalah 0.029 \textsl{bits}, untuk nilai \textsl{gain}(siswa) adalah 0.151 \textsl{bits}, dan \textsl{gain}(resiko\_kredit) = 0.048 \textsl{bits}. Karena nilai \textsl{gain} dari atribut umur merupakan nilai terbesar diantara semua atribut, maka atribut umur dipilih menjadi \textsl{splitting attribute}. Kemudian, node N akan membentuk cabang berdasarkan nilai dari atribut umur seperti pada gambar \ref{fig:hasilCabang}.
 
 \begin{figure}
 \centering
@@ -344,7 +352,7 @@ Dengan melakukan hal yang sama, dapat diperoleh nilai \textsl{gain} untuk atribu
 \label{fig:hasilCabang}
 \end{figure}
 
-Untuk atribut yang merupakan nilai \textsl{continuous}, harus dicari nilai \textsl{split point} untuk A. Nilai-nilai dari dua angka yang bersebelahan dapat diambil nilai tengahnya untuk dijadikan \textsl{split-point}. Jika terdapat v nilai yang berbeda dari A, maka akan terdapat v-1 kemungkinan \textsl{split point}. Kemudian nilai \textsl{split point} akan dijadikan sebagai nilai pembagi, sebagai contoh: A <= \textsl{split-point} merupakan cabang pertama, dan A > \textsl{split-point} merupakan cabang kedua.
+Untuk memilih atribut yang merupakan nilai kontinu, pencarian nilai \textsl{split point} harus dilakukan terlebih dahulu. Nilai yang diambil adalah nilai tengahnya untuk dijadikan \textsl{split-point}. Jika terdapat v nilai yang berbeda dari A, maka akan terdapat v-1 kemungkinan \textsl{split point}. Kemudian nilai \textsl{split point} akan dijadikan sebagai nilai pembagi, sebagai contoh: A <= \textsl{split-point} merupakan cabang pertama, dan A > \textsl{split-point} merupakan cabang kedua.
 
 \subsubsection{C4.5}
 
@@ -385,9 +393,8 @@ Jika nilai \textsl{gain information} dari \textsl{income} adalah 0.029, maka, da
 \end{displaymath}
 
 Maka nilai \textsl{gain ratio} dari atribut pendapatan adalah 0.031 bits. Perhitungan tersebut dilakukan pada semua atribut, dan atribut yang memiliki nilai \textsl{gain ratio} yang terbesar adalah atribut yang dipilih.
-\paragraph{Tree Pruning}
-	
-\textsl{Tree pruning} merupakan proses pemotongan \textsl{decision tree} agar lebih efisien dan tidak terlalu mempengaruhi nilai keputusan yang dihasilkan. \textsl{decision tree} yang sudah dipotong akan lebih kecil ukuran pohonnya, tidak serumit dengan pohon yang asli, namun lebih mudah untuk diproses. \textsl{Decision tree} yang sudah dipotong memiliki kecepatan serta ketepatan mengklasifikasikan yang lebih baik \cite{DM}. Perbedaan \textsl{decision tree} yang sudah dipotong dan belum dapat dilihat pada gambar \ref{fig:treePruning}.
+
+\paragraph{Tree Pruning} merupakan proses pemotongan \textsl{decision tree} agar lebih efisien namun tidak terlalu mempengaruhi nilai keputusan yang dihasilkan. \textsl{decision tree} yang sudah dipotong akan lebih kecil ukuran pohonnya, tidak serumit dengan pohon yang asli, namun lebih mudah untuk diproses. \textsl{Decision tree} yang sudah dipotong memiliki kecepatan serta ketepatan mengklasifikasikan yang lebih baik \cite{DM}. Perbedaan \textsl{decision tree} yang sudah dipotong dan belum dapat dilihat pada gambar \ref{fig:treePruning}.
 
 \begin{figure}
 \centering
@@ -398,13 +405,11 @@ Maka nilai \textsl{gain ratio} dari atribut pendapatan adalah 0.031 bits. Perhit
 
 Terdapat dua pendekatan dalam melakukan \textsl{pruning}, yaitu \textsl{prepruning} dan \textsl{postpruning}.
 
-Pada \textsl{prepruning}, pemotongan pohon dilakukan dengan cara menahan dan tidak melanjutkan pembuatan cabang atau partisi dari sebuah node, dan membuat node tersebut menjadi \textsl{leaf}. 
-
-Pada \textsl{postpruning}, pemotongan pohon dilakukan ketika \textsl{decision tree} sudah selesai dibangun dengan cara menggubah cabang pohon menjadi \textsl{leaf}.
+\textsl{Prepruning}, pemotongan pohon dilakukan dengan cara menahan dan tidak melanjutkan pembuatan cabang atau partisi dari sebuah node, dan membuat node tersebut menjadi \textsl{leaf}. \textsl{Postpruning}, pemotongan pohon dilakukan ketika \textsl{decision tree} sudah selesai dibangun dengan cara menggubah cabang pohon menjadi \textsl{leaf}.
 
 \subsection{\textsl{Pattern Evaluation}}
-\textsl{Pattern evaluation} merupakan tahap mengidentifikasi apakah \textsl{pattern} atau pola tersebut menarik dan merepresentasikan \textsl{knowledge} berdasarkan beberapa \textsl{interestingness measures}.
-Suatu \textsl{pattern} atau pola dapat dinyatakan menarik apabila
+\textsl{Pattern evaluation} merupakan tahap mengidentifikasi apakah pola tersebut menarik dan merepresentasikan \textsl{knowledge} berdasarkan beberapa \textsl{interestingness measures}.
+Suatu pola dapat dinyatakan menarik apabila
 \begin{itemize}
 	\item mudah dimengerti oleh manusia
 	\item valid untuk data percobaan maupun data yang baru
@@ -413,7 +418,7 @@ Suatu \textsl{pattern} atau pola dapat dinyatakan menarik apabila
 \end{itemize}
 
 \subsection{\textsl{Knowledge Presentation}}
-\textsl{Knowledge presentation} merupakan tahap representasi dan visualisasi terhadap \textsl{knowledge} yang merupakan hasil dari \textsl{knowledge discovery}.	
+\textsl{Knowledge presentation} merupakan tahap representasi dan visualisasi terhadap \textsl{knowledge} yang merupakan hasil dari \textsl{knowledge discovery}. Hasil dari representasi dan visualisasi bisa dalam berbagai bentuk diantaranya adalah \textsl{flat data}, grafik, atau pohon keputusan.
 %\section{\textsl{Spatial and Spatiotemporal}}
 
 \section{Log Histori KIRI}
@@ -424,15 +429,15 @@ KIRI memiliki log histori yang melakukan pencatatan untuk setiap user ketika men
 \begin{itemize}
 	\item logId, primary key dari tuple
 	\item APIKey, mengidentifikasikan sumber dari pencarian ini
-	\item \textsl{Timestamp} (UTC), waktu ketika pengguna KIRI mencari rute angkot menggunakan waktu UTC / GMT
+	\item \textsl{Timestamp} (UTC), waktu ketika pengguna KIRI mencari rute angkot, dalam waktu UTC / GMT
 	\item \textsl{Action}, tipe dari log yang dibuat.
 	\item AdditionalData, mencatat data-data yang berhubungan sesuai dengan nilai atribut\textsl{action}
 \end{itemize}
 
-LogId merupakan \textsl{field} dengan tipe data int dengan batas 6 karakter yang digunakan sebagai \textsl{primary key} dari table tersebut. LogId diisi dengan menggunakan fungsi \textsl{increment integer}. \textsl{Increment integer} merupakan fungsi untuk pengisian data pada database dengan menambahkan nilai 1 dari nilai yang terakhir kali diisi.
-APIKey merupakan \textsl{field} dengan tipe data varchar yang digunakan untuk mengindentifikasi pengguna KIRI ketika menggunakan KIRI.
-\textsl{Timestamp} (UTC) merupakan \textsl{field} dengan tipe data \textsl{timestamp} yang digunakan untuk mencatat waktu penggunaan KIRI oleh user, diisi dengan menggunakan fungsi \textsl{current time}. \textsl{Current time} merupakan fungsi untuk pengisian data pada database dengan mengambil waktu pada komputer ketika \textsl{record} dibuat.
-\textsl{Action} merupakan \textsl{field} dengan tipe data varchar yang digunakan untuk memeriksa fungsi apa yang dipanggil dari API KIRI. Terdapat beberapa tipe pada \textsl{field action}, yaitu
+LogId merupakan \textsl{field} dengan tipe data int dengan batas 6 karakter sebagai \textsl{primary key} dari table tersebut. LogId diisi dengan menggunakan fungsi \textsl{increment integer}. \textsl{Increment integer} merupakan fungsi untuk pengisian data pada database dengan menambahkan nilai 1 dari nilai yang terakhir kali diisi.
+APIKey merupakan \textsl{field} dengan tipe data varchar untuk mengindentifikasi pengguna KIRI ketika menggunakan KIRI.
+\textsl{Timestamp} (UTC) merupakan \textsl{field} dengan tipe data \textsl{timestamp} untuk mencatat waktu penggunaan KIRI oleh user, diisi dengan menggunakan fungsi \textsl{current time}. \textsl{Current time} merupakan fungsi untuk pengisian data pada database dengan mengambil waktu pada komputer ketika \textsl{record} dibuat.
+\textsl{Action} merupakan \textsl{field} dengan tipe data varchar untuk memeriksa fungsi apa yang dipanggil dari API KIRI. Terdapat beberapa tipe pada \textsl{field action}, yaitu
 \begin{itemize}
 	\item \textsl{ADDAPIKEY}, \textsl{action} yang dicatat ke dalam log ketika fungsi pembuatan \textsl{API key} yang baru dipanggil.
 	\item \textsl{FINDROUTE}, \textsl{action} yang dicatat ketika user melakukan pencarian rute
@@ -444,7 +449,7 @@ APIKey merupakan \textsl{field} dengan tipe data varchar yang digunakan untuk me
 	\item \textsl{WIDGETERROR}, mencatat log tersebut ketika user menerima error dari \textit{widget}
 	\item \textsl{WIDGETLOAD}, mencatat log tersebut ketika user melakukan download widget
 \end{itemize}
-AdditionalData, merupakan \textsl{field} dengan tipe data varchar yang digunakan untuk mencatat informasi yang dibutuhkan sesuai dengan \textsl{field action}. Isi dari additionalData tersebut untuk setiap \textsl{action} adalah
+AdditionalData, merupakan \textsl{field} dengan tipe data varchar untuk mencatat informasi sesuai dengan \textsl{field action}. Isi dari additionalData untuk setiap \textsl{action} adalah
 \begin{itemize}
 	\item Jika nilai atribut \textsl{action} adalah \textsl{ADDAPIKEY}, maka isi nilai dari additionalData adalah nilai \textsl{API key} yang dihasilkan
 	\item Jika nilai atribut \textsl{action} adalah \textsl{FINDROUTE}, maka isi nilai dari additionalData adalah \textsl{latitude} dan \textsl{longitude} lokasi awal dan tujuan serta banyak jalur yang dihasilkan dari aplikasi KIRI
@@ -478,7 +483,7 @@ Dimana
 \end{itemize}
 
 Contoh untuk perhitungan Haversine sebagai berikut:
-Jika kita ingin menghitung jarak dua titik dari daerah Jakarta ke Surabaya, dengan titik pada Jakarta adalah -6.211544, 106.845172 dan titik pada Surabaya adalah -7.289166, 112.734398, maka perhitungan rumusnya akan menjadi
+Jika kita ingin menghitung jarak dua titik dari daerah Jakarta ke Surabaya, dengan titik pada Jakarta adalah -6.211544, 106.845172 dan titik pada Surabaya adalah -7.289166, 112.734398, maka perhitungan \textsl{haversine formula} akan menjadi
 
 \begin{displaymath}
 	a = \sin^{2}((|-6.211544-(-7.289166)|)/2) + \cos-6.211544 . \cos-7.289166 . \sin^{2}((|106.845172-112.734398|)/2)
@@ -507,7 +512,7 @@ Jika kita ingin menghitung jarak dua titik dari daerah Jakarta ke Surabaya, deng
 Dengan menggunakan rumus Haversine, maka jarak antar kedua titik tersebut adalah 661.246 km
 
 \section{Weka}\cite{Weka}
-Weka merupakan aplikasi berbasis java yang berisi alat-alat untuk melakukan visualisasi dan algoritma untuk data analisis serta pemodelan prediksi. Weka juga menyediakan file weka-src.jar yang berisi kelas-kelas yang dipakai oleh aplikasi weka sehingga user dapat menggunakannya untuk membuat program java yang berfungsi untuk \textsl{data mining}. Berikut beberapa kelas yang dimiliki oleh Weka:
+Weka merupakan aplikasi berbasis java yang berisi alat-alat untuk melakukan visualisasi dan algoritma data analisis serta pemodelan prediksi. Weka juga menyediakan file weka-src.jar yang berisi kelas-kelas yang dipakai oleh aplikasi weka sehingga user dapat menggunakannya untuk membuat program java yang berfungsi untuk \textsl{data mining}. Berikut beberapa kelas yang dimiliki oleh Weka:
 
 \paragraph{\textsl{Classifier}} adalah sebuah \textsl{interface} yang digunakan sebagai skema untuk prediksi numerik ataupun nominal pada weka. Kelas tersebut memiliki \textsl{method} sebagai berikut:
 \begin{itemize}
@@ -520,13 +525,6 @@ Weka merupakan aplikasi berbasis java yang berisi alat-alat untuk melakukan visu
 	
 	untuk melakukan klasifikasi dari data dengan parameter contoh data yang akan dilakukan klasifikasi. Method tersebut akan mengebalikan nilai kelas yang sesuai dengan data tersebut.
 	
-	\item double[] distributionForInstance(Instance instance)
-	
-	untuk memprediksi keanggotaan kelas untuk contoh yang diberikan dengan parameter contoh data yang akan dilakukan klasifikasi dan mengembalikan array yang berisi nilai keanggotaan dari contoh data.
-	
-	\item Capabilities getCapabilities()
-	
-	mengembalikan capabilities dari kelas tersebut.
 \end{itemize}
 
 \paragraph{Instance} adalah interface yang mewakili set data.

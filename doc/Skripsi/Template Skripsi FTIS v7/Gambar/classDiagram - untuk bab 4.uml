@@ -2341,7 +2341,7 @@
 <XPD:REF name="Owner">J2BxNqyaEEKmUsTUUJWiiQAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Attributes[9]" type="UMLAttribute" guid="0qEvXfwii0un4dA3dfgKCwAA">
-<XPD:ATTR name="Name" type="string">radioButtonJ48</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">radioButtonC45</XPD:ATTR>
 <XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">JRadioButton</XPD:ATTR>
 <XPD:REF name="Owner">J2BxNqyaEEKmUsTUUJWiiQAA</XPD:REF>

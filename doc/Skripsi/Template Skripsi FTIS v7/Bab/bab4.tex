@@ -31,8 +31,8 @@ Agar perangkat lunak dapat menjalankan fungsi yang sudah dibahas pada pemodelan 
 			\item JLabel labelPemilihanMethod, merupakan label untuk menunjukkan bagian pemilihan method.
 			\item JLabel labelHasil, merupakan label untuk menunjukkan bagian hasil program.
 			\item JLabel labelKeterangan, merupakan label untuk menunjukkan keterangan dari program.
-			\item JRadioButton radioButtonId3, merupakan \textsl{radio button} yang menunjukkan bahwa user memilih method ID3 atau tidak.
-			\item JRadiioButton radioButtonJ48, merupakan \textsl{radio button} yang menunjukkan bahwa user memilih method J48 atau tidak.
+			\item JRadioButton radioButtonId3, merupakan \textsl{radio button} yang menunjukkan bahwa user memilih metode ID3 atau tidak.
+			\item JRadiioButton radioButtonC4.5, merupakan \textsl{radio button} yang menunjukkan bahwa user memilih metode C4.5 atau tidak.
 			\item JScrollPanel scrollPanel, merupakan variabel yang digunakan untuk mengaktifkan fungsi scroll pada JTextArea hasil.
 			\item JTextArea hasil, merupakan sebuah JTextArea yang digunakan untuk menunjukkan hasil \textsl{data mining} dari program.
 			\item JTextField textFieldFilePath, digunakan untuk melakukan \textsl{input path file }baik dilakukan secara manual atau melalui tombol \textsl{browse}.
@@ -41,7 +41,7 @@ Agar perangkat lunak dapat menjalankan fungsi yang sudah dibahas pada pemodelan 
 		\item Method
 		\begin{itemize}
 			\item public void buttonBrowseActionPerformed(java.awt.event.ActionEvent evt), digunakan untuk membuat jFileChooser yang berfungsi untuk memilih file dan mendapatkan \textsl{file path} dari file yang dipilih dan memasukkan \textsl{string }tersebut ke textFieldFilePath.
-			\item public void buttonStartActionPerformed(java.awt.event.ActionEvent evt), digunakan untuk mengambil String dari textFieldFilePath serta method yang dipilih pada jRadioButton (Id3 atau J48) kemudian memanggil method startMining dengan masukan kedua string tersebut, label dan textArea.
+			\item public void buttonStartActionPerformed(java.awt.event.ActionEvent evt), digunakan untuk mengambil String dari textFieldFilePath serta method yang dipilih pada jRadioButton (Id3 atau C4.5) kemudian memanggil method startMining dengan masukan kedua string tersebut, label dan textArea.
 		\end{itemize}
 	\end{itemize}
 
@@ -86,7 +86,7 @@ Agar perangkat lunak dapat menjalankan fungsi yang sudah dibahas pada pemodelan 
 			\item public DecisionTree(), merupakan konstruktor untuk kelas DecisionTree.
 			\item public double calculatePrecision(Instances data), digunakan untuk mendapatkan nilai akurasi dari \textsl{decision tree} yang dihasilkan.
 			\item public String id3(Instances data), digunakan untuk membuat \textsl{decision tree} dengan menggunakan metode ID3 dari API Weka.
-			\item public String j48(Instances data), digunakan untuk membuat \textsl{decision tree} dengan menggunakan metode J48 dari API Weka.
+			\item public String j48(Instances data), digunakan untuk membuat \textsl{decision tree} dengan menggunakan metode C4.5 dari API Weka.
 		\end{itemize}
 	\end{itemize}
 

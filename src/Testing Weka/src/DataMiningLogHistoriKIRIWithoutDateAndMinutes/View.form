@@ -44,7 +44,7 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="radioButtonId3" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="radioButtonJ48" min="-2" max="-2" attributes="0"/>
+                                      <Component id="radioButtonC45" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="buttonStart" alignment="0" min="-2" pref="124" max="-2" attributes="0"/>
                                   <Component id="labelHasil" alignment="0" min="-2" pref="89" max="-2" attributes="0"/>
@@ -74,7 +74,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="labelPemilihanMethod" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
-                  <Component id="radioButtonJ48" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="radioButtonC45" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="radioButtonId3" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -121,12 +121,12 @@
         <Property name="text" type="java.lang.String" value="ID3"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="radioButtonJ48">
+    <Component class="javax.swing.JRadioButton" name="radioButtonC45">
       <Properties>
-        <Property name="text" type="java.lang.String" value="J48"/>
+        <Property name="text" type="java.lang.String" value="C4.5"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radioButtonJ48ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radioButtonC45ActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="textFieldFilePath">

@@ -19,7 +19,7 @@ public class View extends javax.swing.JPanel {
         this.cont = cont;
         initComponents();
         buttonGroup1.add(radioButtonId3);
-        buttonGroup1.add(radioButtonJ48);
+        buttonGroup1.add(radioButtonC45);
     }
 
     /**
@@ -36,7 +36,7 @@ public class View extends javax.swing.JPanel {
         labelFileData = new javax.swing.JLabel();
         labelPemilihanMethod = new javax.swing.JLabel();
         radioButtonId3 = new javax.swing.JRadioButton();
-        radioButtonJ48 = new javax.swing.JRadioButton();
+        radioButtonC45 = new javax.swing.JRadioButton();
         textFieldFilePath = new javax.swing.JTextField();
         buttonStart = new javax.swing.JButton();
         scrollPanel = new javax.swing.JScrollPane();
@@ -58,10 +58,10 @@ public class View extends javax.swing.JPanel {
         radioButtonId3.setSelected(true);
         radioButtonId3.setText("ID3");
 
-        radioButtonJ48.setText("J48");
-        radioButtonJ48.addActionListener(new java.awt.event.ActionListener() {
+        radioButtonC45.setText("C4.5");
+        radioButtonC45.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                radioButtonJ48ActionPerformed(evt);
+                radioButtonC45ActionPerformed(evt);
             }
         });
 
@@ -114,7 +114,7 @@ public class View extends javax.swing.JPanel {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(radioButtonId3)
                                         .addGap(18, 18, 18)
-                                        .addComponent(radioButtonJ48))
+                                        .addComponent(radioButtonC45))
                                     .addComponent(buttonStart, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(labelHasil, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(scrollPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 441, Short.MAX_VALUE)
@@ -135,7 +135,7 @@ public class View extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelPemilihanMethod, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(radioButtonJ48)
+                    .addComponent(radioButtonC45)
                     .addComponent(radioButtonId3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(buttonStart)
@@ -170,7 +170,7 @@ public class View extends javax.swing.JPanel {
         }
         else
         {
-            miningAlgo = "j48";
+            miningAlgo = "c45";
         }
         
         try {
@@ -182,9 +182,9 @@ public class View extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_buttonStartActionPerformed
 
-    private void radioButtonJ48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioButtonJ48ActionPerformed
+    private void radioButtonC45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioButtonC45ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_radioButtonJ48ActionPerformed
+    }//GEN-LAST:event_radioButtonC45ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -197,8 +197,8 @@ public class View extends javax.swing.JPanel {
     private javax.swing.JLabel labelHasil;
     private javax.swing.JLabel labelKeterangan;
     private javax.swing.JLabel labelPemilihanMethod;
+    private javax.swing.JRadioButton radioButtonC45;
     private javax.swing.JRadioButton radioButtonId3;
-    private javax.swing.JRadioButton radioButtonJ48;
     private javax.swing.JScrollPane scrollPanel;
     private javax.swing.JTextField textFieldFilePath;
     // End of variables declaration//GEN-END:variables

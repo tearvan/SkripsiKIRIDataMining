@@ -50,7 +50,7 @@ Setelah alamat file CSV diisi, hal selanjutnya yang dilakukan adalah memilih met
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.7]{Gambar/GUI3and4.jpg}
-\caption[Tampilan Form Pemilihan Metode Pembuatan \textsl{Decision Tree}]{Tampilan Form Pemilihan Metode Pembuatan \textsl{Decision Tree}. Gambar a merupakan kondisi tampilan ketika metode ID3 dipilih sedangkan gambar b merupakan kondisi tampilan ketika metode J48 dipilih.} 
+\caption[Tampilan Form Pemilihan Metode Pembuatan \textsl{Decision Tree}]{Tampilan Form Pemilihan Metode Pembuatan \textsl{Decision Tree}. Gambar a merupakan kondisi tampilan ketika metode ID3 dipilih sedangkan gambar b merupakan kondisi tampilan ketika metode C4.5 dipilih.} 
 \label{fig:GUI3and4}
 \end{figure}
 
@@ -193,7 +193,7 @@ Berikut hasil pengujian yang dilakukan dengan menggunakan data tersebut:
 	\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.4]{Gambar/pengujian32.jpg}
-	\caption[Pengujian Pembuatan \textsl{Decision Tree} J48]{Pengujian  Pembuatan \textsl{Decision Tree} J48. Gambar a merupakan hasil dari aplikasi \textsl{data mining} sedangkan gambar b merupakan hasil dari weka.} 
+	\caption[Pengujian Pembuatan \textsl{Decision Tree} C4.5]{Pengujian  Pembuatan \textsl{Decision Tree} C4.5. Gambar a merupakan hasil dari aplikasi \textsl{data mining} sedangkan gambar b merupakan hasil dari weka.} 
 	\label{fig:Pengujian32}
 	\end{figure}
 
@@ -225,7 +225,7 @@ Ketika Pengujian dilakukan, ditemukan \textsl{bug} data yaitu terdapat nilai dar
 \label{fig:percobaanError}
 \end{figure}
 
-Setelah melakukan \textsl{data cleaning}, program dapat berjalan dengan baik. Berikut hasil dari percobaan metode ID3 pada gambar \ref{fig:percobaan1} dan metode J48 pada gambar \ref{fig:percobaan2}.
+Setelah melakukan \textsl{data cleaning}, program dapat berjalan dengan baik. Berikut hasil dari percobaan metode ID3 pada gambar \ref{fig:percobaan1} dan metode C4.5 pada gambar \ref{fig:percobaan2}.
 
 \begin{figure}[H]
 \centering
@@ -237,19 +237,19 @@ Setelah melakukan \textsl{data cleaning}, program dapat berjalan dengan baik. Be
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.3]{Gambar/percobaan2.jpg}
-\caption[Percobaan \textsl{Data Mining} dengan Menggunakan Metode J48 pada \textsl{Log} Histori KIRI pada Bulan 2 Tahun 2014]{Percobaan \textsl{Data Mining} dengan Menggunakan Metode J48 pada \textsl{Log} Histori KIRI pada Bulan 2 Tahun 2014.} 
+\caption[Percobaan \textsl{Data Mining} dengan Menggunakan Metode C4.5 pada \textsl{Log} Histori KIRI pada Bulan 2 Tahun 2014]{Percobaan \textsl{Data Mining} dengan Menggunakan Metode C4.5 pada \textsl{Log} Histori KIRI pada Bulan 2 Tahun 2014.} 
 \label{fig:percobaan2}
 \end{figure}
 
 Pada kedua percobaan, terdapat perbedaan bulan, hal ini dikarenakan perubahan waktu dari UTC menuju GMT+7 sehingga terdapat perubahan bulan atau tahun. Karena data pada bulan selanjutnya hanya tujuh jam, maka hasil pada bulan selanjutnya lebih baik tidak dianggap karena data tersebut tidak cukup untuk merepresentasikan waktu satu bulan.
 
-Hasil percobaan pembuatan \textsl{decision tree} pada metode ID3 mengalami overfitting karena menghasilkan klasifikasi pada hampir setiap kemungkinan, dapat disimpulkan hasil \textsl{decision tree} pada percobaan di bulan ini cukup jelek. Namun pada percobaan metode J48, menghasilkan \textsl{decision tree} yang cukup besar namun tidak overfitting dan banyak \textsl{user} yang menjauhi Bandung.
+Hasil percobaan pembuatan \textsl{decision tree} pada metode ID3 mengalami overfitting karena menghasilkan klasifikasi pada hampir setiap kemungkinan, dapat disimpulkan hasil \textsl{decision tree} pada percobaan di bulan ini cukup jelek. Namun pada percobaan metode C4.5, menghasilkan \textsl{decision tree} yang cukup besar namun tidak overfitting dan banyak \textsl{user} yang menjauhi Bandung.
 
-Nilai akurasi dari percobaan dengan metode ID3 adalah 38.22\% sedangkan untuk percobaan dengan metode j48 adalah 50.37\%, dari sini dapat dinyatakan bahwa hasil \textsl{decision tree} dari j48 lebih tepat daripada ID3 dan metode ID3 menghasilkan nilai akurasi yang belum memuaskan karena masih dibawah 50\%.
+Nilai akurasi dari percobaan dengan metode ID3 adalah 38.22\% sedangkan untuk percobaan dengan metode C4.5 adalah 50.37\%, dari sini dapat dinyatakan bahwa hasil \textsl{decision tree} dari C4.5 lebih tepat daripada ID3 dan metode ID3 menghasilkan nilai akurasi yang belum memuaskan karena masih dibawah 50\%.
 
 Selain itu, dari kedua percobaan ini, diperoleh bahwa cukup sulit untuk membaca hasil \textsl{decision tree} terutama seperti hasil \textsl{decision tree} dengan metode ID3. Oleh karena itu, akan ditambahkan fungsi agar \textsl{decision tree} lebih mudah dibaca. Program akan ditambah satu kelas baru yaitu SDForExtractData yang berfungsi untuk menyimpan data dan membuat kesimpulan dari setiap \textsl{leaf} yang dihasilkan.
 
-%Nilai akurasi dari percobaan dengan metode ID3 adalah 37.49\% sedangkan untuk percobaan dengan metode j48 adalah 49.79\%, dari sini dapat dinyatakan bahwa hasil \textsl{decision tree} dari j48 lebih tepat daripada ID3 namun kedua metode tersebut menghasilkan nilai akurasi yang belum memuaskan, karena masih dibawah 50\%
+%Nilai akurasi dari percobaan dengan metode ID3 adalah 37.49\% sedangkan untuk percobaan dengan metode C4.5 adalah 49.79\%, dari sini dapat dinyatakan bahwa hasil \textsl{decision tree} dari C4.5 lebih tepat daripada ID3 namun kedua metode tersebut menghasilkan nilai akurasi yang belum memuaskan, karena masih dibawah 50\%
 
 %Selain itu, dari kedua percobaan ini, diperoleh bahwa cukup sulit untuk membaca hasil \textsl{decision tree} terutama pada \textsl{node} dengan kedalaman lebih dari 4 tingkat. Oleh karena itu, akan ditambahkan fungsi agar \textsl{decision tree} lebih mudah dibaca. Program akan ditambah satu kelas baru yaitu SDForExtractData yang berfungsi untuk menyimpan data dan membuat kesimpulan dari setiap \textsl{leaf} yang dihasilkan.
 
@@ -270,12 +270,12 @@ Berdasarkan pengujian di atas, dapat disimpulkan bahwa
 
 \begin{enumerate}
 	\item Metode ID3 menghasilkan \textsl{decision tree} yang bersifat overfitting pada data \textsl{log} histori KIRI dengan  \textsl{preprocessing data} dan klasifikasi yang sudah dijelaskan pada bab 3.
-	\item Metode J48 menghasilkan \textsl{decision tree} yang lebih baik dan tepat daripada ID3, khususnya pada data \textsl{log} histori KIRI dengan \textsl{preprocessing data} dan klasifikasi yang sudah dijelaskan pada bab 3 (J48 menghasilkan 50.37\% sedangkan ID3 menghasilkan 38.22\%).
+	\item Metode C4.5 menghasilkan \textsl{decision tree} yang lebih baik dan tepat daripada ID3, khususnya pada data \textsl{log} histori KIRI dengan \textsl{preprocessing data} dan klasifikasi yang sudah dijelaskan pada bab 3 (C4.5 menghasilkan 50.37\% sedangkan ID3 menghasilkan 38.22\%).
 	\item Metode ID3 belum menghasilkan nilai akurasi yang memuaskan, karena masih dibawah 50\%.
-	\item Dari data \textsl{log} histori KIRI pada bulan Febuari 2014, \textsl{decision tree} dengan metode J48 menyatakan bahwa \textsl{user} lebih sering menjauhi Bandung daripada mendekati Bandung atau berangkat menuju daerah yang sama.
-	%\item Metode J48 menghasilkan \textsl{decision tree} yang lebih baik dan tepat daripada ID3, khususnya pada data \textsl{log} histori KIRI dengan \textsl{preprocessing data} dan klasifikasi yang sudah dijelaskan pada bab 3 (J48 menghasilkan 49.79\% sedangkan ID3 menghasilkan 37.49\%).
+	\item Dari data \textsl{log} histori KIRI pada bulan Febuari 2014, \textsl{decision tree} dengan metode C4.5 menyatakan bahwa \textsl{user} lebih sering menjauhi Bandung daripada mendekati Bandung atau berangkat menuju daerah yang sama.
+	%\item Metode C4.5 menghasilkan \textsl{decision tree} yang lebih baik dan tepat daripada ID3, khususnya pada data \textsl{log} histori KIRI dengan \textsl{preprocessing data} dan klasifikasi yang sudah dijelaskan pada bab 3 (C4.5 menghasilkan 49.79\% sedangkan ID3 menghasilkan 37.49\%).
 	%\item Kedua metode belum menghasilkan nilai akurasi yang memuaskan, karena masih dibawah 50\%.
-	%\item Dari data \textsl{log} histori KIRI pada bulan Febuari 2014, \textsl{decision tree} dengan metode J48 menyatakan bahwa \textsl{user} sering menjauhi Bandung dan mendekati Bandung, namun hampir tidak ada \textsl{user} yang berangkat menuju daerah yang sama. Dari pernyataan tersebut, dapat disimpulkan bahwa \textsl{user} sering berpergian dengan jarak lebih dari satu kilometer.
+	%\item Dari data \textsl{log} histori KIRI pada bulan Febuari 2014, \textsl{decision tree} dengan metode C4.5 menyatakan bahwa \textsl{user} sering menjauhi Bandung dan mendekati Bandung, namun hampir tidak ada \textsl{user} yang berangkat menuju daerah yang sama. Dari pernyataan tersebut, dapat disimpulkan bahwa \textsl{user} sering berpergian dengan jarak lebih dari satu kilometer.
 \end{enumerate}
 
 
