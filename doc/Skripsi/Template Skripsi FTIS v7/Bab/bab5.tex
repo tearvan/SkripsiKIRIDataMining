@@ -1,6 +1,6 @@
 \chapter{Implementasi Program dan Pengujian}
 
-Pada bab ini, akan dijelaskan tentang lingkupan pembangunan, implementasi rancangan antarmuka, serta pengujian secara fungsional dan experimental pada aplikasi \textsl{data mining}.
+Bab ini menjelaskan tentang lingkupan pembangunan, implementasi rancangan antarmuka, serta pengujian secara fungsional dan experimental pada aplikasi \textsl{data mining}.
 
 \section{Lingkungan Pembangunan}
 Lingkungan perangkat lunak dan perangkat keras yang digunakan untuk membangun dan menguji aplikasi \textsl{data mining} ini adalah:
@@ -18,9 +18,9 @@ Lingkungan perangkat lunak dan perangkat keras yang digunakan untuk membangun da
 \end{enumerate}
 
 \section{Hasil Tampilan Antarmuka}
-Pada aplikasi \textsl{data mining} ini, terdapat dua form. Form pertama berfungsi untuk memilih file CSV yang akan dilakukan \textsl{data mining}, memilih metode pembuatan \textsl{decision tree}, serta menunjukkan hasil \textsl{decision tree} yang dihasilkan dalam bentuk String. Sedangkan untuk form kedua, berfungsi untuk memvisualisasikan \textsl{decision tree} yang sudah diperoleh dalam bentuk gambar.
+Pada aplikasi \textsl{data mining} ini, terdapat dua form. Form pertama berfungsi untuk memilih file CSV yang dilakukan \textsl{data mining}, memilih metode pembuatan \textsl{decision tree}, serta menunjukkan hasil \textsl{decision tree} yang dihasilkan dalam bentuk String. Sedangkan untuk form kedua, berfungsi untuk memvisualisasikan \textsl{decision tree} yang sudah diperoleh dalam bentuk gambar.
 
-TextField yang pertama berfungsi untuk mengisi alamat file CSV yang akan dilakukan \textsl{data mining}. RadioButton berfungsi untuk memilih metode manakah yang akan digunakan untuk membuat \textsl{decision tree}, sedangkan TextArea digunakan untuk memperlihatkan hasil \textsl{decision tree} dalam bentuk String. Tampilan awal aplikasi dapat dilihat di \ref{fig:GUI1}.
+TextField yang pertama berfungsi untuk mengisi alamat file CSV yang dilakukan \textsl{data mining}. RadioButton berfungsi untuk memilih metode manakah yang digunakan untuk membuat \textsl{decision tree}. TextArea digunakan untuk memperlihatkan hasil \textsl{decision tree} dalam bentuk String. Tampilan awal aplikasi dapat dilihat di \ref{fig:GUI1}.
 
 \begin{figure}[H]
 \centering
@@ -45,7 +45,7 @@ Terdapat dua cara untuk mengisi TextField, yaitu ditulis secara manual alamat fi
 \label{fig:GUI3}
 \end{figure}
 
-Setelah alamat file CSV diisi, hal selanjutnya yang dilakukan adalah memilih metode pembuatan \textsl{decision tree} pada RadioButton. RadioButton akan memilih metode ID3 jika \textsl{setting} ini tidak diubah. Tampilan tersebut dapat dilihat di gambar \ref{fig:GUI3and4}.
+Setelah alamat file CSV diisi, hal selanjutnya yang dilakukan adalah memilih metode pembuatan \textsl{decision tree} pada RadioButton. RadioButton memilih metode ID3 jika \textsl{setting} ini tidak diubah. Tampilan tersebut dapat dilihat di gambar \ref{fig:GUI3and4}.
 
 \begin{figure}[H]
 \centering
@@ -54,7 +54,7 @@ Setelah alamat file CSV diisi, hal selanjutnya yang dilakukan adalah memilih met
 \label{fig:GUI3and4}
 \end{figure}
 
-Kemudian, tombol start diklik lalu program akan melakukan proses \textsl{data mining}. Setelah selesai, maka program akan menunjukkan hasil \textsl{data mining} dalam bentuk String pada TextArea dan dalam bentuk gambar pada form kedua. Tampilan akhir dari aplikasi serta form kedua dapat dilihat di gambar \ref{fig:GUI5}.
+Kemudian, tombol start diklik lalu program melakukan proses \textsl{data mining}. Setelah selesai, program menunjukkan hasil \textsl{data mining} dalam bentuk String pada TextArea dan dalam bentuk gambar pada form kedua. Tampilan akhir dari aplikasi serta form kedua dapat dilihat di gambar \ref{fig:GUI5}.
 
 \begin{figure}[H]
 \centering
@@ -69,14 +69,14 @@ Kemudian, tombol start diklik lalu program akan melakukan proses \textsl{data mi
 
 \subsubsection{Rancangan Pengujian}
 
-Dalam pengujian aplikasi \textsl{data mining} ini, akan digunakan teknik pengujian \textsl{black box}. Pengujian yang akan dilakukan:
+Dalam pengujian aplikasi \textsl{data mining} ini, digunakan teknik pengujian \textsl{black box}. Pengujian yang dilakukan:
 \begin{enumerate}
 	\item Pengujian \textsl{method} utama untuk mencapai tujuan dari aplikasi \textsl{data mining} ini. Terdapat beberapa \textsl{method} yang perlu diuji, yaitu
 	\begin{enumerate}
-		\item \textsl{method} untuk membaca file CSV
-		\item \textsl{method} untuk melakukan \textsl{preprocessing data}
-		\item \textsl{method} untuk membuat \textsl{decision tree}
-		\item \textsl{method} untuk mengubah \textsl{decision tree} dalam bentuk String menjadi bahasa DOT
+		\item Membaca file CSV
+		\item Melakukan \textsl{preprocessing data}
+		\item Membuat \textsl{decision tree}
+		\item Mengubah \textsl{decision tree} dalam bentuk String menjadi bahasa DOT
 	\end{enumerate}
 	\item Kebenaran perangkat lunak hanya dilihat pada hasil keluaran program atau kondisi masukan yang diberikan tanpa melihat bagaimana proses untuk mendapatkan keluaran tersebut.
 	\item Dari keluaran yang dihasilkan, kemampuan program untuk memenuhi kebutuhan pemakai dapat diukur dan dapat diketahui kesalahan jika ada.
@@ -119,7 +119,7 @@ Dibuat sebuah \textsl{test case} yang berisi 20 data \textsl{log} histori KIRI d
 
 Berikut hasil pengujian yang dilakukan dengan menggunakan data tersebut:
 \begin{enumerate}
-	\item Pengujian pertama: Membaca file CSV, data akan diambil oleh program dan dipilah, hanya record dengan \textsl{action} FINDROUTE yang akan diambil sedangkan yang lain akan dibuang. Berikut hasil dengan contoh data diatas dengan menggunakan sistem \textsl{debug} untuk melihat data yang diambil dari CSV pada gambar \ref{fig:Pengujian1} dan \ref{fig:Pengujian12}
+	\item Pengujian pertama: Membaca file CSV, data diambil oleh program dan dipilah, hanya record dengan \textsl{action} FINDROUTE yang diambil sedangkan yang lain dibuang. Berikut hasil dengan contoh data diatas dengan menggunakan sistem \textsl{debug} untuk melihat data yang diambil dari CSV pada gambar \ref{fig:Pengujian1} dan \ref{fig:Pengujian12}
 	
 	\begin{figure}[H]
 	\centering
@@ -137,16 +137,16 @@ Berikut hasil pengujian yang dilakukan dengan menggunakan data tersebut:
 
 	Gambar pertama memperlihatkan bahwa data pertama yang diperoleh 21 array String dengan array pertama adalah atributnya sedangkan array selanjutnya adalah isi data yang diperoleh. Pada gambar kedua, terdapat 13 array String dimana semua array tersebut merupakan record dengan nilai \textsl{action} FINDROUTE saja. Dengan demikian, pengujian membaca CSV berhasil dilakukan.
 
-	\item Pengujian kedua: Melakukan \textsl{preprocessing data}, data yang digunakan adalah 13 array String yang sudah diperoleh dari pengujian pertama. Pengujian dilakukan dengan melakukan pengecekan data dengan menggunakan weka untuk melihat data yang sudah dihasilkan, dapat dilihat pada \ref{fig:Pengujian214} dan \ref{fig:Pengujian25} 
+	\item Pengujian kedua: Melakukan \textsl{preprocessing data}, data yang digunakan adalah 13 array String yang sudah diperoleh dari pengujian pertama. Pengujian dilakukan dengan cara mengecek data menggunakan weka untuk melihat data yang sudah dihasilkan. Hasil yang diperoleh dari pengujian dapat dilihat pada \ref{fig:Pengujian214} dan \ref{fig:Pengujian25} 
 	
-	\begin{figure}[H]
+	\begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.4]{Gambar/pengujian214.jpg}
 	\caption[Pengujian \textsl{Preprocessing Data}]{Pengujian \textsl{Preprocessing Data}. Gambar a menunjukkan nilai pada atribut bulan. Gambar b menunjukkan nilai pada atribut tahun. Gambar c menunjukkan nilai pada atribut hari. Gambar d menunjukkan nilai pada atribut jam.} 
 	\label{fig:Pengujian214}
 	\end{figure}
 	
-	\begin{figure}[H]
+	\begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.4]{Gambar/pengujian25.jpg}
 	\caption[Pengujian \textsl{Preprocessing Data} untuk Klasifikasi Data]{Pengujian \textsl{Preprocessing Data} untuk Klasifikasi Data} 
@@ -155,7 +155,7 @@ Berikut hasil pengujian yang dilakukan dengan menggunakan data tersebut:
 
 	Terdapat dua tahap penting pada \textsl{prerpocessing data}, yaitu pengubahan waktu dari UTC menjadi GMT+7 dan klasifikasi area. Pada tahap pengubahan waktu dari UTC menjadi GMT+7, pada gambar \ref{fig:Pengujian214} d, atribut jam yang dimiliki menjadi bernilai sembilan karena pada testcase, nilai atribut jam adalah dua. Pada tahap klasifikasi area, dapat dilihat pada tabel \ref{table:PenentuanAreaDanKlasifikasi}
 	
-	\begin{table}[H]
+	\begin{table}[ht]
 	\centering
 	\begin{tabular}{|l|l|l|}
 	\hline
@@ -180,26 +180,25 @@ Berikut hasil pengujian yang dilakukan dengan menggunakan data tersebut:
 	
 	Terdapat lima data dengan klasifikasi -1, enam data dengan klasifikasi 0, dan 2 data dengan klasifikasi 1. Dari kedua hasil tersebut, dapat disimpulkan bahwa tahap \textsl{preprocessing data} sudah berjalan dengan baik.
 	
-	\item Pengujian ketiga: Membuat \textsl{decision tree}, akan dilakukan perbandingan antara hasil dari program dengan hasil dari weka, dapat dilihat pada gambar \ref{fig:Pengujian31} dan 
-	\ref{fig:Pengujian32}.
+	\item Pengujian ketiga: Membuat \textsl{decision tree}, dilakukan perbandingan antara hasil dari program dengan hasil dari weka, dapat dilihat pada gambar \ref{fig:Pengujian31} dan 
+	\ref{fig:Pengujian32}. Dari kedua gambar tersebut, dapat disimpulkan bahwa hasil \textsl{decision tree} yang dihasilkan sama dan benar.
 	
-	\begin{figure}[H]
+	\begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.4]{Gambar/pengujian31.jpg}
 	\caption[Pengujian Pembuatan \textsl{Decision Tree} ID3]{Pengujian Pembuatan \textsl{Decision Tree} ID3. Gambar a merupakan hasil dari aplikasi \textsl{data mining} sedangkan gambar b merupakan hasil dari weka.} 
 	\label{fig:Pengujian31}
 	\end{figure}
 
-	\begin{figure}[H]
+	\begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.4]{Gambar/pengujian32.jpg}
 	\caption[Pengujian Pembuatan \textsl{Decision Tree} C4.5]{Pengujian  Pembuatan \textsl{Decision Tree} C4.5. Gambar a merupakan hasil dari aplikasi \textsl{data mining} sedangkan gambar b merupakan hasil dari weka.} 
 	\label{fig:Pengujian32}
 	\end{figure}
 
-	Dari kedua gambar tersebut, dapat disimpulkan bahwa hasil \textsl{decision tree} yang dihasilkan sama dan benar.
 	
-	\item Pengujian keempat: Mengubah \textsl{decision tree} dalam bentuk String menjadi bahasa DOT, akan dilakukan visualisasi \textsl{decision tree} dengan membuat graph dalam bahasa DOT, dapat dilihat pada gambar \ref{fig:Pengujian4}.
+	\item Pengujian keempat: Mengubah \textsl{decision tree} dalam bentuk String menjadi bahasa DOT, melakukan visualisasi \textsl{decision tree} dengan membuat graph dalam bahasa DOT, dapat dilihat pada gambar \ref{fig:Pengujian4}. Dari gambar tersebut, dapat disimpulkan bahwa pengubahan \textsl{decision tree} menjadi bahasa DOT telah berhasil.
 	
 	\begin{figure}[H]
 	\centering
@@ -208,15 +207,14 @@ Berikut hasil pengujian yang dilakukan dengan menggunakan data tersebut:
 	\label{fig:Pengujian4}
 	\end{figure}
 	
-	Dari gambar tersebut, dapat disimpulkan bahwa pengubahan \textsl{decision tree} menjadi bahasa DOT telah berhasil.
 
 \end{enumerate}
 
 \subsection{Pengujian Eksperimental}
 
-Pada subbab ini, akan dilakukan pengujian pada data 1 bulan dari \textsl{log} histori KIRI pada bulan Febuari.
+Pada subbab ini, dilakukan pengujian pada data 1 bulan dari \textsl{log} histori KIRI bulan Febuari.
 
-Ketika Pengujian dilakukan, ditemukan \textsl{bug} data yaitu terdapat nilai dari data \textsl{log} histori KIRI pada \textsl{action} FINDROUTE kolom additionalData dengan format String yang berbeda. Kesalahan format tersebut adalah nilai pembatas angka dibelakang koma yang seharusnya menggunakan titik menjadi koma, sehingga pemotongan nilai String menghasilkan data yang salah dan \textsl{error}. Dari pengujian ini, maka diperlukan \textsl{data cleaning} pada tahap \textsl{preprocessing data} agar data dengan format yang salah dapat dibuang dan tidak menyebabkan \textsl{error}. Hasil error yang ditemukan dari \textsl{data cleaning} dapat dilihat pada gambar \ref{fig:percobaanError}.
+Ketika Pengujian dilakukan, ditemukan \textsl{bug} data yaitu terdapat nilai dari data \textsl{log} histori KIRI pada \textsl{action} FINDROUTE kolom additionalData dengan format String yang berbeda. Kesalahan format tersebut adalah nilai pembatas angka dibelakang koma yang seharusnya menggunakan titik menjadi koma, sehingga pemotongan nilai String menghasilkan data yang salah dan menyebabkan \textsl{error} berupa data tidak dapat diproses. Dari pengujian ini, maka diperlukan \textsl{data cleaning} pada tahap \textsl{preprocessing data} agar data dengan format yang salah dapat dibuang dan tidak menyebabkan \textsl{error}. Hasil error yang ditemukan dari \textsl{data cleaning} dapat dilihat pada gambar \ref{fig:percobaanError}.
 
 \begin{figure}[H]
 \centering
@@ -243,17 +241,17 @@ Setelah melakukan \textsl{data cleaning}, program dapat berjalan dengan baik. Be
 
 Pada kedua percobaan, terdapat perbedaan bulan, hal ini dikarenakan perubahan waktu dari UTC menuju GMT+7 sehingga terdapat perubahan bulan atau tahun. Karena data pada bulan selanjutnya hanya tujuh jam, maka hasil pada bulan selanjutnya lebih baik tidak dianggap karena data tersebut tidak cukup untuk merepresentasikan waktu satu bulan.
 
-Hasil percobaan pembuatan \textsl{decision tree} pada metode ID3 mengalami overfitting karena menghasilkan klasifikasi pada hampir setiap kemungkinan, dapat disimpulkan hasil \textsl{decision tree} pada percobaan di bulan ini cukup jelek. Namun pada percobaan metode C4.5, menghasilkan \textsl{decision tree} yang cukup besar namun tidak overfitting dan banyak \textsl{user} yang menjauhi Bandung.
+Hasil percobaan pembuatan \textsl{decision tree} pada metode ID3 mengalami overfitting karena menghasilkan klasifikasi pada hampir setiap kemungkinan. Oleh karena itu, dapat disimpulkan bahwa \textsl{decision tree} dengan metode ID3 menghasilkan \textsl{tree} yang jelek. Namun pada percobaan metode C4.5, menghasilkan \textsl{decision tree} yang cukup besar namun tidak overfitting dan banyak \textsl{user} yang menjauhi Bandung. Tetapi, \textsl{tree} yang dihasilkan cukup kecil. Dapat disimpulkan hasil \textsl{decision tree} pada percobaan di bulan ini cukup jelek.
 
 Nilai akurasi dari percobaan dengan metode ID3 adalah 38.22\% sedangkan untuk percobaan dengan metode C4.5 adalah 50.37\%, dari sini dapat dinyatakan bahwa hasil \textsl{decision tree} dari C4.5 lebih tepat daripada ID3 dan metode ID3 menghasilkan nilai akurasi yang belum memuaskan karena masih dibawah 50\%.
 
-Selain itu, dari kedua percobaan ini, diperoleh bahwa cukup sulit untuk membaca hasil \textsl{decision tree} terutama seperti hasil \textsl{decision tree} dengan metode ID3. Oleh karena itu, akan ditambahkan fungsi agar \textsl{decision tree} lebih mudah dibaca. Program akan ditambah satu kelas baru yaitu SDForExtractData yang berfungsi untuk menyimpan data dan membuat kesimpulan dari setiap \textsl{leaf} yang dihasilkan.
+Selain itu, dari kedua percobaan ini, diperoleh bahwa cukup sulit untuk membaca hasil \textsl{decision tree} terutama seperti hasil \textsl{decision tree} dengan metode ID3. Oleh karena itu, ditambahkan fungsi agar \textsl{decision tree} lebih mudah dibaca. Program ditambah satu kelas baru yaitu SDForExtractData yang berfungsi untuk menyimpan data dan membuat kesimpulan dari setiap \textsl{leaf} yang dihasilkan.
 
 %Nilai akurasi dari percobaan dengan metode ID3 adalah 37.49\% sedangkan untuk percobaan dengan metode C4.5 adalah 49.79\%, dari sini dapat dinyatakan bahwa hasil \textsl{decision tree} dari C4.5 lebih tepat daripada ID3 namun kedua metode tersebut menghasilkan nilai akurasi yang belum memuaskan, karena masih dibawah 50\%
 
 %Selain itu, dari kedua percobaan ini, diperoleh bahwa cukup sulit untuk membaca hasil \textsl{decision tree} terutama pada \textsl{node} dengan kedalaman lebih dari 4 tingkat. Oleh karena itu, akan ditambahkan fungsi agar \textsl{decision tree} lebih mudah dibaca. Program akan ditambah satu kelas baru yaitu SDForExtractData yang berfungsi untuk menyimpan data dan membuat kesimpulan dari setiap \textsl{leaf} yang dihasilkan.
 
-Berikut hasil dari fungsi yang dibuat agar \textsl{decision tree} lebih mudah dibaca, dapat dilihat pada gambar \ref{fig:percobaan3}.
+Berikut hasil dari fungsi yang dibuat agar \textsl{decision tree} lebih mudah dibaca, dapat dilihat pada gambar \ref{fig:percobaan3}. Dengan fungsi tersebut, diharapkan user dapat lebih mudah membaca \textsl{decision tree} yang dihasilkan.
 
 \begin{figure}[H]
 \centering
@@ -261,8 +259,6 @@ Berikut hasil dari fungsi yang dibuat agar \textsl{decision tree} lebih mudah di
 \caption[Hasil dari SDForExtractData]{Hasil dari SDForExtractData} 
 \label{fig:percobaan3}
 \end{figure}
-
-Dengan fungsi tersebut, diharapkan user dapat lebih mudah membaca \textsl{decision tree} yang dihasilkan.
 
 \subsection{Analisis Hasil Uji}
 
@@ -273,6 +269,7 @@ Berdasarkan pengujian di atas, dapat disimpulkan bahwa
 	\item Metode C4.5 menghasilkan \textsl{decision tree} yang lebih baik dan tepat daripada ID3, khususnya pada data \textsl{log} histori KIRI dengan \textsl{preprocessing data} dan klasifikasi yang sudah dijelaskan pada bab 3 (C4.5 menghasilkan 50.37\% sedangkan ID3 menghasilkan 38.22\%).
 	\item Metode ID3 belum menghasilkan nilai akurasi yang memuaskan, karena masih dibawah 50\%.
 	\item Dari data \textsl{log} histori KIRI pada bulan Febuari 2014, \textsl{decision tree} dengan metode C4.5 menyatakan bahwa \textsl{user} lebih sering menjauhi Bandung daripada mendekati Bandung atau berangkat menuju daerah yang sama.
+	\item \textsl{Decision tree} yang dihasilkan di bulan ini tidak memberikan nilai lebih yang signifikan dibandingkan statistik biasa.
 	%\item Metode C4.5 menghasilkan \textsl{decision tree} yang lebih baik dan tepat daripada ID3, khususnya pada data \textsl{log} histori KIRI dengan \textsl{preprocessing data} dan klasifikasi yang sudah dijelaskan pada bab 3 (C4.5 menghasilkan 49.79\% sedangkan ID3 menghasilkan 37.49\%).
 	%\item Kedua metode belum menghasilkan nilai akurasi yang memuaskan, karena masih dibawah 50\%.
 	%\item Dari data \textsl{log} histori KIRI pada bulan Febuari 2014, \textsl{decision tree} dengan metode C4.5 menyatakan bahwa \textsl{user} sering menjauhi Bandung dan mendekati Bandung, namun hampir tidak ada \textsl{user} yang berangkat menuju daerah yang sama. Dari pernyataan tersebut, dapat disimpulkan bahwa \textsl{user} sering berpergian dengan jarak lebih dari satu kilometer.

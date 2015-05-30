@@ -5,7 +5,7 @@ Bab ini berisi tentang penjelasan perancangan perangkat lunak untuk melakukan pr
 \section{Perancangan Perangkat Lunak}
 
 \subsection{Perancangan Kelas}
-Agar perangkat lunak dapat menjalankan fungsi yang sudah dibahas pada pemodelan fungsi di bab 3, maka pada subbab ini akan dibahas rancangan kelas dan \textsl{method} yang akan dibuat.
+Agar perangkat lunak dapat menjalankan fungsi yang sudah dibahas pada pemodelan fungsi di bab 3, maka subab ini membahas rancangan kelas dan \textsl{method} yang dibuat.
 
 \begin{itemize}
 	\item Kelas Controller, merupakan kelas untuk mengatur view dan modul ketika program dijalankan.
@@ -50,7 +50,7 @@ Agar perangkat lunak dapat menjalankan fungsi yang sudah dibahas pada pemodelan 
 		\item Atribut
 		\begin{itemize}
 			\item ArrayList<String[]> data, digunakan untuk menyimpan isi dari file CSV yang sudah dibaca.
-			\item int banyakAtribut, digunakan untuk menyimpan banyak atribut yang akan dibaca oleh CSV.
+			\item int banyakAtribut, digunakan untuk menyimpan banyak atribut yang dibaca oleh CSV.
 		\end{itemize}
 		\item Method
 		\begin{itemize}
@@ -69,7 +69,7 @@ Agar perangkat lunak dapat menjalankan fungsi yang sudah dibahas pada pemodelan 
 		\item Method
 		\begin{itemize}
 			\item public ProcessingData(), merupakan konstruktor dari kelas ProcessingData.
-			\item public void processSorting(ArrayList array, ArrayList data, String action), digunakan untuk memilah arraylist sehingga arraylist tersebut hanya berisi \textsl{action} yang diinginkan saja (pada penelitian ini, \textsl{action} yang diharapkan adalah FINDROUTE). Hasil pilah akan disimpan pada varibel array dari parameter method sehingga tidak diperlukan return value.
+			\item public void processSorting(ArrayList array, ArrayList data, String action), digunakan untuk memilah arraylist sehingga arraylist tersebut hanya berisi \textsl{action} yang diinginkan saja (pada penelitian ini, \textsl{action} yang diharapkan adalah FINDROUTE). Hasil pilah disimpan pada varibel array dari parameter method sehingga tidak diperlukan return value.
 			\item public ArrayList preprocessingData(ArrayList<String[]> data), Digunakan untuk melakukan tahap \textsl{preprocessing data} seperti yang sudah dijelaskan pada pemodelan data di bab 3. Tujuan dari fungsi ini adalah mendapatkan nilai waktu yang sudah diubah menjadi GMT+7 dan sudah dikelompokkan menjadi jam, hari, bulan, dan tahun serta mengetahui klasifikasi kelas dari untuk setiap \textsl{record} dengan menghitung jarak dari titik keberangkatan terhadap titik pusat Bandung dan titik tujuan terhadap titik pusat Bandung.
 			\item public int KlasifikasiKelas(double jarakKeberangkatan, double jarakTujuan), Digunakan untuk menentukan kelas dari hasil jarak titik keberangkatan dengan titik pusat Bandung dan titik tujuan dengan titik pusat Bandung. 
 		\end{itemize}
@@ -99,7 +99,7 @@ Agar perangkat lunak dapat menjalankan fungsi yang sudah dibahas pada pemodelan 
 	\end{itemize}
 \end{itemize}
 	
-	Pada kelas ProcessingData, nilai data waktu perlu diganti menjadi GMT+7 dan perlu menghitung jarak antar dua titik. Maka dari itu, akan dibuat dua kelas tambahan untuk melakukan kedua hal tersebut, yaitu TimezoneConverter dan DistanceHaversine.
+	Pada kelas ProcessingData, nilai data waktu perlu diganti menjadi GMT+7 dan perlu menghitung jarak antar dua titik. Maka dari itu, dibuat dua kelas tambahan untuk melakukan kedua hal tersebut, yaitu TimezoneConverter dan DistanceHaversine.
 	
 \begin{itemize}
 	\item Kelas TimezoneConverter, merupakan kelas yang memiliki \textsl{method} untuk mengubah waktu dari UTC menjadi GMT+7
@@ -123,7 +123,7 @@ Agar perangkat lunak dapat menjalankan fungsi yang sudah dibahas pada pemodelan 
 	\end{itemize}
 \end{itemize}
 
-	Setelah melakukan penelitian tentang API Weka, diperoleh bahwa input untuk membuat \textsl{decision tree} merupakan kelas Instances dari API Weka. Selain itu, diperlukan juga pengecekkan untuk hasil dari kelas tersebut, apakah sudah sesuai dengan aplikasi Weka atau belum (karena menggunakan API Weka, seharusnya \textsl{decision tree} yang dihasilkan sama). Oleh karena itu, akan ditambahkan kelas ArffIO yang berfungsi untuk menulis dan membaca data dengan format arff, sehingga ketika program melakukan \textsl{data mining}, program akan menghasilkan file dengan format .arff yang dapat dibaca oleh aplikasi Weka untuk melakukan pengetesan. Karena kita sudah memiliki file .arff tersebut, ada baiknya jika menggunakan fungsi membaca arff dari API Weka yang menghasilkan \textsl{return value} berupa kelas Instances yang dapat digunakan untuk membuat \textsl{decision tree}.
+	Setelah melakukan penelitian tentang API Weka, diperoleh bahwa input untuk membuat \textsl{decision tree} merupakan kelas Instances dari API Weka. Selain itu, diperlukan juga pengecekkan untuk hasil dari kelas tersebut, apakah sudah sesuai dengan aplikasi Weka atau belum (karena menggunakan API Weka, seharusnya \textsl{decision tree} yang dihasilkan sama). Oleh karena itu, ditambahkan kelas ArffIO yang berfungsi untuk menulis dan membaca data dengan format arff, sehingga ketika program melakukan \textsl{data mining}, program menghasilkan file dengan format .arff yang dapat dibaca oleh aplikasi Weka untuk melakukan pengetesan. Karena kita sudah memiliki file .arff tersebut, ada baiknya jika menggunakan fungsi membaca arff dari API Weka yang menghasilkan \textsl{return value} berupa kelas Instances yang dapat digunakan untuk membuat \textsl{decision tree}.
 
 \begin{itemize}
 	\item Kelas ArffIO, merupakan kelas yang berfungsi untuk melakukan penyimpanan dan membaca data dengan format arff.
@@ -137,20 +137,20 @@ Agar perangkat lunak dapat menjalankan fungsi yang sudah dibahas pada pemodelan 
 	\end{itemize}
 \end{itemize}
 
-Ketika mulai merancang \textsl{method} convert yang berada di kelas DotConverter, akan lebih mudah jika dirancang menjadi rekursif. Karena data yang diolah pada \textsl{method}
-tersebut cukup banyak dan diperlukan nama yang berbeda pada setiap node yang akan ditulis pada DOT, maka perlu ditambah kelas yang berfungsi untuk struktur data pada kelas tersebut, yaitu SDForConvertTree.
+Ketika mulai merancang \textsl{method} convert yang berada di kelas DotConverter, lebih mudah jika dirancang menjadi rekursif. Karena data yang diolah pada \textsl{method}
+tersebut cukup banyak dan diperlukan nama yang berbeda pada setiap node yang ditulis pada DOT, maka perlu ditambah kelas yang berfungsi untuk struktur data pada kelas tersebut, yaitu SDForConvertTree.
 
 \begin{itemize}
 	\item kelas SDForConvertTree, kelas yang berfungsi untuk menyimpan data yang dibutuhkan untuk mengubah String hasil dari kelas DecisionTree menjadi bahasa DOT.
 	\begin{itemize}
 		\item Atribut
 		\begin{itemize}
-			\item String[] data, digunakan untuk menyimpan nama-nama atribut yang akan diubah ke dalam bahasa DOT.
+			\item String[] data, digunakan untuk menyimpan nama-nama atribut yang diubah ke dalam bahasa DOT.
 			\item int[] count, digunakan untuk menghitung penggunaan nama setiap atribut sehingga dapat menghasilkan nama node yang berbeda untuk setiap atribut.
 		\end{itemize}
 		\item Method
 		\begin{itemize}
-			\item public SDForConvertTree(String[] data), merupakan konstruktor untuk kelas ini dan akan melakukan inisialisasi data pada atribut dengan nilai data pada parameter serta melakukan inisialisasi nilai variabel count dengan 0.
+			\item public SDForConvertTree(String[] data), merupakan konstruktor untuk kelas ini dan melakukan inisialisasi data pada atribut dengan nilai data pada parameter serta melakukan inisialisasi nilai variabel count dengan 0.
 			\item public void setData(String data, index int), digunakan untuk mengubah nilai data pada index tertentu.
 			\item public String[] getData(), digunakan untuk mendapatkan nilai atribut data.
 			\item public String getData(int index), digunakan untuk mendapatkan nilai data pada index tertentu.
@@ -163,7 +163,7 @@ tersebut cukup banyak dan diperlukan nama yang berbeda pada setiap node yang aka
 	\end{itemize}
 \end{itemize}
 
-Setelah melakukan \textsl{convert} dari \textsl{string} hasil dari \textsl{method} pembuatan \textsl{decision tree} dari API Weka ke bahasa Dot, maka diperlukan pemanggilan fungsi dot yang terdapat pada graphviz. Cara memanggilan fungsi tersebut yaitu dengan menggunakan \textsl{command prompt}. Maka dari itu, akan diperlukan kelas yang memiliki \textsl{method} untuk memanggil \textsl{command prompt} dan menjalankan fungsi dot tersebut, yaitu kelas CMD.
+Setelah melakukan \textsl{convert} \textsl{string} hasil dari \textsl{method} pembuatan \textsl{decision tree} API Weka ke bahasa Dot, maka diperlukan pemanggilan fungsi dot yang terdapat pada graphviz. Cara memanggilan fungsi tersebut yaitu dengan menggunakan \textsl{command prompt}. Oleh karena itu, diperlukan kelas yang memiliki \textsl{method} untuk memanggil \textsl{command prompt} dan menjalankan fungsi dot tersebut, yaitu kelas CMD.
 
 
 \begin{itemize}
@@ -178,42 +178,42 @@ Setelah melakukan \textsl{convert} dari \textsl{string} hasil dari \textsl{metho
 
 Karena cara yang untuk memanggil fungsi dot adalah \textsl{command prompt}, maka hasil dari \textsl{method} convert harus disimpan dalam bentuk file text agar dapat dibaca oleh \textsl{command prompt}.
 
-Dari perancangan kelas dan \textsl{method} yang sudah dilakukan, maka akan diperoleh diagram kelas seperti pada \ref{fig:classDiagram2}
+Dari perancangan kelas dan \textsl{method} yang sudah dilakukan, maka diperoleh diagram kelas seperti pada \ref{fig:classDiagram2}
 
-\begin{figure}[H]
-\includegraphics[scale=0.5, angle =90]{Gambar/classdiagram2.jpg}
+\begin{figure}[ht]
+\includegraphics[scale=0.47, angle =90]{Gambar/classdiagram2.jpg}
 \caption[Diagram \textsl{Class} Perangkat Lunak \textsl{Data Mining Log} Histori KIRI]{Diagram \textsl{Class} Perangkat Lunak \textsl{Data Mining Log} Histori KIRI} 
 \label{fig:classDiagram2}
 \end{figure}
 
 \subsection{Sequence Diagram}
 
-Pada subbab ini, akan dijelaskan alur program dengan menggunakan \textsl{sequence diagram} pada \ref{fig:sequenceDiagram}.
+Pada subbab ini, dijelaskan alur program dengan menggunakan \textsl{sequence diagram} pada \ref{fig:sequenceDiagram}.
 
-Pertama, program akan menampilkan desain antar muka yang dihasilkan oleh kelas View. Kemudian user akan menulis \textsl{file path} atau memilih (dengan menggunakan tombol \textsl{browse}) \textsl{input} file pada JTextField serta memilih metode pembuatan \textsl{decision tree} (tahap  pertama). Setelah memilih file dan metode, user akan menekan tombol start, dan kelas View akan memanggil \textsl{method} startMining dari kelas controller (tahap 3-4).
+Pertama, program menampilkan desain antar muka yang dihasilkan oleh kelas View. Kemudian user menulis \textsl{file path} atau memilih (dengan menggunakan tombol \textsl{browse}) \textsl{input} file pada JTextField serta memilih metode pembuatan \textsl{decision tree} (tahap  pertama). Setelah memilih file dan metode, user menekan tombol start, dan kelas View memanggil \textsl{method} startMining dari kelas controller (tahap 3-4).
 
-Kelas Controller akan mengakses file sesuai dengan masukan \textsl{file path} dengan memanggil \textsl{method} readCSV dari kelas CSVReader dan mendapat nilai kembalian berupa arraylist (tahap 5-6). Setelah mendapatkan data dari file CSV yang dipilih, data tersebut akan dipilah dan menggambil \textsl{record} dengan \textsl{action} FINDROUTE dengan cara memanggil \textsl{method} processSorting pada kelas ProcessingData dan mengembalikan ArrayList dengan data yang sudah dipilah (tahap 7-8). Kemudian data tersebut akan dilakukan \textsl{preprocessing data} dengan cara memanggil \textsl{method} preprocessingData dari kelas ProcessingData(tahap 9).
+Kelas Controller mengakses file sesuai dengan masukan \textsl{file path} dengan memanggil \textsl{method} readCSV dari kelas CSVReader dan mendapat nilai kembalian berupa arraylist (tahap 5-6). Setelah mendapatkan data dari file CSV yang dipilih, data tersebut dipilah dan hanya \textsl{record} dengan \textsl{action} FINDROUTE yang diambil. Pemilihan dilakukan dengan cara memanggil \textsl{method} processSorting pada kelas ProcessingData dan mengembalikan ArrayList dengan data yang sudah dipilah (tahap 7-8). Kemudian program melakukan \textsl{preprocessing data} dengan cara memanggil \textsl{method} preprocessingData dari kelas ProcessingData(tahap 9).
 
-Ketika \textsl{method} preprocessingData dijalankan, perlu mengubah nilai waktu dari UTC menjadi GMT+7 dengan cara memanggil \textsl{method} convertGMT7 dari kelas TimezoneConverter dan mengembalikan nilai bertipe Date (tahap 10-11). Setelah nilai waktu diubah, diperlukan perhitungan jarak antara dua titik dengan cara memanggil \textsl{method} calculateDistance  dari kelas DistanceHaversine dan mengembalikan nilai double yang berisi jarak dari kedua titik(tahap 12-13). Kemudian diperlukan klasifikasi kelas dari jarak yang sudah dihasilkan dengan cara memanggil \textsl{method} klasifikasiKelas dari kelas ProcessingData (tahap 14-15). Kemudian semua data yang sudah diproses akan dikembalikan dalam bentuk ArrayList(tahap 16).
+Ketika \textsl{method} preprocessingData dijalankan, nilai waktu dari UTC harus menjadi GMT+7 dengan cara memanggil \textsl{method} convertGMT7 dari kelas TimezoneConverter dan mengembalikan nilai bertipe Date (tahap 10-11). Setelah nilai waktu diubah, program menghitung jarak antara dua titik dengan cara memanggil \textsl{method} calculateDistance  dari kelas DistanceHaversine dan mengembalikan nilai double yang berisi jarak dari kedua titik(tahap 12-13). Kemudian program mengklasifikasikan kelas dari jarak yang sudah dihasilkan dengan cara memanggil \textsl{method} klasifikasiKelas dari kelas ProcessingData (tahap 14-15). Lalu semua data yang sudah diproses, dikembalikan dalam bentuk ArrayList(tahap 16).
 
-Setelah didapat data yang sudah dilakukan \textsl{preprocessing data}, data tersebut akan disimpan dengan format arff dengan cara memanggi \textsl{method} writeArff pada kelas ArffIO(tahap 17). Setelah disimpan, diperlukan mengambil data dari file arff yang sudah disimpan untuk mendapatkan data dengan tipe Instance dengan cara memanggil \textsl{method}readArff(tahap 18-19).
+Setelah didapat data yang sudah dilakukan \textsl{preprocessing data}, data disimpan dengan format arff dengan cara memanggi \textsl{method} writeArff pada kelas ArffIO(tahap 17). Kemudian, program mengambil data dari file arff yang sudah disimpan untuk mendapatkan data bertipe Instance dengan cara memanggil \textsl{method}readArff(tahap 18-19).
 
-Kemudian program akan membuat \textsl{decision tree} dengan cara memanggil \textsl{method} id3 atau j48 pada kelas DecisionTree dan mengembalikan \textsl{decision tree} dalam bentuk \textsl{String}(tahap 20-21). Setelah \textsl{decision tree} dibuat, perlu dicari nilai akurasi yang diperoleh dari \textsl{decision tree} tersebut dengan cara memanggil \textsl{method} calculatePrecision dan nilai akurasi yang dihasilkan dikembalikan dalam bentuk double(tahap 22-23).
+Kemudian program membuat \textsl{decision tree} dengan cara memanggil \textsl{method} id3 atau j48 pada kelas DecisionTree dan mengembalikan \textsl{decision tree} dalam bentuk \textsl{String}(tahap 20-21). Setelah memperoleh \textsl{decision tree}, perlu dicari nilai akurasi yang dihasilkan oleh \textsl{decision tree} tersebut dengan cara memanggil \textsl{method} calculatePrecision dan nilai akurasi yang dihasilkan dikembalikan dalam bentuk double(tahap 22-23).
 
-Tahap selanjutnya adalah mengubah nilai String yang diperoleh dari \textsl{method} id3 atau j48 menjadi bahasa DOT dengan cara memanggil \textsl{method} convert pada kelas DotConverter dan akan mengembalikan nilai String(tahap 24-25). Setelah diperoleh hasil dari \textsl{method} convert, maka diperlukan \textsl{command prompt} untuk menghasilkan gambar grafik untuk melakukan visualisasi \textsl{decision tree} yang sudah dihasilkan(tahap 26-27).
+Tahap selanjutnya adalah mengubah nilai String yang diperoleh dari \textsl{method} id3 atau j48 menjadi bahasa DOT dengan cara memanggil \textsl{method} convert pada kelas DotConverter dan mengembalikan nilai String(tahap 24-25). Setelah diperoleh hasil dari \textsl{method} convert, maka diperlukan \textsl{command prompt} untuk menghasilkan gambar grafik visualisasi dari \textsl{decision tree} yang sudah dihasilkan(tahap 26-27).
 
-Setelah gambar \textsl{decision tree} dihasilkan, maka \textsl{method} startMining akan membuat JFrame yang baru untuk memperlihatkan hasil gambar \textsl{decision tree} yang sudah diperoleh serta mengembalikan nilai String \textsl{decision tree} kepada kelas View yang akan ditampilkan di JTextArea(tahap 28-29).
+Setelah menghasilkan gambar visualisasi \textsl{decision tree}, \textsl{method} startMining membuat JFrame yang baru untuk memperlihatkan hasil gambar \textsl{decision tree} yang sudah dihasilkan serta mengembalikan nilai String \textsl{decision tree} kepada kelas View yang ditampilkan di JTextArea(tahap 28-29).
 
 
-\begin{figure}[H]
-\includegraphics[scale=0.42, angle =90]{Gambar/sequenceDiagram.jpg}
-\caption[Diagram \textsl{Class} Perangkat Lunak \textsl{Data Mining Log} Histori KIRI]{Diagram \textsl{Class} Perangkat Lunak \textsl{Data Mining Log} Histori KIRI} 
+\begin{figure}[ht]
+\includegraphics[scale=0.40, angle =90]{Gambar/sequenceDiagram.jpg}
+\caption[\textsl{Sequence} Diagram Perangkat Lunak \textsl{Data Mining Log} Histori KIRI]{\textsl{Sequence} diagram Perangkat Lunak \textsl{Data Mining Log} Histori KIRI} 
 \label{fig:sequenceDiagram}
 \end{figure}
 
 \subsection{Perancangan Desain Antar Muka}
 
-Pada subbab ini, akan diperlihatkan rancangan desain antar muka yang akan digunakan untuk program ini.
+Pada subbab ini, diperlihatkan rancangan desain antar muka yang digunakan untuk program ini.
 
 Aplikasi ini memiliki dua form untuk melakukan \textsl{data mining} dan membuat \textsl{decision tree}. Pada form pertama(dapat dilihat di \ref{fig:MU1}) disediakan JTextbox dan JButton yang digunakan untuk memilih file, JRadioButton yang digunakan untuk memilih metode pembuatan \textsl{decision tree}, JTextArea yang digunakan untuk memperlihatkan hasil \textsl{decision tree} yang diperoleh dalam bentuk String, serta JTextButton yang kedua (dengan label Start) yang digunakan untuk memulai proses \textsl{data mining}. Sedangkan form kedua, berisi gambar visualisasi \textsl{decision tree} yang sudah dihasilkan(dapat dilihat di \ref{fig:MU2}).
 \begin{figure}[H]
