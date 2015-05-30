@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package DataMiningLogHistoriKIRI;
 
 /**
@@ -52,6 +46,17 @@ public class SDForConvertTree
         this.count[index]++;
         return temp;
     }
+    public boolean hasNext()
+    {
+        if(this.data.length > 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
     
     public void buangArrayPertama()
     {
@@ -92,7 +97,7 @@ public class SDForConvertTree
             result += count[5];
             count[5]++;
         }
-        else if(atribut.equals("0"))
+        else if(atribut.equals("-1"))
         {
             result += count[6];
             count[6]++;
@@ -102,7 +107,7 @@ public class SDForConvertTree
             result += count[7];
             count[7]++;
         }
-        else if(atribut.equals("2"))
+        else if(atribut.equals("0"))
         {
             result += count[8];
             count[8]++;

@@ -1,4 +1,4 @@
-package DataMiningLogHistoriKIRIWithoutDateAndMinutes;
+package DataMiningLogHistoriKIRI;
 
 import java.util.ArrayList;
 

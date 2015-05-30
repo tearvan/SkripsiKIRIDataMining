@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package DataMiningLogHistoriKIRI;
 
 import java.io.BufferedReader;
@@ -33,44 +27,14 @@ public class ArffIO
     // disini nilai hari akan diubah menjadi string, 1 akan menjadi senin, ..., dan 7 akan menjadi minggu
     public void writeArrf(String name, ArrayList<int[]> data)
     {
-        String result = "@relation " + name + "\n\n@attribute tanggal REAL\n@attribute bulan REAL\n@attribute tahun REAL\n"
+        String result = "@relation " + name + "\n\n@attribute bulan REAL\n@attribute tahun REAL\n"
                 + "@attribute hari REAL"
-                + "\n@attribute jam REAL\n@attribute menit REAL\n@attribute menujuBandung {0,1,2}\n\n@data";
+                + "\n@attribute jam REAL\n@attribute menujuBandung {-1,0,1}\n\n@data";
         
         for(int i = 0; i < data.size(); i++)
         {
             int[] temp = data.get(i);
-            /**
-            String hari;
-            if(temp[3] == 1)
-            {
-                hari = "Senin";
-            }
-            else if(temp[3] == 2)
-            {
-                hari = "Selasa";
-            }
-            else if(temp[3] == 3)
-            {
-                hari = "Rabu";
-            }
-            else if(temp[3] == 4)
-            {
-                hari = "Kamis";
-            }
-            else if(temp[3] == 5)
-            {
-                hari = "Jumat";
-            }
-            else if(temp[3] == 6)
-            {
-                hari = "Sabtu";
-            }
-            else
-            {
-                hari = "Minggu";
-            }**/
-            result += "\n" + temp[0] + "," + temp[1] + "," + temp[2] + "," + temp[3] + "," + temp[4] + "," + temp[5] + "," + temp[6]; 
+            result += "\n" + temp[0] + "," + temp[1] + "," + temp[2] + "," + temp[3] + "," + temp[4]; 
         }
         
         try {

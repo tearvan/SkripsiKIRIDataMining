@@ -1,20 +1,19 @@
 package DataMiningLogHistoriKIRI;
 
-
+import java.awt.image.BufferedImage;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
-import weka.classifiers.trees.Id3;
-import weka.classifiers.trees.J48;
+import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 import weka.core.Instances;
-import weka.gui.explorer.PreprocessPanel;
-
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
  *
@@ -22,109 +21,120 @@ import weka.gui.explorer.PreprocessPanel;
  */
 public class Controller
 {
-    public static void main (String [] args) throws IOException
+    public Controller()
     {
-        
-        /**
-        //CSVReader reader = new CSVReader();
-        String[] file = new String[]{
-        "D:\\kiri.travel\\temp\\statistic\\statistics-2014-01.csv",
-        "D:\\kiri.travel\\temp\\statistic\\statistics-2014-02.csv",
-        "D:\\kiri.travel\\temp\\statistic\\statistics-2014-03.csv",
-        "D:\\kiri.travel\\temp\\statistic\\statistics-2014-04.csv",
-        "D:\\kiri.travel\\temp\\statistic\\statistics-2014-05.csv",
-        "D:\\kiri.travel\\temp\\statistic\\statistics-2014-06.csv",
-        "D:\\kiri.travel\\temp\\statistic\\statistics-2014-07.csv",
-        "D:\\kiri.travel\\temp\\statistic\\statistics-2014-08.csv",
-        "D:\\kiri.travel\\temp\\statistic\\statistics-2014-09.csv",
-        "D:\\kiri.travel\\temp\\statistic\\statistics-2014-10.csv",
-        "D:\\kiri.travel\\temp\\statistic\\statistics-2014-11.csv",
-        "D:\\kiri.travel\\temp\\statistic\\statistics-2014-12.csv"
-        };
-        //ArrayList data = reader.readCSV("D:\\kiri.travel\\temp\\statistic\\statistics-2014-01.csv");
-        ArrayList data = reader.readCSV(file);
-
-        ArrayList addApiKey = new ArrayList<String[]>();
-        ArrayList findRoute = new ArrayList<String[]>();
-        ArrayList login = new ArrayList<String[]>();
-        ArrayList nearbyTransport = new ArrayList<String[]>();
-        ArrayList pageLoad = new ArrayList<String[]>();
-        ArrayList register = new ArrayList<String[]>();
-        ArrayList searchPlace = new ArrayList<String[]>();
-        ArrayList widgetError = new ArrayList<String[]>();
-        ArrayList widgetLoad = new ArrayList<String[]>();
-        ProcessingData process = new ProcessingData();
-
-        process.processSorting(addApiKey, findRoute, login, nearbyTransport, pageLoad, register, searchPlace, widgetError, widgetLoad, data);
-
-        System.out.println("Banyak data findRoute: " + findRoute.size());
-        System.out.println("\nProcess count findRoute\n");
-
-
-        JFrame jf = new JFrame();
-        View v = new View();
-        
-        jf.setVisible(true);
-        jf.setSize(620, 500);
-        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
-        jf.add(v);
-        * */
-        
+    }
+    
+    public void startMining(String inputFilePath, String miningAlgo, JLabel label, JTextArea textArea) throws IOException
+    {
         CSVReader csv = new CSVReader();
-        ArrayList<String[]> data = csv.readCSV("KIRIStatistics-2014-02.csv");
+        ArrayList<String[]> data = csv.readCSV(inputFilePath);
         //ArrayList<String[]> data = csv.readCSV(file);
         
         ArrayList<String[]> findRoute = new ArrayList<String[]>();
         ProcessingData pd = new ProcessingData();
         pd.processSorting(findRoute, data, "FINDROUTE");
         
-        ArrayList<int[]> dataAfterPreprocessing = pd.preprocessingData(findRoute);
+        //int maxMin digunakan untuk menyimpan nilai max dan min dari variable bulan dan tahun. Untuk ketentuan posisi array dapat dilihat di method preprocessing data
+        int[] maxMin = new int[4];
+        ArrayList<int[]> dataAfterPreprocessing = pd.preprocessingData(findRoute, maxMin);
         
         ArffIO io = new ArffIO();
         io.writeArrf("tempArff", dataAfterPreprocessing);
         
         Instances arff = io.readArff("temp.arff");
         //arff.setClassIndex(arff.numAttributes() - 1);
-        
-        String[] option = new String[]{"-U"};
-        J48 tree = new J48();
+        DecisionTree dt = new DecisionTree();
+        String [] tempTreeDataResult;
+        System.out.println(miningAlgo);
+        if(miningAlgo.equals("id3"))
+        {
+             textArea.setText(dt.id3(arff));
+        }
+        else
+        {
+             textArea.setText(dt.j48(arff));
+        }
+        tempTreeDataResult = textArea.getText().split("\n");
+        textArea.setText(textArea.getText() + "\nNilai Akurasi: " + dt.calculatePrecision(arff) + "\n");
+        String[] treeDataResult;
+        System.out.println(tempTreeDataResult.length);
+        if(tempTreeDataResult.length < 8)
+        {
+            if(miningAlgo.equals("id3"))
+            {
+                treeDataResult = new String[tempTreeDataResult.length-2];
+            }
+            else
+            {
+                treeDataResult = new String[tempTreeDataResult.length-6];
+            }
+            System.arraycopy(tempTreeDataResult, 2, treeDataResult, 0, treeDataResult.length);
+        }
+        else
+        {
+            if(miningAlgo.equals("id3"))
+            {
+                treeDataResult = new String[tempTreeDataResult.length-3];
+            }
+            else
+            {
+                treeDataResult = new String[tempTreeDataResult.length-7];
+            }
+            System.arraycopy(tempTreeDataResult, 3, treeDataResult, 0, treeDataResult.length);
+        }
+        System.out.println(treeDataResult[0]);
+        SDForConvertTree dataTree = new SDForConvertTree(treeDataResult);
+        //System.out.println("TEST: " + dataTree.getData(0).length());
         
         try {
-            //tree.setOptions(option);
+            PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("tree.txt")));
+            SDForExtractData extract = new SDForExtractData(new String[]{"bulan", "tahun", "hari", "jam"},new int[]{maxMin[0],maxMin[1],7,24}, new int[]{maxMin[2],maxMin[3],1,0});
+            out.println("digraph{" + DotConverter.convert(dataTree, extract, miningAlgo, 0, "") + "}");
+            out.close();
             
-            tree.buildClassifier(arff);
-        } catch (Exception ex) {
-            Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        System.out.println(tree.toString());
-        
-        int nilaiBenar = 0, resultInt;
-        float result = 0;
-        for (int i = 0; i < arff.numInstances(); i++)
-        {
-            try {
-                result = (float)tree.classifyInstance(arff.instance(i));
-                resultInt = Math.round(result);
-                //System.out.println(dataAfterPreprocessing.get(i)[6] + " " + arff.instance(i).stringValue(6));
-                if(resultInt == Integer.parseInt(arff.instance(i).stringValue(6)))
-                {
-                    nilaiBenar++;
-                }
-            } catch (Exception ex) {
-                Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
+            textArea.setText(textArea.getText());
+            ArrayList<String> extractData = extract.getList();
+            
+            if(extractData.size() > 0)
+            {
+                textArea.setText(textArea.getText() + "\nExtract Data\n");
             }
+            for(int i = 0; i < extractData.size(); i++)
+            {
+                textArea.setText(textArea.getText() + "\n" + extractData.get(i));
+            }
+            
+        } catch (IOException ex) {
+            System.out.println("Error ketika menulis file txt");
         }
-        System.out.println("nilai: " + nilaiBenar + " " + arff.numInstances());
-        double confident = nilaiBenar * 1.0 / arff.numInstances() * 100;
-        System.out.println("Confident = " + confident + "%");
         
-        String [] tempTreeDataResult = tree.toString().split("\n");
-        String [] treeDataResult = new String[tempTreeDataResult.length-7];
-        System.arraycopy(tempTreeDataResult, 3, treeDataResult, 0, treeDataResult.length);
+        Cmd.makeJpgUsingDotCommand();
         
-        SDForConvertTree dataTree = new SDForConvertTree(treeDataResult);
+        JFrame jf2 = new JFrame();
         
-        System.out.println(DotConverter.convert(dataTree, 0, ""));
+        jf2.setVisible(true);
+        jf2.setSize(620, 500);
+        BufferedImage image = null;
+        image = ImageIO.read(new File("tree.jpg"));
+        ImageIcon image2 = new ImageIcon(image);
+        JLabel labels = new JLabel(image2);
+        JScrollPane pane = new JScrollPane(labels);
+        jf2.setContentPane(pane);
+    }
+    
+    
+    public static void main (String [] args) 
+    {
+        Controller cont = new Controller();
+        
+        JFrame jf = new JFrame();
+        View v = new View(cont);
+        
+        jf.setVisible(true);
+        jf.setSize(620, 500);
+        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        jf.add(v);
     }
 }
