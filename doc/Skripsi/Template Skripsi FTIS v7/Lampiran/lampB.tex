@@ -11,7 +11,7 @@
 %
 % caption : nama yang akan ditampilkan di dokumen akhir, lihat contoh
 \begin{lstlisting}[language=Java,basicstyle=\tiny,caption=Controller.java]
-package DataMiningLogHistoriKIRIWithoutDateAndMinutes;
+package DataMiningLogHistoriKIRI;
 
 import java.awt.image.BufferedImage;
 import java.io.BufferedWriter;
@@ -68,7 +68,7 @@ public class Controller
              textArea.setText(dt.j48(arff));
         }
         tempTreeDataResult = textArea.getText().split("\n");
-        textArea.setText(textArea.getText() + "\nNilai Confident: " + dt.calculatePrecision(arff) + "\n");
+        textArea.setText(textArea.getText() + "\nNilai Akurasi: " + dt.calculatePrecision(arff) + "\n");
         String[] treeDataResult;
         System.out.println(tempTreeDataResult.length);
         if(tempTreeDataResult.length < 8)
@@ -153,7 +153,7 @@ public class Controller
 \end{lstlisting}
 
 \begin{lstlisting}[language=Java,basicstyle=\tiny,caption=View.java]
-package DataMiningLogHistoriKIRIWithoutDateAndMinutes;
+package DataMiningLogHistoriKIRI;
 
 import java.io.File;
 import java.io.IOException;
@@ -363,7 +363,7 @@ public class View extends javax.swing.JPanel {
 \end{lstlisting}
 
 \begin{lstlisting}[language=Java,basicstyle=\tiny,caption=CSVReader.java]
-package DataMiningLogHistoriKIRIWithoutDateAndMinutes;
+package DataMiningLogHistoriKIRI;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -501,7 +501,7 @@ public class CSVReader
 \end{lstlisting}
 
 \begin{lstlisting}[language=Java,basicstyle=\tiny,caption=ProcessingData.java]
-package DataMiningLogHistoriKIRIWithoutDateAndMinutes;
+package DataMiningLogHistoriKIRI;
 
 import java.util.ArrayList;
 
@@ -513,51 +513,6 @@ public class ProcessingData
 {
     ProcessingData()
     {
-    }
-
-    public void processSorting(ArrayList addApiKey, ArrayList findRoute, ArrayList login, ArrayList nearbyTransport, ArrayList pageLoad, ArrayList register, ArrayList searchPlace, ArrayList widgetError, ArrayList widgetLoad, ArrayList data)
-    {
-        System.out.println("Banyak Data: " + data.size());
-        for(int i =0; i < data.size(); i++)
-        {
-            String [] tempData = (String[])data.get(i);
-            if(tempData[3].equals("ADDAPIKEY"))
-            {
-                addApiKey.add(tempData);
-            }
-            else if(tempData[3].equals("FINDROUTE"))
-            {
-                findRoute.add(tempData);
-            }
-            else if(tempData[3].equals("LOGIN"))
-            {
-                login.add(tempData);
-            }
-            else if(tempData[3].equals("NEARBYTRANSPORT"))
-            {
-                nearbyTransport.add(tempData);
-            }
-            else if(tempData[3].equals("PAGELOAD"))
-            {
-                pageLoad.add(tempData);
-            }
-            else if(tempData[3].equals("REGISTER"))
-            {
-                register.add(tempData);
-            }
-            else if(tempData[3].equals("SEARCHPLACE"))
-            {
-                searchPlace.add(tempData);
-            }
-            else if(tempData[3].equals("WIDGETERROR"))
-            {
-                widgetError.add(tempData);
-            }
-            else if(tempData[3].equals("WIDGETLOAD"))
-            {
-                widgetLoad.add(tempData);
-            }
-        }
     }
     public void processSorting(ArrayList array, ArrayList data, String action)
     {
@@ -586,6 +541,7 @@ public class ProcessingData
         // tahap pertama: ubah waktu dari UTC ke GMT+7
         for(int i = 0; i < data.size(); i++)
         {
+            //System.out.println(data.get(i)[3]);
             data.get(i)[2] = TimezoneConverter.convertToGMT7(data.get(i)[2]);
         }
         
@@ -654,7 +610,7 @@ public class ProcessingData
     public int klasifikasiKelas(double jarakKeberangkatan, double jarakTujuan)
     {
         int regionKeberangkatan, regionTujuan;
-        int klasifikasi = 0; // -1 --> tidak menuju Bandung, 0 --> menuju Bandung, 1 --> menuju region yang sama
+        int klasifikasi = 0; // 0 --> tidak menuju Bandung, 1 --> menuju Bandung, 2 --> menuju region yang sama
         
         regionKeberangkatan = (int)jarakKeberangkatan;
         regionTujuan = (int)jarakTujuan;
@@ -665,6 +621,14 @@ public class ProcessingData
         }
         else
         {
+            if(regionKeberangkatan >= 11)
+            {
+                regionKeberangkatan = 11;
+            }
+            else if(regionTujuan >= 11)
+            {
+                regionTujuan = 11;
+            }
             if (regionKeberangkatan > regionTujuan)
             {
                 klasifikasi = -1;
@@ -681,10 +645,11 @@ public class ProcessingData
         }
     }
 }
+
 \end{lstlisting}
 
 \begin{lstlisting}[language=Java,basicstyle=\tiny,caption=TimezoneConverter.java]
-package DataMiningLogHistoriKIRIWithoutDateAndMinutes;
+package DataMiningLogHistoriKIRI;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -733,7 +698,7 @@ public class TimezoneConverter
 \end{lstlisting}
 
 \begin{lstlisting}[language=Java,basicstyle=\tiny,caption=DistanceHaversine.java]
-package DataMiningLogHistoriKIRIWithoutDateAndMinutes;
+package DataMiningLogHistoriKIRI;
 
 /**
  *
@@ -766,7 +731,7 @@ public class DistanceHaversine
 \end{lstlisting}
 
 \begin{lstlisting}[language=Java,basicstyle=\tiny,caption=ArffIO.java]
-package DataMiningLogHistoriKIRIWithoutDateAndMinutes;
+package DataMiningLogHistoriKIRI;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -825,7 +790,7 @@ public class ArffIO
 \end{lstlisting}
 
 \begin{lstlisting}[language=Java,basicstyle=\tiny,caption=DecisionTree.java]
-package DataMiningLogHistoriKIRIWithoutDateAndMinutes;
+package DataMiningLogHistoriKIRI;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -901,7 +866,7 @@ public class DecisionTree
 \end{lstlisting}
 
 \begin{lstlisting}[language=Java,basicstyle=\tiny,caption=DotConverter.java]
-package DataMiningLogHistoriKIRIWithoutDateAndMinutes;
+package DataMiningLogHistoriKIRI;
 
 import DataMiningLogHistoriKIRI.*;
 
@@ -1101,7 +1066,7 @@ public class DotConverter
 \end{lstlisting}
 
 \begin{lstlisting}[language=Java,basicstyle=\tiny,caption=SDForConvertTree.java]
-package DataMiningLogHistoriKIRIWithoutDateAndMinutes;
+package DataMiningLogHistoriKIRI;
 
 /**
  *
@@ -1221,7 +1186,7 @@ public class SDForConvertTree
 \end{lstlisting}
 
 \begin{lstlisting}[language=Java,basicstyle=\tiny,caption=SDForExtractData.java]
-package DataMiningLogHistoriKIRIWithoutDateAndMinutes;
+package DataMiningLogHistoriKIRI;
 
 import java.util.ArrayList;
 
@@ -1413,7 +1378,7 @@ public class SDForExtractData
 \end{lstlisting}
 
 \begin{lstlisting}[language=Java,basicstyle=\tiny,caption=CMD.java]
-package DataMiningLogHistoriKIRIWithoutDateAndMinutes;
+package DataMiningLogHistoriKIRI;
 
 import java.io.BufferedReader;
 import java.io.IOException;
