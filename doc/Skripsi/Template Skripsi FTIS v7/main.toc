@@ -36,44 +36,44 @@
 \contentsline {section}{\numberline {2.3}\textsl {Haversine Formula}}{20}{section.2.3}
 \contentsline {section}{\numberline {2.4}Weka}{21}{section.2.4}
 \contentsline {paragraph}{\textsl {Classifier}}{21}{paragraph*.18}
-\contentsline {paragraph}{Instance}{22}{paragraph*.19}
-\contentsline {paragraph}{Instances}{25}{paragraph*.20}
-\contentsline {paragraph}{Attribute}{31}{paragraph*.21}
-\contentsline {paragraph}{ID3}{36}{paragraph*.22}
-\contentsline {paragraph}{J48}{37}{paragraph*.23}
-\contentsline {paragraph}{NumericToNominal}{40}{paragraph*.24}
-\contentsline {section}{\numberline {2.5}Graphviz}{40}{section.2.5}
-\contentsline {chapter}{\numberline {3}Analisa}{43}{chapter.3}
-\contentsline {section}{\numberline {3.1}Analisis Data}{43}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}\textsl {Data Cleaning}}{43}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}\textsl {Data Integration}}{43}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}\textsl {Data Selection}}{43}{subsection.3.1.3}
-\contentsline {subsection}{\numberline {3.1.4}\textsl {Data Transformation}}{44}{subsection.3.1.4}
-\contentsline {section}{\numberline {3.2}Analisis Perangkat Lunak}{48}{section.3.2}
-\contentsline {subsubsection}{Spesifikasi Kebutuhan Fungsional Perangkat Lunak \textsl {Data Mining log} Histori KIRI}{48}{subsubsection*.25}
-\contentsline {subsubsection}{Pemodelan Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{49}{subsubsection*.26}
-\contentsline {subsubsection}{Pemodelan Data pada Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{49}{subsubsection*.27}
-\contentsline {subsubsection}{Pemodelan Fungsi pada Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{50}{subsubsection*.28}
-\contentsline {subsection}{\numberline {3.2.1}Diagram \textsl {Use Case} Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{50}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Diagram kelas Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{52}{subsection.3.2.2}
-\contentsline {chapter}{\numberline {4}Perancangan Perangkat Lunak}{55}{chapter.4}
-\contentsline {section}{\numberline {4.1}Perancangan Perangkat Lunak}{55}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Perancangan Kelas}{55}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Sequence Diagram}{62}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Perancangan Desain Antar Muka}{64}{subsection.4.1.3}
-\contentsline {chapter}{\numberline {5}Implementasi Program dan Pengujian}{65}{chapter.5}
-\contentsline {section}{\numberline {5.1}Lingkungan Pembangunan}{65}{section.5.1}
-\contentsline {section}{\numberline {5.2}Hasil Tampilan Antarmuka}{65}{section.5.2}
-\contentsline {section}{\numberline {5.3}Pengujian Aplikasi \textsl {Data Mining}}{68}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Pengujian Fungsional}{68}{subsection.5.3.1}
-\contentsline {subsubsection}{Rancangan Pengujian}{68}{subsubsection*.29}
-\contentsline {subsubsection}{Hasil Pengujian}{68}{subsubsection*.30}
-\contentsline {subsection}{\numberline {5.3.2}Pengujian Eksperimental}{74}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Analisis Hasil Uji}{76}{subsection.5.3.3}
-\contentsline {chapter}{\numberline {6}Kesimpulan dan Saran}{79}{chapter.6}
-\contentsline {section}{\numberline {6.1}Kesimpulan}{79}{section.6.1}
-\contentsline {section}{\numberline {6.2}Saran}{79}{section.6.2}
-\contentsline {chapter}{Daftar Referensi}{81}{chapter*.31}
+\contentsline {paragraph}{Instance}{21}{paragraph*.19}
+\contentsline {paragraph}{Instances}{22}{paragraph*.20}
+\contentsline {paragraph}{Attribute}{22}{paragraph*.21}
+\contentsline {paragraph}{ID3}{22}{paragraph*.22}
+\contentsline {paragraph}{J48}{22}{paragraph*.23}
+\contentsline {paragraph}{NumericToNominal}{22}{paragraph*.24}
+\contentsline {section}{\numberline {2.5}Graphviz}{22}{section.2.5}
+\contentsline {chapter}{\numberline {3}Analisa}{25}{chapter.3}
+\contentsline {section}{\numberline {3.1}Analisis Data}{25}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}\textsl {Data Cleaning}}{25}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}\textsl {Data Integration}}{25}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}\textsl {Data Selection}}{25}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}\textsl {Data Transformation}}{26}{subsection.3.1.4}
+\contentsline {section}{\numberline {3.2}Analisis Perangkat Lunak}{30}{section.3.2}
+\contentsline {subsubsection}{Spesifikasi Kebutuhan Fungsional Perangkat Lunak \textsl {Data Mining log} Histori KIRI}{30}{subsubsection*.25}
+\contentsline {subsubsection}{Pemodelan Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{31}{subsubsection*.26}
+\contentsline {subsubsection}{Pemodelan Data pada Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{31}{subsubsection*.27}
+\contentsline {subsubsection}{Pemodelan Fungsi pada Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{32}{subsubsection*.28}
+\contentsline {subsection}{\numberline {3.2.1}Diagram \textsl {Use Case} Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{32}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Diagram kelas Perangkat Lunak \textsl {Data Mining Log} Histori KIRI}{34}{subsection.3.2.2}
+\contentsline {chapter}{\numberline {4}Perancangan Perangkat Lunak}{37}{chapter.4}
+\contentsline {section}{\numberline {4.1}Perancangan Perangkat Lunak}{37}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Perancangan Kelas}{37}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Sequence Diagram}{42}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Perancangan Desain Antar Muka}{43}{subsection.4.1.3}
+\contentsline {chapter}{\numberline {5}Implementasi Program dan Pengujian}{47}{chapter.5}
+\contentsline {section}{\numberline {5.1}Lingkungan Pembangunan}{47}{section.5.1}
+\contentsline {section}{\numberline {5.2}Hasil Tampilan Antarmuka}{47}{section.5.2}
+\contentsline {section}{\numberline {5.3}Pengujian Aplikasi \textsl {Data Mining}}{50}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Pengujian Fungsional}{50}{subsection.5.3.1}
+\contentsline {subsubsection}{Rancangan Pengujian}{50}{subsubsection*.29}
+\contentsline {subsubsection}{Hasil Pengujian}{50}{subsubsection*.30}
+\contentsline {subsection}{\numberline {5.3.2}Pengujian Eksperimental}{55}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Analisis Hasil Uji}{58}{subsection.5.3.3}
+\contentsline {chapter}{\numberline {6}Kesimpulan dan Saran}{59}{chapter.6}
+\contentsline {section}{\numberline {6.1}Kesimpulan}{59}{section.6.1}
+\contentsline {section}{\numberline {6.2}Saran}{59}{section.6.2}
+\contentsline {chapter}{Daftar Referensi}{61}{chapter*.31}
 \renewcommand {\cftchappresnum }{\bf \scshape }
-\contentsline {chapter}{\numberline {A}100 data pertama dari \textsl {log} histori KIRI}{83}{appendix.A}
-\contentsline {chapter}{\numberline {B}The Source Code}{89}{appendix.B}
+\contentsline {chapter}{\numberline {A}100 data pertama dari \textsl {log} histori KIRI}{63}{appendix.A}
+\contentsline {chapter}{\numberline {B}The Source Code}{69}{appendix.B}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.8.19)  25 MAY 2015 10:45
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.8.19)  30 MAY 2015 15:56
 entering extended mode
 **main.tex
 ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.tex"
@@ -838,138 +838,122 @@ OMS/cmsy/m/n/10.95  \OT1/cmr/m/n/10.95 6\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 
 10.95 =\OT1/cmr/m/n/10.95 2)
  []
 
-[21] [22] [23] [24] [25] [26] [27] [28]
-Overfull \hbox (1.6171pt too wide) in paragraph at lines 976--977
-[]\T1/cmr/m/n/10.95 Instances re-sam-ple-Wi-th-We-i-ghts(java.util.Random ran-dom, bo-o-le-an rep-re-sen-tU-si-ngWe-
- []
-
-[29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] <Gambar/Graphviz.jpg, id=667, 162.6075pt x 240.9pt>
+[21] [22] <Gambar/Graphviz.jpg, id=592, 162.6075pt x 240.9pt>
 File: Gambar/Graphviz.jpg Graphic file (type jpg)
-
-<use Gambar/Graphviz.jpg>
-Package pdftex.def Info: Gambar/Graphviz.jpg used on input line 1708.
+ <use Gambar/Graphviz.jpg>
+Package pdftex.def Info: Gambar/Graphviz.jpg used on input line 612.
 (pdftex.def)             Requested size: 146.3454pt x 216.80798pt.
-) [41 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/Graphviz.jpg>] ("D:\Tugas\Skri
-psi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab3.tex" [42
+) [23 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/Graphviz.jpg>]
+("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab3.tex" [24
 
 
 
 ]
 Bab 3.
-[43] [44]
-Underfull \hbox (badness 10000) in paragraph at lines 104--104
-[]|\T1/cmr/bx/n/10.95 Longitude
+[25]
+Overfull \hbox (3.7994pt too wide) in paragraph at lines 55--56
+[]\T1/cmr/m/n/10.95 Pada atri-but \T1/cmr/m/sl/10.95 ti-mes-tamp\T1/cmr/m/n/10.95 , ni-lai wak-tu da-ri atri-but ter-se-
+but di-u-bah men-ja-di wak-tu GMT+7.
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 102--102
+[]|\T1/cmr/bx/n/10.95 Latitude Ke-be-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--104
-\T1/cmr/bx/n/10.95 Ke-be-rang-
+Underfull \hbox (badness 5203) in paragraph at lines 102--102
+[]|\T1/cmr/bx/n/10.95 Longitude Ke-be-
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 104--104
-[]|\T1/cmr/bx/n/10.95 Longitude
- []
-
-[45] [46] <Gambar/classificationmap.jpg, id=708, 170.13562pt x 147.55125pt>
+[27] [28] <Gambar/classificationmap.jpg, id=633, 170.13562pt x 147.55125pt>
 File: Gambar/classificationmap.jpg Graphic file (type jpg)
  <use Gambar/classificationmap.jpg>
-Package pdftex.def Info: Gambar/classificationmap.jpg used on input line 115.
+Package pdftex.def Info: Gambar/classificationmap.jpg used on input line 113.
 (pdftex.def)             Requested size: 255.20279pt x 221.32631pt.
 
-Overfull \hbox (37.01013pt too wide) in paragraph at lines 120--120
+Overfull \hbox (37.01013pt too wide) in paragraph at lines 118--118
 [][][]\T1/cmr/m/n/9 http://tools.wmflabs.org/geohack/geohack.php?pagename=Bandung&params=6_55_S_107_36_E_region:ID-
  []
 
-[47 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/classificationmap.jpg>]
-Underfull \vbox (badness 10000) detected at line 142
+[29 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/classificationmap.jpg>]
+Underfull \vbox (badness 10000) detected at line 140
  []
 
-[48] [49] <Gambar/usecase.jpg, id=743, 469.755pt x 329.23pt>
+[30] [31] <Gambar/usecase.jpg, id=669, 469.755pt x 329.23pt>
 File: Gambar/usecase.jpg Graphic file (type jpg)
  <use Gambar/usecase.jpg>
-Package pdftex.def Info: Gambar/usecase.jpg used on input line 204.
+Package pdftex.def Info: Gambar/usecase.jpg used on input line 202.
 (pdftex.def)             Requested size: 469.75386pt x 329.22919pt.
 
-Overfull \hbox (35.84932pt too wide) in paragraph at lines 204--205
+Overfull \hbox (35.84932pt too wide) in paragraph at lines 202--203
  [][] 
  []
 
 
-Underfull \vbox (badness 1062) has occurred while \output is active []
+Underfull \vbox (badness 3989) has occurred while \output is active []
 
- [50]
+ [32]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [51 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/usecase.jpg>] <Gambar/classdiag
-ram.jpg, id=761, 666.49pt x 345.29pt>
+ [33 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/usecase.jpg>] <Gambar/classdiag
+ram.jpg, id=686, 666.49pt x 345.29pt>
 File: Gambar/classdiagram.jpg Graphic file (type jpg)
 
 <use Gambar/classdiagram.jpg>
-Package pdftex.def Info: Gambar/classdiagram.jpg used on input line 260.
+Package pdftex.def Info: Gambar/classdiagram.jpg used on input line 258.
 (pdftex.def)             Requested size: 466.53983pt x 241.70134pt.
 
-Overfull \hbox (32.63528pt too wide) in paragraph at lines 260--261
+Overfull \hbox (32.63528pt too wide) in paragraph at lines 258--259
 [][] 
  []
 
-[52 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/classdiagram.jpg>]) [53]
-("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab4.tex" [54
+[34 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/classdiagram.jpg>]) [35]
+("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab4.tex" [36
 
 
 
 ]
 Bab 4.
-[55]
+[37]
 Overfull \hbox (2.43916pt too wide) in paragraph at lines 44--45
 []\T1/cmr/m/n/10.95 public vo-id but-ton-Star-tA-ction-Per-for-med(java.awt.event.ActionEvent evt), di-
  []
 
-[56] [57] [58] [59] <Gambar/classdiagram2.jpg, id=796, 1485.55pt x 686.565pt>
+[38] [39] [40] [41] <Gambar/classdiagram2.jpg, id=721, 1485.55pt x 686.565pt>
 File: Gambar/classdiagram2.jpg Graphic file (type jpg)
  <use Gambar/classdiagram2.jpg>
 Package pdftex.def Info: Gambar/classdiagram2.jpg used on input line 184.
-(pdftex.def)             Requested size: 742.7732pt x 343.28166pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [60]
-Overfull \vbox (37.26599pt too high) has occurred while \output is active []
-
- [61 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/classdiagram2.jpg>]
-<Gambar/sequenceDiagram.jpg, id=807, 1689.31125pt x 1039.885pt>
+(pdftex.def)             Requested size: 698.2086pt x 322.6856pt.
+ [42]
+<Gambar/sequenceDiagram.jpg, id=727, 1689.31125pt x 1039.885pt>
 File: Gambar/sequenceDiagram.jpg Graphic file (type jpg)
  <use Gambar/sequenceDiagram.jpg>
 Package pdftex.def Info: Gambar/sequenceDiagram.jpg used on input line 209.
-(pdftex.def)             Requested size: 709.5059pt x 436.74872pt.
+(pdftex.def)             Requested size: 675.71254pt x 415.94662pt.
 
-Overfull \hbox (2.84418pt too wide) in paragraph at lines 209--210
-[][] 
- []
-
-
-Underfull \vbox (badness 1019) has occurred while \output is active []
-
- [62]
-Overfull \vbox (3.9987pt too high) has occurred while \output is active []
-
- [63 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/sequenceDiagram.jpg>] <Gambar/m
-ockUp1.jpg, id=818, 163.812pt x 120.45pt>
+<Gambar/mockUp1.jpg, id=730, 163.812pt x 120.45pt>
 File: Gambar/mockUp1.jpg Graphic file (type jpg)
-
-<use Gambar/mockUp1.jpg>
+ <use Gambar/mockUp1.jpg>
 Package pdftex.def Info: Gambar/mockUp1.jpg used on input line 221.
 (pdftex.def)             Requested size: 196.5734pt x 144.53926pt.
- <Gambar/mockUp2.jpg, id=819, 163.812pt x 120.45pt>
+
+<Gambar/mockUp2.jpg, id=731, 163.812pt x 120.45pt>
 File: Gambar/mockUp2.jpg Graphic file (type jpg)
  <use Gambar/mockUp2.jpg>
 Package pdftex.def Info: Gambar/mockUp2.jpg used on input line 228.
 (pdftex.def)             Requested size: 196.5734pt x 144.53926pt.
-) [64 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/mockUp1.jpg> <D:/Tugas/Skripsi
-/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/mockUp2.jpg>]
-("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab5.tex"
+) [43 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/mockUp1.jpg> <D:/Tugas/Skripsi
+/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/mockUp2.jpg>] [44 <D:/Tugas/Skripsi/SkripsiKIRIDataMi
+ning/doc/Skripsi/Template Skripsi FTIS v7/Gambar/classdiagram2.jpg>] [45 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skr
+ipsi/Template Skripsi FTIS v7/Gambar/sequenceDiagram.jpg>] ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template
+ Skripsi FTIS v7\Bab/bab5.tex" [46
+
+
+
+]
 Bab 5.
-<Gambar/GUI1.jpg, id=825, 466.74374pt x 376.40625pt>
+<Gambar/GUI1.jpg, id=750, 466.74374pt x 376.40625pt>
 File: Gambar/GUI1.jpg Graphic file (type jpg)
  <use Gambar/GUI1.jpg>
 Package pdftex.def Info: Gambar/GUI1.jpg used on input line 27.
@@ -977,18 +961,14 @@ Package pdftex.def Info: Gambar/GUI1.jpg used on input line 27.
 
 Underfull \vbox (badness 1033) has occurred while \output is active []
 
- [65
-
-
-
-]
-<Gambar/GUI2.jpg, id=835, 467.49657pt x 376.40625pt>
+ [47]
+<Gambar/GUI2.jpg, id=760, 467.49657pt x 376.40625pt>
 File: Gambar/GUI2.jpg Graphic file (type jpg)
  <use Gambar/GUI2.jpg>
 Package pdftex.def Info: Gambar/GUI2.jpg used on input line 36.
 (pdftex.def)             Requested size: 327.24536pt x 263.48257pt.
 
-<Gambar/GUI3.jpg, id=836, 467.49657pt x 376.40625pt>
+<Gambar/GUI3.jpg, id=761, 467.49657pt x 376.40625pt>
 File: Gambar/GUI3.jpg Graphic file (type jpg)
  <use Gambar/GUI3.jpg>
 Package pdftex.def Info: Gambar/GUI3.jpg used on input line 43.
@@ -996,8 +976,8 @@ Package pdftex.def Info: Gambar/GUI3.jpg used on input line 43.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [66 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/GUI1.jpg> <D:/Tugas/Skripsi/Skr
-ipsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/GUI2.jpg>] <Gambar/GUI3and4.jpg, id=842, 702.625pt x 300.
+ [48 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/GUI1.jpg> <D:/Tugas/Skripsi/Skr
+ipsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/GUI2.jpg>] <Gambar/GUI3and4.jpg, id=767, 702.625pt x 300.
 12125pt>
 File: Gambar/GUI3and4.jpg Graphic file (type jpg)
  <use Gambar/GUI3and4.jpg>
@@ -1008,7 +988,7 @@ Overfull \hbox (57.9296pt too wide) in paragraph at lines 52--53
  [][] 
  []
 
-<Gambar/GUI5.jpg, id=844, 933.4875pt x 377.15906pt>
+<Gambar/GUI5.jpg, id=769, 933.4875pt x 377.15906pt>
 File: Gambar/GUI5.jpg Graphic file (type jpg)
  <use Gambar/GUI5.jpg>
 Package pdftex.def Info: Gambar/GUI5.jpg used on input line 61.
@@ -1021,15 +1001,15 @@ Overfull \hbox (32.83807pt too wide) in paragraph at lines 61--62
 
 Underfull \vbox (badness 2837) has occurred while \output is active []
 
- [67 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/GUI3.jpg> <D:/Tugas/Skripsi/Skr
+ [49 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/GUI3.jpg> <D:/Tugas/Skripsi/Skr
 ipsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/GUI3and4.jpg>]
 Underfull \vbox (badness 1371) has occurred while \output is active []
 
- [68 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/GUI5.jpg>]
+ [50 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/GUI5.jpg>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [69]
-<Gambar/pengujian1.jpg, id=870, 1146.53343pt x 584.93532pt>
+ [51]
+<Gambar/pengujian1.jpg, id=795, 1146.53343pt x 584.93532pt>
 File: Gambar/pengujian1.jpg Graphic file (type jpg)
  <use Gambar/pengujian1.jpg>
 Package pdftex.def Info: Gambar/pengujian1.jpg used on input line 126.
@@ -1039,7 +1019,7 @@ Overfull \hbox (24.70071pt too wide) in paragraph at lines 126--127
  [][] 
  []
 
-<Gambar/pengujian12.jpg, id=871, 1146.53343pt x 488.57532pt>
+<Gambar/pengujian12.jpg, id=796, 1146.53343pt x 488.57532pt>
 File: Gambar/pengujian12.jpg Graphic file (type jpg)
  <use Gambar/pengujian12.jpg>
 Package pdftex.def Info: Gambar/pengujian12.jpg used on input line 133.
@@ -1049,9 +1029,9 @@ Overfull \hbox (24.70071pt too wide) in paragraph at lines 133--134
  [][] 
  []
 
-[70 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/pengujian1.jpg> <D:/Tugas/Skrips
+[52 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/pengujian1.jpg> <D:/Tugas/Skrips
 i/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/pengujian12.jpg>]
-<Gambar/pengujian214.jpg, id=880, 1204.5pt x 1003.75pt>
+<Gambar/pengujian214.jpg, id=805, 1204.5pt x 1003.75pt>
 File: Gambar/pengujian214.jpg Graphic file (type jpg)
  <use Gambar/pengujian214.jpg>
 Package pdftex.def Info: Gambar/pengujian214.jpg used on input line 144.
@@ -1061,98 +1041,104 @@ Overfull \hbox (47.88693pt too wide) in paragraph at lines 144--145
  [][] 
  []
 
-<Gambar/pengujian25.jpg, id=881, 602.25pt x 451.6875pt>
+<Gambar/pengujian25.jpg, id=806, 602.25pt x 451.6875pt>
 File: Gambar/pengujian25.jpg Graphic file (type jpg)
  <use Gambar/pengujian25.jpg>
 Package pdftex.def Info: Gambar/pengujian25.jpg used on input line 151.
 (pdftex.def)             Requested size: 240.89572pt x 180.67178pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [71 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/pengujian214.jpg>] <Gambar/peng
-ujian31.jpg, id=890, 934.24031pt x 375.65344pt>
+<Gambar/pengujian31.jpg, id=811, 934.24031pt x 375.65344pt>
 File: Gambar/pengujian31.jpg Graphic file (type jpg)
-
-<use Gambar/pengujian31.jpg>
+ <use Gambar/pengujian31.jpg>
 Package pdftex.def Info: Gambar/pengujian31.jpg used on input line 188.
 (pdftex.def)             Requested size: 373.6895pt x 150.2587pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [72 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/pengujian25.jpg>] <Gambar/pengu
-jian32.jpg, id=896, 933.4875pt x 378.66469pt>
+<Gambar/pengujian32.jpg, id=812, 933.4875pt x 378.66469pt>
 File: Gambar/pengujian32.jpg Graphic file (type jpg)
-
-<use Gambar/pengujian32.jpg>
+ <use Gambar/pengujian32.jpg>
 Package pdftex.def Info: Gambar/pengujian32.jpg used on input line 195.
 (pdftex.def)             Requested size: 373.38838pt x 151.46318pt.
- <Gambar/pengujian4.jpg, id=898, 466.74374pt x 375.65344pt>
+ [53 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/pengujian214.jpg>]
+<Gambar/pengujian4.jpg, id=819, 466.74374pt x 375.65344pt>
 File: Gambar/pengujian4.jpg Graphic file (type jpg)
  <use Gambar/pengujian4.jpg>
-Package pdftex.def Info: Gambar/pengujian4.jpg used on input line 206.
+Package pdftex.def Info: Gambar/pengujian4.jpg used on input line 205.
 (pdftex.def)             Requested size: 186.69418pt x 150.2587pt.
 
-[73 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/pengujian31.jpg> <D:/Tugas/Skrip
-si/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/pengujian32.jpg> <D:/Tugas/Skripsi/SkripsiKIRIDataM
-ining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/pengujian4.jpg>]
-<Gambar/percobaanError.jpg, id=906, 985.6825pt x 327.2225pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [54 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/pengujian25.jpg> <D:/Tugas/Skri
+psi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/pengujian4.jpg>] <Gambar/percobaanError.jpg, id=82
+6, 985.6825pt x 327.2225pt>
 File: Gambar/percobaanError.jpg Graphic file (type jpg)
- <use Gambar/percobaanError.jpg>
-Package pdftex.def Info: Gambar/percobaanError.jpg used on input line 223.
+
+<use Gambar/percobaanError.jpg>
+Package pdftex.def Info: Gambar/percobaanError.jpg used on input line 221.
 (pdftex.def)             Requested size: 492.84004pt x 163.61084pt.
 
-Overfull \hbox (58.9355pt too wide) in paragraph at lines 223--224
- [][] 
- []
-
-<Gambar/percobaan1.jpg, id=909, 998.73125pt x 864.22874pt>
-File: Gambar/percobaan1.jpg Graphic file (type jpg)
- <use Gambar/percobaan1.jpg>
-Package pdftex.def Info: Gambar/percobaan1.jpg used on input line 232.
-(pdftex.def)             Requested size: 499.3644pt x 432.11331pt.
-
-Overfull \hbox (65.45985pt too wide) in paragraph at lines 232--233
+Overfull \hbox (58.9355pt too wide) in paragraph at lines 221--222
  [][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [74 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/percobaanError.jpg>] <Gambar/pe
-rcobaan2.jpg, id=914, 1245.65375pt x 504.88625pt>
-File: Gambar/percobaan2.jpg Graphic file (type jpg)
+ [55 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/pengujian31.jpg> <D:/Tugas/Skri
+psi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/pengujian32.jpg>] <Gambar/percobaan1.jpg, id=834, 
+998.73125pt x 864.22874pt>
+File: Gambar/percobaan1.jpg Graphic file (type jpg)
 
-<use Gambar/percobaan2.jpg>
-Package pdftex.def Info: Gambar/percobaan2.jpg used on input line 239.
+<use Gambar/percobaan1.jpg>
+Package pdftex.def Info: Gambar/percobaan1.jpg used on input line 230.
+(pdftex.def)             Requested size: 499.3644pt x 432.11331pt.
+
+Overfull \hbox (65.45985pt too wide) in paragraph at lines 230--231
+ [][] 
+ []
+
+<Gambar/percobaan2.jpg, id=835, 1245.65375pt x 504.88625pt>
+File: Gambar/percobaan2.jpg Graphic file (type jpg)
+ <use Gambar/percobaan2.jpg>
+Package pdftex.def Info: Gambar/percobaan2.jpg used on input line 237.
 (pdftex.def)             Requested size: 373.699pt x 151.46703pt.
- [75 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/percobaan1.jpg> <D:/Tugas/Skrip
-si/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/percobaan2.jpg>]
-<Gambar/percobaan3.jpg, id=920, 466.74374pt x 376.40625pt>
+ [56 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/percobaanError.jpg> <D:/Tugas/S
+kripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/percobaan1.jpg>] <Gambar/percobaan3.jpg, id=841
+, 466.74374pt x 376.40625pt>
 File: Gambar/percobaan3.jpg Graphic file (type jpg)
- <use Gambar/percobaan3.jpg>
-Package pdftex.def Info: Gambar/percobaan3.jpg used on input line 260.
+
+<use Gambar/percobaan3.jpg>
+Package pdftex.def Info: Gambar/percobaan3.jpg used on input line 258.
 (pdftex.def)             Requested size: 326.71838pt x 263.48257pt.
- [76 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/percobaan3.jpg>]) [77]
-("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab6.tex" [78
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [57 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/percobaan2.jpg>]) [58 <D:/Tugas
+/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/percobaan3.jpg>]
+("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab6.tex"
+Bab 6.
+) [59
+
+
+
+] ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab7.tex")
+("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab8.tex")
+("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab9.tex")
+("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.bbl" [60
+
+
+
+
+
 
 
 
 ]
-Bab 6.
-) [79] ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab7.tex")
-("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab8.tex")
-("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab9.tex")
-("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.bbl" [80
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 10.
 
-
-
-
-
-
-
-
-]) [81]
-("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Lampiran/lampA.tex" [82
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)) [61]
+("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Lampiran/lampA.tex" [62
 
 
 
@@ -1362,7 +1348,7 @@ Overfull \hbox (4.21089pt too wide) in paragraph at lines 46--46
 []|\T1/cmr/m/n/10.95 113947| 
  []
 
-[83]
+[63]
 Overfull \hbox (4.21089pt too wide) in paragraph at lines 47--47
 []|\T1/cmr/m/n/10.95 113948| 
  []
@@ -1577,7 +1563,7 @@ Overfull \hbox (4.21089pt too wide) in paragraph at lines 86--86
 []|\T1/cmr/m/n/10.95 113987| 
  []
 
-[84]
+[64]
 Overfull \hbox (4.21089pt too wide) in paragraph at lines 87--87
 []|\T1/cmr/m/n/10.95 113988| 
  []
@@ -1682,7 +1668,7 @@ Overfull \hbox (4.21089pt too wide) in paragraph at lines 106--106
 []|\T1/cmr/m/n/10.95 114007| 
  []
 
-[85]
+[65]
 Overfull \hbox (4.21089pt too wide) in paragraph at lines 107--107
 []|\T1/cmr/m/n/10.95 114008| 
  []
@@ -1692,7 +1678,7 @@ Overfull \hbox (4.21089pt too wide) in paragraph at lines 109--109
 []|\T1/cmr/m/n/10.95 114009| 
  []
 
-[86]) [87] ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Lampiran/lampB.tex" [88
+[66]) [67] ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Lampiran/lampB.tex" [68
 
 
 
@@ -1704,22 +1690,19 @@ File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 31.
- [89] [90]
+ [69] [70]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [91] [92]
+ [71] [72]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [93] [94]
+ [73] [74] [75] [76] [77] [78]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [95] [96] [97] [98]
+ [79] [80] [81]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [99] [100] [101]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [102]) [103]
+ [82]) [83]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 518.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 518.
 
@@ -1741,35 +1724,36 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 613DBE0159B7FA17D47457847FA8A421;7750.
  ) 
 Here is how much of TeX's memory you used:
- 16599 strings out of 493921
- 236660 string characters out of 3147258
- 743804 words of memory out of 3000000
- 17825 multiletter control sequences out of 15000+200000
- 24537 words of font info for 52 fonts, out of 3000000 for 9000
+ 16517 strings out of 493921
+ 236035 string characters out of 3147258
+ 743584 words of memory out of 3000000
+ 17791 multiletter control sequences out of 15000+200000
+ 24851 words of font info for 53 fonts, out of 3000000 for 9000
  846 hyphenation exceptions out of 8191
  45i,12n,44p,1106b,1843s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx0600.pk> <C:\Users\Jovan Guna
-wan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTe
-X\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\j
-knappen\ec\dpi600\ecti1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0
-900.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1000.pk> <C:\Users\Jovan
- Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbl1200.pk> <C:\Users\Jovan Gunawan\AppData\Local\
-MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
-our\jknappen\ec\dpi600\eccc1000.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
-ecss0600.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbl1095.pk> <C:\Users\
-Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1095.pk> <C:\Users\Jovan Gunawan\AppData\L
-ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\p
-k\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dp
-i600\ecbx1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbl1440.pk> <C:\U
-sers\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (115 pages, 6292487 bytes).
+wan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTe
+X\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\j
+knappen\ec\dpi600\ecrm0800.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1
+095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk> <C:\Users\Jovan
+ Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1000.pk> <C:\Users\Jovan Gunawan\AppData\Local\
+MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbl1200.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
+eccc1000.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss0600.pk> <C:\Users\
+Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbl1095.pk> <C:\Users\Jovan Gunawan\AppData\L
+ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\p
+k\ljfour\jknappen\ec\dpi600\ecsl1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dp
+i600\ecrm1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\U
+sers\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbl1440.pk> <C:\Users\Jovan Gunawan\AppD
+ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+msy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmsy8.pfb>
+Output written on main.pdf (95 pages, 6123214 bytes).
 PDF statistics:
- 3570 PDF objects out of 3580 (max. 8388607)
- 1735 named destinations out of 2073 (max. 500000)
+ 3473 PDF objects out of 3580 (max. 8388607)
+ 1683 named destinations out of 1728 (max. 500000)
  556 words of extra memory for PDF output out of 10000 (max. 10000000)
 

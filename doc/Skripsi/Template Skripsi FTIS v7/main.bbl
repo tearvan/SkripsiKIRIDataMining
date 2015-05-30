@@ -7,13 +7,14 @@ J.~Han, M.~Kamber, and J.~Pei, {\em Data Mining : concepts and techniques,
 
 \bibitem{Haversine}
 C.~Veness, ``Calculate distance, bearing and more between latitude/longitude
-  points,'' 2002.
+  points.'' \url{http://www.movable-type.co.uk/scripts/latlong.html}, 2002.
 
 \bibitem{Weka}
-T.~U. of~Waikato, ``Weka api,'' 2009.
+T.~U. of~Waikato, ``Weka api.'' \url{http://weka.sourceforge.net/doc.stable/},
+  2009.
 
 \bibitem{Graph}
-E.~R. Gansner, E.~Koutsofios, and S.~North, ``Drawing graphs with dot,''
-  January 2015.
+E.~R. Gansner, E.~Koutsofios, and S.~North, ``Drawing graphs with dot.''
+  \url{http://www.graphviz.org/pdf/dotguide.pdf}, January 2015.
 
 \end{thebibliography}
