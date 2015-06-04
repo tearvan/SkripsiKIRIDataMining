@@ -140,6 +140,42 @@ Dengan adanya perhitungan jarak dan penentuan daerah Bandung, nilai latitude dan
 \end{longtable}
 \end{table} 
 
+\section{\textsl{Data Convert} Hasil \textsl{Decision Tree} menjadi Bahasa DOT}
+
+Hasil dari \textsl{data mining} dari weka adalah \textsl{decision tree} dalam bentuk \textsl{String}. Berikut contoh hasil \textsl{decision tree} dari weka:
+
+\begin{algorithmic}[1]
+\label{alg:contohHasilDecisionTree}
+	\STATE J48 pruned tree
+	\STATE ------------------
+	\STATE 
+	\STATE jam <= 4
+	\STATE |   jam <= 0
+	\STATE |   |   hari <= 1: 1 (46.0/20.0)
+	\STATE |   |   hari > 1: -1 (198.0/104.0)
+	\STATE |   jam > 0: -1 (509.0/179.0)
+	\STATE jam > 4
+	\STATE |   bulan <= 11: -1 (18611.0/9986.0)
+	\STATE |   bulan > 11: 1 (54.0/21.0)
+	\STATE 
+	\STATE Number of Leaves  : 	5
+	\STATE 
+	\STATE Size of the tree : 	9
+\end{algorithmic}
+
+Nilai yang dibutuhkan dari hasil \textsl{decision tree} (pada \ref{alg:contohHasilDecisionTree}) adalah baris 3 sampai 11. Kedalaman sebuah \textsl{node} dapat dilihat dari banyaknya tanda '|' yang dipisahkan dengan spasi. Terdapat dua cara untuk mengetahui kedalaman dari \textsl{decision tree} yaitu menghitung banyak tanda '|' atau memiliki suatu variabel yang selalu ditambah satu setiap program memasuki \textsl{node} yang lebih dalam. Cara kedua sedikit lebih efisien karena tidak perlu melakukan \textsl{loop} untuk menghitung banyak tanda '|' namun program harus bisa tahu kapan \textsl{node} yang sedang dibaca merupakan \textsl{node} yang lebih dalam. 
+
+\subsection{Pengecekkan kedalaman \textsl{node}}
+
+Setelah dilakukan penelitian, ditemukan bahwa hasil \textsl{decision tree} dari weka untuk data log histori dengan menggunakan ID3 selalu berbentuk \textsl{discrete value} sedangkan untuk metode C4.5 selalu berbentuk \textsl{continuous values}. Oleh karena itu, pengecekkan untuk kasus ini dapat dilakukan hanya untuk \textsl{discrete value} untuk metode ID3 dan \textsl{continous value} untuk metode C4.5.
+
+Pengecekkan untuk ID3, pengecekkan dapat dilakukan dengan cara menghitung banyak array yang dihasilkan dari \textsl{method} split dikurangi satu masih sama dengan nilai kedalam saat ini atau tidak. Sedangkan untuk C4.5, karena \textsl{decision tree} yang dihasilkan berbentuk \textsl{continous value}, maka hanya perlu dilakukan pengulangan dua kali, dan jika \textsl{node} yang sedang diproses bukan sebuah \textsl{leaf} maka \textsl{node} selanjutnya adalah node yang lebih dalam. Untuk mengetahui apakah \textsl{node} tersebut adalah \textsl{leaf} atau bukan dapat dilakukan dengan cara mengecek apakah ada tanda ':' pada baris tersebut. Contoh \textsl{node} yang merupakan \textsl{leaf} dapat dilihat pada \ref{alg:contohHasilDecisionTree} baris 6,7, 10 dan 11.
+
+\subsection{Ketentuan untuk membuat \textsl{edge}}
+
+Untuk kasus pada penelitian ini, \textsl{Edge} dibuat hanya antara \textsl{node} dengan \textsl{node} atau \textsl{node} dengan \textsl{leaf}. Untuk setiap \textsl{node} pasti memiliki \textsl{edge} untuk \textsl{node} atau \textsl{leaf} setelah \textsl{node} tersebut, namun tidak untuk \textsl{leaf}. Dari hal tersebut, program harus selalu mengecek apakah \textsl{node} yang sedang diproses merupakan \textsl{leaf} atau tidak dengan cara mengecek apakah ada tanda ':' pada baris tersebut. Pengecekkan ini berlaku untuk hasil \textsl{decision tree} dengan menggunakan metode ID3 dan C4.5.
+
+Pembuatan \textsl{node} pada graphviz harus mengetahui nama dari kedua \textsl{node} yang akan diberi \textsl{edge}. Oleh karena itu, nama \textsl{node} (dalam kasus ini, penamaan \textsl{node} akan selalu menggunakan nama atribut yang dipilih) harus selalu disimpan untuk dilakukan pengecekan pada \textsl{node} selanjutnya. 
 
 \section{Analisis Perangkat Lunak}
 Agar analisis pola dari lokasi keberangkatan dan tujuan dari data \textsl{log} histori lebih mudah, maka dibangun sebuah perangkat lunak yang dapat melakukan proses \textsl{data mining} dengan menggunakan teknik ID3 dan C4.5. Perangkat lunak dapat melakukan visualisasi hasil dari \textsl{data mining} yang diperoleh setelah proses dijalankan.

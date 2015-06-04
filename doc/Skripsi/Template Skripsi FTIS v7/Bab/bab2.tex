@@ -242,7 +242,7 @@ Node N akan diisi dengan hasil dari \textsl{splitting criterion} (baris 9). Kemu
 
 \begin{enumerate}
 	\item \textbf{\textsl{Discrete valued}}: cabang yang dihasilkan memiliki kelas dengan nilai diskret. Karena kelas yang dihasilkan diskret dan hanya memiliki nilai yang sama pada cabang tersebut, maka \textbf{\textsl{attribut\_list}} akan dihapus (baris 10 sampai 12)
-	\item \textsl{Continuous values}: cabang yang dihasilkan memiliki jarak nilai untuk memenuhi suatu kondisi (contoh: A <= split\_point), dimana nilai \textsl{split\_point} adalah nilai pembagi yang dikembalikan oleh \textsl{attribute\_selection\_method}
+	\item \textbf{\textsl{Continuous values}}: cabang yang dihasilkan memiliki jarak nilai untuk memenuhi suatu kondisi (contoh: A <= split\_point), dimana nilai \textsl{split\_point} adalah nilai pembagi yang dikembalikan oleh \textsl{attribute\_selection\_method}
 	\item \textbf{\textsl{Dicrete valued and a binary tree}}: cabang yang dihasilkan berupa nilai iya dan tidak dari "apakah A anggota S$_{a}$", dimana S$_{a}$ merupakan subset dari A, yang dikembalikan oleh \textsl{Attribute\_selection\_method}
 \end{enumerate}
 
@@ -579,31 +579,29 @@ Weka merupakan aplikasi berbasis java yang berisi alat-alat untuk melakukan visu
 \end{itemize}
 
 \section{Graphviz}\cite{Graph}
-Graphviz merupakan perangkat lunak \textsl{open source} untuk visualisasi grafik. Dengan menggunakan graphviz, visualisasi grafik dapat dibuat dengan menulis kode. Atribut gambar yang disediakan oleh graphviz adalah \textsl{node shapes} dan \textsl{labels}. Dengan memanfaatkan kedua atribut gambar tersebut, gambar yang dihasilkan dapat:
+Graphviz merupakan perangkat lunak \textsl{open source} untuk visualisasi grafik. Dengan menggunakan graphviz, visualisasi grafik dapat dibuat dengan menulis kode. Bahasa pemograman yang digunakan oleh graphviz adalah bahasa DOT. DOT merupakan bahasa dekripsi grafik dalam bentuk \textsl{plain teks}. 
+
+Pada bahasa DOT, pertama ditentukan bentuk grafik yang akan dibuat dengan cara menulis \textsl{graph} atau \textsl{digraph}. Grafik dapat diberi nama dengan cara menulis nama setelah penentuan bentuk grafik. Isi dari grafik akan diawali dengan tanda '{' dan diakhiri dengan tanda '}'. Contoh Penulisan untuk bentuk grafik serta penamaan grafik dapat dilihat pada listing \ref{lst:dotExample} baris 1. Berikut beberapa kata kunci yang merupakan isi dari grafik:
+
 \begin{itemize}
-	\item Berbeda bentuk untuk setiap \textsl{node}
-	\item Berbeda warna untuk setiap \textsl{node} dan \textsl{edge}
-	\item Pemberian label pada setiap \textsl{node} dan \textsl{edge}
+	\item \textbf{\textsl{Node}}, merupakan kata kunci untuk membuat sebuah \textsl{node}. \textsl{Node} dapat dibuat dengan cara menuliskan nama node yang ingin dibuat. Kata kunci ini memiliki atribut yang dapat diubah, diantaranya adalah label \textsl{node}, bentuk \textsl{node}, ukuran \textsl{node}, warna \textsl{node}, dan \textsl{style node}. Penulisan atribut dapat diawali dengan tanda '[' dan diakhiri dengan tanda ']'. Contoh untuk penulisan \textsl{node} dapat dilihat pada listing \ref{lst:dotExample} baris ke 2,3, dan 5.
+	\item \textbf{\textsl{Edge}}, merupakan kata kunci yang digunakan untuk mengubah atribut dari edge. Atribut \textsl{edge} yang dapat diubah diantaranya warna dari \textsl{edge} yang dibuat selanjutnya. Pengubahan atribut \textsl{edge} dapat dilakukan dengan cara menulis kata "edge" kemudian menulis atribut yang akan diubah yang diawali dengan tanda '[' dan diakhiri dengan tanda ']'. Contoh penulisan kata kunci \textsl{edge} dapat dilihat pada listing \ref{lst:dotExample} baris ke 6.
 \end{itemize}
 
-Bentuk umum untuk setiap node adalah elips dengan lebar 0.75 dan tinggi 0.5 serta diberi label node name. Ada bentuk umum yang lain, tiga diantaranya adalah kotak, bulat, dan \textsl{plaintext}. Sedangkan untuk ukuran node, dapat dilakukan perubahan dengan cara mengubah nilai atribut dari lebar dan tinggi.
+Untuk membuat sebuah \textsl{edge} dari node ke node yang lain, dapat dilakukan dengan cara menulis kedua nama node dan memberi tanda "->" diantara kedua node tersebut. \textsl{Edge} tersebut memiliki atribut yang dapat dapat diubah, salah satunya adalah label dari \textsl{edge}. Penulisan nilai atribut diawali tanda '[' dan diakhiri tanda ']' setelah penulisan nama node yang kedua. Contoh penulisan untuk membuat sebuah \textsl{edge} antara dua node dapat dilihat pada listing \ref{lst:dotExample} baris ke 4 dan 7.
 
-Warna untuk node dan edge secara umum adalah hitam. Node dan edge dapat diubah warnanya dengan cara mengubah nilai atribut dari warna. Sedangkan untuk mewarnai bagian dalam dari node, dapat diberi \textsl{style filled}.
+Berikut contoh kode dengan bahasa DOT yang dapat dijadikan input untuk aplikasi graphviz: 
 
-Pemberian label dapat dilakukan dengan cara mengisi nilai atribut label pada objek yang akan diberi label.
-
-Bahasa pemograman yang digunakan oleh graphviz adalah bahasa DOT. DOT merupakan bahasa dekripsi grafik dalam bentuk \textsl{plain teks}. Berikut contoh kode dengan bahasa DOT yang dapat dijadikan input untuk aplikasi graphviz:
-
-\begin{algorithmic}[1]
-	\STATE digraph G\{
-	\STATE 		Main
-	\STATE		Execute [shape=box, color=red, style=filled]
-	\STATE		Main -> Execute [label="proses dimulai"]
-	\STATE		Output [label="return result", width=2, height=1]
-	\STATE    edge [color=blue]
-	\STATE		Execute -> Output
-	\STATE \}
-\end{algorithmic}
+\begin{lstlisting}[caption={Dot Example}, label={lst:dotExample}]
+	digraph G{
+	Main
+	Execute [shape=box, color=red, style=filled]
+	Main -> Execute [label="proses dimulai"]
+	Output [label="return result", width=2, height=1]
+	edge [color=blue]
+	Execute -> Output
+	}
+\end{lstlisting}
 
 Maka hasil yang diperoleh dari perangkat lunak graphviz dapat dilihat pada gambar \ref{fig:outGraphviz}
 
