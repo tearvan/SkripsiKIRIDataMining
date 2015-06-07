@@ -50,7 +50,7 @@
 \contentsline {subsection}{\numberline {3.1.3}\textsl {Data Selection}}{25}{subsection.3.1.3}
 \contentsline {subsection}{\numberline {3.1.4}\textsl {Data Transformation}}{26}{subsection.3.1.4}
 \contentsline {section}{\numberline {3.2}\textsl {Data Convert} Hasil \textsl {Decision Tree} menjadi Bahasa DOT}{30}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Pengecekkan kedalaman \textsl {node}}{31}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.1}Pengecekan kedalaman \textsl {node}}{31}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Ketentuan untuk membuat \textsl {edge}}{31}{subsection.3.2.2}
 \contentsline {section}{\numberline {3.3}Analisis Perangkat Lunak}{31}{section.3.3}
 \contentsline {subsubsection}{Spesifikasi Kebutuhan Fungsional Perangkat Lunak \textsl {Data Mining log} Histori KIRI}{32}{subsubsection*.25}
@@ -71,7 +71,7 @@
 \contentsline {subsection}{\numberline {5.3.1}Pengujian Fungsional}{50}{subsection.5.3.1}
 \contentsline {subsubsection}{Rancangan Pengujian}{50}{subsubsection*.29}
 \contentsline {subsubsection}{Hasil Pengujian}{50}{subsubsection*.30}
-\contentsline {subsection}{\numberline {5.3.2}Pengujian Eksperimental}{55}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.2}Pengujian Eksperimental}{54}{subsection.5.3.2}
 \contentsline {subsection}{\numberline {5.3.3}Analisis Hasil Uji}{58}{subsection.5.3.3}
 \contentsline {chapter}{\numberline {6}Kesimpulan dan Saran}{59}{chapter.6}
 \contentsline {section}{\numberline {6.1}Kesimpulan}{59}{section.6.1}
