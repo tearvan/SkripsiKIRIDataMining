@@ -1,14 +1,17 @@
 %_____________________________________________________________________________
 %=============================================================================
-% data.tex v5 (10-11-2013) \ldots dibuat oleh Lionov - Informatika FTIS UNPAR
+% data.tex v6 (13-04-2015) \ldots dibuat oleh Lionov - Informatika FTIS UNPAR
 %
-% Perubahan pada versi 5 (10-11-2013)
-% - Perbaikan pada memasukkan bab : tidak perlu menuliskan apapun untuk 
-%	memasukkan seluruh bab (bagian V)
-% - Perbaikan pada memasukkan lampiran : tidak perlu menuliskan apapun untuk
-%	memasukkan seluruh lampiran atau -1 jika tidak memasukkan apapun
+% Perubahan pada versi 6 (13-04-2015)
+% - Perubahan untuk data-data ``template" menjadi lebih generik dan menggunakan
+%	tanda << dan >>
 %
 % Perubahan pada versi sebelumnya
+% 	versi 5 (10-11-2013)
+% 	- Perbaikan pada memasukkan bab : tidak perlu menuliskan apapun untuk 
+%	  memasukkan seluruh bab (bagian V)
+% 	- Perbaikan pada memasukkan lampiran : tidak perlu menuliskan apapun untuk
+%	  memasukkan seluruh lampiran atau -1 jika tidak memasukkan apapun
 %	versi 4 (21-10-2012)
 %	- Data dosen dipindah ke dosen.tex agar jika ada perubahan/update data dosen
 %   mahasiswa tidak perlu mengubah data.tex
@@ -27,6 +30,7 @@
 % Masukkan ke dalam file ini, data-data yang diperlukan oleh template ini
 % Cara memasukkan data dijelaskan di setiap bagian
 % Data yang WAJIB dan HARUS diisi dengan baik dan benar adalah SELURUHNYA !!
+% Hilangkan tanda << dan >> jika anda menemukannya
 %=============================================================================
 %_____________________________________________________________________________
 %=============================================================================
@@ -59,8 +63,8 @@
 % \mode{kosong}
 % \mode{cover}
 % \mode{sidang}
-\mode{sidang_akhir}
-%\mode{final} 
+%\mode{sidang_akhir}
+\mode{final} 
 %=============================================================================
 
 %_____________________________________________________________________________
@@ -139,14 +143,17 @@
 %			  ujian akhir skripsi/tugas akhir
 % - pembimbing: isi dengan pembimbing anda, lihat daftar dosen di file dosen.tex
 %				jika pembimbing hanya 1, kosongkan parameter kedua 
-%				(e.g. \pembimbing{\JND}{  } )
+%				(e.g. \pembimbing{\JND}{  } ) , \JND adalah kode dosen
 % - penguji : isi dengan para penguji anda, lihat daftar dosen di file dosen.tex
-%				(e.g. \penguji{\JHD}{\JCD} )
+%				(e.g. \penguji{\JHD}{\JCD} ) , \JND dan \JCD adalah kode dosen
+%
 %=============================================================================
-\namanpm{Jovan Gunawan}{2011730029}
-\tanggal{22}{4}{2015}
-\pembimbing{\PAS}{}     %Lihat singkatan pembimbing anda di file dosen.tex
-%\penguji{\NIS}{\CEN} 		%Lihat singkatan penguji anda di file dosen.tex
+\namanpm{Jovan Gunawan}{2011730029}	%hilangkan tanda << & >>
+\tanggal{24}{4}{2015}			%hilangkan tanda << & >>
+\pembimbing{\PAS}{}     
+%Lihat singkatan pembimbing anda di file dosen.tex, hilangkan tanda << & >>
+\penguji{\CAN}{\JNH} 		
+%Lihat singkatan penguji anda di file dosen.tex, hilangkan tanda << & >>
 %=============================================================================
 
 %_____________________________________________________________________________
@@ -160,6 +167,7 @@
 %			   bawahnya
 %			 - Gunakan \texorpdfstring{\\}{} untuk pindah ke baris baru
 %			 - Judul TIDAK ditulis dengan menggunakan huruf besar seluruhnya !!
+%			 - Gunakan perintah \texorpdfstring{\\}{} untuk baris baru
 %=============================================================================
 
 \judulINA{\textsl{Data Mining} Histori Pencarian Rute Angkot}
@@ -188,7 +196,6 @@ Atribut yang diuji adalah \textsl{timestamp} dan \textsl{additionalData} yang be
 Dengan klasifikasi tersebut, dapat ditentukan apakah pengguna menjauhi Bandung atau mendekati Bandung atau menuju daerah yang sama. Penggunaan \textsl{decision tree} digunakan untuk melakukan klasifikasi apakah pada hari tertentu dan jam tertentu, pengguna akan lebih sering menjauhi Bandung atau menuju Bandung atau menuju daerah yang sama. 
 Dari hasil pengujian eksperimental, diperoleh bahwa \textsl{decision tree} yang dibuat dengan ID3 mengalami \textsl{overfitting} dengan akurasi 38.22\%, sedangkan dengan C4.5 tidak mengalami \textsl{overfitting} dengan akurasi 50.37\%. Dari hasil tersebut, diperoleh kesimpulan bahwa pengguna sering menjauhi Bandung daripada menuju Bandung atau menuju daerah yang sama pada bulan Febuari 2014.
 }
-%Dari hasil pengujian experimental, diperoleh bahwa \textsl{decision tree} yang dibuat dengan ID3 mengalami overfitting dengan akurasi 37.49\%, sedangkan dengan J48 (metode C4.5 dari weka) tidak mengalami overfitting dengan akurasi 49.79\% dan diperoleh kesimpulan bahwa \textsl{user} sering menjauhi Bandung dan menuju Bandung, namun jarang atau tidak pernah menuju daerah yang sama.
 
 \abstrakENG{Accurate information is needed everyday to perform analysis and decision making. The information need to be treated in order to be presented better.
 If viewed in more detail, the data can be treated furthermore to facilitate decision making. \textsl{Data mining} is one of data processing to ease analyze and draw conclusions.
@@ -201,8 +208,6 @@ Attributes to be tested is timestamp and additionalData which contains departure
 With the regional classification, can be determined whether the user away from Bandung or heading to Bandung or heading to same region. The \textsl{decision tree} is used to classify whether on certain days and certain hours, users will be more frequent to away Bandung or heading to Bandung or heading to same region.
 From the results of experimental testing, obtained that the \textsl{decision tree} created with ID3 is overfitting with 38.22\% accuracy, while C4.5 is not overfitting with 50.37\% accuracy. From these result, it is concluded that user more often away from Bandung than heading Bandung or heading to same region at February 2014.
 } 
-
-%From the results of experimental testing, obtained that the \textsl{decision tree} created with ID3 is overfitting with 39.49\% accuracy, while J48 (method C4.5 from weka) is not overfitting with 49.79\% accuracy, and it is concluded that user often away from Bandung and heading Bandung, but rarely or never heading to same region.} 
 
 %=============================================================================
 
@@ -225,7 +230,7 @@ From the results of experimental testing, obtained that the \textsl{decision tre
 %=============================================================================
 % Persembahan : kepada siapa anda mempersembahkan skripsi ini ...
 %=============================================================================
-\untuk{Dipersembahkan untuk diri sendiri }
+\untuk{Dipersembahkan untuk keluarga, teman-teman serta dosen di universitas Parahyangan jurusan Ilmu Komputer}
 %=============================================================================
 
 %_____________________________________________________________________________
@@ -243,15 +248,14 @@ Saya menyadari bahwa skripsi ini dapat diselesaikan karena peranan banyak pihak.
 
 \begin{enumerate}
 	\item Papa, Mama, Koko, dan Cici yang telah memberikan dukungan dalam mengerjakan skripsi ini pada saya.
-	\item Pak Pascal selaku dosen wali atas bimbingannya selama saya mengerjakan skripsi ini dan selaku developer KIRI yang telah mengizinkan saya untuk melakukan \textsl{data mining} serta analisis pada data \textsl{log} histori KIRI.
-	\item Dosen-dosen penguji yang telah meluangkan waktu untuk mempelajari skripsi ini dan memberikan kritik dan saran.
-	\item Pak Lionov yang telah memberikan informasi, tips, serta dorongan dalam melaksanakan skripsi.
+	\item Pak Pascal selaku dosen wali atas bimbingannya selama saya mengerjakan skripsi ini dan selaku developer KIRI yang telah mengizinkan saya melakukan \textsl{data mining} serta analisis pada data \textsl{log} histori KIRI.
+	\item Pa Chandra dan bu Joanna Helga sebagai dosen penguji yang telah meluangkan waktu untuk mempelajari skripsi ini dan memberikan kritik dan saran.
+	\item Pak Lionov yang telah memberikan informasi serta dorongan dalam melaksanakan skripsi.
 	\item Clara, Antonio, Steven, Samuel, Kevin, dan seluruh angkatan 2011 IT Universitas Parahyangan atas segala dukungan, bantuan, saran, persahabatan, serta kerja samanya selama ini.
 \end{enumerate}
 Serta seluruh pihak yang tidak dapat disebutkan satu-persatu atas dukungan kalian yang sangat bearti bagi saya, Tuhan memberkati.
 
 Saya menyadari bahwa skripsi ini masih jauh dari sempurna, oleh karena itu, saya menerima saran dan kritik agar bisa menghasilkan yang lebih baik. Akhir kata, saya berharap skripsi ini dapat bermanfaat bagi perkembangan ilmu teknologi khususnya di bidang \textsl{data mining}, dan bagi KIRI serta para pembaca.}
-
 %=============================================================================
 
 %_____________________________________________________________________________

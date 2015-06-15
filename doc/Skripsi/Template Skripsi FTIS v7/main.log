@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.8.19)  7 JUN 2015 14:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.8.19)  13 JUN 2015 02:09
 entering extended mode
 **main.tex
 ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.tex"
@@ -459,8 +459,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 ("C:\Program Files\MiKTeX 2.9\tex\latex\emptypage\emptypage.sty"
 Package: emptypage 2010/05/30 v1.2 Suppress page numbers and headings on empty pages
 )
-Package hyperref Info: Option `unicode' set `true' on input line 293.
-Package hyperref Info: Option `colorlinks' set `true' on input line 293.
+Package hyperref Info: Option `unicode' set `true' on input line 306.
+Package hyperref Info: Option `colorlinks' set `true' on input line 306.
 
 \@input{data.aux}
 ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\data.tex"
@@ -579,27 +579,24 @@ LaTeX Info: Redefining \] on input line 2666.
 ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab4.aux")
 ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab5.aux")
 ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab6.aux")
-("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab7.aux")
-("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab8.aux")
-("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab9.aux")
 ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Lampiran/lampA.aux")
 ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Lampiran/lampB.aux"))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 308.
-LaTeX Font Info:    ... okay on input line 308.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 308.
-LaTeX Font Info:    ... okay on input line 308.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 308.
-LaTeX Font Info:    ... okay on input line 308.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 308.
-LaTeX Font Info:    ... okay on input line 308.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 308.
-LaTeX Font Info:    ... okay on input line 308.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 308.
-LaTeX Font Info:    ... okay on input line 308.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 308.
-LaTeX Font Info:    ... okay on input line 308.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 308.
-LaTeX Font Info:    ... okay on input line 308.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 321.
+LaTeX Font Info:    ... okay on input line 321.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 321.
+LaTeX Font Info:    ... okay on input line 321.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 321.
+LaTeX Font Info:    ... okay on input line 321.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 321.
+LaTeX Font Info:    ... okay on input line 321.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 321.
+LaTeX Font Info:    ... okay on input line 321.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 321.
+LaTeX Font Info:    ... okay on input line 321.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 321.
+LaTeX Font Info:    ... okay on input line 321.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 321.
+LaTeX Font Info:    ... okay on input line 321.
 
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -651,7 +648,7 @@ LaTeX Font Info:    ... okay on input line 308.
 
 \c@lstlisting=\count167
 \AtBeginShipoutBox=\box65
-Package hyperref Info: Link coloring ON on input line 308.
+Package hyperref Info: Link coloring ON on input line 321.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -660,18 +657,18 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count168
 )
-LaTeX Info: Redefining \ref on input line 308.
-LaTeX Info: Redefining \pageref on input line 308.
-LaTeX Info: Redefining \nameref on input line 308.
+LaTeX Info: Redefining \ref on input line 321.
+LaTeX Info: Redefining \pageref on input line 321.
+LaTeX Info: Redefining \nameref on input line 321.
 
 ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.out")
 ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.out")
 \@outlinefile=\write4
 
-<Gambar/logo-unpar.png, id=215, 360.59718pt x 356.0803pt>
+<Gambar/logo-unpar.png, id=219, 360.59718pt x 356.0803pt>
 File: Gambar/logo-unpar.png Graphic file (type png)
  <use Gambar/logo-unpar.png>
-Package pdftex.def Info: Gambar/logo-unpar.png used on input line 476.
+Package pdftex.def Info: Gambar/logo-unpar.png used on input line 494.
 (pdftex.def)             Requested size: 144.23631pt x 142.4296pt.
  [1
 
@@ -685,7 +682,7 @@ i FTIS v7/Gambar/logo-unpar.png>] [2
 ]
 File: Gambar/logo-unpar.png Graphic file (type png)
  <use Gambar/logo-unpar.png>
-Package pdftex.def Info: Gambar/logo-unpar.png used on input line 476.
+Package pdftex.def Info: Gambar/logo-unpar.png used on input line 494.
 (pdftex.def)             Requested size: 144.23631pt x 142.4296pt.
  [3] [4
 
@@ -693,141 +690,91 @@ Package pdftex.def Info: Gambar/logo-unpar.png used on input line 476.
 
 ] [7] [8
 
+] [9] [10
+
+] [11] [12
+
+] [13] [14
+
+] [15
+
+] [16
+
 ]
-("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.toc" [9])
+("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.toc" [17])
 \tf@toc=\write5
- [10]
+ [18]
 ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.lof")
 \tf@lof=\write6
- [11]
+ [19]
 ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.lot")
 \tf@lot=\write7
- [12]
-*geometry* verbose mode - [ newgeometry ] result:
-* driver: pdftex
-* paper: a4paper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: twoside 
-* h-part:(L,W,R)=(85.35826pt, 433.90454pt, 78.24507pt)
-* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=433.90454pt
-* \textheight=731.23584pt
-* \oddsidemargin=13.08827pt
-* \evensidemargin=5.97508pt
-* \topmargin=-55.36449pt
-* \headheight=15.0pt
-* \headsep=25.0pt
-* \topskip=11.0pt
-* \footskip=30.0pt
-* \marginparwidth=103.0pt
-* \marginparsep=10.0pt
-* \columnsep=10.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-
+ [20]
 ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab1.tex"
 Bab 1.
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 1.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmss.fd"
-File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 14.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 14.
-
-[1
-
+ [1
 
 
 
 
-] [2]) [3] ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab2.tex" [4
+] [2]) [3]
+("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab2.tex" [4
 
 
 
 ]
 Bab 2.
-<Gambar/tahapdatamining.jpg, id=432, 355.3275pt x 477.28313pt>
+<Gambar/tahapdatamining.jpg, id=477, 355.3275pt x 477.28313pt>
 File: Gambar/tahapdatamining.jpg Graphic file (type jpg)
  <use Gambar/tahapdatamining.jpg>
 Package pdftex.def Info: Gambar/tahapdatamining.jpg used on input line 11.
 (pdftex.def)             Requested size: 319.79178pt x 429.55084pt.
  [5 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/tahapdatamining.jpg>] [6] [7] [8
 ] [9]
-<Gambar/tahapdataclassification.jpg, id=482, 482.55281pt x 496.85625pt>
+<Gambar/tahapdataclassification.jpg, id=524, 482.55281pt x 496.85625pt>
 File: Gambar/tahapdataclassification.jpg Graphic file (type jpg)
  <use Gambar/tahapdataclassification.jpg>
 Package pdftex.def Info: Gambar/tahapdataclassification.jpg used on input line 187.
 (pdftex.def)             Requested size: 386.04276pt x 397.48553pt.
 
 [10] [11 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/tahapdataclassification.jpg
->] <Gambar/decisiontree.jpg, id=494, 286.06876pt x 165.61874pt>
+>] <Gambar/decisiontree.jpg, id=538, 286.06876pt x 165.61874pt>
 File: Gambar/decisiontree.jpg Graphic file (type jpg)
  <use Gambar/decisiontree.jpg>
 Package pdftex.def Info: Gambar/decisiontree.jpg used on input line 199.
 (pdftex.def)             Requested size: 286.06805pt x 165.61833pt.
-
-Overfull \hbox (1.03218pt too wide) in paragraph at lines 210--211
-[] []\T1/cmr/m/sl/10.95 Attribute_selection_method\T1/cmr/m/n/10.95 , pro-se-dur un-tuk me-nen-tuk-an \T1/cmr/m/sl/10.95
- split-ting cri-te-rion\T1/cmr/m/n/10.95 . Pa-
+ [12 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/decisiontree.jpg>]
+Overfull \hbox (44.83504pt too wide) in paragraph at lines 239--240
+[]\T1/cmr/m/n/10.95 Jika tu-ple di D me-mi-li-ki ke-las yang ber-be-da, ma-ka al-go-ri-tma ak-an me-mang-gil \T1/cmr/m/s
+l/10.95 at-tri-bu-te_selection_method
  []
 
-
-Overfull \hbox (3.39162pt too wide) in paragraph at lines 222--223
-[] []\T1/cmr/m/n/10.95 attribute_list $\OMS/cmsy/m/n/10.95  $ \T1/cmr/m/n/10.95 at-tri-bu-te_list - split-ting_attribute
-; {meng-ha-pus split-ting_attribute} 
- []
-
-[12 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/decisiontree.jpg>]
-Overfull \hbox (10.3788pt too wide) in paragraph at lines 229--230
-[] []\T1/cmr/m/n/10.95 melampirkan no-de yang di-kem-ba-lik-an oleh ge-ne-ra-te_decision_tree(Dj, at-tri-bu-te_list)
- []
-
-<Gambar/jenishasilsplitpoint.jpg, id=516, 420.06938pt x 274.77657pt>
+<Gambar/jenishasilsplitpoint.jpg, id=557, 420.06938pt x 274.77657pt>
 File: Gambar/jenishasilsplitpoint.jpg Graphic file (type jpg)
  <use Gambar/jenishasilsplitpoint.jpg>
 Package pdftex.def Info: Gambar/jenishasilsplitpoint.jpg used on input line 252.
 (pdftex.def)             Requested size: 420.06836pt x 274.77588pt.
  [13] [14 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/jenishasilsplitpoint.jpg>]
  [15]
-<Gambar/hasilcabangid3.jpg, id=551, 455.45157pt x 301.8778pt>
+<Gambar/hasilcabangid3.jpg, id=594, 455.45157pt x 301.8778pt>
 File: Gambar/hasilcabangid3.jpg Graphic file (type jpg)
  <use Gambar/hasilcabangid3.jpg>
 Package pdftex.def Info: Gambar/hasilcabangid3.jpg used on input line 350.
 (pdftex.def)             Requested size: 455.45045pt x 301.87706pt.
-
-Overfull \hbox (21.54591pt too wide) in paragraph at lines 350--351
- [][] 
- []
-
-[16 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/hasilcabangid3.jpg>] [17]
-<Gambar/treepruning.jpg, id=567, 352.31625pt x 167.12437pt>
+ [16] [17 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/hasilcabangid3.jpg>]
+<Gambar/treepruning.jpg, id=611, 352.31625pt x 167.12437pt>
 File: Gambar/treepruning.jpg Graphic file (type jpg)
  <use Gambar/treepruning.jpg>
 Package pdftex.def Info: Gambar/treepruning.jpg used on input line 401.
 (pdftex.def)             Requested size: 352.31538pt x 167.12395pt.
- [18 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/treepruning.jpg>]
-Overfull \hbox (9.26393pt too wide) in paragraph at lines 434--435
-[]\T1/cmr/m/n/10.95 AdditionalData, men-ca-tat data-data yang ber-hu-bung-an se-su-ai de-ngan ni-lai atri-but\T1/cmr/m/s
-l/10.95 action 
- []
-
-[19] [20]
-Overfull \hbox (71.94415pt too wide) detected at line 490
+ [18 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/treepruning.jpg>] [19] [20]
+Overfull \hbox (36.3782pt too wide) detected at line 490
 \OML/cmm/m/it/10.95 a \OT1/cmr/m/n/10.95 = [][]((\OMS/cmsy/m/n/10.95 j   \OT1/cmr/m/n/10.95 6\OML/cmm/m/it/10.95 :\OT1/c
 mr/m/n/10.95 211544 \OMS/cmsy/m/n/10.95   \OT1/cmr/m/n/10.95 (\OMS/cmsy/m/n/10.95  \OT1/cmr/m/n/10.95 7\OML/cmm/m/it/10.
 95 :\OT1/cmr/m/n/10.95 289166)\OMS/cmsy/m/n/10.95 j\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 =\OT1/cmr/m/n/10.95 2) + [] \
@@ -838,14 +785,11 @@ OMS/cmsy/m/n/10.95  \OT1/cmr/m/n/10.95 6\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 
 10.95 =\OT1/cmr/m/n/10.95 2)
  []
 
-[21] [22] <Gambar/Graphviz.jpg, id=611, 162.6075pt x 240.9pt>
+[21] [22] <Gambar/Graphviz.jpg, id=652, 162.6075pt x 240.9pt>
 File: Gambar/Graphviz.jpg Graphic file (type jpg)
  <use Gambar/Graphviz.jpg>
 Package pdftex.def Info: Gambar/Graphviz.jpg used on input line 610.
 (pdftex.def)             Requested size: 146.3454pt x 216.80798pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [23]) [24 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/Graphviz.jpg>]
 ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab3.tex"
 Bab 3.
@@ -853,13 +797,7 @@ Bab 3.
 
 
 
-]
-Overfull \hbox (3.7994pt too wide) in paragraph at lines 55--56
-[]\T1/cmr/m/n/10.95 Pada atri-but \T1/cmr/m/sl/10.95 ti-mes-tamp\T1/cmr/m/n/10.95 , ni-lai wak-tu da-ri atri-but ter-se-
-but di-u-bah men-ja-di wak-tu GMT+7.
- []
-
-[26]
+] [26]
 Underfull \hbox (badness 10000) in paragraph at lines 102--102
 []|\T1/cmr/bx/n/10.95 Latitude Ke-be-
  []
@@ -869,13 +807,13 @@ Underfull \hbox (badness 5203) in paragraph at lines 102--102
 []|\T1/cmr/bx/n/10.95 Longitude Ke-be-
  []
 
-[27] [28] <Gambar/classificationmap.jpg, id=655, 170.13562pt x 147.55125pt>
+[27] [28] <Gambar/classificationmap.jpg, id=697, 170.13562pt x 147.55125pt>
 File: Gambar/classificationmap.jpg Graphic file (type jpg)
  <use Gambar/classificationmap.jpg>
 Package pdftex.def Info: Gambar/classificationmap.jpg used on input line 113.
 (pdftex.def)             Requested size: 255.20279pt x 221.32631pt.
 
-Overfull \hbox (37.01013pt too wide) in paragraph at lines 118--118
+Overfull \hbox (1.44418pt too wide) in paragraph at lines 118--118
 [][][]\T1/cmr/m/n/9 http://tools.wmflabs.org/geohack/geohack.php?pagename=Bandung&params=6_55_S_107_36_E_region:ID-
  []
 
@@ -883,62 +821,43 @@ Overfull \hbox (37.01013pt too wide) in paragraph at lines 118--118
 Underfull \vbox (badness 10000) detected at line 140
  []
 
-[30] [31] [32] <Gambar/usecase.jpg, id=710, 469.755pt x 329.23pt>
+[30] [31] [32] <Gambar/usecase.jpg, id=755, 469.755pt x 329.23pt>
 File: Gambar/usecase.jpg Graphic file (type jpg)
  <use Gambar/usecase.jpg>
 Package pdftex.def Info: Gambar/usecase.jpg used on input line 237.
 (pdftex.def)             Requested size: 469.75386pt x 329.22919pt.
-
-Overfull \hbox (35.84932pt too wide) in paragraph at lines 237--238
- [][] 
- []
-
-[33]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [34 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/usecase.jpg>] <Gambar/classdiag
-ram.jpg, id=729, 666.49pt x 345.29pt>
+ [33] [34 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/usecase.jpg>]
+<Gambar/classdiagram.jpg, id=771, 666.49pt x 345.29pt>
 File: Gambar/classdiagram.jpg Graphic file (type jpg)
-
-<use Gambar/classdiagram.jpg>
+ <use Gambar/classdiagram.jpg>
 Package pdftex.def Info: Gambar/classdiagram.jpg used on input line 293.
 (pdftex.def)             Requested size: 466.53983pt x 241.70134pt.
-
-Overfull \hbox (32.63528pt too wide) in paragraph at lines 293--294
-[][] 
- []
-
-[35 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/classdiagram.jpg>]) [36]
-("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab4.tex"
-Bab 4.
-[37
+) [35 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/classdiagram.jpg>]
+("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab4.tex" [36
 
 
 
 ]
-Overfull \hbox (2.43916pt too wide) in paragraph at lines 44--45
-[]\T1/cmr/m/n/10.95 public vo-id but-ton-Star-tA-ction-Per-for-med(java.awt.event.ActionEvent evt), di-
- []
-
-[38] [39] [40] [41] <Gambar/classdiagram2.jpg, id=760, 1485.55pt x 686.565pt>
+Bab 4.
+[37] [38] [39] [40] [41] <Gambar/classdiagram2.jpg, id=803, 1485.55pt x 686.565pt>
 File: Gambar/classdiagram2.jpg Graphic file (type jpg)
  <use Gambar/classdiagram2.jpg>
 Package pdftex.def Info: Gambar/classdiagram2.jpg used on input line 184.
-(pdftex.def)             Requested size: 698.2086pt x 322.6856pt.
- [42]
-<Gambar/sequenceDiagram.jpg, id=766, 1689.31125pt x 1039.885pt>
+(pdftex.def)             Requested size: 668.49133pt x 308.95139pt.
+
+[42] <Gambar/sequenceDiagram.jpg, id=809, 1689.31125pt x 1039.885pt>
 File: Gambar/sequenceDiagram.jpg Graphic file (type jpg)
  <use Gambar/sequenceDiagram.jpg>
 Package pdftex.def Info: Gambar/sequenceDiagram.jpg used on input line 209.
 (pdftex.def)             Requested size: 675.71254pt x 415.94662pt.
 
-<Gambar/mockUp1.jpg, id=769, 163.812pt x 120.45pt>
+<Gambar/mockUp1.jpg, id=812, 163.812pt x 120.45pt>
 File: Gambar/mockUp1.jpg Graphic file (type jpg)
  <use Gambar/mockUp1.jpg>
 Package pdftex.def Info: Gambar/mockUp1.jpg used on input line 221.
 (pdftex.def)             Requested size: 196.5734pt x 144.53926pt.
 
-<Gambar/mockUp2.jpg, id=770, 163.812pt x 120.45pt>
+<Gambar/mockUp2.jpg, id=813, 163.812pt x 120.45pt>
 File: Gambar/mockUp2.jpg Graphic file (type jpg)
  <use Gambar/mockUp2.jpg>
 Package pdftex.def Info: Gambar/mockUp2.jpg used on input line 228.
@@ -953,142 +872,113 @@ ipsi/Template Skripsi FTIS v7/Gambar/sequenceDiagram.jpg>] ("D:\Tugas\Skripsi\Sk
 
 ]
 Bab 5.
-<Gambar/GUI1.jpg, id=789, 466.74374pt x 376.40625pt>
+<Gambar/GUI1.jpg, id=831, 466.74374pt x 376.40625pt>
 File: Gambar/GUI1.jpg Graphic file (type jpg)
  <use Gambar/GUI1.jpg>
 Package pdftex.def Info: Gambar/GUI1.jpg used on input line 27.
 (pdftex.def)             Requested size: 326.71838pt x 263.48257pt.
-
-Underfull \vbox (badness 1033) has occurred while \output is active []
-
  [47]
-<Gambar/GUI2.jpg, id=799, 467.49657pt x 376.40625pt>
+<Gambar/GUI2.jpg, id=842, 467.49657pt x 376.40625pt>
 File: Gambar/GUI2.jpg Graphic file (type jpg)
  <use Gambar/GUI2.jpg>
 Package pdftex.def Info: Gambar/GUI2.jpg used on input line 36.
 (pdftex.def)             Requested size: 327.24536pt x 263.48257pt.
 
-<Gambar/GUI3.jpg, id=800, 467.49657pt x 376.40625pt>
+<Gambar/GUI3.jpg, id=843, 467.49657pt x 376.40625pt>
 File: Gambar/GUI3.jpg Graphic file (type jpg)
  <use Gambar/GUI3.jpg>
 Package pdftex.def Info: Gambar/GUI3.jpg used on input line 43.
 (pdftex.def)             Requested size: 327.24536pt x 263.48257pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [48 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/GUI1.jpg> <D:/Tugas/Skripsi/Skr
-ipsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/GUI2.jpg>] <Gambar/GUI3and4.jpg, id=806, 702.625pt x 300.
+ipsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/GUI2.jpg>] <Gambar/GUI3and4.jpg, id=849, 702.625pt x 300.
 12125pt>
 File: Gambar/GUI3and4.jpg Graphic file (type jpg)
  <use Gambar/GUI3and4.jpg>
 Package pdftex.def Info: Gambar/GUI3and4.jpg used on input line 52.
 (pdftex.def)             Requested size: 351.31163pt x 150.06026pt.
 
-<Gambar/GUI5.jpg, id=808, 933.4875pt x 377.15906pt>
+<Gambar/GUI5.jpg, id=851, 933.4875pt x 377.15906pt>
 File: Gambar/GUI5.jpg Graphic file (type jpg)
  <use Gambar/GUI5.jpg>
 Package pdftex.def Info: Gambar/GUI5.jpg used on input line 61.
 (pdftex.def)             Requested size: 373.38838pt x 150.86095pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [49 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/GUI3.jpg> <D:/Tugas/Skripsi/Skr
-ipsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/GUI3and4.jpg>]
-Underfull \vbox (badness 3623) has occurred while \output is active []
-
- [50 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/GUI5.jpg>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ipsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/GUI3and4.jpg>] [50 <D:/Tugas/Skripsi/SkripsiKIRIDataMinin
+g/doc/Skripsi/Template Skripsi FTIS v7/Gambar/GUI5.jpg>]
+Overfull \vbox (27.97824pt too high) has occurred while \output is active []
 
  [51]
-<Gambar/pengujian1.jpg, id=834, 1146.53343pt x 584.93532pt>
+<Gambar/pengujian1.jpg, id=876, 1146.53343pt x 584.93532pt>
 File: Gambar/pengujian1.jpg Graphic file (type jpg)
  <use Gambar/pengujian1.jpg>
 Package pdftex.def Info: Gambar/pengujian1.jpg used on input line 126.
 (pdftex.def)             Requested size: 458.60526pt x 233.96997pt.
 
-Overfull \hbox (24.70071pt too wide) in paragraph at lines 126--127
- [][] 
- []
-
-<Gambar/pengujian12.jpg, id=835, 1146.53343pt x 488.57532pt>
+<Gambar/pengujian12.jpg, id=877, 1146.53343pt x 488.57532pt>
 File: Gambar/pengujian12.jpg Graphic file (type jpg)
  <use Gambar/pengujian12.jpg>
 Package pdftex.def Info: Gambar/pengujian12.jpg used on input line 133.
 (pdftex.def)             Requested size: 458.60526pt x 195.42667pt.
-
-Overfull \hbox (24.70071pt too wide) in paragraph at lines 133--134
- [][] 
- []
-
-[52 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/pengujian1.jpg> <D:/Tugas/Skrips
-i/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/pengujian12.jpg>]
-<Gambar/pengujian214.jpg, id=844, 1204.5pt x 1003.75pt>
+ [52 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/pengujian1.jpg> <D:/Tugas/Skrip
+si/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/pengujian12.jpg>] <Gambar/pengujian214.jpg, id=885,
+ 1204.5pt x 1003.75pt>
 File: Gambar/pengujian214.jpg Graphic file (type jpg)
- <use Gambar/pengujian214.jpg>
+
+<use Gambar/pengujian214.jpg>
 Package pdftex.def Info: Gambar/pengujian214.jpg used on input line 144.
 (pdftex.def)             Requested size: 421.58131pt x 351.31776pt.
-
-<Gambar/pengujian25.jpg, id=845, 602.25pt x 451.6875pt>
+ <Gambar/pengujian25.jpg, id=886, 602.25pt x 451.6875pt>
 File: Gambar/pengujian25.jpg Graphic file (type jpg)
  <use Gambar/pengujian25.jpg>
 Package pdftex.def Info: Gambar/pengujian25.jpg used on input line 151.
 (pdftex.def)             Requested size: 240.89572pt x 180.67178pt.
 
-<Gambar/pengujian31.jpg, id=850, 934.24031pt x 375.65344pt>
+<Gambar/pengujian31.jpg, id=891, 934.24031pt x 375.65344pt>
 File: Gambar/pengujian31.jpg Graphic file (type jpg)
  <use Gambar/pengujian31.jpg>
 Package pdftex.def Info: Gambar/pengujian31.jpg used on input line 188.
 (pdftex.def)             Requested size: 373.6895pt x 150.2587pt.
 
-<Gambar/pengujian32.jpg, id=851, 933.4875pt x 378.66469pt>
+<Gambar/pengujian32.jpg, id=892, 933.4875pt x 378.66469pt>
 File: Gambar/pengujian32.jpg Graphic file (type jpg)
  <use Gambar/pengujian32.jpg>
 Package pdftex.def Info: Gambar/pengujian32.jpg used on input line 195.
 (pdftex.def)             Requested size: 373.38838pt x 151.46318pt.
  [53 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/pengujian214.jpg>]
-<Gambar/pengujian4.jpg, id=859, 466.74374pt x 375.65344pt>
+<Gambar/pengujian4.jpg, id=902, 466.74374pt x 375.65344pt>
 File: Gambar/pengujian4.jpg Graphic file (type jpg)
  <use Gambar/pengujian4.jpg>
 Package pdftex.def Info: Gambar/pengujian4.jpg used on input line 205.
 (pdftex.def)             Requested size: 186.69418pt x 150.2587pt.
  [54 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/pengujian25.jpg> <D:/Tugas/Skri
-psi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/pengujian4.jpg>] <Gambar/percobaanError.jpg, id=86
-5, 749.80125pt x 327.2225pt>
+psi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/pengujian4.jpg>] <Gambar/percobaanError.jpg, id=90
+8, 749.80125pt x 327.2225pt>
 File: Gambar/percobaanError.jpg Graphic file (type jpg)
 
 <use Gambar/percobaanError.jpg>
 Package pdftex.def Info: Gambar/percobaanError.jpg used on input line 221.
 (pdftex.def)             Requested size: 374.8997pt x 163.61084pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [55 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/pengujian31.jpg> <D:/Tugas/Skri
-psi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/pengujian32.jpg>] <Gambar/percobaan1.jpg, id=873, 
-998.73125pt x 864.22874pt>
+psi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/pengujian32.jpg>]
+<Gambar/percobaan1.jpg, id=915, 998.73125pt x 864.22874pt>
 File: Gambar/percobaan1.jpg Graphic file (type jpg)
-
-<use Gambar/percobaan1.jpg>
+ <use Gambar/percobaan1.jpg>
 Package pdftex.def Info: Gambar/percobaan1.jpg used on input line 230.
 (pdftex.def)             Requested size: 429.44606pt x 371.61111pt.
- <Gambar/percobaan2.jpg, id=874, 1245.65375pt x 504.88625pt>
+
+<Gambar/percobaan2.jpg, id=916, 1245.65375pt x 504.88625pt>
 File: Gambar/percobaan2.jpg Graphic file (type jpg)
  <use Gambar/percobaan2.jpg>
 Package pdftex.def Info: Gambar/percobaan2.jpg used on input line 237.
 (pdftex.def)             Requested size: 373.699pt x 151.46703pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [56 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/percobaanError.jpg> <D:/Tugas/S
-kripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/percobaan1.jpg>] <Gambar/percobaan3.jpg, id=880
+kripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/percobaan1.jpg>] <Gambar/percobaan3.jpg, id=922
 , 466.74374pt x 376.40625pt>
 File: Gambar/percobaan3.jpg Graphic file (type jpg)
 
 <use Gambar/percobaan3.jpg>
 Package pdftex.def Info: Gambar/percobaan3.jpg used on input line 258.
 (pdftex.def)             Requested size: 326.71838pt x 263.48257pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [57 <D:/Tugas/Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/percobaan2.jpg>]) [58 <D:/Tugas
 /Skripsi/SkripsiKIRIDataMining/doc/Skripsi/Template Skripsi FTIS v7/Gambar/percobaan3.jpg>]
 ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab6.tex"
@@ -1097,17 +987,7 @@ Bab 6.
 
 
 
-]
-No file Bab/bab7.tex.
-No file Bab/bab8.tex.
-No file Bab/bab9.tex.
-("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.bbl" [60
-
-
-
-
-
-
+] ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.bbl" [60
 
 
 ]
@@ -1668,60 +1548,49 @@ File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 31.
- [69] [70]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [71] [72]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [73] [74] [75] [76] [77] [78]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [79] [80] [81]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [82]) [83]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 518.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 518.
-
-("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.aux"
+ [69] [70] [71] [72] [73] [74] [75] [76] [77] [78]
+[79] [80] [81] [82]) [83]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 536.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 536.
+ ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\main.aux"
 ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab1.aux")
 ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab2.aux")
 ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab3.aux")
 ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab4.aux")
 ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab5.aux")
 ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab6.aux")
-("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab7.aux")
-("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab8.aux")
-("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Bab/bab9.aux")
 ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Lampiran/lampA.aux")
 ("D:\Tugas\Skripsi\SkripsiKIRIDataMining\doc\Skripsi\Template Skripsi FTIS v7\Lampiran/lampB.aux"))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 518.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 518.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 536.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 536.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: DDDEA8A38589404A34B177EBABBD3BDA;8488.
+(rerunfilecheck)             Checksum: C451BA4F01239AFAB79E50AB142EC89B;8607.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 16538 strings out of 493921
- 235934 string characters out of 3147258
- 743772 words of memory out of 3000000
- 17798 multiletter control sequences out of 15000+200000
- 24851 words of font info for 53 fonts, out of 3000000 for 9000
+ 16386 strings out of 493921
+ 233364 string characters out of 3147258
+ 750292 words of memory out of 3000000
+ 17650 multiletter control sequences out of 15000+200000
+ 24766 words of font info for 53 fonts, out of 3000000 for 9000
  846 hyphenation exceptions out of 8191
- 45i,12n,44p,1106b,1843s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,12n,44p,1106b,1831s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx0600.pk> <C:\Users\Jovan Guna
 wan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTe
 X\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\j
 knappen\ec\dpi600\ecrm0600.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1
 095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk> <C:\Users\Jovan
  Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1000.pk> <C:\Users\Jovan Gunawan\AppData\Local\
-MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbl1200.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
-our\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
-eccc1000.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss0600.pk> <C:\Users\
-Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbl1095.pk> <C:\Users\Jovan Gunawan\AppData\L
-ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\p
-k\ljfour\jknappen\ec\dpi600\ecsl1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dp
-i600\ecrm1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\U
+MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1000.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi600\ecbl1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
+ecxc1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1440.pk> <C:\Users\
+Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1095.pk> <C:\Users\Jovan Gunawan\AppData\L
+ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\p
+k\ljfour\jknappen\ec\dpi600\ecbl1200.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dp
+i600\ecrm1095.pk> <C:\Users\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\U
 sers\Jovan Gunawan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbl1440.pk> <C:\Users\Jovan Gunawan\AppD
 ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/f
@@ -1729,9 +1598,9 @@ onts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 msy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (95 pages, 5887754 bytes).
+Output written on main.pdf (103 pages, 5895425 bytes).
 PDF statistics:
- 3518 PDF objects out of 3580 (max. 8388607)
- 1703 named destinations out of 1728 (max. 500000)
- 580 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3597 PDF objects out of 4296 (max. 8388607)
+ 1717 named destinations out of 1728 (max. 500000)
+ 588 words of extra memory for PDF output out of 10000 (max. 10000000)
 
